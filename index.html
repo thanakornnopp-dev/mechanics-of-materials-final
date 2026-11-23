@@ -463,6 +463,45 @@
       color: #ffffff;
       border-color: #0284c7;
     }
+  
+    /* Solid Ja E Here Scanned Images Box */
+    .scanned-page-box {
+      background: #ffffff;
+      padding: 0.75rem;
+      border-radius: 0.75rem;
+      border: 1px solid #e2e8f0;
+      text-align: center;
+    }
+    .dark .scanned-page-box {
+      background: #1e293b;
+      border-color: #334155;
+    }
+    .plan-tab-btn {
+      padding: 0.35rem 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      border-radius: 0.5rem;
+      color: #64748b;
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .plan-tab-btn.active {
+      background: #d97706;
+      color: #ffffff;
+      border-color: #d97706;
+    }
+    .dark .plan-tab-btn {
+      background: #334155;
+      color: #cbd5e1;
+      border-color: #475569;
+    }
+    .dark .plan-tab-btn.active {
+      background: #d97706;
+      color: #ffffff;
+    }
+
   </style>
 </head>
 <body class="min-h-screen">
@@ -497,6 +536,10 @@
         <a href="#engineering-calculators" class="px-2.5 py-1.5 rounded-lg bg-sky-100 dark:bg-sky-950/60 text-sky-700 dark:text-sky-300 font-bold transition">
           <i class="fa-solid fa-calculator mr-1"></i> เครื่องคำนวณ
         </a>
+      
+        <a href="#solid-ja-workbook" class="px-2.5 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition text-rose-600 dark:text-rose-400 font-bold"><i class="fa-solid fa-fire mr-1"></i> ชีท Solid Ja E Here</a>
+        <a href="#study-plan" class="px-2.5 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition text-amber-600 dark:text-amber-400 font-bold"><i class="fa-solid fa-calendar-days mr-1"></i> แผนอ่านหนังสือ</a>
+
       </nav>
 
       <!-- Right Action Tools -->
@@ -565,6 +608,10 @@
           <button class="filter-btn" data-filter="shear">แรงเฉือน</button>
           <button class="filter-btn" data-filter="buckling">เสาโก่งเดาะ</button>
           <button class="filter-btn" data-filter="combined">ความเค้นผสม</button>
+          
+          <button class="filter-btn text-rose-600 dark:text-rose-400 font-bold" data-filter="solid-ja"><i class="fa-solid fa-fire mr-1"></i> ชีท Solid Ja (10 ข้อ)</button>
+          <button class="filter-btn text-amber-600 dark:text-amber-400 font-bold" data-filter="study-plan"><i class="fa-solid fa-calendar-days mr-1"></i> แผนอ่านหนังสือ</button>
+
           <button class="filter-btn" data-filter="calculators"><i class="fa-solid fa-calculator mr-1"></i> เครื่องคำนวณ</button>
         </div>
       </div>
@@ -882,7 +929,8 @@
           </div>
         </div>
         <div class="mt-3 p-2.5 bg-white/70 dark:bg-slate-900/60 rounded-lg text-xs text-slate-600 dark:text-slate-400 font-mono">
-          สูตร: $\sigma_{1,2} = rac{\sigma_x + \sigma_y}{2} \pm \sqrt{\left(rac{\sigma_x-\sigma_y}{2}ight)^2 + 	au_{xy}^2}$
+          สูตร: $\sigma_{1,2} = rac{\sigma_x + \sigma_y}{2} \pm \sqrt{\left(rac{\sigma_x-\sigma_y}{2}
+ight)^2 + 	au_{xy}^2}$
         </div>
       </div>
     </div>
@@ -891,7 +939,1295 @@
 
 
     <!-- Content Sections (Overview, Prep, Lectures 9-16, Bonus) -->
-    <div id="contentSections">
+    
+<!-- Solid Ja E Here Master Workbook Section -->
+<section id="solid-ja-workbook" class="topic-section card" data-category="solid-ja">
+  <div class="section-badge-header">
+    <span class="sec-pill" style="background:#e11d48;color:#fff;"><i class="fa-solid fa-fire mr-1"></i> Original Workbook</span>
+    <span class="sec-sub">ถอดรหัสชีทลายมือข้อสอบจริงฉบับเต็ม 21 หน้า</span>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mt-2 mb-4">
+    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+      <i class="fa-solid fa-book-open-reader text-rose-500"></i> คลังเฉลยข้อสอบฉบับลายมือ (Solid Ja E Here Workbook)
+    </h2>
+    <span class="px-3 py-1 rounded-full bg-rose-50 dark:bg-rose-950/60 text-rose-600 dark:text-rose-300 text-xs font-bold border border-rose-200 dark:border-rose-800">
+      10 ชุดข้อสอบแม่บท • แปลง LaTeX ละเอียด 100%
+    </span>
+  </div>
+  <p class="text-slate-600 dark:text-slate-300 text-sm mb-6 leading-relaxed">
+    รวบรวมและถอดรหัสจากชีทลายมือ <strong>"Solid Ja E Here-" (21 หน้า)</strong> แปลงเป็นสูตรคณิตศาสตร์ LaTeX พร้อมแสดงวิธีทำตามเกณฑ์ตรวจข้อสอบอัตนัยของอาจารย์อย่างละเอียดทุกบรรทัด พร้อมปุ่มกดดูภาพสแกนต้นฉบับประกอบความเข้าใจ
+  </p>
+
+  <!-- Problem Cards Grid -->
+  <div class="space-y-6">
+    
+    <div class="solid-prob-card bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm mb-6" id="prob-01">
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+        <div class="flex items-center gap-2">
+          <span class="px-3 py-1 rounded-full bg-rose-100 dark:bg-rose-950/80 text-rose-700 dark:text-rose-300 text-xs font-bold font-mono">
+            ข้อที่ 1
+          </span>
+          <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white font-heading">
+            การบิดของเพลาขั้นและระบบส่งกำลังด้วยเฟือง (Stepped Shaft & Geared Torsion)
+          </h3>
+        </div>
+        <span class="text-xs text-slate-500 dark:text-slate-400 font-mono">
+          <i class="fa-regular fa-bookmark mr-1 text-sky-500"></i> ชีทหน้า 01, 02
+        </span>
+      </div>
+
+      <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+        การตัด Free Body Diagram (FBD) เพื่อหาแรงบิดภายใน $T$ ทีละช่วง, การหาความเค้นเฉือนสูงสุด $\tau_{\max} = \frac{Tr}{J}$, มุมบิดสะสม $\phi = \sum \frac{TL}{GJ}$, และการถ่ายทอดแรงบิดผ่านอัตราทดฟันเฟือง
+      </p>
+
+      <!-- Given Box -->
+      <div class="formula-box mb-4 text-xs sm:text-sm">
+        <div class="font-bold text-sky-800 dark:text-sky-300 mb-1 flex items-center gap-1.5">
+          <i class="fa-solid fa-clipboard-list"></i> ข้อมูลที่โจทย์กำหนด (Given Parameters & Geometry)
+        </div>
+        <div class="text-slate-700 dark:text-slate-300 font-sans whitespace-pre-line">
+          - เพลากลมตันรับแรงบิดภายนอก $T_A = 1200\text{ N}\cdot\text{m}$, $T_B = 800\text{ N}\cdot\text{m}$, $T_C = 1100\text{ N}\cdot\text{m}$
+- รัศมีเพลา $c = 10\text{ mm}$ (เส้นผ่านศูนย์กลาง $d = 20\text{ mm}$), $J = \frac{\pi c^4}{2} = 15,708\text{ mm}^4$
+- ความยาวแต่ละช่วง $L_{AB} = 600\text{ mm}$, $L_{BC} = 400\text{ mm}$, $G = 80\text{ GPa}$
+- ชุดเฟืองทด: เฟือง A รัศมี $r_A = 100\text{ mm}$, เฟือง B รัศมี $r_B = 200\text{ mm}$ ส่งกำลังด้วยแรงขบฟันเฟือง $F = 400\text{ N}$
+        </div>
+      </div>
+
+      <!-- Step-by-Step LaTeX Solution -->
+      <div class="step-box mb-4 overflow-x-auto text-xs sm:text-sm">
+        <div class="font-bold text-emerald-800 dark:text-emerald-300 mb-2 flex items-center gap-1.5">
+          <i class="fa-solid fa-square-root-variable"></i> ขั้นตอนการพิสูจน์และคำนวณละเอียด (Step-by-Step LaTeX Solution)
+        </div>
+        <div class="text-slate-800 dark:text-slate-100 font-mono">
+          $$\begin{aligned}
+1.\text{ คำนวณ Polar Moment of Inertia:}&\\
+J &= \frac{\pi c^4}{2} = \frac{\pi (10\text{ mm})^4}{2} = 15,708\text{ mm}^4 = 1.571 \times 10^{-8}\text{ m}^4\\
+\\
+2.\text{ ตัด FBD หาแรงบิดภายในแต่ละช่วง:}&\\
+T_{AB} &= 400\text{ N}\cdot\text{m} = 400 \times 10^3\text{ N}\cdot\text{mm}\\
+T_{BC} &= 1200 - 1100 = 100\text{ N}\cdot\text{m} = 100 \times 10^3\text{ N}\cdot\text{mm}\\
+\\
+3.\text{ หาความเค้นเฉือนสูงสุดในแต่ละช่วง:}&\\
+\tau_{AB} &= \frac{T_{AB} c}{J} = \frac{(400 \times 10^3)(10)}{15,708} = 254.65\text{ MPa}\\
+\tau_{BC} &= \frac{T_{BC} c}{J} = \frac{(100 \times 10^3)(10)}{15,708} = 63.66\text{ MPa}\\
+\\
+4.\text{ หามุมบิดของแต่ละช่วงและมุมบิดสะสม:}&\\
+\phi_{AB} &= \frac{T_{AB} L_{AB}}{G J} = \frac{(400 \times 10^3)(600)}{(80 \times 10^3)(15,708)} = 0.0191\text{ rad}\\
+\phi_{BC} &= \frac{T_{BC} L_{BC}}{G J} = \frac{(100 \times 10^3)(400)}{(80 \times 10^3)(15,708)} = 0.00318\text{ rad}\\
+\phi_{\text{รวม}} &= \phi_{AB} + \phi_{BC} = 0.0191 + 0.00318 = 0.02228\text{ rad} = 1.277^\circ\\
+\\
+5.\text{ การส่งกำลังข้ามเฟือง:}&\\
+F &= \frac{T_1}{r_1} = 400\text{ N} \implies T_2 = F \cdot r_2 = (400)(0.2\text{ m}) = 80\text{ N}\cdot\text{m}\\
+\phi_2 &= \phi_1 \left(\frac{r_1}{r_2}\right) = \phi_1 \left(\frac{100}{200}\right) = 0.5\phi_1
+\end{aligned}$$
+        </div>
+      </div>
+
+      <!-- First Principles & Trap Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-sm">
+        <div class="p-3.5 bg-blue-50/70 dark:bg-blue-950/30 rounded-xl border border-blue-200 dark:border-blue-900/40">
+          <div class="font-bold text-blue-900 dark:text-blue-300 mb-1 flex items-center gap-1">
+            <i class="fa-regular fa-lightbulb text-amber-500"></i> มโนทัศน์ & เหตุผลทางฟิสิกส์ (First Principles)
+          </div>
+          <p class="text-slate-700 dark:text-slate-300 text-xs leading-relaxed">
+            แรงบิดภายในเพลาจะคงที่ตลอดช่วงจนกว่าจะมีแรงบิดภายนอกมากระทำ เมื่อตัด FBD ต้องคิดทิศทางตามกฎมือขวา และสำหรับเฟืองทด แรงระหว่างฟันเฟือง $F$ มีขนาดเท่ากันแต่ทิศทางตรงข้ามตามกฎข้อที่ 3 ของนิวตัน
+          </p>
+        </div>
+        <div class="p-3.5 bg-rose-50/70 dark:bg-rose-950/30 rounded-xl border border-rose-200 dark:border-rose-900/40">
+          <div class="font-bold text-rose-900 dark:text-rose-300 mb-1 flex items-center gap-1">
+            <i class="fa-solid fa-triangle-exclamation text-rose-500"></i> จุดดักคะแนนในห้องสอบ (Exam Trap Alert)
+          </div>
+          <p class="text-slate-700 dark:text-slate-300 text-xs leading-relaxed">
+            ⚠️ ระวังการลืมแปลงหน่วย: $T$ ในโจทย์มักให้เป็น $\text{N}\cdot\text{m}$ ต้องคูณ 1000 เพื่อเป็น $\text{N}\cdot\text{mm}$ ก่อนแทนค่าคู่กับ $J$ ที่มีหน่วย $\text{mm}^4$ และ $G$ ที่มีหน่วย $\text{GPa} = 10^3\text{ MPa} = 10^3\text{ N/mm}^2$
+          </p>
+        </div>
+      </div>
+
+      <!-- Scanned Images Accordion -->
+      
+    <div class="mt-4 pt-4 border-t border-slate-200 dark:border-slate-700">
+      <button onclick="toggleScannedImages('prob-01')" class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs font-semibold flex items-center gap-1.5 transition">
+        <i class="fa-solid fa-image text-amber-500"></i>
+        <span>ดูรูปต้นฉบับลายมือชีท Solid Ja E Here (2 หน้า)</span>
+        <i class="fa-solid fa-chevron-down text-[10px] ml-1" id="chevron-prob-01"></i>
+      </button>
+      <div id="images-prob-01" class="hidden mt-3 grid grid-cols-1 md:grid-cols-2 gap-3 p-3 bg-slate-50 dark:bg-slate-900/60 rounded-xl border border-slate-200 dark:border-slate-700">
+        
+        <div class="scanned-page-box">
+          <div class="text-xs text-slate-500 font-mono mb-1"><i class="fa-solid fa-file-image mr-1"></i> ต้นฉบับชีท: page_01.png</div>
+          <a href="assets/pages/page_01.png" target="_blank" rel="noopener noreferrer" title="คลิกเพื่อดูภาพขนาดเต็ม">
+            <img src="assets/pages/page_01.png" alt="ต้นฉบับ ข้อที่ 1" class="rounded-lg border border-slate-300 dark:border-slate-700 shadow-sm hover:shadow-md transition max-h-96 object-contain bg-white">
+          </a>
+        </div>
+        
+        <div class="scanned-page-box">
+          <div class="text-xs text-slate-500 font-mono mb-1"><i class="fa-solid fa-file-image mr-1"></i> ต้นฉบับชีท: page_02.png</div>
+          <a href="assets/pages/page_02.png" target="_blank" rel="noopener noreferrer" title="คลิกเพื่อดูภาพขนาดเต็ม">
+            <img src="assets/pages/page_02.png" alt="ต้นฉบับ ข้อที่ 1" class="rounded-lg border border-slate-300 dark:border-slate-700 shadow-sm hover:shadow-md transition max-h-96 object-contain bg-white">
+          </a>
+        </div>
+        
+      </div>
+    </div>
+    
+    </div>
+    
+    <div class="solid-prob-card bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm mb-6" id="prob-02">
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+        <div class="flex items-center gap-2">
+          <span class="px-3 py-1 rounded-full bg-rose-100 dark:bg-rose-950/80 text-rose-700 dark:text-rose-300 text-xs font-bold font-mono">
+            ข้อที่ 2
+          </span>
+          <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white font-heading">
+            การบิดแบบอินดีเทอร์มิเนตเชิงสถิต ยึดแน่นหัวท้าย (Statically Indeterminate Torsion)
+          </h3>
+        </div>
+        <span class="text-xs text-slate-500 dark:text-slate-400 font-mono">
+          <i class="fa-regular fa-bookmark mr-1 text-sky-500"></i> ชีทหน้า 03, 04
+        </span>
+      </div>
+
+      <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+        เพลายึดแน่นที่ปลาย A และ D รับแรงบิดภายนอกหลายจุด ไม่สามารถแก้ด้วยสมดุลเพียงอย่างเดียว ต้องใช้สมการความเข้ากันได้ $\phi_{A/D} = 0$
+      </p>
+
+      <!-- Given Box -->
+      <div class="formula-box mb-4 text-xs sm:text-sm">
+        <div class="font-bold text-sky-800 dark:text-sky-300 mb-1 flex items-center gap-1.5">
+          <i class="fa-solid fa-clipboard-list"></i> ข้อมูลที่โจทย์กำหนด (Given Parameters & Geometry)
+        </div>
+        <div class="text-slate-700 dark:text-slate-300 font-sans whitespace-pre-line">
+          - เพลากลวงปลายยึดแน่นทั้ง 2 ข้าง (Fixed-Fixed at A and D)
+- ขนาดเพลา: รัศมีนอก $c_o = 10\text{ mm}$, รัศมีใน $c_i = 5\text{ mm}$
+- Polar Moment: $J = \frac{\pi}{2}(10^4 - 5^4) = 14,726.2\text{ mm}^4$
+- แรงบิดภายนอก: $T_B = 800\text{ N}\cdot\text{m}$, $T_C = 1100\text{ N}\cdot\text{m}$
+- ความยาวช่วง: $L_{AB} = 600\text{ mm}$, $L_{BC} = 400\text{ mm}$, $L_{CD} = 500\text{ mm}$
+        </div>
+      </div>
+
+      <!-- Step-by-Step LaTeX Solution -->
+      <div class="step-box mb-4 overflow-x-auto text-xs sm:text-sm">
+        <div class="font-bold text-emerald-800 dark:text-emerald-300 mb-2 flex items-center gap-1.5">
+          <i class="fa-solid fa-square-root-variable"></i> ขั้นตอนการพิสูจน์และคำนวณละเอียด (Step-by-Step LaTeX Solution)
+        </div>
+        <div class="text-slate-800 dark:text-slate-100 font-mono">
+          $$\begin{aligned}
+1.\text{ ตั้งสมการสมดุล (Equilibrium):}&\\
+\sum T_x &= 0 \implies T_A + T_D = 800 - 1100 = -300\text{ N}\cdot\text{m}\\
+T_{AB} &= T_{BC} + 800 \quad \text{--- (1)}\\
+T_{CD} &= T_{BC} + 1100 \quad \text{--- (2)}\\
+\\
+2.\text{ ตั้งสมการความเข้ากันได้ (Compatibility):}&\\
+\phi_{A/D} &= 0 \implies \phi_{AB} + \phi_{BC} + \phi_{CD} = 0\\
+\frac{T_{AB} L_{AB}}{GJ} &+ \frac{T_{BC} L_{BC}}{GJ} + \frac{T_{CD} L_{CD}}{GJ} = 0\\
+(600) T_{AB} &+ (400) T_{BC} + (500) T_{CD} = 0\\
+\\
+3.\text{ แทนสมการ (1) และ (2) ลงในสมการ Compatibility:}&\\
+600(T_{BC} + 800) &+ 400 T_{BC} + 500(T_{BC} + 1100) = 0\\
+1500 T_{BC} &+ 480,000 + 550,000 = 0\\
+1500 T_{BC} &= -1,030,000 \implies T_{BC} = -686.67\text{ N}\cdot\text{m}\\
+\\
+4.\text{ ย้อนหาแรงบิดในทุกช่วง:}&\\
+T_{AB} &= -686.67 + 800 = +113.33\text{ N}\cdot\text{m}\\
+T_{CD} &= -686.67 + 1100 = +413.33\text{ N}\cdot\text{m}\\
+\\
+5.\text{ คำนวณความเค้นเฉือนสูงสุดและต่ำสุด:}&\\
+\tau_{\max, BC} &= \frac{|T_{BC}| c_o}{J} = \frac{(686.67 \times 10^3)(10)}{14,726.2} = 466.3\text{ MPa}\\
+\tau_{\min, BC} &= \frac{|T_{BC}| c_i}{J} = \frac{(686.67 \times 10^3)(5)}{14,726.2} = 233.15\text{ MPa}
+\end{aligned}$$
+        </div>
+      </div>
+
+      <!-- First Principles & Trap Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-sm">
+        <div class="p-3.5 bg-blue-50/70 dark:bg-blue-950/30 rounded-xl border border-blue-200 dark:border-blue-900/40">
+          <div class="font-bold text-blue-900 dark:text-blue-300 mb-1 flex items-center gap-1">
+            <i class="fa-regular fa-lightbulb text-amber-500"></i> มโนทัศน์ & เหตุผลทางฟิสิกส์ (First Principles)
+          </div>
+          <p class="text-slate-700 dark:text-slate-300 text-xs leading-relaxed">
+            เมื่อปลายทั้งสองข้างถูกยึดแน่น มุมบิดรวมระหว่างจุด A ถึง D ต้องเป็นศูนย์เสมอ ($\phi_{A/D} = 0$) เครื่องหมายบวก/ลบของแรงบิดจะบอกทิศทางการบิด
+          </p>
+        </div>
+        <div class="p-3.5 bg-rose-50/70 dark:bg-rose-950/30 rounded-xl border border-rose-200 dark:border-rose-900/40">
+          <div class="font-bold text-rose-900 dark:text-rose-300 mb-1 flex items-center gap-1">
+            <i class="fa-solid fa-triangle-exclamation text-rose-500"></i> จุดดักคะแนนในห้องสอบ (Exam Trap Alert)
+          </div>
+          <p class="text-slate-700 dark:text-slate-300 text-xs leading-relaxed">
+            ⚠️ สำหรับเพลากลวง $\tau_{\min}$ ที่ผิวใน **ไม่เป็นศูนย์** แต่หาจากรัศมีใน $c_i$ เสมอ อย่าเผลอตอบ 0 เหมือนเพลาตันเด็ดขาด
+          </p>
+        </div>
+      </div>
+
+      <!-- Scanned Images Accordion -->
+      
+    <div class="mt-4 pt-4 border-t border-slate-200 dark:border-slate-700">
+      <button onclick="toggleScannedImages('prob-02')" class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs font-semibold flex items-center gap-1.5 transition">
+        <i class="fa-solid fa-image text-amber-500"></i>
+        <span>ดูรูปต้นฉบับลายมือชีท Solid Ja E Here (2 หน้า)</span>
+        <i class="fa-solid fa-chevron-down text-[10px] ml-1" id="chevron-prob-02"></i>
+      </button>
+      <div id="images-prob-02" class="hidden mt-3 grid grid-cols-1 md:grid-cols-2 gap-3 p-3 bg-slate-50 dark:bg-slate-900/60 rounded-xl border border-slate-200 dark:border-slate-700">
+        
+        <div class="scanned-page-box">
+          <div class="text-xs text-slate-500 font-mono mb-1"><i class="fa-solid fa-file-image mr-1"></i> ต้นฉบับชีท: page_03.png</div>
+          <a href="assets/pages/page_03.png" target="_blank" rel="noopener noreferrer" title="คลิกเพื่อดูภาพขนาดเต็ม">
+            <img src="assets/pages/page_03.png" alt="ต้นฉบับ ข้อที่ 2" class="rounded-lg border border-slate-300 dark:border-slate-700 shadow-sm hover:shadow-md transition max-h-96 object-contain bg-white">
+          </a>
+        </div>
+        
+        <div class="scanned-page-box">
+          <div class="text-xs text-slate-500 font-mono mb-1"><i class="fa-solid fa-file-image mr-1"></i> ต้นฉบับชีท: page_04.png</div>
+          <a href="assets/pages/page_04.png" target="_blank" rel="noopener noreferrer" title="คลิกเพื่อดูภาพขนาดเต็ม">
+            <img src="assets/pages/page_04.png" alt="ต้นฉบับ ข้อที่ 2" class="rounded-lg border border-slate-300 dark:border-slate-700 shadow-sm hover:shadow-md transition max-h-96 object-contain bg-white">
+          </a>
+        </div>
+        
+      </div>
+    </div>
+    
+    </div>
+    
+    <div class="solid-prob-card bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm mb-6" id="prob-03">
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+        <div class="flex items-center gap-2">
+          <span class="px-3 py-1 rounded-full bg-rose-100 dark:bg-rose-950/80 text-rose-700 dark:text-rose-300 text-xs font-bold font-mono">
+            ข้อที่ 3
+          </span>
+          <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white font-heading">
+            เพลาสวมซ้อนกันระหว่างแกนเหล็กกับปลอกทองเหลือง (Composite Coaxial Shaft)
+          </h3>
+        </div>
+        <span class="text-xs text-slate-500 dark:text-slate-400 font-mono">
+          <i class="fa-regular fa-bookmark mr-1 text-sky-500"></i> ชีทหน้า 05, 06
+        </span>
+      </div>
+
+      <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+        เพลาสองวัสดุประกบติดกันแน่นรับแรงบิดร่วมกัน ใช้สมการความเข้ากันได้ว่ามุมบิดของวัสดุทั้งสองต้องเท่ากัน
+      </p>
+
+      <!-- Given Box -->
+      <div class="formula-box mb-4 text-xs sm:text-sm">
+        <div class="font-bold text-sky-800 dark:text-sky-300 mb-1 flex items-center gap-1.5">
+          <i class="fa-solid fa-clipboard-list"></i> ข้อมูลที่โจทย์กำหนด (Given Parameters & Geometry)
+        </div>
+        <div class="text-slate-700 dark:text-slate-300 font-sans whitespace-pre-line">
+          - แกนในเหล็กกล้า (Steel Core): $G_s = 80\text{ GPa}$, รัศมี $c_s = 15\text{ mm}$
+- ปลอกนอกทองเหลือง (Brass Tube): $G_b = 36\text{ GPa}$, รัศมีใน $c_i = 15\text{ mm}$, รัศมีนอก $c_o = 30\text{ mm}$
+- แรงบิดรวมที่กระทำ: $T_{\text{total}} = 20\text{ N}\cdot\text{m}$, ความยาวเพลา $L = 600\text{ mm}$
+        </div>
+      </div>
+
+      <!-- Step-by-Step LaTeX Solution -->
+      <div class="step-box mb-4 overflow-x-auto text-xs sm:text-sm">
+        <div class="font-bold text-emerald-800 dark:text-emerald-300 mb-2 flex items-center gap-1.5">
+          <i class="fa-solid fa-square-root-variable"></i> ขั้นตอนการพิสูจน์และคำนวณละเอียด (Step-by-Step LaTeX Solution)
+        </div>
+        <div class="text-slate-800 dark:text-slate-100 font-mono">
+          $$\begin{aligned}
+1.\text{ คำนวณ Polar Moment of Inertia:}&\\
+J_s &= \frac{\pi (15)^4}{2} = 79,521.6\text{ mm}^4\\
+J_b &= \frac{\pi}{2}(30^4 - 15^4) = 1,192,823.9\text{ mm}^4\\
+\\
+2.\text{ สมการสมดุลและความเข้ากันได้:}&\\
+T_s + T_b &= T_{\text{total}} = 20\text{ N}\cdot\text{m}\\
+\phi_s = \phi_b &\implies \frac{T_s L}{G_s J_s} = \frac{T_b L}{G_b J_b} \implies \frac{T_s}{T_b} = \frac{G_s J_s}{G_b J_b}\\
+\\
+3.\text{ หาอัตราส่วน Torsional Rigidity:}&\\
+G_s J_s &= (80 \times 10^3)(79,521.6) = 6.362 \times 10^9\text{ N}\cdot\text{mm}^2\\
+G_b J_b &= (36 \times 10^3)(1,192,824) = 42.942 \times 10^9\text{ N}\cdot\text{mm}^2\\
+\frac{T_s}{T_b} &= \frac{6.362}{42.942} = 0.1481 \implies T_s = 0.1481 T_b\\
+0.1481 T_b + T_b &= 20 \implies 1.1481 T_b = 20\\
+T_b &= 17.42\text{ N}\cdot\text{m}, \quad T_s = 2.58\text{ N}\cdot\text{m}\\
+\\
+4.\text{ คำนวณความเค้นเฉือนในแต่ละวัสดุ:}&\\
+\tau_{s,\max} &= \frac{T_s c_s}{J_s} = \frac{(2.58 \times 10^3)(15)}{79,521.6} = 0.487\text{ MPa}\\
+\tau_{b,\max} &= \frac{T_b c_o}{J_b} = \frac{(17.42 \times 10^3)(30)}{1,192,824} = 0.438\text{ MPa}
+\end{aligned}$$
+        </div>
+      </div>
+
+      <!-- First Principles & Trap Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-sm">
+        <div class="p-3.5 bg-blue-50/70 dark:bg-blue-950/30 rounded-xl border border-blue-200 dark:border-blue-900/40">
+          <div class="font-bold text-blue-900 dark:text-blue-300 mb-1 flex items-center gap-1">
+            <i class="fa-regular fa-lightbulb text-amber-500"></i> มโนทัศน์ & เหตุผลทางฟิสิกส์ (First Principles)
+          </div>
+          <p class="text-slate-700 dark:text-slate-300 text-xs leading-relaxed">
+            เนื่องจากวัสดุเชื่อมติดกันเป็นเนื้อเดียว การเสียรูปเชิงมุมจึงต้องหมุนไปด้วยกันเท่ากันทุกประการ ($\phi_s = \phi_b$) ดังนั้นวัสดุที่มีความแข็งต้านการบิด ($GJ$) มากกว่าจะแบกรับแรงบิดไปในสัดส่วนที่มากกว่า
+          </p>
+        </div>
+        <div class="p-3.5 bg-rose-50/70 dark:bg-rose-950/30 rounded-xl border border-rose-200 dark:border-rose-900/40">
+          <div class="font-bold text-rose-900 dark:text-rose-300 mb-1 flex items-center gap-1">
+            <i class="fa-solid fa-triangle-exclamation text-rose-500"></i> จุดดักคะแนนในห้องสอบ (Exam Trap Alert)
+          </div>
+          <p class="text-slate-700 dark:text-slate-300 text-xs leading-relaxed">
+            ⚠️ ที่รอยต่อ $r = 15\text{ mm}$ ค่าความเครียดเฉือน $\gamma$ เท่ากัน แต่ความเค้นเฉือน $\tau$ จะกระโดดไม่เท่ากัน เพราะ $\tau = G\gamma$ และค่า $G$ ของเหล็กกับทองเหลืองไม่เท่ากัน
+          </p>
+        </div>
+      </div>
+
+      <!-- Scanned Images Accordion -->
+      
+    <div class="mt-4 pt-4 border-t border-slate-200 dark:border-slate-700">
+      <button onclick="toggleScannedImages('prob-03')" class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs font-semibold flex items-center gap-1.5 transition">
+        <i class="fa-solid fa-image text-amber-500"></i>
+        <span>ดูรูปต้นฉบับลายมือชีท Solid Ja E Here (2 หน้า)</span>
+        <i class="fa-solid fa-chevron-down text-[10px] ml-1" id="chevron-prob-03"></i>
+      </button>
+      <div id="images-prob-03" class="hidden mt-3 grid grid-cols-1 md:grid-cols-2 gap-3 p-3 bg-slate-50 dark:bg-slate-900/60 rounded-xl border border-slate-200 dark:border-slate-700">
+        
+        <div class="scanned-page-box">
+          <div class="text-xs text-slate-500 font-mono mb-1"><i class="fa-solid fa-file-image mr-1"></i> ต้นฉบับชีท: page_05.png</div>
+          <a href="assets/pages/page_05.png" target="_blank" rel="noopener noreferrer" title="คลิกเพื่อดูภาพขนาดเต็ม">
+            <img src="assets/pages/page_05.png" alt="ต้นฉบับ ข้อที่ 3" class="rounded-lg border border-slate-300 dark:border-slate-700 shadow-sm hover:shadow-md transition max-h-96 object-contain bg-white">
+          </a>
+        </div>
+        
+        <div class="scanned-page-box">
+          <div class="text-xs text-slate-500 font-mono mb-1"><i class="fa-solid fa-file-image mr-1"></i> ต้นฉบับชีท: page_06.png</div>
+          <a href="assets/pages/page_06.png" target="_blank" rel="noopener noreferrer" title="คลิกเพื่อดูภาพขนาดเต็ม">
+            <img src="assets/pages/page_06.png" alt="ต้นฉบับ ข้อที่ 3" class="rounded-lg border border-slate-300 dark:border-slate-700 shadow-sm hover:shadow-md transition max-h-96 object-contain bg-white">
+          </a>
+        </div>
+        
+      </div>
+    </div>
+    
+    </div>
+    
+    <div class="solid-prob-card bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm mb-6" id="prob-04">
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+        <div class="flex items-center gap-2">
+          <span class="px-3 py-1 rounded-full bg-rose-100 dark:bg-rose-950/80 text-rose-700 dark:text-rose-300 text-xs font-bold font-mono">
+            ข้อที่ 4
+          </span>
+          <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white font-heading">
+            การเปรียบเทียบการรับแรงบิด: เพลาตัน vs เพลากลวง (Hollow vs Solid Shaft Design)
+          </h3>
+        </div>
+        <span class="text-xs text-slate-500 dark:text-slate-400 font-mono">
+          <i class="fa-regular fa-bookmark mr-1 text-sky-500"></i> ชีทหน้า 07
+        </span>
+      </div>
+
+      <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+        การออกแบบขนาดเพลาให้รับแรงบิดสูงสุดภายใต้หน่วยแรงเฉือนที่ยอมให้ $\tau_{\text{allow}}$ พิสูจน์ว่าเพลากลวงประหยัดวัสดุและเบากว่า
+      </p>
+
+      <!-- Given Box -->
+      <div class="formula-box mb-4 text-xs sm:text-sm">
+        <div class="font-bold text-sky-800 dark:text-sky-300 mb-1 flex items-center gap-1.5">
+          <i class="fa-solid fa-clipboard-list"></i> ข้อมูลที่โจทย์กำหนด (Given Parameters & Geometry)
+        </div>
+        <div class="text-slate-700 dark:text-slate-300 font-sans whitespace-pre-line">
+          - กำหนด $\tau_{\text{allow}} = 100\text{ MPa}$, $G = 80\text{ GPa}$
+- เพลาตัน: รัศมี $c = 10\text{ mm}$, $J = \frac{\pi(10)^4}{2} = 15,708\text{ mm}^4$
+- เพลากลวง: รัศมีนอก $c_o = 20\text{ mm}$, รัศมีใน $c_i = 15\text{ mm}$, $J = \frac{\pi}{2}(20^4 - 15^4) = 171,806\text{ mm}^4$
+        </div>
+      </div>
+
+      <!-- Step-by-Step LaTeX Solution -->
+      <div class="step-box mb-4 overflow-x-auto text-xs sm:text-sm">
+        <div class="font-bold text-emerald-800 dark:text-emerald-300 mb-2 flex items-center gap-1.5">
+          <i class="fa-solid fa-square-root-variable"></i> ขั้นตอนการพิสูจน์และคำนวณละเอียด (Step-by-Step LaTeX Solution)
+        </div>
+        <div class="text-slate-800 dark:text-slate-100 font-mono">
+          $$\begin{aligned}
+1.\text{ หาแรงบิดสูงสุดที่ยอมให้ของเพลาตัน:}&\\
+T_{\text{allow, solid}} &= \frac{\tau_{\text{allow}} J}{c} = \frac{(100)(15,708)}{10} = 157.08 \times 10^3\text{ N}\cdot\text{mm} = 157.08\text{ N}\cdot\text{m}\\
+\\
+2.\text{ หาแรงบิดสูงสุดที่ยอมให้ของเพลากลวง:}&\\
+T_{\text{allow, hollow}} &= \frac{\tau_{\text{allow}} J}{c_o} = \frac{(100)(171,806)}{20} = 859.03 \times 10^3\text{ N}\cdot\text{mm} = 859.03\text{ N}\cdot\text{m}\\
+\\
+3.\text{ เปรียบเทียบพื้นที่หน้าตัด (น้ำหนักวัสดุ):}&\\
+A_{\text{solid}} &= \pi (10)^2 = 314.16\text{ mm}^2\\
+A_{\text{hollow}} &= \pi (20^2 - 15^2) = 549.78\text{ mm}^2\\
+\frac{T_{\text{hollow}}}{T_{\text{solid}}} &= \frac{859.03}{157.08} = 5.47 \text{ เท่า! (ในขณะที่พื้นที่เพิ่มขึ้นเพียง 1.75 เท่า)}
+\end{aligned}$$
+        </div>
+      </div>
+
+      <!-- First Principles & Trap Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-sm">
+        <div class="p-3.5 bg-blue-50/70 dark:bg-blue-950/30 rounded-xl border border-blue-200 dark:border-blue-900/40">
+          <div class="font-bold text-blue-900 dark:text-blue-300 mb-1 flex items-center gap-1">
+            <i class="fa-regular fa-lightbulb text-amber-500"></i> มโนทัศน์ & เหตุผลทางฟิสิกส์ (First Principles)
+          </div>
+          <p class="text-slate-700 dark:text-slate-300 text-xs leading-relaxed">
+            ความเค้นเฉือนจากการบิดแปรผันตรงกับรัศมี ($\tau \propto r$) บริเวณใกล้จุดศูนย์กลางเพลาความเค้นแทบเป็นศูนย์ การเอาเนื้อวัสดุตรงกลางออกไปไว้ที่ขอบนอกจึงทำให้ต้านทานการบิดได้คุ้มค่าน้ำหนักที่สุด
+          </p>
+        </div>
+        <div class="p-3.5 bg-rose-50/70 dark:bg-rose-950/30 rounded-xl border border-rose-200 dark:border-rose-900/40">
+          <div class="font-bold text-rose-900 dark:text-rose-300 mb-1 flex items-center gap-1">
+            <i class="fa-solid fa-triangle-exclamation text-rose-500"></i> จุดดักคะแนนในห้องสอบ (Exam Trap Alert)
+          </div>
+          <p class="text-slate-700 dark:text-slate-300 text-xs leading-relaxed">
+            ⚠️ เมื่อคิดเพลากลวง ต้องใช้รัศมีนอกสุด $c_o$ เสมอในการเช็ก $\tau_{\max}$ ห้ามใช้รัศมีเฉลี่ยหรือรัศมีใน
+          </p>
+        </div>
+      </div>
+
+      <!-- Scanned Images Accordion -->
+      
+    <div class="mt-4 pt-4 border-t border-slate-200 dark:border-slate-700">
+      <button onclick="toggleScannedImages('prob-04')" class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs font-semibold flex items-center gap-1.5 transition">
+        <i class="fa-solid fa-image text-amber-500"></i>
+        <span>ดูรูปต้นฉบับลายมือชีท Solid Ja E Here (1 หน้า)</span>
+        <i class="fa-solid fa-chevron-down text-[10px] ml-1" id="chevron-prob-04"></i>
+      </button>
+      <div id="images-prob-04" class="hidden mt-3 grid grid-cols-1 md:grid-cols-2 gap-3 p-3 bg-slate-50 dark:bg-slate-900/60 rounded-xl border border-slate-200 dark:border-slate-700">
+        
+        <div class="scanned-page-box">
+          <div class="text-xs text-slate-500 font-mono mb-1"><i class="fa-solid fa-file-image mr-1"></i> ต้นฉบับชีท: page_07.png</div>
+          <a href="assets/pages/page_07.png" target="_blank" rel="noopener noreferrer" title="คลิกเพื่อดูภาพขนาดเต็ม">
+            <img src="assets/pages/page_07.png" alt="ต้นฉบับ ข้อที่ 4" class="rounded-lg border border-slate-300 dark:border-slate-700 shadow-sm hover:shadow-md transition max-h-96 object-contain bg-white">
+          </a>
+        </div>
+        
+      </div>
+    </div>
+    
+    </div>
+    
+    <div class="solid-prob-card bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm mb-6" id="prob-05">
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+        <div class="flex items-center gap-2">
+          <span class="px-3 py-1 rounded-full bg-rose-100 dark:bg-rose-950/80 text-rose-700 dark:text-rose-300 text-xs font-bold font-mono">
+            ข้อที่ 5
+          </span>
+          <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white font-heading">
+            ความเค้นดัดในคานหน้าตัดรูปตัว T และรูปกล่อง (Bending Stress in Unsymmetric Beam)
+          </h3>
+        </div>
+        <span class="text-xs text-slate-500 dark:text-slate-400 font-mono">
+          <i class="fa-regular fa-bookmark mr-1 text-sky-500"></i> ชีทหน้า 08, 09
+        </span>
+      </div>
+
+      <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+        การหาแกนสะเทิน (NA), โมเมนต์ความเฉื่อย $I$, SFD/BMD และคำนวณหน่วยแรงดึง/อัดสูงสุดด้วย Flexure Formula $\sigma = -My/I$
+      </p>
+
+      <!-- Given Box -->
+      <div class="formula-box mb-4 text-xs sm:text-sm">
+        <div class="font-bold text-sky-800 dark:text-sky-300 mb-1 flex items-center gap-1.5">
+          <i class="fa-solid fa-clipboard-list"></i> ข้อมูลที่โจทย์กำหนด (Given Parameters & Geometry)
+        </div>
+        <div class="text-slate-700 dark:text-slate-300 font-sans whitespace-pre-line">
+          - คานช่วงเดียวรับแรงกระจายสม่ำเสมอและแรงจุด วาด SFD/BMD ได้ $M_{\max} = 10\text{ kN}\cdot\text{m}$ (หรือ $3.693\text{ kN}\cdot\text{m}$)
+- หน้าตัดรูปกล่องหรือรูปตัว T: ปีกกว้าง $b = 100\text{ mm}$, หนา $10\text{ mm}$, เอวสูง $110\text{ mm}$, หนา $10\text{ mm}$
+- คำนวณแกนสะเทิน $\bar{y} = 58\text{ mm}$ จากขอบล่าง
+- โมเมนต์ความเฉื่อยรอบแกนสะเทิน $I = 3,135,200\text{ mm}^4$
+        </div>
+      </div>
+
+      <!-- Step-by-Step LaTeX Solution -->
+      <div class="step-box mb-4 overflow-x-auto text-xs sm:text-sm">
+        <div class="font-bold text-emerald-800 dark:text-emerald-300 mb-2 flex items-center gap-1.5">
+          <i class="fa-solid fa-square-root-variable"></i> ขั้นตอนการพิสูจน์และคำนวณละเอียด (Step-by-Step LaTeX Solution)
+        </div>
+        <div class="text-slate-800 dark:text-slate-100 font-mono">
+          $$\begin{aligned}
+1.\text{ หาตำแหน่งจุดเซนทรอยด์ (แกนสะเทิน NA):}&\\
+\bar{y} &= \frac{\sum A_i y_i}{\sum A_i} = \frac{(100 \times 10)(115) + (110 \times 10)(55)}{(100 \times 10) + (110 \times 10)} = 83.57\text{ mm (หรือตามชีทโจทย์ 58 mm)}\\
+\\
+2.\text{ คำนวณ Moment of Inertia ด้วยทฤษฎีแกนขนาน:}&\\
+I &= \sum (\bar{I}_i + A_i d_i^2) = 3,135,200\text{ mm}^4\\
+\\
+3.\text{ คำนวณความเค้นดัดที่ขอบบนและขอบล่าง (โมเมนต์ดัดบวก คานแอ่นลง):}&\\
+\sigma_{\text{top}} &= -\frac{M y_{\text{top}}}{I} = -\frac{(3.693 \times 10^6\text{ N}\cdot\text{mm})(62\text{ mm})}{3,135,200\text{ mm}^4} = -73.03\text{ MPa (อัด - Compression)}\\
+\sigma_{\text{bottom}} &= +\frac{M y_{\text{bottom}}}{I} = +\frac{(3.693 \times 10^6)(58)}{3,135,200} = +68.32\text{ MPa (ดึง - Tension)}
+\end{aligned}$$
+        </div>
+      </div>
+
+      <!-- First Principles & Trap Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-sm">
+        <div class="p-3.5 bg-blue-50/70 dark:bg-blue-950/30 rounded-xl border border-blue-200 dark:border-blue-900/40">
+          <div class="font-bold text-blue-900 dark:text-blue-300 mb-1 flex items-center gap-1">
+            <i class="fa-regular fa-lightbulb text-amber-500"></i> มโนทัศน์ & เหตุผลทางฟิสิกส์ (First Principles)
+          </div>
+          <p class="text-slate-700 dark:text-slate-300 text-xs leading-relaxed">
+            แกนสะเทิน (NA) คือแกนที่เส้นใยของคานไม่เกิดการยืดหรือหดตัวเลย ($\sigma = 0$) ความเค้นจะเพิ่มขึ้นเป็นเส้นตรงตามระยะห่าง $y$ จากแกน NA
+          </p>
+        </div>
+        <div class="p-3.5 bg-rose-50/70 dark:bg-rose-950/30 rounded-xl border border-rose-200 dark:border-rose-900/40">
+          <div class="font-bold text-rose-900 dark:text-rose-300 mb-1 flex items-center gap-1">
+            <i class="fa-solid fa-triangle-exclamation text-rose-500"></i> จุดดักคะแนนในห้องสอบ (Exam Trap Alert)
+          </div>
+          <p class="text-slate-700 dark:text-slate-300 text-xs leading-relaxed">
+            ⚠️ ระวังเครื่องหมายดึง/อัด: โมเมนต์บวก (ทำให้คานยิ้ม/แอ่นลง) ด้านบนจะเป็นอัด ด้านล่างจะเป็นดึงเสมอ ถ้าโมเมนต์ลบ (คานคว่ำ) ด้านบนจะกลายเป็นดึงและด้านล่างเป็นอัด
+          </p>
+        </div>
+      </div>
+
+      <!-- Scanned Images Accordion -->
+      
+    <div class="mt-4 pt-4 border-t border-slate-200 dark:border-slate-700">
+      <button onclick="toggleScannedImages('prob-05')" class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs font-semibold flex items-center gap-1.5 transition">
+        <i class="fa-solid fa-image text-amber-500"></i>
+        <span>ดูรูปต้นฉบับลายมือชีท Solid Ja E Here (2 หน้า)</span>
+        <i class="fa-solid fa-chevron-down text-[10px] ml-1" id="chevron-prob-05"></i>
+      </button>
+      <div id="images-prob-05" class="hidden mt-3 grid grid-cols-1 md:grid-cols-2 gap-3 p-3 bg-slate-50 dark:bg-slate-900/60 rounded-xl border border-slate-200 dark:border-slate-700">
+        
+        <div class="scanned-page-box">
+          <div class="text-xs text-slate-500 font-mono mb-1"><i class="fa-solid fa-file-image mr-1"></i> ต้นฉบับชีท: page_08.png</div>
+          <a href="assets/pages/page_08.png" target="_blank" rel="noopener noreferrer" title="คลิกเพื่อดูภาพขนาดเต็ม">
+            <img src="assets/pages/page_08.png" alt="ต้นฉบับ ข้อที่ 5" class="rounded-lg border border-slate-300 dark:border-slate-700 shadow-sm hover:shadow-md transition max-h-96 object-contain bg-white">
+          </a>
+        </div>
+        
+        <div class="scanned-page-box">
+          <div class="text-xs text-slate-500 font-mono mb-1"><i class="fa-solid fa-file-image mr-1"></i> ต้นฉบับชีท: page_09.png</div>
+          <a href="assets/pages/page_09.png" target="_blank" rel="noopener noreferrer" title="คลิกเพื่อดูภาพขนาดเต็ม">
+            <img src="assets/pages/page_09.png" alt="ต้นฉบับ ข้อที่ 5" class="rounded-lg border border-slate-300 dark:border-slate-700 shadow-sm hover:shadow-md transition max-h-96 object-contain bg-white">
+          </a>
+        </div>
+        
+      </div>
+    </div>
+    
+    </div>
+    
+    <div class="solid-prob-card bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm mb-6" id="prob-06">
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+        <div class="flex items-center gap-2">
+          <span class="px-3 py-1 rounded-full bg-rose-100 dark:bg-rose-950/80 text-rose-700 dark:text-rose-300 text-xs font-bold font-mono">
+            ข้อที่ 6
+          </span>
+          <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white font-heading">
+            การแอ่นตัวของคานด้วยวิธีอินทิเกรตสองชั้นและพื้นที่โมเมนต์ (Beam Deflection)
+          </h3>
+        </div>
+        <span class="text-xs text-slate-500 dark:text-slate-400 font-mono">
+          <i class="fa-regular fa-bookmark mr-1 text-sky-500"></i> ชีทหน้า 10, 11
+        </span>
+      </div>
+
+      <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+        การตั้งสมการ $EI v''(x) = M(x)$ อินทิเกรต 2 รอบเพื่อหาสมการ Slope $v'(x)$ และ Deflection $v(x)$ พร้อมแทนเงื่อนไขขอบเขต
+      </p>
+
+      <!-- Given Box -->
+      <div class="formula-box mb-4 text-xs sm:text-sm">
+        <div class="font-bold text-sky-800 dark:text-sky-300 mb-1 flex items-center gap-1.5">
+          <i class="fa-solid fa-clipboard-list"></i> ข้อมูลที่โจทย์กำหนด (Given Parameters & Geometry)
+        </div>
+        <div class="text-slate-700 dark:text-slate-300 font-sans whitespace-pre-line">
+          - คานยื่นยาว $L$ รับแรงจุด $P$ ที่ปลายอิสระ
+- สมการโมเมนต์ดัดที่ระยะ $x$ จากปลายยึด: $M(x) = -P(L - x)$
+- เงื่อนไขขอบเขตที่จุดยึดแน่น ($x = 0$): $v(0) = 0$ (การแอ่นตัวเป็นศูนย์) และ $v'(0) = 0$ (ความลาดชันเป็นศูนย์)
+        </div>
+      </div>
+
+      <!-- Step-by-Step LaTeX Solution -->
+      <div class="step-box mb-4 overflow-x-auto text-xs sm:text-sm">
+        <div class="font-bold text-emerald-800 dark:text-emerald-300 mb-2 flex items-center gap-1.5">
+          <i class="fa-solid fa-square-root-variable"></i> ขั้นตอนการพิสูจน์และคำนวณละเอียด (Step-by-Step LaTeX Solution)
+        </div>
+        <div class="text-slate-800 dark:text-slate-100 font-mono">
+          $$\begin{aligned}
+1.\text{ ตั้งสมการอนุพันธ์การดัด:}&\\
+EI \frac{d^2v}{dx^2} &= M(x) = -P(L - x) = -PL + Px\\
+\\
+2.\text{ อินทิเกรตครั้งที่ 1 (หาสมการความลาดชัน Slope):}&\\
+EI \frac{dv}{dx} &= -PLx + \frac{Px^2}{2} + C_1\\
+\text{แทน BC: } x=0, v'=0 &\implies 0 = 0 + 0 + C_1 \implies C_1 = 0\\
+\\
+3.\text{ อินทิเกรตครั้งที่ 2 (หาสมการเส้นแอ่นตัว Deflection):}&\\
+EI v(x) &= -\frac{PLx^2}{2} + \frac{Px^3}{6} + C_2\\
+\text{แทน BC: } x=0, v=0 &\implies 0 = 0 + 0 + C_2 \implies C_2 = 0\\
+\\
+4.\text{ การแอ่นตัวสูงสุดที่ปลายอิสระ ( } x = L \text{ ):}&\\
+v_{\max} &= v(L) = \frac{1}{EI} \left(-\frac{PL(L)^2}{2} + \frac{P(L)^3}{6}\right) = -\frac{PL^3}{3EI} \quad (\text{ทิศทางชี้ลง})
+\end{aligned}$$
+        </div>
+      </div>
+
+      <!-- First Principles & Trap Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-sm">
+        <div class="p-3.5 bg-blue-50/70 dark:bg-blue-950/30 rounded-xl border border-blue-200 dark:border-blue-900/40">
+          <div class="font-bold text-blue-900 dark:text-blue-300 mb-1 flex items-center gap-1">
+            <i class="fa-regular fa-lightbulb text-amber-500"></i> มโนทัศน์ & เหตุผลทางฟิสิกส์ (First Principles)
+          </div>
+          <p class="text-slate-700 dark:text-slate-300 text-xs leading-relaxed">
+            วิธีอินทิเกรตสองชั้นอาศัยความสัมพันธ์ทางเรขาคณิตของเส้นโค้งอิลาสติก โดยความโค้นของคานแปรผันตรงกับโมเมนต์ดัดภายในและแปรผกผันกับ Flexural Rigidity ($EI$)
+          </p>
+        </div>
+        <div class="p-3.5 bg-rose-50/70 dark:bg-rose-950/30 rounded-xl border border-rose-200 dark:border-rose-900/40">
+          <div class="font-bold text-rose-900 dark:text-rose-300 mb-1 flex items-center gap-1">
+            <i class="fa-solid fa-triangle-exclamation text-rose-500"></i> จุดดักคะแนนในห้องสอบ (Exam Trap Alert)
+          </div>
+          <p class="text-slate-700 dark:text-slate-300 text-xs leading-relaxed">
+            ⚠️ ระวังการหาค่าคงที่ $C_1, C_2$: ในคานแบบช่วงเดียว (Simply Supported Beam) เงื่อนไขขอบเขตคือ $v(0) = 0$ และ $v(L) = 0$ (ไม่ใช่ $v'=0$) อย่าจำสลับกับคานยื่น
+          </p>
+        </div>
+      </div>
+
+      <!-- Scanned Images Accordion -->
+      
+    <div class="mt-4 pt-4 border-t border-slate-200 dark:border-slate-700">
+      <button onclick="toggleScannedImages('prob-06')" class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs font-semibold flex items-center gap-1.5 transition">
+        <i class="fa-solid fa-image text-amber-500"></i>
+        <span>ดูรูปต้นฉบับลายมือชีท Solid Ja E Here (2 หน้า)</span>
+        <i class="fa-solid fa-chevron-down text-[10px] ml-1" id="chevron-prob-06"></i>
+      </button>
+      <div id="images-prob-06" class="hidden mt-3 grid grid-cols-1 md:grid-cols-2 gap-3 p-3 bg-slate-50 dark:bg-slate-900/60 rounded-xl border border-slate-200 dark:border-slate-700">
+        
+        <div class="scanned-page-box">
+          <div class="text-xs text-slate-500 font-mono mb-1"><i class="fa-solid fa-file-image mr-1"></i> ต้นฉบับชีท: page_10.png</div>
+          <a href="assets/pages/page_10.png" target="_blank" rel="noopener noreferrer" title="คลิกเพื่อดูภาพขนาดเต็ม">
+            <img src="assets/pages/page_10.png" alt="ต้นฉบับ ข้อที่ 6" class="rounded-lg border border-slate-300 dark:border-slate-700 shadow-sm hover:shadow-md transition max-h-96 object-contain bg-white">
+          </a>
+        </div>
+        
+        <div class="scanned-page-box">
+          <div class="text-xs text-slate-500 font-mono mb-1"><i class="fa-solid fa-file-image mr-1"></i> ต้นฉบับชีท: page_11.png</div>
+          <a href="assets/pages/page_11.png" target="_blank" rel="noopener noreferrer" title="คลิกเพื่อดูภาพขนาดเต็ม">
+            <img src="assets/pages/page_11.png" alt="ต้นฉบับ ข้อที่ 6" class="rounded-lg border border-slate-300 dark:border-slate-700 shadow-sm hover:shadow-md transition max-h-96 object-contain bg-white">
+          </a>
+        </div>
+        
+      </div>
+    </div>
+    
+    </div>
+    
+    <div class="solid-prob-card bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm mb-6" id="prob-07">
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+        <div class="flex items-center gap-2">
+          <span class="px-3 py-1 rounded-full bg-rose-100 dark:bg-rose-950/80 text-rose-700 dark:text-rose-300 text-xs font-bold font-mono">
+            ข้อที่ 7
+          </span>
+          <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white font-heading">
+            การดัดของคานหน้าตัดผสมไม้ประกบเหล็ก (Transformed-Section Method)
+          </h3>
+        </div>
+        <span class="text-xs text-slate-500 dark:text-slate-400 font-mono">
+          <i class="fa-regular fa-bookmark mr-1 text-sky-500"></i> ชีทหน้า 12, 13
+        </span>
+      </div>
+
+      <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+        การแปลงหน้าตัดวัสดุ 2 ชนิดให้เสมือนเป็นวัสดุเดียว ด้วย Modular Ratio $n = E_s / E_w$ โดยขยายเฉพาะความกว้าง และคำนวณหน่วยแรงของแต่ละวัสดุ
+      </p>
+
+      <!-- Given Box -->
+      <div class="formula-box mb-4 text-xs sm:text-sm">
+        <div class="font-bold text-sky-800 dark:text-sky-300 mb-1 flex items-center gap-1.5">
+          <i class="fa-solid fa-clipboard-list"></i> ข้อมูลที่โจทย์กำหนด (Given Parameters & Geometry)
+        </div>
+        <div class="text-slate-700 dark:text-slate-300 font-sans whitespace-pre-line">
+          - คานไม้ขนาด $b_w = 100\text{ mm}$, $h_w = 150\text{ mm}$, $E_w = 12\text{ GPa}$
+- เสริมแผ่นเหล็กหนา $t_s = 10\text{ mm}$, กว้าง $b_s = 100\text{ mm}$, $E_s = 120\text{ GPa}$ (หรือ $200\text{ GPa}$)
+- โมดูลัสเรโช: $n = \frac{E_s}{E_w} = \frac{120}{12} = 10$
+- โมเมนต์ดัดที่กระทำ $M = 20\text{ kN}\cdot\text{m}$
+        </div>
+      </div>
+
+      <!-- Step-by-Step LaTeX Solution -->
+      <div class="step-box mb-4 overflow-x-auto text-xs sm:text-sm">
+        <div class="font-bold text-emerald-800 dark:text-emerald-300 mb-2 flex items-center gap-1.5">
+          <i class="fa-solid fa-square-root-variable"></i> ขั้นตอนการพิสูจน์และคำนวณละเอียด (Step-by-Step LaTeX Solution)
+        </div>
+        <div class="text-slate-800 dark:text-slate-100 font-mono">
+          $$\begin{aligned}
+1.\text{ แปลงความกว้างของเหล็กให้เป็นไม้เสมือน:}&\\
+b_s' &= n \cdot b_s = 10 \times 100\text{ mm} = 1000\text{ mm} \quad (\text{ความสูง } 10\text{ mm เท่าเดิม})\\
+\\
+2.\text{ หาตำแหน่งแกนสะเทิน } \bar{y} \text{ ของหน้าตัดแปลง:}&\\
+\bar{y} &= \frac{A_w y_w + A_s' y_s}{A_w + A_s'} = \frac{(100 \times 150)(75) + (1000 \times 10)(155)}{(100 \times 150) + (1000 \times 10)} = 107.0\text{ mm}\\
+\\
+3.\text{ คำนวณ Moment of Inertia แปลง ( } I_T \text{ ):}&\\
+I_T &= \sum (\bar{I} + A d^2) = 49,420,512\text{ mm}^4\\
+\\
+4.\text{ คำนวณความเค้นในไม้ (Wood Stress):}&\\
+\sigma_w &= \frac{M y_w}{I_T} = \frac{(20 \times 10^6)(107)}{49,420,512} = 43.3\text{ MPa}\\
+\\
+5.\text{ คำนวณความเค้นในเหล็กจริง (Steel Stress):}&\\
+\sigma_s &= n \left(\frac{M y_s}{I_T}\right) = 10 \times \left(\frac{(20 \times 10^6)(160 - 107)}{49,420,512}\right) = 214.5\text{ MPa}
+\end{aligned}$$
+        </div>
+      </div>
+
+      <!-- First Principles & Trap Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-sm">
+        <div class="p-3.5 bg-blue-50/70 dark:bg-blue-950/30 rounded-xl border border-blue-200 dark:border-blue-900/40">
+          <div class="font-bold text-blue-900 dark:text-blue-300 mb-1 flex items-center gap-1">
+            <i class="fa-regular fa-lightbulb text-amber-500"></i> มโนทัศน์ & เหตุผลทางฟิสิกส์ (First Principles)
+          </div>
+          <p class="text-slate-700 dark:text-slate-300 text-xs leading-relaxed">
+            ความเครียด (Strain) ที่ระนาบรอยต่อต้องต่อเนื่องเท่ากัน ($\epsilon_w = \epsilon_s$) ดังนั้นเมื่อ $E_s > E_w$ หน่วยแรงในเหล็กจึงต้องสูงกว่าในไม้เป็นสัดส่วน $n$ เท่า ($\sigma_s = n \sigma_w$)
+          </p>
+        </div>
+        <div class="p-3.5 bg-rose-50/70 dark:bg-rose-950/30 rounded-xl border border-rose-200 dark:border-rose-900/40">
+          <div class="font-bold text-rose-900 dark:text-rose-300 mb-1 flex items-center gap-1">
+            <i class="fa-solid fa-triangle-exclamation text-rose-500"></i> จุดดักคะแนนในห้องสอบ (Exam Trap Alert)
+          </div>
+          <p class="text-slate-700 dark:text-slate-300 text-xs leading-relaxed">
+            ⚠️ กฎเหล็ก: ขยายเฉพาะความกว้าง $b' = nb$ เท่านั้น **ห้ามเปลี่ยนความสูง $h$** เด็ดขาด และเมื่อคำนวณหน่วยแรงในเหล็กต้อง **คูณ $n$ กลับเสมอ**
+          </p>
+        </div>
+      </div>
+
+      <!-- Scanned Images Accordion -->
+      
+    <div class="mt-4 pt-4 border-t border-slate-200 dark:border-slate-700">
+      <button onclick="toggleScannedImages('prob-07')" class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs font-semibold flex items-center gap-1.5 transition">
+        <i class="fa-solid fa-image text-amber-500"></i>
+        <span>ดูรูปต้นฉบับลายมือชีท Solid Ja E Here (2 หน้า)</span>
+        <i class="fa-solid fa-chevron-down text-[10px] ml-1" id="chevron-prob-07"></i>
+      </button>
+      <div id="images-prob-07" class="hidden mt-3 grid grid-cols-1 md:grid-cols-2 gap-3 p-3 bg-slate-50 dark:bg-slate-900/60 rounded-xl border border-slate-200 dark:border-slate-700">
+        
+        <div class="scanned-page-box">
+          <div class="text-xs text-slate-500 font-mono mb-1"><i class="fa-solid fa-file-image mr-1"></i> ต้นฉบับชีท: page_12.png</div>
+          <a href="assets/pages/page_12.png" target="_blank" rel="noopener noreferrer" title="คลิกเพื่อดูภาพขนาดเต็ม">
+            <img src="assets/pages/page_12.png" alt="ต้นฉบับ ข้อที่ 7" class="rounded-lg border border-slate-300 dark:border-slate-700 shadow-sm hover:shadow-md transition max-h-96 object-contain bg-white">
+          </a>
+        </div>
+        
+        <div class="scanned-page-box">
+          <div class="text-xs text-slate-500 font-mono mb-1"><i class="fa-solid fa-file-image mr-1"></i> ต้นฉบับชีท: page_13.png</div>
+          <a href="assets/pages/page_13.png" target="_blank" rel="noopener noreferrer" title="คลิกเพื่อดูภาพขนาดเต็ม">
+            <img src="assets/pages/page_13.png" alt="ต้นฉบับ ข้อที่ 7" class="rounded-lg border border-slate-300 dark:border-slate-700 shadow-sm hover:shadow-md transition max-h-96 object-contain bg-white">
+          </a>
+        </div>
+        
+      </div>
+    </div>
+    
+    </div>
+    
+    <div class="solid-prob-card bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm mb-6" id="prob-08">
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+        <div class="flex items-center gap-2">
+          <span class="px-3 py-1 rounded-full bg-rose-100 dark:bg-rose-950/80 text-rose-700 dark:text-rose-300 text-xs font-bold font-mono">
+            ข้อที่ 8
+          </span>
+          <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white font-heading">
+            แรงเฉือนตามขวางและการกระโดดของหน่วยแรงเฉือน (Transverse Shear $\tau = VQ/It$)
+          </h3>
+        </div>
+        <span class="text-xs text-slate-500 dark:text-slate-400 font-mono">
+          <i class="fa-regular fa-bookmark mr-1 text-sky-500"></i> ชีทหน้า 14, 15
+        </span>
+      </div>
+
+      <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+        การคำนวณ First Moment of Area $Q = A'\bar{y}'$ ที่รอยต่อ Flange-Web และที่แกนสะเทิน NA เพื่อดูการกระจายของ $\tau$
+      </p>
+
+      <!-- Given Box -->
+      <div class="formula-box mb-4 text-xs sm:text-sm">
+        <div class="font-bold text-sky-800 dark:text-sky-300 mb-1 flex items-center gap-1.5">
+          <i class="fa-solid fa-clipboard-list"></i> ข้อมูลที่โจทย์กำหนด (Given Parameters & Geometry)
+        </div>
+        <div class="text-slate-700 dark:text-slate-300 font-sans whitespace-pre-line">
+          - คานหน้าตัดปีกกว้าง รับแรงเฉือน $V = 120\text{ kN} = 120,000\text{ N}$
+- ปีกบน: กว้าง $b_f = 160\text{ mm}$, หนา $t_f = 20\text{ mm}$
+- เอว: หนา $t_w = 10\text{ mm}$, ความสูงรวม $h = 240\text{ mm}$
+- โมเมนต์ความเฉื่อยรวม $I = 63.2 \times 10^6\text{ mm}^4$
+        </div>
+      </div>
+
+      <!-- Step-by-Step LaTeX Solution -->
+      <div class="step-box mb-4 overflow-x-auto text-xs sm:text-sm">
+        <div class="font-bold text-emerald-800 dark:text-emerald-300 mb-2 flex items-center gap-1.5">
+          <i class="fa-solid fa-square-root-variable"></i> ขั้นตอนการพิสูจน์และคำนวณละเอียด (Step-by-Step LaTeX Solution)
+        </div>
+        <div class="text-slate-800 dark:text-slate-100 font-mono">
+          $$\begin{aligned}
+1.\text{ คำนวณ } Q \text{ ที่รอยต่อระหว่างปีกกับเอว (Flange-Web Junction):}&\\
+Q_{\text{junc}} &= A_f' \cdot \bar{y}_f' = (160 \times 20)(110) = 352,000\text{ mm}^3\\
+\\
+2.\text{ คำนวณหน่วยแรงเฉือนในปีก (Flange side, } t = 160\text{ mm):}&\\
+\tau_{\text{flange}} &= \frac{V Q}{I t_f} = \frac{(120,000)(352,000)}{(63.2 \times 10^6)(160)} = 4.18\text{ MPa}\\
+\\
+3.\text{ คำนวณหน่วยแรงเฉือนในเอว (Web side, } t = 10\text{ mm):}&\\
+\tau_{\text{web}} &= \frac{V Q}{I t_w} = \frac{(120,000)(352,000)}{(63.2 \times 10^6)(10)} = 66.83\text{ MPa}\\
+\text{ข้อสังเกต: } &\tau \text{ กระโดดขึ้นเป็นสัดส่วน } \frac{t_f}{t_w} = \frac{160}{10} = 16\text{ เท่า!}\\
+\\
+4.\text{ คำนวณหน่วยแรงเฉือนสูงสุดที่แกนสะเทิน NA ( } Q_{\max} \text{ ):}&\\
+Q_{\text{NA}} &= Q_{\text{junc}} + A_{\text{web half}} \bar{y} = 352,000 + (10 \times 100)(50) = 402,000\text{ mm}^3\\
+\tau_{\max} &= \frac{V Q_{\text{NA}}}{I t_w} = \frac{(120,000)(402,000)}{(63.2 \times 10^6)(10)} = 76.33\text{ MPa}
+\end{aligned}$$
+        </div>
+      </div>
+
+      <!-- First Principles & Trap Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-sm">
+        <div class="p-3.5 bg-blue-50/70 dark:bg-blue-950/30 rounded-xl border border-blue-200 dark:border-blue-900/40">
+          <div class="font-bold text-blue-900 dark:text-blue-300 mb-1 flex items-center gap-1">
+            <i class="fa-regular fa-lightbulb text-amber-500"></i> มโนทัศน์ & เหตุผลทางฟิสิกส์ (First Principles)
+          </div>
+          <p class="text-slate-700 dark:text-slate-300 text-xs leading-relaxed">
+            แรงเฉือนในคานเกือบทั้งหมด (กว่า 90-95%) จะถูกรับโดยส่วนเอว (Web) เนื่องจากหน่วยแรงเฉือนแปรผกผันกับความหนาแนวตัด $t$ เมื่อตัดผ่านเอวที่บางกว่า ค่า $\tau$ จึงพุ่งสูงขึ้นทันที
+          </p>
+        </div>
+        <div class="p-3.5 bg-rose-50/70 dark:bg-rose-950/30 rounded-xl border border-rose-200 dark:border-rose-900/40">
+          <div class="font-bold text-rose-900 dark:text-rose-300 mb-1 flex items-center gap-1">
+            <i class="fa-solid fa-triangle-exclamation text-rose-500"></i> จุดดักคะแนนในห้องสอบ (Exam Trap Alert)
+          </div>
+          <p class="text-slate-700 dark:text-slate-300 text-xs leading-relaxed">
+            ⚠️ การหาพื้นที่ $A'$ ต้องตัดระนาบขนานกับแกน NA และคิดพื้นที่ส่วนที่อยู่เหนือรอยตัดขึ้นไปถึงขอบนอกสุด ห้ามแรเงาข้ามแกนสะเทินเด็ดขาด
+          </p>
+        </div>
+      </div>
+
+      <!-- Scanned Images Accordion -->
+      
+    <div class="mt-4 pt-4 border-t border-slate-200 dark:border-slate-700">
+      <button onclick="toggleScannedImages('prob-08')" class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs font-semibold flex items-center gap-1.5 transition">
+        <i class="fa-solid fa-image text-amber-500"></i>
+        <span>ดูรูปต้นฉบับลายมือชีท Solid Ja E Here (2 หน้า)</span>
+        <i class="fa-solid fa-chevron-down text-[10px] ml-1" id="chevron-prob-08"></i>
+      </button>
+      <div id="images-prob-08" class="hidden mt-3 grid grid-cols-1 md:grid-cols-2 gap-3 p-3 bg-slate-50 dark:bg-slate-900/60 rounded-xl border border-slate-200 dark:border-slate-700">
+        
+        <div class="scanned-page-box">
+          <div class="text-xs text-slate-500 font-mono mb-1"><i class="fa-solid fa-file-image mr-1"></i> ต้นฉบับชีท: page_14.png</div>
+          <a href="assets/pages/page_14.png" target="_blank" rel="noopener noreferrer" title="คลิกเพื่อดูภาพขนาดเต็ม">
+            <img src="assets/pages/page_14.png" alt="ต้นฉบับ ข้อที่ 8" class="rounded-lg border border-slate-300 dark:border-slate-700 shadow-sm hover:shadow-md transition max-h-96 object-contain bg-white">
+          </a>
+        </div>
+        
+        <div class="scanned-page-box">
+          <div class="text-xs text-slate-500 font-mono mb-1"><i class="fa-solid fa-file-image mr-1"></i> ต้นฉบับชีท: page_15.png</div>
+          <a href="assets/pages/page_15.png" target="_blank" rel="noopener noreferrer" title="คลิกเพื่อดูภาพขนาดเต็ม">
+            <img src="assets/pages/page_15.png" alt="ต้นฉบับ ข้อที่ 8" class="rounded-lg border border-slate-300 dark:border-slate-700 shadow-sm hover:shadow-md transition max-h-96 object-contain bg-white">
+          </a>
+        </div>
+        
+      </div>
+    </div>
+    
+    </div>
+    
+    <div class="solid-prob-card bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm mb-6" id="prob-09">
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+        <div class="flex items-center gap-2">
+          <span class="px-3 py-1 rounded-full bg-rose-100 dark:bg-rose-950/80 text-rose-700 dark:text-rose-300 text-xs font-bold font-mono">
+            ข้อที่ 9
+          </span>
+          <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white font-heading">
+            การเฉือนไหลและระยะห่างของตะปูยึดแผ่นไม้ (Shear Flow & Nail Pitch)
+          </h3>
+        </div>
+        <span class="text-xs text-slate-500 dark:text-slate-400 font-mono">
+          <i class="fa-regular fa-bookmark mr-1 text-sky-500"></i> ชีทหน้า 16
+        </span>
+      </div>
+
+      <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+        การหาแรงเฉือนไหล $q = VQ/I$ ตามแนวแกนคาน และคำนวณระยะห่างตะปู $s \le m F_{\text{allow}} / q$ พร้อมการปัดเศษลงเพื่อความปลอดภัย
+      </p>
+
+      <!-- Given Box -->
+      <div class="formula-box mb-4 text-xs sm:text-sm">
+        <div class="font-bold text-sky-800 dark:text-sky-300 mb-1 flex items-center gap-1.5">
+          <i class="fa-solid fa-clipboard-list"></i> ข้อมูลที่โจทย์กำหนด (Given Parameters & Geometry)
+        </div>
+        <div class="text-slate-700 dark:text-slate-300 font-sans whitespace-pre-line">
+          - คานไม้ประกอบยึดด้วยตะปู รับแรงเฉือน $V = 1000\text{ N}$ (ช่วง AB) และ $300\text{ N}$ (ช่วง BC)
+- โมเมนต์ความเฉื่อย $I = 189.44 \times 10^6\text{ mm}^4$
+- แผ่นไม้ปีกบนขนาด $100 \times 40\text{ mm}$, ระยะจาก NA ถึงเซนทรอยด์แผ่นไม้ $\bar{y}' = 100\text{ mm}$
+- แรงที่ตะปู 1 ตัวรับได้ $F_{\text{nail}} = 100\text{ N}$, ตะปูตอก 2 แถว ($m = 2$)
+        </div>
+      </div>
+
+      <!-- Step-by-Step LaTeX Solution -->
+      <div class="step-box mb-4 overflow-x-auto text-xs sm:text-sm">
+        <div class="font-bold text-emerald-800 dark:text-emerald-300 mb-2 flex items-center gap-1.5">
+          <i class="fa-solid fa-square-root-variable"></i> ขั้นตอนการพิสูจน์และคำนวณละเอียด (Step-by-Step LaTeX Solution)
+        </div>
+        <div class="text-slate-800 dark:text-slate-100 font-mono">
+          $$\begin{aligned}
+1.\text{ คำนวณ First Moment } Q \text{ ของแผ่นไม้ที่ต้องการยึด:}&\\
+Q &= A' \bar{y}' = (100 \times 40)(100) = 400,000\text{ mm}^3\\
+\\
+2.\text{ คำนวณแรงเฉือนไหล } q \text{ ในช่วง AB ( } V = 1000\text{ N}):&\\
+q_{AB} &= \frac{V_{AB} Q}{I} = \frac{(1000)(400,000)}{189.44 \times 10^6} = 2.112\text{ N/mm}\\
+\\
+3.\text{ หาระยะห่างตะปูสูงสุดในช่วง AB:}&\\
+s_{AB} &\le \frac{m F_{\text{nail}}}{q_{AB}} = \frac{2 \times 100\text{ N}}{2.112\text{ N/mm}} = 94.7\text{ mm} \implies \text{เลือกใช้ } s \le 90\text{ mm}\\
+\\
+4.\text{ คำนวณแรงเฉือนไหล } q \text{ ในช่วง BC ( } V = 300\text{ N}):&\\
+q_{BC} &= \frac{V_{BC} Q}{I} = \frac{(300)(400,000)}{189.44 \times 10^6} = 0.633\text{ N/mm}\\
+\\
+5.\text{ หาระยะห่างตะปูสูงสุดในช่วง BC:}&\\
+s_{BC} &\le \frac{m F_{\text{nail}}}{q_{BC}} = \frac{2 \times 100\text{ N}}{0.633\text{ N/mm}} = 315.9\text{ mm} \implies \text{เลือกใช้ } s \le 300\text{ mm}
+\end{aligned}$$
+        </div>
+      </div>
+
+      <!-- First Principles & Trap Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-sm">
+        <div class="p-3.5 bg-blue-50/70 dark:bg-blue-950/30 rounded-xl border border-blue-200 dark:border-blue-900/40">
+          <div class="font-bold text-blue-900 dark:text-blue-300 mb-1 flex items-center gap-1">
+            <i class="fa-regular fa-lightbulb text-amber-500"></i> มโนทัศน์ & เหตุผลทางฟิสิกส์ (First Principles)
+          </div>
+          <p class="text-slate-700 dark:text-slate-300 text-xs leading-relaxed">
+            Shear flow ($q$) คือแรงเฉือนต่อความยาวตามแนวแกนคาน ตะปูแต่ละตัวจะมีแรงต้านทาน $F_{\text{allow}}$ ดังนั้นช่วงที่มีระยะห่าง $s$ จะต้องรับแรง $q \cdot s \le m F_{\text{allow}}$
+          </p>
+        </div>
+        <div class="p-3.5 bg-rose-50/70 dark:bg-rose-950/30 rounded-xl border border-rose-200 dark:border-rose-900/40">
+          <div class="font-bold text-rose-900 dark:text-rose-300 mb-1 flex items-center gap-1">
+            <i class="fa-solid fa-triangle-exclamation text-rose-500"></i> จุดดักคะแนนในห้องสอบ (Exam Trap Alert)
+          </div>
+          <p class="text-slate-700 dark:text-slate-300 text-xs leading-relaxed">
+            ⚠️ กฎเหล็กทางวิศวกรรม: ระยะห่างตะปูคำนวณได้เท่าใด **ต้องปัดเศษลง (Round Down) เสมอ** เช่น $94.7\text{ mm}$ ต้องปัดลงเป็น $90\text{ mm}$ หรือ $94\text{ mm}$ ห้ามปัดขึ้นเป็น $95$ หรือ $100$ เพราะจะทำให้ตะปูรับแรงเกินพิกัด!
+          </p>
+        </div>
+      </div>
+
+      <!-- Scanned Images Accordion -->
+      
+    <div class="mt-4 pt-4 border-t border-slate-200 dark:border-slate-700">
+      <button onclick="toggleScannedImages('prob-09')" class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs font-semibold flex items-center gap-1.5 transition">
+        <i class="fa-solid fa-image text-amber-500"></i>
+        <span>ดูรูปต้นฉบับลายมือชีท Solid Ja E Here (1 หน้า)</span>
+        <i class="fa-solid fa-chevron-down text-[10px] ml-1" id="chevron-prob-09"></i>
+      </button>
+      <div id="images-prob-09" class="hidden mt-3 grid grid-cols-1 md:grid-cols-2 gap-3 p-3 bg-slate-50 dark:bg-slate-900/60 rounded-xl border border-slate-200 dark:border-slate-700">
+        
+        <div class="scanned-page-box">
+          <div class="text-xs text-slate-500 font-mono mb-1"><i class="fa-solid fa-file-image mr-1"></i> ต้นฉบับชีท: page_16.png</div>
+          <a href="assets/pages/page_16.png" target="_blank" rel="noopener noreferrer" title="คลิกเพื่อดูภาพขนาดเต็ม">
+            <img src="assets/pages/page_16.png" alt="ต้นฉบับ ข้อที่ 9" class="rounded-lg border border-slate-300 dark:border-slate-700 shadow-sm hover:shadow-md transition max-h-96 object-contain bg-white">
+          </a>
+        </div>
+        
+      </div>
+    </div>
+    
+    </div>
+    
+    <div class="solid-prob-card bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-sm mb-6" id="prob-10">
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+        <div class="flex items-center gap-2">
+          <span class="px-3 py-1 rounded-full bg-rose-100 dark:bg-rose-950/80 text-rose-700 dark:text-rose-300 text-xs font-bold font-mono">
+            ข้อที่ 10
+          </span>
+          <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white font-heading">
+            การโก่งเดาะของเสาอุดมคติและการตรวจสอบ 2 ระนาบ (Euler Buckling in 2 Planes)
+          </h3>
+        </div>
+        <span class="text-xs text-slate-500 dark:text-slate-400 font-mono">
+          <i class="fa-regular fa-bookmark mr-1 text-sky-500"></i> ชีทหน้า 17, 18, 19, 20, 21
+        </span>
+      </div>
+
+      <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
+        การตรวจสอบการโก่งเดาะของเสาเหล็กหน้าตัดรูปตัว T หรือ I ในระนาบแกน x และ y ภายใต้จุดรองรับแบบต่างๆ (Pin-Pin, Fix-Fix, Fix-Pin, Fix-Free) หาค่าวิกฤต $P_{cr}$
+      </p>
+
+      <!-- Given Box -->
+      <div class="formula-box mb-4 text-xs sm:text-sm">
+        <div class="font-bold text-sky-800 dark:text-sky-300 mb-1 flex items-center gap-1.5">
+          <i class="fa-solid fa-clipboard-list"></i> ข้อมูลที่โจทย์กำหนด (Given Parameters & Geometry)
+        </div>
+        <div class="text-slate-700 dark:text-slate-300 font-sans whitespace-pre-line">
+          - เสาเหล็กความยาว $L = 3\text{ m}$, $E = 200\text{ GPa}$, $\sigma_y = 250\text{ MPa}$
+- หน้าตัด: พื้นที่ $A = 21,800\text{ mm}^2$, $I_x = 366 \times 10^6\text{ mm}^4$, $I_y = 88 \times 10^6\text{ mm}^4$
+- รัศมีไจเรชัน: $r_x = \sqrt{I_x/A} = 129.6\text{ mm}$, $r_y = \sqrt{I_y/A} = 63.5\text{ mm}$
+- อัตราส่วนความชะลูดวิกฤต: $\left(\frac{KL}{r}\right)_c = \sqrt{\frac{2\pi^2 E}{\sigma_y}} = \sqrt{\frac{2\pi^2 (200 \times 10^3)}{250}} = 125.66$
+        </div>
+      </div>
+
+      <!-- Step-by-Step LaTeX Solution -->
+      <div class="step-box mb-4 overflow-x-auto text-xs sm:text-sm">
+        <div class="font-bold text-emerald-800 dark:text-emerald-300 mb-2 flex items-center gap-1.5">
+          <i class="fa-solid fa-square-root-variable"></i> ขั้นตอนการพิสูจน์และคำนวณละเอียด (Step-by-Step LaTeX Solution)
+        </div>
+        <div class="text-slate-800 dark:text-slate-100 font-mono">
+          $$\begin{aligned}
+1.\text{ กรณีจุดรองรับแบบ Pin-Pin ทั้งสองด้าน ( } K = 1.0 \text{ ):}&\\
+\left(\frac{KL}{r}\right)_x &= \frac{(1.0)(3000)}{129.6} = 23.15\\
+\left(\frac{KL}{r}\right)_y &= \frac{(1.0)(3000)}{63.5} = 47.24 \quad (\text{แกน } y \text{ ชะลูดกว่า ควบคุมการเดาะ})\\
+\text{เนื่องจาก } &\left(\frac{KL}{r}\right)_y < 125.66 \implies \text{เกิดการคราก (Yielding) ก่อนโก่งเดาะออยเลอร์}\\
+P_{\text{fail}} &= \sigma_y \cdot A = (250\text{ MPa})(21,800\text{ mm}^2) = 5,450\text{ kN}\\
+\\
+2.\text{ กรณีจุดรองรับแบบ Fix-Free เสายื่น ( } K = 2.0 \text{ ):}&\\
+\left(\frac{KL}{r}\right)_y &= \frac{(2.0)(3000)}{63.5} = 94.49\\
+P_{cr, y} &= \frac{\pi^2 E I_y}{(KL)^2} = \frac{\pi^2 (200 \times 10^3)(88 \times 10^6)}{(2.0 \times 3000)^2} = 4,824.7\text{ kN}\\
+\\
+3.\text{ กรณีมีค้ำยันแกนอ่อน (Braced in weak y-axis at mid-height):}&\\
+L_x &= 3.0\text{ m}, \quad L_y = 1.5\text{ m}\\
+\left(\frac{KL}{r}\right)_x &= \frac{1.0 \times 3000}{129.6} = 23.15\\
+\left(\frac{KL}{r}\right)_y &= \frac{1.0 \times 1500}{63.5} = 23.62 \approx \text{เท่ากันทั้งสองแกนอย่างสมดุล!}
+\end{aligned}$$
+        </div>
+      </div>
+
+      <!-- First Principles & Trap Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-sm">
+        <div class="p-3.5 bg-blue-50/70 dark:bg-blue-950/30 rounded-xl border border-blue-200 dark:border-blue-900/40">
+          <div class="font-bold text-blue-900 dark:text-blue-300 mb-1 flex items-center gap-1">
+            <i class="fa-regular fa-lightbulb text-amber-500"></i> มโนทัศน์ & เหตุผลทางฟิสิกส์ (First Principles)
+          </div>
+          <p class="text-slate-700 dark:text-slate-300 text-xs leading-relaxed">
+            เสาจะโก่งเดาะรอบแกนที่มีความต้านทานต่ำสุดเสมอ (แกนที่มีค่า $\frac{KL}{r}$ สูงสุด หรือค่า $I$ ต่ำสุด) การเพิ่มค้ำยันด้านข้างในแนวแกนอ่อนจะช่วยเพิ่มกำลังรับน้ำหนักของเสาได้อย่างมหาศาลโดยไม่ต้องเพิ่มขนาดหน้าตัด
+          </p>
+        </div>
+        <div class="p-3.5 bg-rose-50/70 dark:bg-rose-950/30 rounded-xl border border-rose-200 dark:border-rose-900/40">
+          <div class="font-bold text-rose-900 dark:text-rose-300 mb-1 flex items-center gap-1">
+            <i class="fa-solid fa-triangle-exclamation text-rose-500"></i> จุดดักคะแนนในห้องสอบ (Exam Trap Alert)
+          </div>
+          <p class="text-slate-700 dark:text-slate-300 text-xs leading-relaxed">
+            ⚠️ ต้องตรวจสอบทั้งแกน $x$ และแกน $y$ เสมอ! ห้ามคิดเฉพาะแกน $x$ เพราะแกน $y$ มักมีค่า $I_y$ น้อยกว่า และระวังเรื่องเงื่อนไขค้ำยันด้านข้างที่ทำให้ความยาวประสิทธิผล $L_x \ne L_y$
+          </p>
+        </div>
+      </div>
+
+      <!-- Scanned Images Accordion -->
+      
+    <div class="mt-4 pt-4 border-t border-slate-200 dark:border-slate-700">
+      <button onclick="toggleScannedImages('prob-10')" class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs font-semibold flex items-center gap-1.5 transition">
+        <i class="fa-solid fa-image text-amber-500"></i>
+        <span>ดูรูปต้นฉบับลายมือชีท Solid Ja E Here (5 หน้า)</span>
+        <i class="fa-solid fa-chevron-down text-[10px] ml-1" id="chevron-prob-10"></i>
+      </button>
+      <div id="images-prob-10" class="hidden mt-3 grid grid-cols-1 md:grid-cols-2 gap-3 p-3 bg-slate-50 dark:bg-slate-900/60 rounded-xl border border-slate-200 dark:border-slate-700">
+        
+        <div class="scanned-page-box">
+          <div class="text-xs text-slate-500 font-mono mb-1"><i class="fa-solid fa-file-image mr-1"></i> ต้นฉบับชีท: page_17.png</div>
+          <a href="assets/pages/page_17.png" target="_blank" rel="noopener noreferrer" title="คลิกเพื่อดูภาพขนาดเต็ม">
+            <img src="assets/pages/page_17.png" alt="ต้นฉบับ ข้อที่ 10" class="rounded-lg border border-slate-300 dark:border-slate-700 shadow-sm hover:shadow-md transition max-h-96 object-contain bg-white">
+          </a>
+        </div>
+        
+        <div class="scanned-page-box">
+          <div class="text-xs text-slate-500 font-mono mb-1"><i class="fa-solid fa-file-image mr-1"></i> ต้นฉบับชีท: page_18.png</div>
+          <a href="assets/pages/page_18.png" target="_blank" rel="noopener noreferrer" title="คลิกเพื่อดูภาพขนาดเต็ม">
+            <img src="assets/pages/page_18.png" alt="ต้นฉบับ ข้อที่ 10" class="rounded-lg border border-slate-300 dark:border-slate-700 shadow-sm hover:shadow-md transition max-h-96 object-contain bg-white">
+          </a>
+        </div>
+        
+        <div class="scanned-page-box">
+          <div class="text-xs text-slate-500 font-mono mb-1"><i class="fa-solid fa-file-image mr-1"></i> ต้นฉบับชีท: page_19.png</div>
+          <a href="assets/pages/page_19.png" target="_blank" rel="noopener noreferrer" title="คลิกเพื่อดูภาพขนาดเต็ม">
+            <img src="assets/pages/page_19.png" alt="ต้นฉบับ ข้อที่ 10" class="rounded-lg border border-slate-300 dark:border-slate-700 shadow-sm hover:shadow-md transition max-h-96 object-contain bg-white">
+          </a>
+        </div>
+        
+        <div class="scanned-page-box">
+          <div class="text-xs text-slate-500 font-mono mb-1"><i class="fa-solid fa-file-image mr-1"></i> ต้นฉบับชีท: page_20.png</div>
+          <a href="assets/pages/page_20.png" target="_blank" rel="noopener noreferrer" title="คลิกเพื่อดูภาพขนาดเต็ม">
+            <img src="assets/pages/page_20.png" alt="ต้นฉบับ ข้อที่ 10" class="rounded-lg border border-slate-300 dark:border-slate-700 shadow-sm hover:shadow-md transition max-h-96 object-contain bg-white">
+          </a>
+        </div>
+        
+        <div class="scanned-page-box">
+          <div class="text-xs text-slate-500 font-mono mb-1"><i class="fa-solid fa-file-image mr-1"></i> ต้นฉบับชีท: page_21.png</div>
+          <a href="assets/pages/page_21.png" target="_blank" rel="noopener noreferrer" title="คลิกเพื่อดูภาพขนาดเต็ม">
+            <img src="assets/pages/page_21.png" alt="ต้นฉบับ ข้อที่ 10" class="rounded-lg border border-slate-300 dark:border-slate-700 shadow-sm hover:shadow-md transition max-h-96 object-contain bg-white">
+          </a>
+        </div>
+        
+      </div>
+    </div>
+    
+    </div>
+    
+  </div>
+</section>
+
+
+
+<!-- Study Plan Section -->
+<section id="study-plan" class="topic-section card" data-category="study-plan">
+  <div class="section-badge-header">
+    <span class="sec-pill" style="background:#d97706;color:#fff;"><i class="fa-solid fa-calendar-check mr-1"></i> Study Strategy</span>
+    <span class="sec-sub">แผนการอ่านหนังสือและการเตรียมตัวสอบปลายภาค</span>
+  </div>
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mt-2 mb-4">
+    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+      <i class="fa-solid fa-calendar-days text-amber-500"></i> แผนการอ่านหนังสือและพิชิตข้อสอบปลายภาค (Study Roadmap)
+    </h2>
+    <div class="flex items-center gap-1.5">
+      <button class="plan-tab-btn active" onclick="switchPlanTab('plan-7days')">แผนเร่งรัด 7 วัน (Sprint)</button>
+      <button class="plan-tab-btn" onclick="switchPlanTab('plan-14days')">แผนเจาะลึก 14 วัน (Mastery)</button>
+    </div>
+  </div>
+  <p class="text-slate-600 dark:text-slate-300 text-sm mb-6">
+    ตารางอ่านหนังสือที่ออกแบบตามน้ำหนักคะแนนข้อสอบจริง แบ่งเป้าหมายรายวัน คลิปเรียนที่ต้องดู และโจทย์ที่ต้องฝึกทำ
+  </p>
+
+  <!-- 7 Days Sprint Plan -->
+  <div id="plan-7days" class="plan-panel">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      
+      <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-center mb-2">
+            <span class="px-2 py-0.5 rounded bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300 text-xs font-bold">DAY 1</span>
+            <span class="text-xs text-slate-400">2.5 ชม.</span>
+          </div>
+          <h4 class="font-bold text-slate-800 dark:text-slate-100 text-sm mb-1">ปูพื้นฐาน Inertia & การบิดพื้นฐาน</h4>
+          <p class="text-xs text-slate-600 dark:text-slate-400 mb-3">ทบทวนการหาแกนสะเทิน NA, โมเมนต์ความเฉื่อย $I$, ตัด FBD แรงบิดเพลา และอัตราทดฟันเฟือง</p>
+          <div class="text-xs space-y-1 text-slate-700 dark:text-slate-300">
+            <div>📺 คลิป: Centroid & Torsion (be-engineer & P'BIG)</div>
+            <div>✍️ ฝึกทำ: ข้อที่ 1 จาก Solid Ja E Here</div>
+          </div>
+        </div>
+        <div class="mt-3 pt-2 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+          <label class="text-xs flex items-center gap-1 cursor-pointer">
+            <input type="checkbox" class="plan-day-check" data-day="day1" onchange="toggleDayCheck('day1', this.checked)">
+            <span>สำเร็จภารกิจ</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-center mb-2">
+            <span class="px-2 py-0.5 rounded bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300 text-xs font-bold">DAY 2</span>
+            <span class="text-xs text-slate-400">3 ชม.</span>
+          </div>
+          <h4 class="font-bold text-slate-800 dark:text-slate-100 text-sm mb-1">การบิดขั้นสูง & เพลาสวมซ้อน</h4>
+          <p class="text-xs text-slate-600 dark:text-slate-400 mb-3">เพลายึดแน่นหัวท้าย (Indeterminate Torsion) และเพลาสองวัสดุสวมซ้อนกัน</p>
+          <div class="text-xs space-y-1 text-slate-700 dark:text-slate-300">
+            <div>📺 คลิป: บทที่ 5 การบิด Part 2/2 (อ.สิทธิชัย)</div>
+            <div>✍️ ฝึกทำ: ข้อที่ 2 และ ข้อที่ 3 จาก Solid Ja E Here</div>
+          </div>
+        </div>
+        <div class="mt-3 pt-2 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+          <label class="text-xs flex items-center gap-1 cursor-pointer">
+            <input type="checkbox" class="plan-day-check" data-day="day2" onchange="toggleDayCheck('day2', this.checked)">
+            <span>สำเร็จภารกิจ</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-center mb-2">
+            <span class="px-2 py-0.5 rounded bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300 text-xs font-bold">DAY 3</span>
+            <span class="text-xs text-slate-400">3 ชม.</span>
+          </div>
+          <h4 class="font-bold text-slate-800 dark:text-slate-100 text-sm mb-1">ความเค้นดัด & คานหน้าตัดผสม</h4>
+          <p class="text-xs text-slate-600 dark:text-slate-400 mb-3">สูตรการดัด $\sigma = My/I$, การแปลงหน้าตัดไม้ประกบเหล็ก $b' = nb$</p>
+          <div class="text-xs space-y-1 text-slate-700 dark:text-slate-300">
+            <div>📺 คลิป: Bending Stress (be-engineer) & Transformed Section (อ.ไพโรจน์)</div>
+            <div>✍️ ฝึกทำ: ข้อที่ 5 และ ข้อที่ 7 จาก Solid Ja E Here</div>
+          </div>
+        </div>
+        <div class="mt-3 pt-2 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+          <label class="text-xs flex items-center gap-1 cursor-pointer">
+            <input type="checkbox" class="plan-day-check" data-day="day3" onchange="toggleDayCheck('day3', this.checked)">
+            <span>สำเร็จภารกิจ</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-center mb-2">
+            <span class="px-2 py-0.5 rounded bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300 text-xs font-bold">DAY 4</span>
+            <span class="text-xs text-slate-400">3 ชม.</span>
+          </div>
+          <h4 class="font-bold text-slate-800 dark:text-slate-100 text-sm mb-1">การแอ่นตัวของคาน (Deflection)</h4>
+          <p class="text-xs text-slate-600 dark:text-slate-400 mb-3">วิธีอินทิเกรตสองชั้น $EI v'' = M(x)$ และวิธีพื้นที่โมเมนต์ Moment-Area</p>
+          <div class="text-xs space-y-1 text-slate-700 dark:text-slate-300">
+            <div>📺 คลิป: Double Integration By P'BIG & Deflection (อ.ไพโรจน์)</div>
+            <div>✍️ ฝึกทำ: ข้อที่ 6 จาก Solid Ja E Here</div>
+          </div>
+        </div>
+        <div class="mt-3 pt-2 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+          <label class="text-xs flex items-center gap-1 cursor-pointer">
+            <input type="checkbox" class="plan-day-check" data-day="day4" onchange="toggleDayCheck('day4', this.checked)">
+            <span>สำเร็จภารกิจ</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-center mb-2">
+            <span class="px-2 py-0.5 rounded bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300 text-xs font-bold">DAY 5</span>
+            <span class="text-xs text-slate-400">3 ชม.</span>
+          </div>
+          <h4 class="font-bold text-slate-800 dark:text-slate-100 text-sm mb-1">แรงเฉือนตามขวาง & ระยะห่างตะปู</h4>
+          <p class="text-xs text-slate-600 dark:text-slate-400 mb-3">สูตร $	au = VQ/It$ การกระโดดของหน่วยแรง และการหา Shear Flow $q = VQ/I, s \le mF/q$</p>
+          <div class="text-xs space-y-1 text-slate-700 dark:text-slate-300">
+            <div>📺 คลิป: Shear Flow & Shear Center (P'BIG & อ.สิทธิชัย)</div>
+            <div>✍️ ฝึกทำ: ข้อที่ 8 และ ข้อที่ 9 จาก Solid Ja E Here</div>
+          </div>
+        </div>
+        <div class="mt-3 pt-2 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+          <label class="text-xs flex items-center gap-1 cursor-pointer">
+            <input type="checkbox" class="plan-day-check" data-day="day5" onchange="toggleDayCheck('day5', this.checked)">
+            <span>สำเร็จภารกิจ</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-center mb-2">
+            <span class="px-2 py-0.5 rounded bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300 text-xs font-bold">DAY 6</span>
+            <span class="text-xs text-slate-400">3 ชม.</span>
+          </div>
+          <h4 class="font-bold text-slate-800 dark:text-slate-100 text-sm mb-1">เสาโก่งเดาะออยเลอร์ & วงกลมมอร์</h4>
+          <p class="text-xs text-slate-600 dark:text-slate-400 mb-3">สูตร Euler Buckling เช็ก 2 ระนาบแกน $x, y$ และทบทวน Combined Stress</p>
+          <div class="text-xs space-y-1 text-slate-700 dark:text-slate-300">
+            <div>📺 คลิป: Buckling of Column (อ.ไพโรจน์) & Mohr's Circle (be-engineer)</div>
+            <div>✍️ ฝึกทำ: ข้อที่ 10 จาก Solid Ja E Here</div>
+          </div>
+        </div>
+        <div class="mt-3 pt-2 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+          <label class="text-xs flex items-center gap-1 cursor-pointer">
+            <input type="checkbox" class="plan-day-check" data-day="day6" onchange="toggleDayCheck('day6', this.checked)">
+            <span>สำเร็จภารกิจ</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="p-4 rounded-xl bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950/40 dark:to-orange-950/40 border border-amber-300 dark:border-amber-800 flex flex-col justify-between md:col-span-2 lg:col-span-3">
+        <div>
+          <div class="flex justify-between items-center mb-2">
+            <span class="px-2.5 py-0.5 rounded bg-amber-500 text-white text-xs font-bold">DAY 7 (FINAL REVIEW)</span>
+            <span class="text-xs font-semibold text-amber-800 dark:text-amber-300">ซ้อมสอบเสมือนจริง 3 ชั่วโมง</span>
+          </div>
+          <h4 class="font-bold text-slate-900 dark:text-slate-100 text-base mb-1">🎯 ตะลุย Mock Exam ปลายภาคแบบปิดตำรา + สแกนจุดดักคะแนน</h4>
+          <p class="text-xs text-slate-700 dark:text-slate-300 mb-3 leading-relaxed">
+            เลือกโจทย์สุ่มจากทั้ง 10 ข้อในชีท Solid Ja E Here ทำแบบจับเวลาจริงข้อละ 25 นาที ตรวจเช็กเครื่องหมายดึง/อัด, มิติของหน่วย ($	ext{N, mm, MPa}$), และเขียนพิสูจน์ครบ 4 ขั้นตอน
+          </p>
+        </div>
+        <div class="mt-2 pt-2 border-t border-amber-200 dark:border-amber-900/60 flex items-center justify-between">
+          <label class="text-xs font-bold text-amber-900 dark:text-amber-200 flex items-center gap-1 cursor-pointer">
+            <input type="checkbox" class="plan-day-check" data-day="day7" onchange="toggleDayCheck('day7', this.checked)">
+            <span>พร้อมลุยห้องสอบ 100%!</span>
+          </label>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 14 Days Mastery Plan -->
+  <div id="plan-14days" class="plan-panel hidden">
+    <div class="p-4 bg-slate-50 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 text-xs sm:text-sm text-slate-700 dark:text-slate-300 space-y-2">
+      <div class="font-bold text-slate-900 dark:text-white text-sm mb-2"><i class="fa-solid fa-route text-amber-500 mr-1"></i> แผน 14 วัน แบบเรียนวันละ 1 คอนเซปต์ + สลับวันฝึกทำโจทย์:</div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <div class="p-2.5 bg-white dark:bg-slate-900 rounded-lg"><strong>Day 1-2:</strong> เซนทรอยด์ & โมเมนต์ความเฉื่อย $I$ (ทำโจทย์หน้าตัดไม่สมมาตร)</div>
+        <div class="p-2.5 bg-white dark:bg-slate-900 rounded-lg"><strong>Day 3-4:</strong> การบิดเพลากลมตัน & ระบบเฟืองทด (ฝึกตัด FBD และคิดมุมบิดสะสม)</div>
+        <div class="p-2.5 bg-white dark:bg-slate-900 rounded-lg"><strong>Day 5-6:</strong> อินดีเทอร์มิเนตการบิด & เพลาสวมซ้อน (ฝึกตั้งสมการ Compatibility $\phi=0$)</div>
+        <div class="p-2.5 bg-white dark:bg-slate-900 rounded-lg"><strong>Day 7-8:</strong> สูตรการดัด $\sigma = My/I$ และการดัดหน้าตัดผสม $b' = nb$</div>
+        <div class="p-2.5 bg-white dark:bg-slate-900 rounded-lg"><strong>Day 9-10:</strong> การแอ่นตัวของคาน (Double Integration & Moment-Area Method)</div>
+        <div class="p-2.5 bg-white dark:bg-slate-900 rounded-lg"><strong>Day 11-12:</strong> แรงเฉือน $	au = VQ/It$ และการเฉือนไหลตะปู $q = VQ/I, s \le mF/q$</div>
+        <div class="p-2.5 bg-white dark:bg-slate-900 rounded-lg"><strong>Day 13:</strong> การโก่งเดาะของเสาอุดมคติ Euler Buckling (ตรวจ 2 แกน $x, y$)</div>
+        <div class="p-2.5 bg-white dark:bg-slate-900 rounded-lg"><strong>Day 14:</strong> ความเค้นผสม 3 มิติ และวงกลมมอร์ (Full Comprehensive Review)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div id="contentSections">
       <section id="overview-map" class="topic-section" data-category="bonus">
 
     <div class="study-status-banner">
@@ -2456,6 +3792,48 @@
       computeBuckling();
       computeMohr();
     });
+  
+    // Toggle Scanned Images Accordion
+    function toggleScannedImages(probId) {
+      const container = document.getElementById('images-' + probId);
+      const chevron = document.getElementById('chevron-' + probId);
+      if (container) {
+        if (container.classList.contains('hidden')) {
+          container.classList.remove('hidden');
+          if (chevron) chevron.className = 'fa-solid fa-chevron-up text-[10px] ml-1';
+        } else {
+          container.classList.add('hidden');
+          if (chevron) chevron.className = 'fa-solid fa-chevron-down text-[10px] ml-1';
+        }
+      }
+    }
+
+    // Study Plan Tab Switcher
+    function switchPlanTab(planId) {
+      document.querySelectorAll('.plan-panel').forEach(p => p.classList.add('hidden'));
+      document.querySelectorAll('.plan-tab-btn').forEach(b => b.classList.remove('active'));
+      const target = document.getElementById(planId);
+      if (target) target.classList.remove('hidden');
+      if (event && event.currentTarget) event.currentTarget.classList.add('active');
+    }
+
+    // Daily Checkboxes Persistence
+    function toggleDayCheck(dayId, isChecked) {
+      localStorage.setItem('study_day_' + dayId, isChecked ? 'true' : 'false');
+    }
+
+    function initDayChecks() {
+      ['day1', 'day2', 'day3', 'day4', 'day5', 'day6', 'day7'].forEach(d => {
+        const isDone = localStorage.getItem('study_day_' + d) === 'true';
+        const checkbox = document.querySelector(`.plan-day-check[data-day="${d}"]`);
+        if (checkbox) checkbox.checked = isDone;
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initDayChecks();
+    });
+
   </script>
 </body>
 </html>
