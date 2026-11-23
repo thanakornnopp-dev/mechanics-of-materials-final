@@ -222,3 +222,13 @@ body.practice .pracnote{display:block}
 .quiz-expl{display:none;margin-top:12px;padding:12px 16px;font-size:14.5px;line-height:1.6;border:1.5px solid}
 .quiz-expl.pass{display:block;border-color:var(--green);background:rgba(46,125,50,0.08);color:var(--ink)}
 .quiz-expl.fail{display:block;border-color:var(--red);background:rgba(198,40,40,0.08);color:var(--ink)}
+
+/* Solid Ja E Here Custom Grid & Preview */
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px;margin:20px 0 32px}
+.sheet-preview{margin:32px 0 20px;padding:18px;border:1.5px solid var(--ink);background:var(--hover)}
+.sheet-preview h4{margin:0 0 12px;font-size:16.5px;color:var(--navy);font-weight:700;display:flex;align-items:center;gap:8px}
+.sheet-img-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.sheet-img-card{display:flex;flex-direction:column;gap:6px;background:var(--bg);padding:8px;border:1px solid var(--rule)}
+.sheet-img-card span{font-size:13.5px;color:var(--gray);font-weight:600;text-align:center}
+.sheet-img-card img{width:100%;height:auto;border:1px solid var(--rule);background:#ffffff;box-shadow:0 1px 4px rgba(0,0,0,0.05)}
+
