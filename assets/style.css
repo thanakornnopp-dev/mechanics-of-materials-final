@@ -1,5 +1,5 @@
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 18px/1.85 "Sarabun",system-ui,-apple-system,sans-serif}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.72 "IBM Plex Sans Thai","Noto Sans Thai","Inter",system-ui,-apple-system,sans-serif}
 main{max-width:800px;margin:0 auto;padding:40px 22px 90px}
 .kick{color:var(--gold);text-align:center;font-size:17px;margin:0;font-weight:500;letter-spacing:0.02em}
 h1{color:var(--navy);text-align:center;font-size:clamp(28px,5.5vw,40px);line-height:1.35;margin:18px 0 6px;font-weight:700}
@@ -27,7 +27,7 @@ hr{border:0;border-top:1.5px solid var(--rule);margin:32px 0 16px}
   text-align: left;
 }
 figure{margin:22px 0}
-figure svg{display:block;width:100%;height:auto;max-width:700px;margin:0 auto;font-family:"Sarabun",sans-serif}
+figure svg{display:block;width:100%;height:auto;max-width:700px;margin:0 auto;font-family:"IBM Plex Sans Thai","Noto Sans Thai","Inter",sans-serif}
 figcaption{text-align:center;font-size:15px;color:var(--gray);margin-top:6px}
 table{border-collapse:collapse;margin:14px auto;font-size:16.5px;max-width:100%}
 th,td{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:6px 14px;text-align:center}
@@ -107,7 +107,7 @@ caption{caption-side:top;font-size:15px;color:var(--gray);padding-bottom:6px;fon
 }
 .no{color:var(--red)}.ok{color:var(--green)}
 nav.toc .sp{flex:1}
-nav.toc button.th{position:sticky;right:0;flex:none;display:flex;align-items:center;gap:8px;padding:0 14px;min-height:44px;background:var(--bg);color:var(--ink);border:0;border-left:1.5px solid var(--ink);font:500 15px "Sarabun",sans-serif;cursor:pointer}
+nav.toc button.th{position:sticky;right:0;flex:none;display:flex;align-items:center;gap:8px;padding:0 14px;min-height:44px;background:var(--bg);color:var(--ink);border:0;border-left:1.5px solid var(--ink);font:500 14px "IBM Plex Sans Thai","Noto Sans Thai","Inter",sans-serif;cursor:pointer}
 nav.toc button.th:hover{background:var(--hover)}
 nav.toc button.th svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 :root[data-theme=dark] .th .sun{display:inline}:root[data-theme=dark] .th .moon{display:none}
