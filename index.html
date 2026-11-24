@@ -44,6 +44,7 @@
   <a href="#p9">ข้อ 9 Shear Flow &amp; ตะปู</a>
   <a href="#p10">ข้อ 10 เสาโก่งเดาะ 2 แกน</a>
   <a href="#ref" class="gap">สูตร &amp; จุดดัก</a>
+  <a href="#guess" class="gap" style="color:var(--red);font-weight:700;">🔥 เก็งข้อสอบ &amp; พลิกแพลง</a>
   <span class="sp"></span>
   <span class="tools">
     <button class="th" id="practice" type="button" aria-pressed="false" aria-label="โหมดฝึก ซ่อนวิธีทำ">
@@ -71,6 +72,11 @@
     <p class="pracnote">โหมดฝึกเปิดอยู่: ซ่อนวิธีทำไว้ แตะแต่ละขั้นเพื่อดู (ลองเขียนเองก่อน) กดปุ่ม "ฝึก" อีกครั้งเพื่อปิด</p>
   </header>
 
+  <div class="survival-banner">
+    <h3>🔥 โค้งสุดท้ายก่อนสอบ: หมวดเก็งข้อสอบและเทคนิคแก้โจทย์พลิกแพลง (Survival Guide)</h3>
+    <p>สำหรับนักศึกษาที่ต้องการคะแนนสูงเพื่อดึงเกรดให้พ้น F <b>ห้ามพลาดหมวดนี้เด็ดขาด!</b> รวบรวม 7 รูปแบบโจทย์พลิกแพลงที่อาจารย์ชอบออกข้อสอบตัดเกรด พร้อมเฉลยเทคนิคตั้งสมการแรก ทางลัดโกงเวลา และ 10 Checklist ป้องกัน F <a href="#guess" style="color:var(--red);font-weight:700;text-decoration:underline;margin-left:8px;">คลิกอ่านทันที →</a></p>
+  </div>
+
   <h2 class="prob"><span class="tag">ภาพรวม</span>สรุปสาระสำคัญจากชีท Solid Ja E Here ครบทั้ง 21 หน้า</h2>
   <div class="stmt">
     <p>เอกสารชุดนี้รวบรวมและถอดความจากชีทลายมือเฉลยข้อสอบจริง <b>Solid Ja E Here</b> จำนวน 21 หน้าเต็ม ครอบคลุมเนื้อหาสำคัญครึ่งหลังของวิชากลศาสตร์ของแข็ง (Mechanics of Materials) ทั้ง 10 ข้อใหญ่ โดยแยกขั้นตอนการคำนวณอย่างละเอียดตามเกณฑ์การตรวจข้อสอบอัตนัยของอาจารย์ พร้อมฟังก์ชันโหมดฝึกทำโจทย์ (Practice Mode) และภาพสแกนลายมือต้นฉบับแนบไว้ทุกข้อ</p>
@@ -90,6 +96,7 @@
     <a href="#p9">ข้อ 9 Shear Flow &amp; ตะปู</a>
     <a href="#p10">ข้อ 10 เสาโก่งเดาะ 2 แกน</a>
     <a href="#ref">สูตร &amp; จุดดัก</a>
+    <a href="#guess" style="border-color:var(--red);color:var(--red);font-weight:700;">🔥 เก็งข้อสอบ &amp; พลิกแพลง</a>
   </div>
 
   <h3 class="grp" id="sum-table">ก. ตารางสรุป 10 ข้อสอบจริงในชีท Solid Ja E Here (Exam Problems Matrix)</h3>
@@ -1481,6 +1488,310 @@
   <div class="pn">
     <a href="#p10">← ข้อ 10 เสาโก่งเดาะ 2 แกน</a>
     <a href="#sum">กลับสู่หน้าสรุปภาพรวม 21 หน้า →</a>
+  </div>
+</section>
+
+
+<!-- SECTION 12: หมวดเก็งข้อสอบ & เทคนิคแก้โจทย์พลิกแพลง (SURVIVAL GUIDE) -->
+<section id="guess">
+  <header class="top">
+    <p class="kick">หมวดกู้ชีพข้อสอบปลายภาค · กลศาสตร์ของแข็ง มหาวิทยาลัยธรรมศาสตร์</p>
+    <h1>🔥 รวมเก็งข้อสอบจริง &amp; เทคนิคแก้โจทย์พลิกแพลง 7 รูปแบบ</h1>
+    <p class="sub">วิเคราะห์โจทย์ที่อาจารย์ชอบใช้ตัดเกรด A/B/C/D/F · เทคนิคตั้งสมการแรก · วิธีโกยคะแนนสูงสุดเพื่อการันตีรอด F</p>
+    <p class="by">เรียบเรียงและกลั่นกรองจากข้อสอบเก่าย้อนหลังและเกณฑ์การตรวจข้อสอบภาควิชาวิศวกรรมโยธา</p>
+    <p class="pracnote">โหมดฝึกเปิดอยู่: ซ่อนวิธีทำไว้ แตะแต่ละขั้นเพื่อดู (ลองเขียนเองก่อน) กดปุ่ม "ฝึก" อีกครั้งเพื่อปิด</p>
+  </header>
+
+  <div class="survival-banner">
+    <h3>🚨 ยุทธศาสตร์เอาตัวรอดในห้องสอบ: วิธีทำข้อสอบให้พ้น F 100%</h3>
+    <p><b>กฎข้อที่ 1 ของการสอบอัตนัยวิศวกรรม:</b> คะแนนกว่า 70-80% อยู่ที่ <b>"การตั้งสมการแรกและขั้นตอน FBD"</b> แม้ตัวเลขสุดท้ายจะคำนวณผิดจากการกดเครื่องคิดเลขพลาด แต่ถ้าสูตรหลักและตัวแปรในสมการแรกถูกต้อง อาจารย์จะให้คะแนนกระบวนการ (Process Marks) เกือบเต็ม! ดังนั้นในทุกข้อ <b>ต้องเขียนสมการแม่บท (Governing Equation) และ FBD ให้ชัดเจนเสมอ</b></p>
+  </div>
+
+  <h2 class="prob"><span class="tag">ยุทธศาสตร์</span>ลำดับการเลือกทำข้อสอบในห้องสอบจริง (Exam Order of Attack)</h2>
+  <div class="stmt">
+    <p>อย่าทำข้อสอบเรียงจากหน้า 1 ไปหน้าสุดท้ายเด็ดขาด! ให้แบ่งการทำข้อสอบเป็น 4 ลำดับเพื่อล็อคคะแนนผ่านใน 60 นาทีแรก:</p>
+  </div>
+
+  <div class="tw">
+    <table>
+      <caption>ตารางลำดับการทำข้อสอบเพื่อกวาดคะแนนสูงสุดและบริหารเวลา 3 ชั่วโมง</caption>
+      <thead>
+        <tr>
+          <th>ลำดับ</th>
+          <th>กลุ่มข้อสอบ</th>
+          <th>หัวข้อเรื่อง</th>
+          <th>เวลาที่ควรใช้</th>
+          <th>เป้าหมายคะแนน</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>ขั้นที่ 1</b></td>
+          <td><b>ของตายเก็บแต้มชัวร์</b></td>
+          <td>ข้อ 4 (เพลาตัน vs กลวง), ข้อ 9 (Shear Flow &amp; ตะปู), ข้อ 1 (เพลาขั้น)</td>
+          <td>30–35 นาที</td>
+          <td>ต้องได้เต็ม 100% (เป็นฐานคะแนนรอด F)</td>
+        </tr>
+        <tr>
+          <td><b>ขั้นที่ 2</b></td>
+          <td><b>ข้อสูตรตรงไปตรงมา</b></td>
+          <td>ข้อ 5 (ดัดหน้าตัดไม่สมมาตร), ข้อ 8 (แรงเฉือน \(\tau\) กระโดด), ข้อ 7 (หน้าตัดผสม)</td>
+          <td>45–50 นาที</td>
+          <td>เก็บแต้มอย่างน้อย 85% (ระวังเครื่องหมาย ดึง/อัด และการคูณ n)</td>
+        </tr>
+        <tr>
+          <td><b>ขั้นที่ 3</b></td>
+          <td><b>ข้อคำนวณยาว</b></td>
+          <td>ข้อ 2 (บิดอินดีเทอร์มิเนต), ข้อ 10 (เสาโก่งเดาะ 2 แกน)</td>
+          <td>40–45 นาที</td>
+          <td>ตั้งสมการ Compatibility ให้ถูก จะได้คะแนนวิธีทำแล้ว 75%</td>
+        </tr>
+        <tr>
+          <td><b>ขั้นที่ 4</b></td>
+          <td><b>ข้อพลิกแพลง/พิสูจน์</b></td>
+          <td>ข้อ 6 (คานแอ่นตัว) หรือข้อสอบพลิกแพลง Combined Loading / Biaxial</td>
+          <td>35–40 นาที</td>
+          <td>เขียนสมการหลัก แตกแรง และแสดงวิธีทำให้มากที่สุด</td>
+        </tr>
+        <tr>
+          <td><b>ขั้นที่ 5</b></td>
+          <td><b>ตรวจทานหน่วย 10 นาทีสุดท้าย</b></td>
+          <td>เช็กหน่วย \(\text{N}\cdot\text{mm}\), \(\text{MPa}\), ปัดเศษตะปูลง, เช็ก 2 แกนเสา</td>
+          <td>10 นาทีสุดท้าย</td>
+          <td>ป้องกันคะแนนตกหล่นจุดละ 1–2 แต้ม</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- TWIST 1 -->
+  <div class="twist-card">
+    <div class="twist-head">
+      <span class="twist-title">เก็งข้อสอบพลิกแพลง 1: เพลาบิดอินดีเทอร์มิเนตแบบมีช่องว่าง (Torsion Gap)</span>
+      <span class="twist-badge">ออกบ่อยระดับ 5 ดาว ⭐⭐⭐⭐⭐</span>
+    </div>
+    <div class="twist-grid">
+      <div class="twist-col normal">
+        <h5>รูปแบบปกติในชีท (ข้อ 2)</h5>
+        <p>เพลายึดแน่นกับผนังทั้งสองข้างตั้งแต่เริ่มต้น ทำให้มุมบิดรวมจากปลายถึงปลายเท่ากับศูนย์เสมอ:</p>
+        \[\phi_{A/B} = \sum \frac{T_i L_i}{GJ} = 0\]
+      </div>
+      <div class="twist-col twisted">
+        <h5>การพลิกแพลงของอาจารย์ในห้องสอบ</h5>
+        <p>ปลายด้านหนึ่ง (เช่น จุด B) <b>มีช่องว่างเริ่มต้น (Gap \(\Delta \phi\))</b> เพลาต้องบิดไปจนแตะผนังก่อน ผนังจึงจะเริ่มออกแรงต้านทาน \(T_B\)!</p>
+      </div>
+    </div>
+    <div class="technique-box">
+      <h5>⚡ เทคนิคการทำโจทย์ &amp; สมการแม่บท:</h5>
+      <p><b>สเต็ป 1:</b> สมมติให้ปลาย B เป็นอิสระ (Free End, \(T_B = 0\)) แล้วคำนวณมุมบิดที่ปลาย B จากแรงบิดภายนอก \(T_0\):</p>
+      \[\phi_B^{\text{free}} = \frac{T_0 L_{AC}}{GJ}\]
+      <p><b>สเต็ป 2 (เช็กเงื่อนไข):</b></p>
+      <ul>
+        <li>ถ้า \(\phi_B^{\text{free}} \le \Delta \phi\): เพลาบิดไม่ถึงผนัง! ปลาย B เป็นอิสระจริง \(T_B = 0\) และ \(T_A = T_0\) (กลายเป็นโจทย์ดีเทอร์มิเนตธรรมดา)</li>
+        <li>ถ้า \(\phi_B^{\text{free}} > \Delta \phi\): เพลาชนผนังและเกิดแรงปฏิกิริยา \(T_B\) ให้ตั้งสมการ Compatibility ใหม่เป็น:
+        \[\phi_{A/B} = \Delta \phi \implies \frac{T_{AC} L_{AC}}{GJ} + \frac{T_{CB} L_{CB}}{GJ} = \Delta \phi\]
+        </li>
+      </ul>
+      <p><b>จุดระวัง:</b> แปลงมุมช่องว่าง \(\Delta \phi\) จากองศาเป็นเรเดียนเสมอ: \(\text{rad} = \text{deg} \times \frac{\pi}{180}\)</p>
+    </div>
+  </div>
+
+  <!-- TWIST 2 -->
+  <div class="twist-card">
+    <div class="twist-head">
+      <span class="twist-title">เก็งข้อสอบพลิกแพลง 2: การดัดเอียงสองแกน (Biaxial / Unsymmetrical Bending)</span>
+      <span class="twist-badge">โจทย์ตัดเกรด A/B ⭐⭐⭐⭐⭐</span>
+    </div>
+    <div class="twist-grid">
+      <div class="twist-col normal">
+        <h5>รูปแบบปกติในชีท (ข้อ 5)</h5>
+        <p>โมเมนต์ดัดกระทำในระนาบแกนหลักแกนเดียว (รอบแกน \(z\)) แกนสะเทิน NA ขนานกับแกน \(z\) เสมอ:</p>
+        \[\sigma = -\frac{M y}{I}\]
+      </div>
+      <div class="twist-col twisted">
+        <h5>การพลิกแพลงของอาจารย์ในห้องสอบ</h5>
+        <p>แรงกระทำทำมุมเอียง \(\theta\) กับแกนหลัก (เช่น คานแปหลังคาวางเอียง หรือแรงเฉียง) ทำให้เกิดโมเมนต์ดัดทั้ง 2 แกน (\(M_z\) และ \(M_y\))</p>
+      </div>
+    </div>
+    <div class="technique-box">
+      <h5>⚡ เทคนิคการทำโจทย์ &amp; สมการแม่บท:</h5>
+      <p><b>สเต็ป 1:</b> แตกโมเมนต์เข้าสู่แกนหลักของหน้าตัด:</p>
+      \[M_z = M \cos \theta, \quad M_y = M \sin \theta\]
+      <p><b>สเต็ป 2:</b> ตั้งสมการความเค้นรวม (Superposition of Bending):</p>
+      \[\sigma_x = -\frac{M_z y}{I_z} + \frac{M_y z}{I_y}\]
+      <p><b>สเต็ป 3: หามุมเอียงของแกนสะเทิน (Neutral Axis Angle \(\alpha\)):</b> ที่แกน NA ความเค้น \(\sigma_x = 0\):</p>
+      \[0 = -\frac{M_z y}{I_z} + \frac{M_y z}{I_y} \implies \frac{y}{z} = \frac{M_y I_z}{M_z I_y} = \left(\frac{I_z}{I_y}\right) \tan \theta\]
+      \[\tan \alpha = \frac{I_z}{I_y} \tan \theta\]
+      <p><b>⚠️ กับดักที่คน 90% ตกม้าตาย:</b> แกนสะเทิน NA **จะไม่ตั้งฉากกับแนวโมเมนต์** ถ้า \(I_z \ne I_y\)! แกน NA จะเอียงเบนเข้าหาแกนอ่อนเสมอ</p>
+    </div>
+  </div>
+
+  <!-- TWIST 3 -->
+  <div class="twist-card">
+    <div class="twist-head">
+      <span class="twist-title">เก็งข้อสอบพลิกแพลง 3: คานหน้าตัดผสมเสริมแผ่นเหล็กคู่ &amp; คานคอนกรีตแตกร้าว (RC Beam)</span>
+      <span class="twist-badge">ข้อสอบยอดฮิตวิศวกรรมโยธา ⭐⭐⭐⭐⭐</span>
+    </div>
+    <div class="twist-grid">
+      <div class="twist-col normal">
+        <h5>รูปแบบปกติในชีท (ข้อ 7)</h5>
+        <p>คานไม้เสริมแผ่นเหล็กที่ด้านล่างแผ่นเดียว แปลงหน้าตัดเหล็กแผ่นล่าง \(b' = nb\) หาเซนทรอยด์ใหม่</p>
+      </div>
+      <div class="twist-col twisted">
+        <h5>การพลิกแพลงของอาจารย์ในห้องสอบ</h5>
+        <p>1. เสริมแผ่นเหล็กทั้งบนและล่างเท่ากัน (หน้าตัดสมมาตร แกน NA อยู่กึ่งกลางเดิม!)<br>
+        2. คานคอนกรีตเสริมเหล็ก (คอนกรีตรับแรงดึงไม่ได้ ต้องตัดทิ้ง คิดเฉพาะคอนกรีตส่วนรับแรงอัด)</p>
+      </div>
+    </div>
+    <div class="technique-box">
+      <h5>⚡ เทคนิคทางลัดกรณีแผ่นเหล็กประกบคู่ (Top &amp; Bottom Sandwich):</h5>
+      <p>ถ้าแผ่นเหล็กบน-ล่างมีขนาดเท่ากัน หน้าตัดยังคง <b>สมมาตร</b> แกนสะเทิน NA อยู่ที่กึ่งกลางความสูงเดิมทันที ไม่ต้องเสียเวลาคำนวณ \(\bar{y}\)!</p>
+      \[I_T = \frac{b_w h_w^3}{12} + 2 \left[ \frac{b_s' t_s^3}{12} + (b_s' t_s) d^2 \right] \quad (b_s' = n b_s)\]
+      <h5>⚡ เทคนิคกรณีคอนกรีตเสริมเหล็ก (Cracked RC Section):</h5>
+      <p>สมดุล First Moment ของพื้นที่แปลงรอบแกนสะเทิน NA (ระยะลึก \(kd\)):</p>
+      \[b \cdot \frac{(kd)^2}{2} = n A_s (d - kd)\]
+      <p>แก้สมการกำลังสองหาค่า \(kd\) แล้วคำนวณ \(I_{\text{cr}} = \frac{b(kd)^3}{3} + n A_s (d - kd)^2\) จากนั้น \(\sigma_c = \frac{M kd}{I_{\text{cr}}}\) และ \(\sigma_s = n \frac{M(d-kd)}{I_{\text{cr}}}\)</p>
+    </div>
+  </div>
+
+  <!-- TWIST 4 -->
+  <div class="twist-card">
+    <div class="twist-head">
+      <span class="twist-title">เก็งข้อสอบพลิกแพลง 4: แรงเฉือนในคานกล่องสองเอว และรอยต่อทากาว (Box Girder &amp; Glued Joints)</span>
+      <span class="twist-badge">จุดตัดคะแนนยอดนิยม ⭐⭐⭐⭐</span>
+    </div>
+    <div class="twist-grid">
+      <div class="twist-col normal">
+        <h5>รูปแบบปกติในชีท (ข้อ 8 &amp; 9)</h5>
+        <p>คานปีกกว้างเอวเดี่ยว ตะปูยึดแผ่นปีกระนาบเดียว แรงเฉือนวิ่งผ่านเอวความหนา \(t = t_w\)</p>
+      </div>
+      <div class="twist-col twisted">
+        <h5>การพลิกแพลงของอาจารย์ในห้องสอบ</h5>
+        <p>หน้าตัดเป็นกล่องกลวง (Box Girder) มีเอว 2 ข้าง หรือแผ่นไม้ประกบยึดด้วย <b>กาว (Glue)</b> แทนตะปู</p>
+      </div>
+    </div>
+    <div class="technique-box">
+      <h5>⚡ เทคนิคการคิดคานกล่อง 2 เอว:</h5>
+      <p>เมื่อตัดระนาบผ่านเอวของคานกล่อง แรงเฉือนจะแบ่งไหลลงเอวซ้ายและขวาเท่ากัน ดังนั้นความหนาต้านแรงเฉือนคือ <b>\(t = 2 t_w\)</b>:</p>
+      \[\tau_{\text{web}} = \frac{V Q}{I (2 t_w)}\]
+      <p>และแรงเฉือนไหลที่รอยต่อตะปูแต่ละข้างคือ: \(q_{\text{one side}} = \frac{V Q_{\text{flange}}}{2 I}\)</p>
+      <h5>⚡ เทคนิคกรณีรอยต่อทากาว (Glued Joint):</h5>
+      <p>กาวรับแรงเฉือนแบบต่อเนื่องบนพื้นที่ผิวสัมผัสกว้าง \(b_{\text{glue}}\):</p>
+      \[\tau_{\text{glue}} = \frac{q}{b_{\text{glue}}} \le \tau_{\text{allow, glue}} \implies b_{\text{glue}} \ge \frac{q}{\tau_{\text{allow, glue}}}\]
+    </div>
+  </div>
+
+  <!-- TWIST 5 -->
+  <div class="twist-card">
+    <div class="twist-head">
+      <span class="twist-title">เก็งข้อสอบพลิกแพลง 5: คานแอ่นตัวอินดีเทอร์มิเนตด้วย Superposition (Propped Cantilever)</span>
+      <span class="twist-badge">ทางลัดโกงเวลาประหยัด 20 นาที ⭐⭐⭐⭐⭐</span>
+    </div>
+    <div class="twist-grid">
+      <div class="twist-col normal">
+        <h5>รูปแบบปกติในชีท (ข้อ 6)</h5>
+        <p>คานยื่นดีเทอร์มิเนต อินทิเกรตสองชั้น \(EI v'' = M(x)\) แทนค่า \(C_1=0, C_2=0\)</p>
+      </div>
+      <div class="twist-col twisted">
+        <h5>การพลิกแพลงของอาจารย์ในห้องสอบ</h5>
+        <p>คานยื่นแต่มี Roller หนุนที่ปลาย B (Propped Cantilever) รับแรงกระจาย \(w\) เป็นโครงสร้างอินดีเทอร์มิเนต!</p>
+      </div>
+    </div>
+    <div class="technique-box">
+      <h5>⚡ ทางลัดไม่ต้องอินทิเกรต (ใช้วิธี Superposition จบใน 3 บรรทัด!):</h5>
+      <p><b>สเต็ป 1:</b> ปลด Roller ที่ B ออก ให้กลายเป็นแรงปฏิกิริยาส่วนเกิน \(B_y \uparrow\)</p>
+      <p><b>สเต็ป 2:</b> ตั้งสมการการแอ่นตัวที่จุด B ต้องเป็นศูนย์ (\(v_B = 0\)):</p>
+      \[v_B = v_{B, w} + v_{B, R} = 0\]
+      \[-\frac{w L^4}{8 E I} + \frac{B_y L^3}{3 E I} = 0 \implies B_y = \frac{3}{8} w L\]
+      <p><b>สเต็ป 3:</b> หาแรงปฏิกิริยาและโมเมนต์ที่ปลายยึดแน่น A ทันที:</p>
+      \[A_y = w L - B_y = \frac{5}{8} w L\]
+      \[M_A = -\frac{w L^2}{2} + B_y L = -\frac{w L^2}{2} + \left(\frac{3}{8}wL\right)L = -\frac{1}{8} w L^2\]
+      <p><b>จำผลลัพธ์นี้ไปเลย:</b> สำหรับ Propped Cantilever รับแรง \(w\) ตลอดช่วง \(B_y = \frac{3}{8}wL\) และ \(M_A = -\frac{1}{8}wL^2\)</p>
+    </div>
+  </div>
+
+  <!-- TWIST 6 -->
+  <div class="twist-card">
+    <div class="twist-head">
+      <span class="twist-title">เก็งข้อสอบพลิกแพลง 6: ความเค้นรวม วงกลมมอร์ และเกณฑ์การวิบัติ (Combined Loadings &amp; Mohr's Circle)</span>
+      <span class="twist-badge">ข้อสอบภาคบังคับปลายภาค 100% ⭐⭐⭐⭐⭐</span>
+    </div>
+    <div class="twist-grid">
+      <div class="twist-col normal">
+        <h5>รูปแบบปกติในชีท</h5>
+        <p>แยกคำนวณการบิด \(\tau = Tr/J\), การดัด \(\sigma = My/I\), หรือแรงตามแนวแกน \(\sigma = P/A\) ทีละเรื่อง</p>
+      </div>
+      <div class="twist-col twisted">
+        <h5>การพลิกแพลงของอาจารย์ในห้องสอบ</h5>
+        <p><b>รวมทุกแรงเข้าด้วยกันในเพลาเดียว:</b> รับทั้งแรงกด \(P\), โมเมนต์ดัด \(M\), และแรงบิด \(T\) พร้อมกัน แล้วสั่งให้หาวงกลมมอร์และเช็กการวิบัติ!</p>
+      </div>
+    </div>
+    <div class="technique-box">
+      <h5>⚡ ลำดับขั้นตอนการแก้โจทย์แบบสมบูรณ์:</h5>
+      <p><b>สเต็ป 1: รวมความเค้นตั้งฉาก (Normal Stress \(\sigma_x\)):</b></p>
+      \[\sigma_x = -\frac{P}{A} - \frac{M y}{I} \quad (\text{แรงกดเป็นลบ, โมเมนต์ดัดดูฝั่งดึงหรืออัด})\]
+      <p><b>สเต็ป 2: คำนวณความเค้นเฉือนจากแรงบิด (Torsional Shear \(\tau_{xy}\)):</b></p>
+      \[\tau_{xy} = \frac{T r}{J}\]
+      <p><b>สเต็ป 3: สร้างวงกลมมอร์ (Mohr's Circle) หา Principal Stresses:</b></p>
+      \[\sigma_{\text{avg}} = \frac{\sigma_x}{2}, \quad R = \sqrt{\left(\frac{\sigma_x}{2}\right)^2 + \tau_{xy}^2}\]
+      \[\sigma_1 = \sigma_{\text{avg}} + R, \quad \sigma_2 = \sigma_{\text{avg}} - R, \quad \tau_{\max} = R\]
+      <p><b>สเต็ป 4: ตรวจสอบเกณฑ์การวิบัติ (Yield Criteria):</b></p>
+      <ul>
+        <li><b>ทฤษฎี Tresca (Max Shear Stress):</b> \(\sigma_{\text{Tresca}} = \sigma_1 - \sigma_2 = 2R = \sqrt{\sigma_x^2 + 4\tau_{xy}^2} \le \sigma_y\)</li>
+        <li><b>ทฤษฎี von Mises (Distortion Energy):</b> \(\sigma_{\text{vm}} = \sqrt{\sigma_1^2 - \sigma_1\sigma_2 + \sigma_2^2} = \sqrt{\sigma_x^2 + 3\tau_{xy}^2} \le \sigma_y\)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TWIST 7 -->
+  <div class="twist-card">
+    <div class="twist-head">
+      <span class="twist-title">เก็งข้อสอบพลิกแพลง 7: เสาโก่งเดาะออยเลอร์ในโครงสร้างจริง 3 มิติ (Different End Conditions in X &amp; Y)</span>
+      <span class="twist-badge">จุดตัดคะแนนข้อสอบใหญ่ ⭐⭐⭐⭐⭐</span>
+    </div>
+    <div class="twist-grid">
+      <div class="twist-col normal">
+        <h5>รูปแบบปกติในชีท (ข้อ 10)</h5>
+        <p>จุดรองรับเหมือนกันทั้งสองแกน (เช่น Pin-Pin ทั้งแกน x และ y) เสาโก่งเดาะรอบแกนอ่อน y เสมอ</p>
+      </div>
+      <div class="twist-col twisted">
+        <h5>การพลิกแพลงของอาจารย์ในห้องสอบ</h5>
+        <p>จุดรองรับ 2 ระนาบ <b>ไม่เหมือนกัน</b> เช่น ระนาบ \(x-z\) เป็น Fix-Fix (\(K_x = 0.5\)) แต่ระนาบ \(y-z\) เป็น Pin-Pin (\(K_y = 1.0\)) และมีค้ำยันข้าง!</p>
+      </div>
+    </div>
+    <div class="technique-box">
+      <h5>⚡ วิธีวิเคราะห์เปรียบเทียบ 2 แกนทีละสเต็ป:</h5>
+      <p><b>สเต็ป 1:</b> คำนวณอัตราส่วนความชะลูดแยกทีละแกนอย่างเด็ดขาด:</p>
+      \[\lambda_x = \frac{K_x L_x}{r_x}, \quad \lambda_y = \frac{K_y L_y}{r_y}\]
+      <p><b>สเต็ป 2: เปรียบเทียบหาแกนวิกฤต:</b></p>
+      <p>แกนที่มีค่า <b>\(\lambda = \frac{KL}{r}\) สูงกว่า</b> จะเป็นแกนที่ควบคุมการโก่งเดาะเสมอ (Critical Axis)!</p>
+      <p><b>สเต็ป 3: เช็กขีดจำกัดการคราก (Yielding vs Buckling):</b></p>
+      <ul>
+        <li>ถ้า \(\lambda_{\max} < \left(\frac{KL}{r}\right)_c = \sqrt{\frac{2\pi^2 E}{\sigma_y}}\): <b>เสาครากก่อนโก่งเดาะ</b> \(P_{\text{fail}} = \sigma_y \cdot A\)</li>
+        <li>ถ้า \(\lambda_{\max} \ge \left(\frac{KL}{r}\right)_c\): <b>เสาเกิด Euler Buckling</b> \(P_{cr} = \frac{\pi^2 E A}{\lambda_{\max}^2} = \frac{\pi^2 E I_{\text{gov}}}{(KL)_{\text{gov}}^2}\)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="checklist-card">
+    <h4>✅ The Zero-F Checklist: 10 จุดตรวจทานก่อนวางปากกาในห้องสอบ</h4>
+    <ol>
+      <li><b>หน่วยโมเมนต์ &amp; แรงบิด:</b> แปลง \(\text{N}\cdot\text{m} \to \text{N}\cdot\text{mm}\) (คูณ \(10^3\)) หรือ \(\text{kN}\cdot\text{m} \to \text{N}\cdot\text{mm}\) (คูณ \(10^6\)) ก่อนแทนค่าหรือยัง?</li>
+      <li><b>หน่วยโมดูลัส:</b> แปลง \(\text{GPa} \to \text{MPa} = \text{N/mm}^2\) (คูณ \(10^3\)) แล้วหรือยัง?</li>
+      <li><b>เพลากลวง:</b> คำนวณ \(\tau_{\min}\) ที่ผิวในจาก \(c_i\) ใช่ไหม (ห้ามตอบ 0 เด็ดขาด)?</li>
+      <li><b>หน้าตัดผสม:</b> ขยายเฉพาะความกว้าง \(b' = nb\) ไม่ได้ขยายความสูง \(h\) ใช่ไหม?</li>
+      <li><b>หน้าตัดผสม:</b> เมื่อคำนวณหน่วยแรงในเหล็ก ได้ <b>คูณ \(n\) กลับ</b> เข้าไปในสมการหรือยัง (\(\sigma_s = n My/I_T\))?</li>
+      <li><b>เครื่องหมายการดัด:</b> โมเมนต์บวกเขียนกำกับชัดเจนหรือยังว่า ผิวบนเป็น <b>(อัด)</b> ผิวล่างเป็น <b>(ดึง)</b>?</li>
+      <li><b>ระยะห่างตะปู (s):</b> คำนวณได้ทศนิยม ได้ <b>ปัดเศษลง (Round Down) เสมอ</b> เพื่อความปลอดภัยใช่ไหม?</li>
+      <li><b>แรงเฉือนคานกล่อง:</b> ระนาบตัดผ่านเอว 2 ข้าง ได้ใช้ \(t = 2t_w\) แล้วหรือยัง?</li>
+      <li><b>เสาโก่งเดาะ:</b> คำนวณตรวจสอบครบทั้งแกน \(x\) และแกน \(y\) แล้วเลือกค่าความชะลูดสูงสุดใช่ไหม?</li>
+      <li><b>วงกลมมอร์:</b> รัศมี \(R\) คือค่า \(\tau_{\max}\) และอย่าลืมใส่หน่วย \(\text{MPa}\) ให้ครบทุกคำตอบ!</li>
+    </ol>
+  </div>
+
+  <div class="pn">
+    <a href="#sum">← กลับสู่หน้าสรุปภาพรวม 21 หน้า</a>
+    <a href="#p1">ไปทบทวนข้อสอบข้อที่ 1 →</a>
   </div>
 </section>
 
