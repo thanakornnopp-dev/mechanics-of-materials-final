@@ -45,6 +45,7 @@
   <a href="#p10">ข้อ 10 เสาโก่งเดาะ 2 แกน</a>
   <a href="#ref" class="gap">สูตร &amp; จุดดัก</a>
   <a href="#guess" class="gap" style="color:var(--red);font-weight:700;">🔥 เก็งข้อสอบ &amp; พลิกแพลง</a>
+  <a href="#mock" class="gap" style="color:var(--gold);font-weight:700;">🎯 ข้อสอบเก็งจริง 5 ข้อ</a>
   <span class="sp"></span>
   <span class="tools">
     <button class="th" id="practice" type="button" aria-pressed="false" aria-label="โหมดฝึก ซ่อนวิธีทำ">
@@ -97,6 +98,7 @@
     <a href="#p10">ข้อ 10 เสาโก่งเดาะ 2 แกน</a>
     <a href="#ref">สูตร &amp; จุดดัก</a>
     <a href="#guess" style="border-color:var(--red);color:var(--red);font-weight:700;">🔥 เก็งข้อสอบ &amp; พลิกแพลง</a>
+    <a href="#mock" style="border-color:var(--gold);color:var(--gold);font-weight:700;">🎯 ข้อสอบเก็งจริง 5 ข้อ</a>
   </div>
 
   <h3 class="grp" id="sum-table">ก. ตารางสรุป 10 ข้อสอบจริงในชีท Solid Ja E Here (Exam Problems Matrix)</h3>
@@ -1792,6 +1794,383 @@
   <div class="pn">
     <a href="#sum">← กลับสู่หน้าสรุปภาพรวม 21 หน้า</a>
     <a href="#p1">ไปทบทวนข้อสอบข้อที่ 1 →</a>
+  </div>
+</section>
+
+
+<!-- SECTION 13: ชุดข้อสอบเก็งปลายภาคจริง 5 ข้อใหญ่ (FINAL MOCK EXAM 2026) -->
+<section id="mock">
+  <header class="top">
+    <p class="kick">จำลองข้อสอบจริงปลายภาค · ภาควิชาวิศวกรรมโยธา มหาวิทยาลัยธรรมศาสตร์</p>
+    <h1>🎯 ชุดข้อสอบเก็งปลายภาคจริง 5 ข้อใหญ่ (Final Mock Exam)</h1>
+    <p class="sub">โจทย์เต็ม · มิติรูปทรงจริง · เฉลยละเอียด 4 สเต็ปบรรทัดต่อบรรทัด · ระบบตรวจคำตอบ</p>
+    <p class="by">คัดเลือกและจำลองข้อสอบที่มีโอกาสออกสูงสุดในห้องสอบจริง · จัดทำโดย ธนภรณ์ นพรัตน์</p>
+    <p class="pracnote">โหมดฝึกเปิดอยู่: ซ่อนวิธีทำไว้ แตะแต่ละขั้นเพื่อดู (ลองเขียนเองก่อน) กดปุ่ม "ฝึก" อีกครั้งเพื่อปิด</p>
+  </header>
+
+  <div class="survival-banner" style="border-color:var(--gold);background:rgba(168,101,26,0.06);">
+    <h3 style="color:var(--gold);">📝 คำแนะนำการทำชุดข้อสอบเก็งก่อนสอบวันพรุ่งนี้</h3>
+    <p>ชุดข้อสอบนี้จำลองโจทย์จริง 5 ข้อใหญ่ที่ครอบคลุมเนื้อหาสำคัญหลังมิดเทอม 100% แนะนำให้ <b>กดปุ่ม "ฝึก" ที่มุมขวาบนเพื่อซ่อนวิธีทำ</b> แล้วหยิบกระดาษ A4 มานั่งทำจับเวลาข้อละ 25–30 นาที จากนั้นแตะแถวเพื่อตรวจเฉลยทีละขั้น หากทำชุดนี้ได้ครบ คุณจะทำข้อสอบจริงในห้องสอบได้อย่างแน่นอน!</p>
+  </div>
+
+  <div class="jump">
+    <a href="#mock-q1">ข้อ 1 เพลาขั้น &amp; เฟือง</a>
+    <a href="#mock-q2">ข้อ 2 ดัดสองแกน Biaxial</a>
+    <a href="#mock-q3">ข้อ 3 หน้าตัดผสมไม้-เหล็ก &amp; ตะปู</a>
+    <a href="#mock-q4">ข้อ 4 Combined Loading &amp; Mohr</a>
+    <a href="#mock-q5">ข้อ 5 เสาโก่งเดาะ 3D</a>
+  </div>
+
+  <!-- MOCK QUESTION 1 -->
+  <h2 class="prob" id="mock-q1"><span class="tag">ข้อสอบเก็ง 1</span>การบิดเพลาขั้นส่งกำลังผ่านเฟือง &amp; ตรวจสอบหน่วยแรง (20 คะแนน)</h2>
+  <div class="stmt">
+    <p>เพลาเหล็กกลมตันปลายด้านหนึ่งยึดแน่นที่จุด A (Fixed at A) ทำจากวัสดุที่มีโมดูลัสเฉือน \(G = 80\text{ GPa}\) และหน่วยแรงเฉือนที่ยอมให้ \(\tau_{\text{allow}} = 60\text{ MPa}\) เพลาประกอบด้วย 2 ช่วง:<br>
+    - ช่วง \(AB\): เส้นผ่านศูนย์กลาง \(d_1 = 40\text{ mm}\) (รัศมี \(c_1 = 20\text{ mm}\)), ความยาว \(L_1 = 800\text{ mm}\)<br>
+    - ช่วง \(BC\): เส้นผ่านศูนย์กลาง \(d_2 = 60\text{ mm}\) (รัศมี \(c_2 = 30\text{ mm}\)), ความยาว \(L_2 = 1200\text{ mm}\)<br>
+    ที่ปลาย C ติดตั้งเฟืองวงกลมรัศมี \(r_C = 150\text{ mm}\) ขบกับเฟือง D รัศมี \(r_D = 300\text{ mm}\) ส่งแรงขบฟันเฟืองในแนวสัมผัส \(F = 6\text{ kN}\) และที่จุด B มีแรงบิดภายนอกกระทำ \(T_B = 1.2\text{ kN}\cdot\text{m}\) ในทิศทางเดียวกับแรงบิดจากเฟือง จงหา:<br>
+    1. แรงบิดภายในในแต่ละช่วง \(T_{AB}\) และ \(T_{BC}\)<br>
+    2. ความเค้นเฉือนสูงสุดในแต่ละช่วง พร้อมตรวจสอบว่าปลอดภัยหรือไม่<br>
+    3. มุมบิดสะสมที่ปลาย C สัมพัทธ์กับปลาย A (\(\phi_{C/A}\)) ในหน่วยเรเดียนและองศา<br>
+    4. มุมการหมุนของเฟือง D (\(\phi_D\))</p>
+  </div>
+
+  <h3 class="grp">เฉลยละเอียดข้อ 1 ทีละขั้นตอน (Step-by-Step Solution)</h3>
+  <div class="exam">
+    <div class="step">
+      <div class="row">
+        <div class="lab">สิ่งที่โจทย์กำหนด</div>
+        <div class="math">
+          \(d_1 = 40\text{ mm} \implies c_1 = 20\text{ mm}, \quad L_1 = 800\text{ mm}\)<br>
+          \(d_2 = 60\text{ mm} \implies c_2 = 30\text{ mm}, \quad L_2 = 1200\text{ mm}\)<br>
+          \(G = 80\text{ GPa} = 80 \times 10^3\text{ MPa}, \quad \tau_{\text{allow}} = 60\text{ MPa}\)<br>
+          \(r_C = 150\text{ mm}, \quad r_D = 300\text{ mm}, \quad F = 6\text{ kN} = 6,000\text{ N}, \quad T_B = 1.2\text{ kN}\cdot\text{m} = 1.2 \times 10^6\text{ N}\cdot\text{mm}\)
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">ขั้น 1: โมเมนต์ความเฉื่อยเชิงขั้ว J</div>
+        <div class="math">
+          \[J_1 = \frac{\pi c_1^4}{2} = \frac{\pi (20)^4}{2} = 251,327.41\text{ mm}^4\]
+          \[J_2 = \frac{\pi c_2^4}{2} = \frac{\pi (30)^4}{2} = 1,272,345.02\text{ mm}^4\]
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">ขั้น 2: ตัด FBD หาแรงบิดภายใน T</div>
+        <div class="math">
+          แรงบิดที่ปลาย C จากแรงขบฟันเฟือง:<br>
+          \[T_C = F \cdot r_C = (6,000\text{ N})(150\text{ mm}) = 900,000\text{ N}\cdot\text{mm} = 0.9\text{ kN}\cdot\text{m}\]
+          ตัดช่วง BC: \(T_{BC} = T_C = 900 \times 10^3\text{ N}\cdot\text{mm} = 0.9\text{ kN}\cdot\text{m}\)<br>
+          ตัดช่วง AB: มี \(T_B\) เสริมทิศทางเดียวกัน:<br>
+          \[T_{AB} = T_{BC} + T_B = 900 \times 10^3 + 1,200 \times 10^3 = 2,100 \times 10^3\text{ N}\cdot\text{mm} = 2.1\text{ kN}\cdot\text{m}\]
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">ขั้น 3: ความเค้นเฉือน &amp; เช็กความปลอดภัย</div>
+        <div class="math">
+          ช่วง AB:\
+          \[\tau_{AB} = \frac{T_{AB} c_1}{J_1} = \frac{(2,100 \times 10^3)(20)}{251,327.41} = 167.11\text{ MPa} > 60\text{ MPa} \implies \text{ไม่ปลอดภัย (UNSAFE!)}\]
+          ช่วง BC:\
+          \[\tau_{BC} = \frac{T_{BC} c_2}{J_2} = \frac{(900 \times 10^3)(30)}{1,272,345.02} = 21.22\text{ MPa} < 60\text{ MPa} \implies \text{ปลอดภัย (SAFE!)}\]
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">ขั้น 4: หามุมบิดสะสมที่ปลาย C</div>
+        <div class="math">
+          \[\phi_{AB} = \frac{T_{AB} L_1}{G J_1} = \frac{(2,100 \times 10^3)(800)}{(80 \times 10^3)(251,327.41)} = 0.08356\text{ rad}\]
+          \[\phi_{BC} = \frac{T_{BC} L_2}{G J_2} = \frac{(900 \times 10^3)(1200)}{(80 \times 10^3)(1,272,345.02)} = 0.01061\text{ rad}\]
+          \[\phi_C = \phi_{AB} + \phi_{BC} = 0.08356 + 0.01061 = 0.09417\text{ rad} \approx 5.40^\circ\]
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">ขั้น 5: หามุมหมุนของเฟือง D</div>
+        <div class="math">
+          อัตราทดเฟืองตามความยาวส่วนโค้ง \(r_C \phi_C = r_D \phi_D\):<br>
+          \[\phi_D = \phi_C \left(\frac{r_C}{r_D}\right) = (0.09417\text{ rad}) \left(\frac{150}{300}\right) = 0.04708\text{ rad} \approx 2.70^\circ\]
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">คำตอบสุดท้าย</div>
+        <div>
+          <span class="fin">\(T_{AB} = 2.1\text{ kN}\cdot\text{m}, \quad \tau_{AB} = 167.11\text{ MPa (วิบัติ)}, \quad \phi_C = 0.0942\text{ rad} (5.40^\circ), \quad \phi_D = 0.0471\text{ rad} (2.70^\circ)\)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOCK QUESTION 2 -->
+  <h2 class="prob" id="mock-q2"><span class="tag">ข้อสอบเก็ง 2</span>การดัดสองแกนในคานหน้าตัดสี่เหลี่ยม &amp; มุมเอียงแกนสะเทิน (20 คะแนน)</h2>
+  <div class="stmt">
+    <p>คานช่วงเดี่ยว (Simply Supported Beam) ความยาวช่วง \(L = 4.0\text{ m}\) รับแรงกระทำแบบจุดที่กึ่งกลางคาน \(P = 5.0\text{ kN}\) โดยแนวแรงทำมุมเอียง \(\theta = 30^\circ\) กับแนวดิ่ง หน้าตัดคานเป็นรูปสี่เหลี่ยมผืนผ้ากว้าง \(b = 100\text{ mm}\) สูง \(h = 200\text{ mm}\) จงหา:<br>
+    1. โมเมนต์ดัดสูงสุดรอบแกนหลัก \(M_z\) และ \(M_y\)<br>
+    2. Moment of Inertia \(I_z\) และ \(I_y\)<br>
+    3. มุมเอียงของแกนสะเทิน (Neutral Axis Angle \(\alpha\)) เทียบกับแกน \(z\)<br>
+    4. หน่วยแรงดัดที่จุดมุมทั้งสี่ \(A, B, C, D\) พร้อมระบุจุดวิกฤตที่รับแรงดึงและแรงอัดสูงสุด</p>
+  </div>
+
+  <h3 class="grp">เฉลยละเอียดข้อ 2 ทีละขั้นตอน (Step-by-Step Solution)</h3>
+  <div class="exam">
+    <div class="step">
+      <div class="row">
+        <div class="lab">สิ่งที่โจทย์กำหนด</div>
+        <div class="math">
+          \(L = 4,000\text{ mm}, \quad P = 5,000\text{ N}, \quad \theta = 30^\circ\)<br>
+          \(b = 100\text{ mm}, \quad h = 200\text{ mm}\)
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">ขั้น 1: โมเมนต์ดัดสูงสุดรอบแกนหลัก</div>
+        <div class="math">
+          โมเมนต์รวมสูงสุดที่กึ่งกลางคานช่วงเดี่ยว: \(M = \frac{PL}{4} = \frac{(5,000)(4,000)}{4} = 5,000,000\text{ N}\cdot\text{mm}\)<br>
+          แตกเข้าแกนหลัก \(z\) (แนวนอน) และ \(y\) (แนวดิ่ง):<br>
+          \[M_z = M \cos 30^\circ = (5 \times 10^6)(0.8660) = 4,330,127\text{ N}\cdot\text{mm}\]
+          \[M_y = M \sin 30^\circ = (5 \times 10^6)(0.5000) = 2,500,000\text{ N}\cdot\text{mm}\]
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">ขั้น 2: Moment of Inertia Iz และ Iy</div>
+        <div class="math">
+          \[I_z = \frac{b h^3}{12} = \frac{(100)(200)^3}{12} = 66,666,667\text{ mm}^4 = 66.67 \times 10^6\text{ mm}^4\]
+          \[I_y = \frac{h b^3}{12} = \frac{(200)(100)^3}{12} = 16,666,667\text{ mm}^4 = 16.67 \times 10^6\text{ mm}^4\]
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">ขั้น 3: มุมเอียงของแกนสะเทิน NA</div>
+        <div class="math">
+          \[\tan \alpha = \left(\frac{I_z}{I_y}\right) \tan \theta = \left(\frac{66.67 \times 10^6}{16.67 \times 10^6}\right) \tan 30^\circ = 4.0 \times 0.57735 = 2.3094\]
+          \[\alpha = \arctan(2.3094) = 66.59^\circ\]
+          <b>ข้อสังเกต:</b> แกนสะเทินทำมุม \(66.59^\circ\) เอียงเบนเข้าหาแกนอ่อน \(y\) มากกว่าแนวแรงเดิม (\(30^\circ\))
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">ขั้น 4: คำนวณความเค้นที่มุมทั้ง 4</div>
+        <div class="math">
+          สูตร: \(\sigma = -\frac{M_z y}{I_z} + \frac{M_y z}{I_y}\) (พิกัด: ขอบบน \(y = +100\), ขอบล่าง \(y = -100\), ขวา \(z = +50\), ซ้าย \(z = -50\))<br>
+          - <b>มุม B (บน-ซ้าย: y = +100, z = -50):</b><br>
+          \[\sigma_B = -\frac{(4.330 \times 10^6)(100)}{66.67 \times 10^6} + \frac{(2.500 \times 10^6)(-50)}{16.67 \times 10^6} = -6.50 - 7.50 = -14.00\text{ MPa (อัดสูงสุด!)}\]
+          - <b>มุม D (ล่าง-ขวา: y = -100, z = +50):</b><br>
+          \[\sigma_D = -\frac{(4.330 \times 10^6)(-100)}{66.67 \times 10^6} + \frac{(2.500 \times 10^6)(+50)}{16.67 \times 10^6} = +6.50 + 7.50 = +14.00\text{ MPa (ดึงสูงสุด!)}\]
+          - มุม A (บน-ขวา): \(\sigma_A = -6.50 + 7.50 = +1.00\text{ MPa (ดึง)}\)<br>
+          - มุม C (ล่าง-ซ้าย): \(\sigma_C = +6.50 - 7.50 = -1.00\text{ MPa (อัด)}\)
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">คำตอบสุดท้าย</div>
+        <div>
+          <span class="fin">\(\alpha = 66.59^\circ, \quad \sigma_{\max, \text{อัด}} = -14.00\text{ MPa (ที่จุด B)}, \quad \sigma_{\max, \text{ดึง}} = +14.00\text{ MPa (ที่จุด D)}\)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOCK QUESTION 3 -->
+  <h2 class="prob" id="mock-q3"><span class="tag">ข้อสอบเก็ง 3</span>คานประกอบไม้ประกบเหล็กบน-ล่าง &amp; ระยะห่างตะปูยึด (20 คะแนน)</h2>
+  <div class="stmt">
+    <p>คานประกอบสมมาตร แกนกลางทำด้วยไม้ขนาดกว้าง \(b_w = 120\text{ mm}\) สูง \(h_w = 200\text{ mm}\) (\(E_w = 10\text{ GPa}\)) ประกบติดด้วยแผ่นเหล็กทั้งขอบบนและขอบล่าง ขนาดกว้าง \(b_s = 120\text{ mm}\) หนา \(t_s = 10\text{ mm}\) (\(E_s = 200\text{ GPa}\)) คานรับโมเมนต์ดัดบวก \(M = 35\text{ kN}\cdot\text{m}\) และแรงเฉือน \(V = 24\text{ kN}\) ยึดแผ่นเหล็กกับไม้ด้วยตะปู 2 แถว (\(m = 2\)) ตะปู 1 ตัวรับแรงเฉือนได้ \(F_{\text{nail}} = 1.5\text{ kN}\) จงหา:<br>
+    1. อัตราส่วนโมดูลัส \(n\) และ Moment of Inertia ของหน้าตัดแปลง \(I_T\)<br>
+    2. หน่วยแรงดัดสูงสุดในเนื้อไม้ \(\sigma_{w,\max}\) และในเนื้อเหล็ก \(\sigma_{s,\max}\)<br>
+    3. ค่า First Moment of Area \(Q\) ที่ระนาบรอยต่อระหว่างเหล็กกับไม้<br>
+    4. แรงเฉือนไหล \(q\) และกำหนดระยะห่างตะปู \(s\) ที่ปลอดภัยตามหลักวิศวกรรม</p>
+  </div>
+
+  <h3 class="grp">เฉลยละเอียดข้อ 3 ทีละขั้นตอน (Step-by-Step Solution)</h3>
+  <div class="exam">
+    <div class="step">
+      <div class="row">
+        <div class="lab">สิ่งที่โจทย์กำหนด</div>
+        <div class="math">
+          ไม้: \(b_w = 120\text{ mm}, \quad h_w = 200\text{ mm}, \quad E_w = 10\text{ GPa}\)<br>
+          เหล็ก: \(b_s = 120\text{ mm}, \quad t_s = 10\text{ mm}, \quad E_s = 200\text{ GPa}\)<br>
+          \(M = 35 \times 10^6\text{ N}\cdot\text{mm}, \quad V = 24,000\text{ N}, \quad m = 2, \quad F_{\text{nail}} = 1,500\text{ N}\)
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">ขั้น 1: แปลงหน้าตัด &amp; หา IT</div>
+        <div class="math">
+          \[n = \frac{E_s}{E_w} = \frac{200}{10} = 20\]
+          ความกว้างเหล็กแปลง: \(b_s' = n \cdot b_s = 20 \times 120 = 2,400\text{ mm}\)<br>
+          เนื่องจากหน้าตัดสมมาตรบน-ล่าง แกนสะเทิน NA อยู่ที่กึ่งกลางความสูงเดิม (ระยะห่างจาก NA ถึงเซนทรอยด์แผ่นเหล็ก \(d_s = 100 + 5 = 105\text{ mm}\)):<br>
+          \[I_w = \frac{b_w h_w^3}{12} = \frac{(120)(200)^3}{12} = 80 \times 10^6\text{ mm}^4\]
+          \[I_{s,\text{one}} = \frac{b_s' t_s^3}{12} + (b_s' t_s) d_s^2 = \frac{(2400)(10)^3}{12} + (2400 \times 10)(105)^2 = 200,000 + 264,600,000 = 264.8 \times 10^6\text{ mm}^4\]
+          \[I_T = I_w + 2 I_{s,\text{one}} = 80 \times 10^6 + 2(264.8 \times 10^6) = 609.6 \times 10^6\text{ mm}^4\]
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">ขั้น 2: คำนวณความเค้นดัดในไม้และเหล็ก</div>
+        <div class="math">
+          ในเนื้อไม้ (สูงสุดที่ขอบนอกไม้ \(y = 100\text{ mm}\)):<br>
+          \[\sigma_{w,\max} = \frac{M y_w}{I_T} = \frac{(35 \times 10^6)(100)}{609.6 \times 10^6} = 5.74\text{ MPa}\]
+          ในเนื้อเหล็ก (สูงสุดที่ขอบนอกสุด \(y = 110\text{ mm}\)) **ต้องคูณ n กลับ:**<br>
+          \[\sigma_{s,\max} = n \left(\frac{M y_s}{I_T}\right) = 20 \times \frac{(35 \times 10^6)(110)}{609.6 \times 10^6} = 126.31\text{ MPa}\]
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">ขั้น 3: คำนวณ First Moment Q ที่รอยต่อ</div>
+        <div class="math">
+          คิดพื้นที่แผ่นเหล็กแปลงเหนือรอยต่อ:\
+          \[Q = A_s' \cdot d_s = (b_s' t_s)(105) = (2400 \times 10)(105) = 2,520,000\text{ mm}^3\]
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">ขั้น 4: คำนวณ Shear Flow q &amp; ระยะตะปู s</div>
+        <div class="math">
+          \[q = \frac{V Q}{I_T} = \frac{(24,000\text{ N})(2,520,000\text{ mm}^3)}{609.6 \times 10^6\text{ mm}^4} = 99.21\text{ N/mm}\]
+          คำนวณระยะห่างตะปู 2 แถว:\
+          \[s \le \frac{m F_{\text{nail}}}{q} = \frac{2 \times 1,500\text{ N}}{99.21\text{ N/mm}} = 30.24\text{ mm}\]
+          <b>การตัดสินใจทางวิศวกรรม (ปัดเศษลง):</b> <b>เลือกใช้ \(s \le 30\text{ mm}\)</b>
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">คำตอบสุดท้าย</div>
+        <div>
+          <span class="fin">\(I_T = 609.6 \times 10^6\text{ mm}^4, \quad \sigma_{w,\max} = 5.74\text{ MPa}, \quad \sigma_{s,\max} = 126.31\text{ MPa}, \quad q = 99.21\text{ N/mm} \implies s \le 30\text{ mm}\)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOCK QUESTION 4 -->
+  <h2 class="prob" id="mock-q4"><span class="tag">ข้อสอบเก็ง 4</span>ความเค้นรวม วงกลมมอร์ และการตรวจสอบการวิบัติของเพลา (20 คะแนน)</h2>
+  <div class="stmt">
+    <p>เพลากลมตันขนาดเส้นผ่านศูนย์กลาง \(d = 50\text{ mm}\) (\(c = 25\text{ mm}\)) ทำจากเหล็กกล้าโครงสร้างมีกำลังคราก \(\sigma_y = 300\text{ MPa}\) รับแรงกระทำพร้อมกันที่หน้าตัดวิกฤต ดังนี้:<br>
+    - แรงกดตามแนวแกน (Axial Compression) \(P = 40\text{ kN}\)<br>
+    - โมเมนต์ดัด (Bending Moment) \(M = 1.5\text{ kN}\cdot\text{m}\)<br>
+    - แรงบิด (Torsional Moment) \(T = 2.0\text{ kN}\cdot\text{m}\)<br>
+    จงหา:<br>
+    1. ความเค้นตั้งฉากรวม \(\sigma_x\) และความเค้นเฉือน \(\tau_{xy}\) ที่ผิวบนสุดของเพลา (จุด A)<br>
+    2. วงกลมมอร์ คำนวณความเค้นหลัก \(\sigma_1, \sigma_2\) และความเค้นเฉือนสูงสุดในระนาบ \(\tau_{\max}\)<br>
+    3. ตรวจสอบความปลอดภัยด้วยทฤษฎี Tresca (Max Shear Stress) และทฤษฎี von Mises (Distortion Energy) พร้อมหาค่า Factor of Safety (\(FS\))</p>
+  </div>
+
+  <h3 class="grp">เฉลยละเอียดข้อ 4 ทีละขั้นตอน (Step-by-Step Solution)</h3>
+  <div class="exam">
+    <div class="step">
+      <div class="row">
+        <div class="lab">สิ่งที่โจทย์กำหนด</div>
+        <div class="math">
+          \(d = 50\text{ mm} \implies c = 25\text{ mm}, \quad \sigma_y = 300\text{ MPa}\)<br>
+          \(P = 40,000\text{ N} \text{ (กด)}, \quad M = 1.5 \times 10^6\text{ N}\cdot\text{mm}, \quad T = 2.0 \times 10^6\text{ N}\cdot\text{mm}\)
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">ขั้น 1: คุณสมบัติหน้าตัด A, I, J</div>
+        <div class="math">
+          \[A = \pi c^2 = \pi (25)^2 = 1,963.50\text{ mm}^2\]
+          \[I = \frac{\pi c^4}{4} = \frac{\pi (25)^4}{4} = 306,796.16\text{ mm}^4\]
+          \[J = 2I = 613,592.32\text{ mm}^4\]
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">ขั้น 2: คำนวณสภาวะความเค้นที่จุดวิกฤต (จุด A ผิวบน)</div>
+        <div class="math">
+          ที่ผิวบนสุด ทั้งแรงกดและโมเมนต์ดัดเสริมให้เกิดแรงอัดรวมกันสูงสุด:<br>
+          \[\sigma_{\text{axial}} = -\frac{P}{A} = -\frac{40,000}{1,963.50} = -20.37\text{ MPa}\]
+          \[\sigma_{\text{bend}} = -\frac{M c}{I} = -\frac{(1.5 \times 10^6)(25)}{306,796.16} = -122.23\text{ MPa}\]
+          \[\sigma_x = -20.37 - 122.23 = -142.60\text{ MPa}\]
+          ความเค้นเฉือนจากแรงบิด:<br>
+          \[\tau_{xy} = \frac{T c}{J} = \frac{(2.0 \times 10^6)(25)}{613,592.32} = 81.49\text{ MPa}\]
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">ขั้น 3: สร้างวงกลมมอร์ &amp; Principal Stresses</div>
+        <div class="math">
+          จุดศูนย์กลางวงกลม: \(\sigma_{\text{avg}} = \frac{\sigma_x + \sigma_y}{2} = \frac{-142.60 + 0}{2} = -71.30\text{ MPa}\)<br>
+          รัศมีวงกลมมอร์ (\(R = \tau_{\max}\)):<br>
+          \[R = \sqrt{\left(\frac{\sigma_x}{2}\right)^2 + \tau_{xy}^2} = \sqrt{(-71.30)^2 + (81.49)^2} = \sqrt{5,083.69 + 6,640.62} = 108.28\text{ MPa}\]
+          ความเค้นหลักทั้งสองค่า:<br>
+          \[\sigma_1 = \sigma_{\text{avg}} + R = -71.30 + 108.28 = +36.98\text{ MPa (ดึง)}\]
+          \[\sigma_2 = \sigma_{\text{avg}} - R = -71.30 - 108.28 = -179.58\text{ MPa (อัด)}\]
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">ขั้น 4: ตรวจสอบการวิบัติ Tresca &amp; von Mises</div>
+        <div class="math">
+          1. <b>ทฤษฎี Tresca (Maximum Shear Stress Theory):</b><br>
+          \[\sigma_{\text{Tresca}} = \sigma_1 - \sigma_2 = 36.98 - (-179.58) = 216.56\text{ MPa} \le 300\text{ MPa} \implies \text{ปลอดภัย}\]
+          \[FS_{\text{Tresca}} = \frac{\sigma_y}{\sigma_{\text{Tresca}}} = \frac{300}{216.56} = 1.39\]
+          2. <b>ทฤษฎี von Mises (Maximum Distortion Energy Theory):</b><br>
+          \[\sigma_{\text{vm}} = \sqrt{\sigma_x^2 + 3\tau_{xy}^2} = \sqrt{(-142.60)^2 + 3(81.49)^2} = \sqrt{20,334.76 + 19,921.86} = 200.64\text{ MPa}\]
+          \[FS_{\text{vm}} = \frac{\sigma_y}{\sigma_{\text{vm}}} = \frac{300}{200.64} = 1.50\]
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">คำตอบสุดท้าย</div>
+        <div>
+          <span class="fin">\(\sigma_1 = +36.98\text{ MPa}, \quad \sigma_2 = -179.58\text{ MPa}, \quad \tau_{\max} = 108.28\text{ MPa}, \quad FS_{\text{Tresca}} = 1.39, \quad FS_{\text{vonMises}} = 1.50\)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOCK QUESTION 5 -->
+  <h2 class="prob" id="mock-q5"><span class="tag">ข้อสอบเก็ง 5</span>เสาเหล็กโครงสร้างโก่งเดาะในระนาบ 3 มิติ และการค้ำยันแกนอ่อน (20 คะแนน)</h2>
+  <div class="stmt">
+    <p>เสาเหล็กโครงสร้างรูปพรรณยาว \(L = 6.0\text{ m}\) หน้าตัดมีพื้นที่ \(A = 7,600\text{ mm}^2\), \(I_x = 120 \times 10^6\text{ mm}^4\), \(I_y = 15 \times 10^6\text{ mm}^4\), ทำจากเหล็กที่มี \(E = 200\text{ GPa}\) และกำลังคราก \(\sigma_y = 250\text{ MPa}\)<br>
+    - <b>ในระนาบ x-z (การดัดรอบแกน x):</b> จุดรองรับหัวท้ายเป็น Fixed-Fixed (\(K_x = 0.5\)) ตลอดความยาว \(6.0\text{ m}\)<br>
+    - <b>ในระนาบ y-z (การดัดรอบแกนอ่อน y):</b> จุดรองรับหัวท้ายเป็น Pin-Pin (\(K_y = 1.0\)) และ <b>มีค้ำยันด้านข้าง (Lateral Bracing) ที่กึ่งกลางความสูง (\(L/2 = 3.0\text{ m}\))</b><br>
+    จงหา:<br>
+    1. รัศมีไจเรชัน \(r_x\) และ \(r_y\)<br>
+    2. อัตราส่วนความชะลูดประสิทธิผล \(\lambda_x\) และ \(\lambda_y\)<br>
+    3. ระบุว่าแกนใดควบคุมการโก่งเดาะ (Governing Axis)<br>
+    4. อัตราส่วนความชะลูดวิกฤต \((KL/r)_c\) และกำลังรับน้ำหนักวิกฤตสูงสุด \(P_{cr}\) ของเสา</p>
+  </div>
+
+  <h3 class="grp">เฉลยละเอียดข้อ 5 ทีละขั้นตอน (Step-by-Step Solution)</h3>
+  <div class="exam">
+    <div class="step">
+      <div class="row">
+        <div class="lab">สิ่งที่โจทย์กำหนด</div>
+        <div class="math">
+          \(L = 6,000\text{ mm}, \quad A = 7,600\text{ mm}^2\)<br>
+          \(I_x = 120 \times 10^6\text{ mm}^4, \quad I_y = 15 \times 10^6\text{ mm}^4\)<br>
+          \(E = 200 \times 10^3\text{ MPa}, \quad \sigma_y = 250\text{ MPa}\)<br>
+          แกน x: \(K_x = 0.5, \quad L_x = 6,000\text{ mm}\)<br>
+          แกน y: \(K_y = 1.0, \quad L_y = 3,000\text{ mm} \text{ (ค้ำยันกึ่งกลาง)}\)
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">ขั้น 1: รัศมีไจเรชัน rx และ ry</div>
+        <div class="math">
+          \[r_x = \sqrt{\frac{I_x}{A}} = \sqrt{\frac{120 \times 10^6}{7,600}} = 125.66\text{ mm}\]
+          \[r_y = \sqrt{\frac{I_y}{A}} = \sqrt{\frac{15 \times 10^6}{7,600}} = 44.43\text{ mm}\]
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">ขั้น 2: อัตราส่วนความชะลูดแยก 2 แกน</div>
+        <div class="math">
+          รอบแกน x (Fixed-Fixed, ยาว 6 m):<br>
+          \[\lambda_x = \frac{K_x L_x}{r_x} = \frac{(0.5)(6,000)}{125.66} = 23.87\]
+          รอบแกน y (Pin-Pin, ค้ำยันกึ่งกลางยาว 3 m):<br>
+          \[\lambda_y = \frac{K_y L_y}{r_y} = \frac{(1.0)(3,000)}{44.43} = 67.53\]
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">ขั้น 3: ระบุแกนควบคุมการโก่งเดาะ</div>
+        <div class="math">
+          เปรียบเทียบค่าความชะลูด:\
+          \[\lambda_y = 67.53 > \lambda_x = 23.87\]
+          <b>แกนที่ควบคุมการโก่งเดาะคือ แกนอ่อน y (Governing Axis)</b> ด้วยค่า \(\lambda_{\text{gov}} = 67.53\)
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">ขั้น 4: เช็กอัตราส่วนวิกฤต &amp; คำนวณ Pcr</div>
+        <div class="math">
+          \[\left(\frac{KL}{r}\right)_c = \sqrt{\frac{2\pi^2 E}{\sigma_y}} = \sqrt{\frac{2\pi^2 (200 \times 10^3)}{250}} = 125.66\]
+          คำนวณกำลังรับน้ำหนักวิกฤต Euler Buckling รอบแกนอ่อน y:<br>
+          \[P_{cr, y} = \frac{\pi^2 E I_y}{(K_y L_y)^2} = \frac{\pi^2 (200 \times 10^3\text{ N/mm}^2)(15 \times 10^6\text{ mm}^4)}{(1.0 \times 3,000\text{ mm})^2} = 3,289,868\text{ N} = 3,289.87\text{ kN}\]
+          (เทียบกับรอบแกน x: \(P_{cr, x} = \frac{\pi^2(200 \times 10^3)(120 \times 10^6)}{(0.5 \times 6000)^2} = 26,318.95\text{ kN}\) สูงกว่ามาก)
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">คำตอบสุดท้าย</div>
+        <div>
+          <span class="fin">\(\lambda_x = 23.87, \quad \lambda_y = 67.53 \implies \text{แกน y ควบคุมการเดาะ}, \quad P_{cr} = 3,289.87\text{ kN}\)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pn">
+    <a href="#guess">← ย้อนกลับไปหมวดเทคนิคเก็งข้อสอบพลิกแพลง</a>
+    <a href="#sum">กลับสู่หน้าสรุปภาพรวม 21 หน้า →</a>
   </div>
 </section>
 
