@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="100%" height="auto" style="background:#FFFFFF; font-family:'Sarabun', system-ui, -apple-system, sans-serif;">
+  <defs>
+    <!-- Arrow marker -->
+    <marker id="ar-red" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#B3201F"/>
+    </marker>
+    <marker id="ar-green" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#17702A"/>
+    </marker>
+    <marker id="ar-blue" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#1C2FA8"/>
+    </marker>
+    <marker id="ar-ink" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#16181D"/>
+    </marker>
+  </defs>
+
+  <!-- Title Header -->
+  <rect x="0" y="0" width="1200" height="70" fill="#F8FAFC"/>
+  <line x1="0" y1="70" x2="1200" y2="70" stroke="#CBD5E1" stroke-width="2"/>
+  <text x="35" y="44" fill="#14295B" font-size="22" font-weight="700">ตัวอย่างที่ 6.1: การกระจายตัวของหน่วยแรงดัดและการแบ่งสัดส่วนโมเมนต์ของหน้าตัดรูปตัว I</text>
+
+  <!-- ==================== PANEL 1: CROSS SECTION ==================== -->
+  <rect x="30" y="90" width="370" height="640" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+  <rect x="30" y="90" width="370" height="42" rx="8" fill="#F1F5F9"/>
+  <text x="45" y="118" fill="#14295B" font-size="16" font-weight="700">1. มิติรูปทรงหน้าตัด (Cross Section, mm)</text>
+
+  <!-- Top Flange (Comp Zone: Light Red) -->
+  <rect x="125" y="190" width="180" height="30" fill="#FEE2E2" stroke="#B3201F" stroke-width="2"/>
+  <text x="215" y="211" fill="#B3201F" font-size="13" font-weight="600" text-anchor="middle">ปีกบน (Top Flange: อัด)</text>
+
+  <!-- Web (Light Purple) -->
+  <rect x="200" y="220" width="30" height="360" fill="#F3E8FF" stroke="#14295B" stroke-width="2"/>
+  <text x="215" y="405" fill="#14295B" font-size="13" font-weight="600" text-anchor="middle" transform="rotate(-90 215 405)">ส่วนเอว (Web: สูง 120)</text>
+
+  <!-- Bottom Flange (Tens Zone: Light Green) -->
+  <rect x="125" y="580" width="180" height="30" fill="#DCFCE7" stroke="#17702A" stroke-width="2"/>
+  <text x="215" y="601" fill="#17702A" font-size="13" font-weight="600" text-anchor="middle">ปีกล่าง (Bot Flange: ดึง)</text>
+
+  <!-- Neutral Axis (NA) -->
+  <line x1="70" y1="400" x2="360" y2="400" stroke="#1C2FA8" stroke-width="2" stroke-dasharray="8 4"/>
+  <text x="365" y="405" fill="#1C2FA8" font-size="14" font-weight="700">NA (y = 0)</text>
+
+  <!-- Points 1, 2, 3, 4 -->
+  <circle cx="215" cy="190" r="5" fill="#B3201F"/>
+  <text x="225" y="180" fill="#B3201F" font-size="14" font-weight="700">จุดที่ 1 (y = +70)</text>
+
+  <circle cx="215" cy="220" r="4" fill="#B3201F"/>
+  <text x="238" y="235" fill="#B3201F" font-size="13" font-weight="600">จุดที่ 2 (y = +60)</text>
+
+  <circle cx="215" cy="580" r="4" fill="#17702A"/>
+  <text x="238" y="575" fill="#17702A" font-size="13" font-weight="600">จุดที่ 3 (y = -60)</text>
+
+  <circle cx="215" cy="610" r="5" fill="#17702A"/>
+  <text x="225" y="630" fill="#17702A" font-size="14" font-weight="700">จุดที่ 4 (y = -70)</text>
+
+  <!-- Dimensions -->
+  <!-- Flange width: 60 mm -->
+  <line x1="125" y1="160" x2="305" y2="160" stroke="#16181D" stroke-width="1.5" marker-start="url(#ar-ink)" marker-end="url(#ar-ink)"/>
+  <line x1="125" y1="150" x2="125" y2="190" stroke="#94A3B8" stroke-width="1"/>
+  <line x1="305" y1="150" x2="305" y2="190" stroke="#94A3B8" stroke-width="1"/>
+  <text x="215" y="152" fill="#16181D" font-size="14" font-weight="700" text-anchor="middle">60 mm</text>
+
+  <!-- Flange thickness: 10 mm -->
+  <line x1="325" y1="190" x2="325" y2="220" stroke="#16181D" stroke-width="1.5" marker-start="url(#ar-ink)" marker-end="url(#ar-ink)"/>
+  <text x="335" y="210" fill="#16181D" font-size="13" font-weight="600">10</text>
+
+  <!-- Web height: 120 mm -->
+  <line x1="325" y1="220" x2="325" y2="580" stroke="#16181D" stroke-width="1.5" marker-start="url(#ar-ink)" marker-end="url(#ar-ink)"/>
+  <text x="335" y="405" fill="#16181D" font-size="14" font-weight="700">120 mm</text>
+
+  <!-- Web thickness: 10 mm -->
+  <text x="145" y="405" fill="#14295B" font-size="13" font-weight="600">หนา 10</text>
+
+  <!-- Distance from NA to top and bot: 70 mm -->
+  <line x1="85" y1="190" x2="85" y2="400" stroke="#64748B" stroke-width="1.2" marker-start="url(#ar-ink)" marker-end="url(#ar-ink)"/>
+  <text x="60" y="300" fill="#64748B" font-size="13" font-weight="600">70 mm</text>
+
+  <line x1="85" y1="400" x2="85" y2="610" stroke="#64748B" stroke-width="1.2" marker-start="url(#ar-ink)" marker-end="url(#ar-ink)"/>
+  <text x="60" y="510" fill="#64748B" font-size="13" font-weight="600">70 mm</text>
+
+  <!-- Moment note at bottom -->
+  <rect x="45" y="655" width="340" height="60" rx="4" fill="#F8FAFC" stroke="#CBD5E1"/>
+  <text x="60" y="678" fill="#B3201F" font-size="14" font-weight="700">โมเมนต์ดัดบวก: M = 20 kN·m</text>
+  <text x="60" y="700" fill="#64748B" font-size="13">ด้านบนรับแรงอัด (Comp) · ด้านล่างรับแรงดึง (Tens)</text>
+
+
+  <!-- ==================== PANEL 2: STRESS DISTRIBUTION ==================== -->
+  <rect x="420" y="90" width="370" height="640" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+  <rect x="420" y="90" width="370" height="42" rx="8" fill="#F1F5F9"/>
+  <text x="435" y="118" fill="#14295B" font-size="16" font-weight="700">2. ไดอะแกรมการกระจายหน่วยแรงดัด (σ, MPa)</text>
+
+  <!-- Center Datum Line (sigma = 0 at x = 605) -->
+  <line x1="605" y1="150" x2="605" y2="650" stroke="#16181D" stroke-width="2"/>
+  <text x="605" y="142" fill="#64748B" font-size="13" font-weight="600" text-anchor="middle">σ = 0</text>
+
+  <!-- Stress Triangles -->
+  <!-- Top Compression Polygon: (605, 400) -> (465, 190) -> (605, 190) -->
+  <polygon points="605,400 465,190 605,190" fill="#FEE2E2" stroke="#B3201F" stroke-width="1.5" opacity="0.8"/>
+
+  <!-- Bottom Tension Polygon: (605, 400) -> (745, 610) -> (605, 610) -->
+  <polygon points="605,400 745,610 605,610" fill="#DCFCE7" stroke="#17702A" stroke-width="1.5" opacity="0.8"/>
+
+  <!-- Linear Stress Line -->
+  <line x1="465" y1="190" x2="745" y2="610" stroke="#1C2FA8" stroke-width="3"/>
+
+  <!-- Stress Arrows (Compression: pointing right towards datum) -->
+  <line x1="465" y1="190" x2="600" y2="190" stroke="#B3201F" stroke-width="2" marker-end="url(#ar-red)"/>
+  <line x1="485" y1="220" x2="600" y2="220" stroke="#B3201F" stroke-width="1.5" marker-end="url(#ar-red)"/>
+  <line x1="535" y1="300" x2="600" y2="300" stroke="#B3201F" stroke-width="1.2" marker-end="url(#ar-red)"/>
+
+  <!-- Stress Arrows (Tension: pointing right away from datum) -->
+  <line x1="610" y1="500" x2="675" y2="500" stroke="#17702A" stroke-width="1.2" marker-end="url(#ar-green)"/>
+  <line x1="610" y1="580" x2="725" y2="580" stroke="#17702A" stroke-width="1.5" marker-end="url(#ar-green)"/>
+  <line x1="610" y1="610" x2="745" y2="610" stroke="#17702A" stroke-width="2" marker-end="url(#ar-green)"/>
+
+  <!-- Stress Value Labels -->
+  <!-- Point 1: -->
+  <text x="445" y="180" fill="#B3201F" font-size="14" font-weight="700">σ₁ = -214.72 MPa</text>
+  <text x="445" y="198" fill="#B3201F" font-size="12">(อัดสูงสุดที่ขอบบน)</text>
+
+  <!-- Point 2: -->
+  <text x="440" y="240" fill="#B3201F" font-size="13" font-weight="600">σ₂ = -184.05 MPa</text>
+  <text x="440" y="256" fill="#64748B" font-size="12">(รอยต่อปีกกับเอวบน)</text>
+
+  <!-- NA: -->
+  <circle cx="605" cy="400" r="5" fill="#1C2FA8"/>
+  <text x="618" y="405" fill="#1C2FA8" font-size="14" font-weight="700">σ_NA = 0</text>
+
+  <!-- Point 3: -->
+  <text x="635" y="565" fill="#17702A" font-size="13" font-weight="600">σ₃ = +184.05 MPa</text>
+  <text x="635" y="581" fill="#64748B" font-size="12">(รอยต่อปีกกับเอวล่าง)</text>
+
+  <!-- Point 4: -->
+  <text x="635" y="625" fill="#17702A" font-size="14" font-weight="700">σ₄ = +214.72 MPa</text>
+  <text x="635" y="643" fill="#17702A" font-size="12">(ดึงสูงสุดที่ขอบล่าง)</text>
+
+  <!-- Formula box -->
+  <rect x="435" y="665" width="340" height="50" rx="4" fill="#F8FAFC" stroke="#CBD5E1"/>
+  <text x="450" y="695" fill="#14295B" font-size="14" font-weight="700">Flexure Formula:  σ = - (M · y) / I_total</text>
+
+
+  <!-- ==================== PANEL 3: MOMENT BREAKDOWN ==================== -->
+  <rect x="810" y="90" width="360" height="640" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+  <rect x="810" y="90" width="360" height="42" rx="8" fill="#F1F5F9"/>
+  <text x="825" y="118" fill="#14295B" font-size="16" font-weight="700">3. สัดส่วนการรับโมเมนต์ดัด (Moment, %)</text>
+
+  <!-- Governing Principle -->
+  <rect x="825" y="145" width="330" height="65" rx="4" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="840" y="170" fill="#14295B" font-size="14" font-weight="700">หลักการ: สัดส่วนโมเมนต์ = สัดส่วน I</text>
+  <text x="840" y="195" fill="#1C2FA8" font-size="14" font-weight="700">M_part = M × (I_part / I_total)</text>
+
+  <!-- Top Flange Card -->
+  <rect x="825" y="225" width="330" height="100" rx="6" fill="#FEF2F2" stroke="#B3201F" stroke-width="1.5"/>
+  <text x="840" y="250" fill="#B3201F" font-size="15" font-weight="700">ก) ปีกบน (Top Flange)</text>
+  <text x="840" y="275" fill="#16181D" font-size="14">I_top = 2,540,000 mm⁴ (d = 65 mm)</text>
+  <text x="840" y="298" fill="#B3201F" font-size="15" font-weight="700">สัดส่วน = 38.96%  (รับ 7.791 kN·m)</text>
+  <text x="840" y="316" fill="#64748B" font-size="12">เกิดจาก I_o + A·d² = 5,000 + 2,535,000</text>
+
+  <!-- Web Card -->
+  <rect x="825" y="340" width="330" height="95" rx="6" fill="#FAF5FF" stroke="#14295B" stroke-width="1.5"/>
+  <text x="840" y="365" fill="#14295B" font-size="15" font-weight="700">ข) ส่วนเอว (Web)</text>
+  <text x="840" y="390" fill="#16181D" font-size="14">I_web = 1,440,000 mm⁴ (d = 0 mm)</text>
+  <text x="840" y="413" fill="#14295B" font-size="15" font-weight="700">สัดส่วน = 22.09%  (รับ 4.417 kN·m)</text>
+  <text x="840" y="430" fill="#64748B" font-size="12">คิดรอบแกน NA โดยตรง d = 0</text>
+
+  <!-- Bottom Flange Card -->
+  <rect x="825" y="450" width="330" height="100" rx="6" fill="#F0FDF4" stroke="#17702A" stroke-width="1.5"/>
+  <text x="840" y="475" fill="#17702A" font-size="15" font-weight="700">ค) ปีกล่าง (Bottom Flange)</text>
+  <text x="840" y="500" fill="#16181D" font-size="14">I_bot = 2,540,000 mm⁴ (d = 65 mm)</text>
+  <text x="840" y="523" fill="#17702A" font-size="15" font-weight="700">สัดส่วน = 38.96%  (รับ 7.791 kN·m)</text>
+  <text x="840" y="541" fill="#64748B" font-size="12">เท่ากับปีกบนเนื่องจากสมมาตร</text>
+
+  <!-- Key Insight Box -->
+  <rect x="825" y="565" width="330" height="150" rx="6" fill="#FEF3C7" stroke="#D97706" stroke-width="1.5"/>
+  <text x="840" y="590" fill="#B45309" font-size="14" font-weight="700">💡 แก่นแท้ทางวิศวกรรม (Engineering Insight):</text>
+  <text x="840" y="615" fill="#B3201F" font-size="14" font-weight="700">• ปีกทั้งสองรับโมเมนต์รวมกันถึง 77.91% !</text>
+  <text x="840" y="638" fill="#14295B" font-size="13">• ส่วนเอวรับเพียง 22.09% เท่านั้น</text>
+  <text x="840" y="660" fill="#64748B" font-size="13">เหตุผล: เพราะปีกอยู่ไกลจากแกน NA (d = 65 mm)</text>
+  <text x="840" y="682" fill="#64748B" font-size="13">ทำให้พจน์ A·d² มีค่าสูงมาก ช่วยต้านโมเมนต์ได้ดีที่สุด</text>
+  <text x="840" y="704" fill="#16181D" font-size="13">นี่คือเหตุผลที่วิศวกรออกแบบคานเป็นรูปตัว I !</text>
+</svg>

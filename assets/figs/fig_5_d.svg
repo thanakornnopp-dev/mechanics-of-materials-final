@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 180" width="100%" height="auto" style="background:#fff;font-family:'Sarabun',sans-serif;">
+  <rect x="0" y="0" width="420" height="180" fill="#fff" stroke="#CBD5E1"/>
+  <circle cx="110" cy="90" r="55" fill="#FEE2E2" stroke="#B3201F" stroke-width="2"/>
+  <circle cx="110" cy="90" r="41" fill="#FFFFFF" stroke="#B3201F" stroke-width="2"/>
+  <line x1="110" y1="90" x2="165" y2="90" stroke="#16181D" stroke-width="1.5"/>
+  <text x="200" y="70" fill="#B3201F" font-size="15" font-weight="700">ข้อ D: เพลาวงแหวนกลวง</text>
+  <text x="200" y="95" fill="#16181D" font-size="13">r_o = 20 mm, r_i = 15 mm</text>
+  <text x="200" y="115" fill="#16181D" font-size="13">τ_allow = 100 MPa</text>
+  <text x="200" y="137" fill="#B3201F" font-size="13" font-weight="700">วาดประกอบเพิ่มเติม (ไม่มีรูปในโจทย์)</text>
+</svg>

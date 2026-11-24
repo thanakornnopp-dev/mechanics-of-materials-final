@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Solid Ja E Here · เฉลยข้อสอบจริง 10 ข้อ 21 หน้าเต็ม · วิศวกรรมโยธา มหาวิทยาลัยธรรมศาสตร์</title>
-  <meta name="description" content="สรุปสูตร ที่มา ขั้นตอนการคำนวณ จุดดักข้อสอบ และเฉลยละเอียดทีละขั้นตอน ครบทั้ง 10 ข้อ 21 หน้าเต็ม จากชีท Solid Ja E Here กลศาสตร์ของแข็ง มหาวิทยาลัยธรรมศาสตร์">
+  <title>Solid Ja E Here · เฉลยแบบฝึกหัดครบทุกข้อ &amp; ทริครวมทำข้อสอบ · วิศวกรรมโยธา มหาวิทยาลัยธรรมศาสตร์</title>
+  <meta name="description" content="สรุปทริครวมวิธีทำโจทย์ทุกเรื่อง และเฉลยละเอียดแบบฝึกหัดครบทุกข้อจากชีท Solid Ja E Here 21 หน้าเต็ม พร้อมรูปประกอบจากโจทย์จริง กลศาสตร์ของแข็ง มหาวิทยาลัยธรรมศาสตร์">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
-  <link rel="stylesheet" href="assets/style.css?v=20261123a">
+  <link rel="stylesheet" href="assets/style.css?v=20261125a">
   <script>
     (function(){
       var t = null;
@@ -32,20 +32,21 @@
 </svg>
 
 <nav class="toc" aria-label="สารบัญนำทาง">
-  <a href="#sum" aria-current="page">สรุปภาพรวม 21 หน้า</a>
-  <a href="#p1">ข้อ 1 เพลาขั้น &amp; เฟือง</a>
-  <a href="#p2">ข้อ 2 บิดอินดีเทอร์มิเนต</a>
-  <a href="#p3">ข้อ 3 เพลาสวมซ้อน</a>
-  <a href="#p4">ข้อ 4 เพลาตัน vs กลวง</a>
-  <a href="#p5">ข้อ 5 ดัดหน้าตัดไม่สมมาตร</a>
-  <a href="#p6">ข้อ 6 คานแอ่นตัว Double Int</a>
-  <a href="#p7">ข้อ 7 หน้าตัดผสมไม้-เหล็ก</a>
-  <a href="#p8">ข้อ 8 แรงเฉือน τ กระโดด</a>
-  <a href="#p9">ข้อ 9 Shear Flow &amp; ตะปู</a>
-  <a href="#p10">ข้อ 10 เสาโก่งเดาะ 2 แกน</a>
-  <a href="#ref" class="gap">สูตร &amp; จุดดัก</a>
-  <a href="#guess" class="gap" style="color:var(--red);font-weight:700;">🔥 เก็งข้อสอบ &amp; พลิกแพลง</a>
-  <a href="#mock" class="gap" style="color:var(--gold);font-weight:700;">🎯 ข้อสอบเก็งจริง 5 ข้อ</a>
+  <a href="#sum" aria-current="page">สรุปภาพรวม</a>
+  <a href="#playbook" class="gap" style="color:var(--blue);font-weight:700;">🎯 ทริครวมทุกเรื่อง</a>
+  <a href="#p1">บท 5.1–5.2 เพลาและเฟือง</a>
+  <a href="#p2">บท 5.4 บิดยึดหัวท้าย</a>
+  <a href="#p3">บท 5.5 เพลาหุ้ม 2 วัสดุ</a>
+  <a href="#p4">แบบฝึกหัด 5 (C–F)</a>
+  <a href="#p5">บท 6.1–6.2 &amp; C ความเค้นดัด</a>
+  <a href="#p6">บท 6.3–6.5 คานแอ่นตัว</a>
+  <a href="#p7">บท 6.6 &amp; A หน้าตัดผสม</a>
+  <a href="#p8">บท 7.2–7.3 แรงเฉือน &amp; กาว</a>
+  <a href="#p9">บท 7.4 คานกล่องตะปู</a>
+  <a href="#p10">บท 8.1–8.3 &amp; 8.2 เสาโก่งเดาะ</a>
+  <a href="#guess" class="gap" style="color:var(--red);font-weight:700;">🔥 เก็งพลิกแพลง</a>
+  <a href="#mock" style="color:var(--gold);font-weight:700;">📝 ข้อสอบเก็ง 5 ข้อ</a>
+  <a href="#ref" class="gap">สูตร &amp; หน่วย</a>
   <span class="sp"></span>
   <span class="tools">
     <button class="th" id="practice" type="button" aria-pressed="false" aria-label="โหมดฝึก ซ่อนวิธีทำ">
@@ -63,1512 +64,1237 @@
 <main>
 <noscript><p style="padding:20px;color:red;text-align:center;">กรุณาเปิดการทำงานของ JavaScript เพื่อแสดงสูตรคณิตศาสตร์และใช้งานระบบ</p></noscript>
 
+
 <!-- SECTION 0: สรุปภาพรวม -->
 <section id="sum" class="on">
   <header class="top">
-    <p class="kick">เฉลยข้อสอบจริงฉบับลายมือ 21 หน้าเต็ม · วิศวกรรมโยธา มหาวิทยาลัยธรรมศาสตร์</p>
-    <h1>Solid Ja E Here · รวมเฉลยข้อสอบจริง 10 ข้อ</h1>
-    <p class="sub">สรุปสูตร · การพิสูจน์ First Principles · วิธีทำบรรทัดต่อบรรทัด · จุดดักคะแนนของอาจารย์</p>
-    <p class="by">คัดลอกจากชีทลายมือเฉลยข้อสอบจริง 21 หน้าเต็ม (Solid Ja E Here) · จัดทำโดย ธนภรณ์ นพรัตน์</p>
+    <p class="kick">เฉลยแบบฝึกหัดครบทุกข้อ (21 หน้าเต็ม) · วิศวกรรมโยธา มหาวิทยาลัยธรรมศาสตร์</p>
+    <h1>Solid Ja E Here · คู่มือเฉลยละเอียดครบทุกข้อ</h1>
+    <p class="sub">ถอดความตรงตามลายมือต้นฉบับ 100% · ใช้รูปจริงจากโจทย์ · พร้อมหน้าสรุปทริคทำข้อสอบทุกเรื่อง</p>
+    <p class="by">เรียบเรียงจากชีท Solid Ja E Here (21 หน้าเต็ม) · จัดทำโดย ธนภรณ์ นพรัตน์</p>
     <p class="pracnote">โหมดฝึกเปิดอยู่: ซ่อนวิธีทำไว้ แตะแต่ละขั้นเพื่อดู (ลองเขียนเองก่อน) กดปุ่ม "ฝึก" อีกครั้งเพื่อปิด</p>
   </header>
 
-  <div class="survival-banner">
-    <h3>🔥 โค้งสุดท้ายก่อนสอบ: หมวดเก็งข้อสอบและเทคนิคแก้โจทย์พลิกแพลง (Survival Guide)</h3>
-    <p>สำหรับนักศึกษาที่ต้องการคะแนนสูงเพื่อดึงเกรดให้พ้น F <b>ห้ามพลาดหมวดนี้เด็ดขาด!</b> รวบรวม 7 รูปแบบโจทย์พลิกแพลงที่อาจารย์ชอบออกข้อสอบตัดเกรด พร้อมเฉลยเทคนิคตั้งสมการแรก ทางลัดโกงเวลา และ 10 Checklist ป้องกัน F <a href="#guess" style="color:var(--red);font-weight:700;text-decoration:underline;margin-left:8px;">คลิกอ่านทันที →</a></p>
-  </div>
-
-  <h2 class="prob"><span class="tag">ภาพรวม</span>สรุปสาระสำคัญจากชีท Solid Ja E Here ครบทั้ง 21 หน้า</h2>
-  <div class="stmt">
-    <p>เอกสารชุดนี้รวบรวมและถอดความจากชีทลายมือเฉลยข้อสอบจริง <b>Solid Ja E Here</b> จำนวน 21 หน้าเต็ม ครอบคลุมเนื้อหาสำคัญครึ่งหลังของวิชากลศาสตร์ของแข็ง (Mechanics of Materials) ทั้ง 10 ข้อใหญ่ โดยแยกขั้นตอนการคำนวณอย่างละเอียดตามเกณฑ์การตรวจข้อสอบอัตนัยของอาจารย์ พร้อมฟังก์ชันโหมดฝึกทำโจทย์ (Practice Mode) และภาพสแกนลายมือต้นฉบับแนบไว้ทุกข้อ</p>
+  <div class="survival-banner" style="border-color:var(--blue);background:rgba(28,47,168,0.05);">
+    <h3 style="color:var(--blue);">🎯 หน้าแนะนำก่อนเข้าห้องสอบ: ทริครวมทุกเรื่อง "เห็นโจทย์แบบไหน → ทำสเต็ปไหน"</h3>
+    <p>หากมีเวลาเหลือน้อย อยากรู้วิธีดูโจทย์แล้วลงมือทำได้ทันทีโดยไม่หลงทาง ให้เปิดอ่านหน้าสรุปทริครวมที่สรุปเป็นขั้นตอนตายตัวครบทั้ง 6 บท <a href="#playbook" style="color:var(--blue);font-weight:700;text-decoration:underline;margin-left:6px;">คลิกเปิดหน้าทริครวมทุกเรื่อง →</a></p>
   </div>
 
   <div class="jump">
-    <a href="#sum-table">ตารางสรุป 10 ข้อ</a>
-    <a href="#sum-cards">การ์ดสรุปสูตร</a>
-    <a href="#p1">ข้อ 1 เพลาขั้น &amp; เฟือง</a>
-    <a href="#p2">ข้อ 2 บิดอินดีเทอร์มิเนต</a>
-    <a href="#p3">ข้อ 3 เพลาสวมซ้อน</a>
-    <a href="#p4">ข้อ 4 เพลาตัน vs กลวง</a>
-    <a href="#p5">ข้อ 5 ดัดหน้าตัดไม่สมมาตร</a>
-    <a href="#p6">ข้อ 6 คานแอ่นตัว Double Int</a>
-    <a href="#p7">ข้อ 7 หน้าตัดผสมไม้-เหล็ก</a>
-    <a href="#p8">ข้อ 8 แรงเฉือน τ กระโดด</a>
-    <a href="#p9">ข้อ 9 Shear Flow &amp; ตะปู</a>
-    <a href="#p10">ข้อ 10 เสาโก่งเดาะ 2 แกน</a>
-    <a href="#ref">สูตร &amp; จุดดัก</a>
-    <a href="#guess" style="border-color:var(--red);color:var(--red);font-weight:700;">🔥 เก็งข้อสอบ &amp; พลิกแพลง</a>
-    <a href="#mock" style="border-color:var(--gold);color:var(--gold);font-weight:700;">🎯 ข้อสอบเก็งจริง 5 ข้อ</a>
+    <a href="#playbook" style="border-color:var(--blue);color:var(--blue);font-weight:700;">🎯 ทริครวม &amp; สเต็ปทำโจทย์</a>
+    <a href="#guess" style="border-color:var(--red);color:var(--red);font-weight:700;">🔥 เก็งพลิกแพลง 7 แบบ</a>
+    <a href="#mock" style="border-color:var(--gold);color:var(--gold);font-weight:700;">📝 ข้อสอบเก็ง 5 ข้อ</a>
+    <a href="#p1">บท 5.1–5.2</a>
+    <a href="#p2">บท 5.4</a>
+    <a href="#p3">บท 5.5</a>
+    <a href="#p4">แบบฝึกหัด 5 (C–F)</a>
+    <a href="#p5">บท 6.1–6.2 &amp; C</a>
+    <a href="#p6">บท 6.3–6.5</a>
+    <a href="#p7">บท 6.6 &amp; A</a>
+    <a href="#p8">บท 7.2–7.3</a>
+    <a href="#p9">บท 7.4</a>
+    <a href="#p10">บท 8.1–8.3 &amp; 8.2</a>
+    <a href="#ref">สูตร &amp; หน่วย</a>
   </div>
 
-  <h3 class="grp" id="sum-table">ก. ตารางสรุป 10 ข้อสอบจริงในชีท Solid Ja E Here (Exam Problems Matrix)</h3>
+  <h3 class="grp">สารบัญแบบฝึกหัดและตัวอย่างทั้งหมดในชีท (ครบทั้ง 21 หน้า ไม่ตกหล่นแม้แต่ข้อเดียว)</h3>
   <div class="tw">
     <table>
-      <caption>ตารางสรุปหัวข้อ หน้าชีท สมการหลัก และคำตอบสำคัญ (เลื่อนแนวนอนเพื่อดูคอลัมน์เต็ม)</caption>
+      <caption>ตารางสรุปตัวอย่างและแบบฝึกหัดทั้งหมดในเอกสาร พร้อมเลขหน้าและคำตอบตรวจสอบ</caption>
       <thead>
         <tr>
-          <th class="td-num">ข้อ</th>
-          <th class="td-name">หัวข้อเรื่อง</th>
+          <th>บท/หมวด</th>
+          <th>ข้อที่ปรากฏในชีท</th>
           <th>หน้าชีท</th>
-          <th class="td-eq">สมการสำคัญ</th>
-          <th class="td-vars">คำตอบสำคัญ</th>
-          <th class="td-tools">จุดดักข้อสอบที่ต้องระวัง</th>
+          <th>สมการควบคุมหลัก</th>
+          <th>คำตอบสำคัญ (ตรงตามลายมือ)</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td class="td-num"><b>1</b></td>
-          <td class="td-name"><a href="#p1">เพลาขั้น &amp; เฟืองทด</a><small>Stepped Shaft &amp; Gears</small></td>
+          <td><b><a href="#p1">บท 5: การบิด (1)</a></b></td>
+          <td>ตัวอย่างที่ 5.1 และ 5.2</td>
           <td>หน้า 1–2</td>
-          <td class="td-eq">
-            <div class="eq-row">
-              <div class="eq-pill">\(\tau = \frac{Tc}{J}\)</div>
-              <div class="eq-pill">\(\phi = \sum \frac{TL}{GJ}\)</div>
-              <div class="eq-pill">\(T_2 = F \cdot r_2\)</div>
-            </div>
-          </td>
-          <td class="td-vars">\(\tau_{AB} = 254.65\text{ MPa}\)<br>\(\tau_{BC} = 63.66\text{ MPa}\)<br>\(\phi_{\text{tot}} = 0.0223\text{ rad}\)</td>
-          <td class="td-tools">ระวังการแปลงหน่วย \(\text{N}\cdot\text{m} \to \text{N}\cdot\text{mm}\) และอัตราทดฟันเฟือง</td>
+          <td>\(\tau = \frac{Tr}{J}, \quad \phi = \frac{TL}{GJ}\)</td>
+          <td>ตย. 5.1: \(\tau_{AB}=31.8, \tau_{BC}=95.5\text{ MPa}\), \(\phi_C=0.03581\text{ rad}\)<br>ตย. 5.2: \(\tau_{BC}=25.46\text{ MPa}\), \(\phi_A=0.00637\text{ rad}\)</td>
         </tr>
         <tr>
-          <td class="td-num"><b>2</b></td>
-          <td class="td-name"><a href="#p2">บิดอินดีเทอร์มิเนต</a><small>Statically Indeterminate</small></td>
+          <td><b><a href="#p2">บท 5: การบิด (2)</a></b></td>
+          <td>ตัวอย่างที่ 5.4 (ยึดหัวท้าย)</td>
           <td>หน้า 3–4</td>
-          <td class="td-eq">
-            <div class="eq-row">
-              <div class="eq-pill">\(\phi_{A/D} = 0\)</div>
-              <div class="eq-pill">\(\sum \frac{T_i L_i}{GJ} = 0\)</div>
-            </div>
-          </td>
-          <td class="td-vars">\(T_{BC} = -686.67\text{ N}\cdot\text{m}\)<br>\(\tau_{\max} = 466.3\text{ MPa}\)<br>\(\tau_{\min} = 233.15\text{ MPa}\)</td>
-          <td class="td-tools">ในเพลากลวง \(\tau_{\min}\) ที่ผิวในไม่เป็นศูนย์ ต้องใช้รัศมีใน \(c_i\)</td>
+          <td>\(\phi_{AB} + \phi_{BC} + \phi_{CD} = 0\)</td>
+          <td>\(T_{BC} = -720, T_{AB} = 80, T_{CD} = 480\text{ N}\cdot\text{m}\)<br>วิกฤต BC: \(244.47 \le \tau_{BC} \le 488.93\text{ MPa}\)</td>
         </tr>
         <tr>
-          <td class="td-num"><b>3</b></td>
-          <td class="td-name"><a href="#p3">เพลาสวมซ้อน แกนเหล็ก-ทองเหลือง</a><small>Composite Coaxial Shaft</small></td>
+          <td><b><a href="#p3">บท 5: การบิด (3)</a></b></td>
+          <td>ตัวอย่างที่ 5.5 (เหล็กหุ้ม Al)</td>
           <td>หน้า 5–6</td>
-          <td class="td-eq">
-            <div class="eq-row">
-              <div class="eq-pill">\(\phi_s = \phi_b\)</div>
-              <div class="eq-pill">\(\frac{T_s}{T_b} = \frac{G_s J_s}{G_b J_b}\)</div>
-            </div>
-          </td>
-          <td class="td-vars">\(T_s = 2.58\text{ N}\cdot\text{m}\)<br>\(T_b = 17.42\text{ N}\cdot\text{m}\)<br>\(\tau_{s,\max} = 0.487\text{ MPa}\)</td>
-          <td class="td-tools">ที่รอยต่อ \(\gamma\) เท่ากัน แต่ \(\tau\) กระโดดไม่เท่ากันเพราะค่า \(G\) ต่างกัน</td>
+          <td>\(\phi_s^{BC} = \phi_a^{BC} \implies T_a = 36 T_s\)</td>
+          <td>\(T_s = 0.54, T_a = 19.46\text{ N}\cdot\text{m}\)<br>\(\tau_{\text{เหล็ก}} = 101.86\text{ MPa}\), \(\phi_A = 0.20785\text{ rad}\)</td>
         </tr>
         <tr>
-          <td class="td-num"><b>4</b></td>
-          <td class="td-name"><a href="#p4">เพลาตัน vs เพลากลวง</a><small>Shaft Design Efficiency</small></td>
+          <td><b><a href="#p4">แบบฝึกหัด บท 5</a></b></td>
+          <td>ข้อ C, D, E และ F</td>
           <td>หน้า 7</td>
-          <td class="td-eq">
-            <div class="eq-row">
-              <div class="eq-pill">\(T_{\text{allow}} = \frac{\tau_{\text{allow}} J}{c}\)</div>
-            </div>
-          </td>
-          <td class="td-vars">\(T_{\text{solid}} = 157.08\text{ N}\cdot\text{m}\)<br>\(T_{\text{hollow}} = 859.03\text{ N}\cdot\text{m}\)<br>กำลังสูงกว่า <b>5.47 เท่า!</b></td>
-          <td class="td-tools">เพลากลวงต้องใช้รัศมีนอก \(c_o\) ในการเช็กความเค้นสูงสุดเสมอ</td>
+          <td>\(T = \frac{\tau J}{c}\)</td>
+          <td>C: \(1256.6\text{ N}\cdot\text{m}\) | D: \(859.03\text{ N}\cdot\text{m}\)<br>E: \(\tau_{\max}=139.69\text{ MPa}\) | F: \(\phi_A = 0.0143\text{ rad}\)</td>
         </tr>
         <tr>
-          <td class="td-num"><b>5</b></td>
-          <td class="td-name"><a href="#p5">ดัดหน้าตัดไม่สมมาตร</a><small>Unsymmetric Bending</small></td>
-          <td>หน้า 8–9</td>
-          <td class="td-eq">
-            <div class="eq-row">
-              <div class="eq-pill">\(\bar{y} = \frac{\sum Ay}{\sum A}\)</div>
-              <div class="eq-pill">\(\sigma = -\frac{My}{I}\)</div>
-            </div>
-          </td>
-          <td class="td-vars">\(\bar{y} = 58\text{ mm}\)<br>\(\sigma_{\text{top}} = -73.03\text{ MPa (อัด)}\)<br>\(\sigma_{\text{bot}} = +68.32\text{ MPa (ดึง)}\)</td>
-          <td class="td-tools">ระวังเครื่องหมาย ดึง/อัด โมเมนต์บวกด้านบนเป็นอัด ด้านล่างเป็นดึง</td>
+          <td><b><a href="#p5">บท 6: ความเค้นดัด</a></b></td>
+          <td>ตย. 6.1, ตย. 6.2 และ ข้อ 6.1(C)</td>
+          <td>หน้า 8–9, 13</td>
+          <td>\(\sigma = \frac{My}{I}, \quad \bar{y} = \frac{\sum Ay}{\sum A}\)</td>
+          <td>ตย. 6.1: \(\sigma_1 = 214.7\text{ MPa}\), เอวรับ 22.08%<br>ตย. 6.2: อัด \(261.5\text{ MPa}\), ดึง \(153.1\text{ MPa}\)</td>
         </tr>
         <tr>
-          <td class="td-num"><b>6</b></td>
-          <td class="td-name"><a href="#p6">คานแอ่นตัว Double Int</a><small>Beam Deflection</small></td>
+          <td><b><a href="#p6">บท 6: การแอ่นตัว</a></b></td>
+          <td>ตัวอย่างที่ 6.3, 6.4 และ 6.5</td>
           <td>หน้า 10–11</td>
-          <td class="td-eq">
-            <div class="eq-row">
-              <div class="eq-pill">\(EI v'' = M(x)\)</div>
-              <div class="eq-pill">\(v_{\max} = -\frac{PL^3}{3EI}\)</div>
-            </div>
-          </td>
-          <td class="td-vars">\(C_1 = 0, C_2 = 0\)<br>\(\theta_B = -\frac{PL^2}{2EI}\)<br>\(v_{\max} = -\frac{PL^3}{3EI}\)</td>
-          <td class="td-tools">เงื่อนไขขอบเขต (Boundary Conditions) ต้องแทนค่าที่จุดยึดแน่นให้ถูกต้อง</td>
+          <td>\(EI v''(x) = M(x)\)</td>
+          <td>6.3: \(v_A = -\frac{PL^3}{3EI}\) | 6.4: \(C_1 = -\frac{1}{24}wL^3\)<br>6.5: \(v_B = -\frac{4PL^3}{243EI}\), \(v_{\max} = -0.01792\frac{PL^3}{EI}\)</td>
         </tr>
         <tr>
-          <td class="td-num"><b>7</b></td>
-          <td class="td-name"><a href="#p7">หน้าตัดผสม ไม้-เหล็ก</a><small>Composite Beam Transformed</small></td>
+          <td><b><a href="#p7">บท 6: หน้าตัดผสม</a></b></td>
+          <td>ตย. 6.6 (ก, ข) และ ข้อ 6.6(A)</td>
           <td>หน้า 12–13</td>
-          <td class="td-eq">
-            <div class="eq-row">
-              <div class="eq-pill">\(n = \frac{E_s}{E_w}\)</div>
-              <div class="eq-pill">\(b' = n \cdot b\)</div>
-              <div class="eq-pill">\(\sigma_s = n \frac{My_s}{I_T}\)</div>
-            </div>
-          </td>
-          <td class="td-vars">\(n = 10, b' = 1000\text{ mm}\)<br>\(\sigma_w = 43.30\text{ MPa}\)<br>\(\sigma_s = 214.50\text{ MPa}\)</td>
-          <td class="td-tools">ขยายเฉพาะความกว้าง \(b' = nb\) ห้ามเปลี่ยนความสูง และอย่าลืมคูณ \(n\) กลับในเนื้อเหล็ก</td>
+          <td>\(n = \frac{E}{E'}, \quad \sigma_{\text{จริง}} = n\sigma'\)</td>
+          <td>6.6: ไม้ \(17.13\text{ MPa}\), เหล็ก \(77.78\text{ MPa}\)<br>6.6(A): เหล็กอัด \(31.9\), Al ดึง \(12.9\text{ MPa}\), ตก A \(21.56\text{ mm}\)</td>
         </tr>
         <tr>
-          <td class="td-num"><b>8</b></td>
-          <td class="td-name"><a href="#p8">แรงเฉือน τ กระโดด</a><small>Transverse Shear Stress</small></td>
+          <td><b><a href="#p8">บท 7: แรงเฉือน &amp; กาว</a></b></td>
+          <td>ตัวอย่างที่ 7.2 และ 7.3</td>
           <td>หน้า 14–15</td>
-          <td class="td-eq">
-            <div class="eq-row">
-              <div class="eq-pill">\(\tau = \frac{VQ}{It}\)</div>
-              <div class="eq-pill">\(Q = A' \bar{y}'\)</div>
-            </div>
-          </td>
-          <td class="td-vars">\(\tau_{\text{flange}} = 4.18\text{ MPa}\)<br>\(\tau_{\text{web}} = 66.83\text{ MPa}\)<br>\(\tau_{\max} = 76.33\text{ MPa}\)</td>
-          <td class="td-tools">\(\tau\) พุ่งขึ้น 16 เท่าที่รอยต่อปีกกับเอวเพราะความหนาลดลงจาก 160 เหลือ 10 mm</td>
+          <td>\(\tau = \frac{VQ}{It}\)</td>
+          <td>7.2: \(\tau_3 = 104.9\text{ MPa}\), เอวรับเฉือน 94%<br>7.3: \(\tau_1 = 1.08\text{ MPa}, \tau_2 = 2.03\text{ MPa}\)</td>
         </tr>
         <tr>
-          <td class="td-num"><b>9</b></td>
-          <td class="td-name"><a href="#p9">Shear Flow &amp; ระยะตะปู</a><small>Shear Flow &amp; Fasteners</small></td>
+          <td><b><a href="#p9">บท 7: Shear Flow ตะปู</a></b></td>
+          <td>ตัวอย่างที่ 7.4 (คานกล่อง 4 แนว)</td>
           <td>หน้า 16</td>
-          <td class="td-eq">
-            <div class="eq-row">
-              <div class="eq-pill">\(q = \frac{VQ}{I}\)</div>
-              <div class="eq-pill">\(s \le \frac{m F_{\text{nail}}}{q}\)</div>
-            </div>
-          </td>
-          <td class="td-vars">\(q_{AB} = 2.112\text{ N/mm} \implies s \le 90\text{ mm}\)<br>\(q_{BC} = 0.633\text{ N/mm} \implies s \le 300\text{ mm}\)</td>
-          <td class="td-tools"><b>ต้องปัดเศษลง (Round Down) เสมอ!</b> เช่น 94.7 mm ต้องปัดลงเป็น 90 mm ห้ามปัดขึ้น</td>
+          <td>\(q = \frac{VQ}{2I}, \quad s = \frac{F_{\text{nail}}}{q}\)</td>
+          <td>รอยต่อ 1: \(47.4\text{ mm}\) (AB), \(94.3\text{ mm}\) (BC)<br>รอยต่อ 2: \(78.7\text{ mm}\) (AB), \(158.7\text{ mm}\) (BC)</td>
         </tr>
         <tr>
-          <td class="td-num"><b>10</b></td>
-          <td class="td-name"><a href="#p10">เสาโก่งเดาะออยเลอร์ 2 แกน</a><small>Euler Column Buckling</small></td>
+          <td><b><a href="#p10">บท 8: เสาโก่งเดาะ</a></b></td>
+          <td>ตย. 8.1, 8.2, 8.3 และ 8.2(ฝึกหัด)</td>
           <td>หน้า 17–21</td>
-          <td class="td-eq">
-            <div class="eq-row">
-              <div class="eq-pill">\(P_{cr} = \frac{\pi^2 E I}{(KL)^2}\)</div>
-              <div class="eq-pill">\(\left(\frac{KL}{r}\right)_c = \sqrt{\frac{2\pi^2 E}{\sigma_y}}\)</div>
-            </div>
-          </td>
-          <td class="td-vars">\(\left(\frac{KL}{r}\right)_c = 125.66\)<br>Pin-Pin ครากก่อน \(P = 5450\text{ kN}\)<br>Fix-Free \(P_{cr} = 4824.7\text{ kN}\)</td>
-          <td class="td-tools">ต้องตรวจสอบทั้ง 2 แกน (\(x\) และ \(y\)) เสมอ เพราะแกน \(y\) อ่อนกว่า และระวังเรื่องค้ำยัน</td>
+          <td>\(\sigma_c = \frac{\pi^2 E}{(KL/r)^2}, \quad P_{cr} = \sigma_c A\)</td>
+          <td>8.1: \(49.12, 54.68, 12.28\text{ MN}\) | 8.2: \(11.74, 34.99\text{ MN}\)<br>8.3: \(29.36\text{ MN}\) (ค้ำยัน \(59.92\text{ MN}\)) | 8.2(ex): \(325, 173.25\text{ kN}\)</td>
         </tr>
       </tbody>
     </table>
-  </div>
-
-  <h3 class="grp" id="sum-cards">ข. การ์ดสรุปสูตรและแนวทางแก้โจทย์ 10 ข้อ (Problem Cards)</h3>
-  <div class="cards-grid">
-    <div class="formula-card">
-      <div class="formula-card-head">
-        <span class="formula-card-title"><a href="#p1">ข้อ 1: เพลาขั้น &amp; เฟืองทด</a></span>
-        <span class="formula-card-badge">หน้า 1–2</span>
-      </div>
-      <div class="formula-card-body">\(\tau_{\max} = \frac{Tr}{J}, \quad \phi = \sum \frac{TL}{GJ}, \quad F = \frac{T}{r}\)</div>
-      <div class="formula-card-desc">ตัด FBD หาแรงบิดภายในทีละช่วง หามุมบิดสะสม และคิดการส่งผ่านโมเมนต์ข้ามฟันเฟือง</div>
-      <div class="formula-card-trap">⚠️ แปลงหน่วย \(\text{N}\cdot\text{m} \to \text{N}\cdot\text{mm}\) คูณ 1000 ก่อนแทนค่าเสมอ</div>
-    </div>
-
-    <div class="formula-card">
-      <div class="formula-card-head">
-        <span class="formula-card-title"><a href="#p2">ข้อ 2: บิดอินดีเทอร์มิเนต</a></span>
-        <span class="formula-card-badge">หน้า 3–4</span>
-      </div>
-      <div class="formula-card-body">\(\sum T_x = 0, \quad \phi_{A/D} = \sum \frac{T_i L_i}{G J_i} = 0\)</div>
-      <div class="formula-card-desc">เพลายึดแน่นหัวท้าย มุมบิดรวมต้องเป็นศูนย์ แก้หาแรงบิดส่วนเกินและหาความเค้นเพลากลวง</div>
-      <div class="formula-card-trap">⚠️ เพลากลวง \(\tau_{\min}\) ที่ผิวในไม่เท่ากับศูนย์ แต่ใช้ \(c_i\) คิด</div>
-    </div>
-
-    <div class="formula-card">
-      <div class="formula-card-head">
-        <span class="formula-card-title"><a href="#p3">ข้อ 3: เพลาสวมซ้อน แกนเหล็ก-ทองเหลือง</a></span>
-        <span class="formula-card-badge">หน้า 5–6</span>
-      </div>
-      <div class="formula-card-body">\(\phi_s = \phi_b \implies \frac{T_s}{T_b} = \frac{G_s J_s}{G_b J_b}, \quad T_s + T_b = T_{\text{tot}}\)</div>
-      <div class="formula-card-desc">วัสดุประกบติดกันแน่น มุมบิดหมุนไปด้วยกัน วัสดุที่แข็งกว่า (GJ สูงกว่า) รับแรงบิดมากกว่า</div>
-      <div class="formula-card-trap">⚠️ ที่รอยต่อ ความเค้นเฉือน \(\tau\) กระโดดตามอัตราส่วนโมดูลัสเฉือน \(G\)</div>
-    </div>
-
-    <div class="formula-card">
-      <div class="formula-card-head">
-        <span class="formula-card-title"><a href="#p4">ข้อ 4: เพลาตัน vs เพลากลวง</a></span>
-        <span class="formula-card-badge">หน้า 7</span>
-      </div>
-      <div class="formula-card-body">\(T_{\text{allow}} = \frac{\tau_{\text{allow}} J}{c_o}, \quad J_{\text{hollow}} = \frac{\pi(c_o^4 - c_i^4)}{2}\)</div>
-      <div class="formula-card-desc">พิสูจน์เชิงวิศวกรรมว่าเพลากลวงรับแรงบิดได้มากกว่า 5.47 เท่า โดยใช้วัสดุเพิ่มเพียง 1.75 เท่า</div>
-      <div class="formula-card-trap">⚠️ เช็กความเค้นสูงสุดต้องใช้รัศมีนอก \(c_o\) ห้ามใช้รัศมีในหรือเฉลี่ย</div>
-    </div>
-
-    <div class="formula-card">
-      <div class="formula-card-head">
-        <span class="formula-card-title"><a href="#p5">ข้อ 5: ดัดหน้าตัดไม่สมมาตร</a></span>
-        <span class="formula-card-badge">หน้า 8–9</span>
-      </div>
-      <div class="formula-card-body">\(\sigma = -\frac{My}{I}, \quad \bar{y} = \frac{\sum Ay}{\sum A}, \quad I = \sum(\bar{I} + Ad^2)\)</div>
-      <div class="formula-card-desc">หาแกนสะเทิน NA, ใช้ทฤษฎีแกนขนานหา \(I\), คำนวณความเค้นดึง/อัดที่ผิวขอบนอกสุด</div>
-      <div class="formula-card-trap">⚠️ โมเมนต์บวก ผิวบนเป็นอัด (-) ผิวล่างเป็นดึง (+) ระบุเครื่องหมายให้ชัด</div>
-    </div>
-
-    <div class="formula-card">
-      <div class="formula-card-head">
-        <span class="formula-card-title"><a href="#p6">ข้อ 6: คานแอ่นตัว Double Integration</a></span>
-        <span class="formula-card-badge">หน้า 10–11</span>
-      </div>
-      <div class="formula-card-body">\(EI v'' = M(x), \quad v'(0)=0, \quad v(0)=0 \implies v_{\max} = -\frac{PL^3}{3EI}\)</div>
-      <div class="formula-card-desc">อินทิเกรตสมการโมเมนต์ 2 ครั้ง แทนเงื่อนไขขอบเขตที่จุดยึดแน่น และตรวจซ้ำด้วย Moment-Area</div>
-      <div class="formula-card-trap">⚠️ คานยื่น \(C_1, C_2 = 0\) แต่ถ้าเป็น Simply Supported \(C_1 \ne 0\) ต้องแก้ระบบสมการ</div>
-    </div>
-
-    <div class="formula-card">
-      <div class="formula-card-head">
-        <span class="formula-card-title"><a href="#p7">ข้อ 7: หน้าตัดผสม ไม้-เหล็ก</a></span>
-        <span class="formula-card-badge">หน้า 12–13</span>
-      </div>
-      <div class="formula-card-body">\(n = \frac{E_s}{E_w}, \quad b' = nb, \quad \sigma_s = n \frac{My_s}{I_T}\)</div>
-      <div class="formula-card-desc">แปลงความกว้างเหล็กเป็นไม้เสมือน หาแกน NA และ \(I_T\) คำนวณความเค้นทั้งสองวัสดุ</div>
-      <div class="formula-card-trap">⚠️ ขยายเฉพาะความกว้าง \(b\) ห้ามขยายความสูง \(h\) และต้องคูณ \(n\) กลับในเนื้อเหล็ก</div>
-    </div>
-
-    <div class="formula-card">
-      <div class="formula-card-head">
-        <span class="formula-card-title"><a href="#p8">ข้อ 8: แรงเฉือนตามขวาง τ กระโดด</a></span>
-        <span class="formula-card-badge">หน้า 14–15</span>
-      </div>
-      <div class="formula-card-body">\(\tau = \frac{VQ}{It}, \quad Q = A' \bar{y}', \quad \frac{\tau_{\text{web}}}{\tau_{\text{flange}}} = \frac{t_f}{t_w}\)</div>
-      <div class="formula-card-desc">คำนวณ First Moment \(Q\) ดูการกระโดดของหน่วยแรงเฉือน 16 เท่าที่รอยต่อ และหา \(\tau_{\max}\) ที่แกน NA</div>
-      <div class="formula-card-trap">⚠️ ค่า \(t\) คือความหนาแนวระนาบตัด ห้ามแรเงาพื้นที่ข้ามแกนสะเทิน</div>
-    </div>
-
-    <div class="formula-card">
-      <div class="formula-card-head">
-        <span class="formula-card-title"><a href="#p9">ข้อ 9: Shear Flow &amp; ระยะตะปู</a></span>
-        <span class="formula-card-badge">หน้า 16</span>
-      </div>
-      <div class="formula-card-body">\(q = \frac{VQ}{I}, \quad s \le \frac{m F_{\text{nail}}}{q}\)</div>
-      <div class="formula-card-desc">หาแรงเฉือนไหลต่อหนึ่งหน่วยความยาว คำนวณระยะห่างตะปูยึดแผ่นปีกคานไม้</div>
-      <div class="formula-card-trap">⚠️ <b>ต้องปัดเศษลง (Round Down) เสมอ</b> เพื่อความปลอดภัยในการรับแรง</div>
-    </div>
-
-    <div class="formula-card">
-      <div class="formula-card-head">
-        <span class="formula-card-title"><a href="#p10">ข้อ 10: เสาโก่งเดาะออยเลอร์ 2 แกน</a></span>
-        <span class="formula-card-badge">หน้า 17–21</span>
-      </div>
-      <div class="formula-card-body">\(P_{cr} = \frac{\pi^2 E I}{(KL)^2}, \quad \sigma_{cr} = \frac{\pi^2 E}{(KL/r)^2}\)</div>
-      <div class="formula-card-desc">วิเคราะห์การโก่งเดาะในระนาบแกน x และ y ตรวจสอบจุดคราก และผลของการใส่ค้ำยันแกนอ่อน</div>
-      <div class="formula-card-trap">⚠️ ต้องเช็กทั้งสองแกนเสมอ เสามักเดาะรอบแกน \(y\) ก่อนเพราะ \(I_y < I_x\)</div>
-    </div>
   </div>
 
   <div class="pn">
     <span></span>
-    <a href="#p1">เริ่มอ่านข้อ 1: เพลาขั้น &amp; เฟืองทด →</a>
+    <a href="#playbook">เปิดหน้าสรุปทริครวมทุกเรื่อง (แนะนำให้อ่านก่อน!) →</a>
   </div>
 </section>
 
-<!-- SECTION 1: ข้อ 1 เพลาขั้น & เฟืองทด -->
+
+<!-- SECTION PLAYBOOK: หน้าสรุปทริครวมทุกเรื่อง -->
+<section id="playbook">
+  <header class="top">
+    <p class="kick">คัมภีร์อ่านแล้วทำข้อสอบได้ทันที · กลศาสตร์ของแข็ง มหาวิทยาลัยธรรมศาสตร์</p>
+    <h1>🎯 หน้าสรุปทริครวมทุกเรื่อง: เห็นโจทย์แบบนี้ → ทำตามสเต็ปไหน</h1>
+    <p class="sub">คู่มือจับทางข้อสอบฉบับรวบรัด · แยกตามหัวข้อครบทั้ง 4 บทหลังมิดเทอม · บอกวิธีมองรูป ตั้งสมการ และเช็กตัวเลข</p>
+    <p class="pracnote">โหมดฝึกเปิดอยู่: ซ่อนวิธีทำไว้ แตะแต่ละขั้นเพื่อดู (ลองเขียนเองก่อน) กดปุ่ม "ฝึก" อีกครั้งเพื่อปิด</p>
+  </header>
+
+  <div class="survival-banner" style="border-color:var(--green);background:rgba(23,112,42,0.05);">
+    <h3 style="color:var(--green);">🧭 กฎทองของหน้านี้: วิธีอ่านให้ทำได้ทุกข้อ</h3>
+    <p>ไม่ต้องจำสูตรเป็นร้อยสูตร! เวลาเจอข้อสอบให้ดูว่า <b>"โจทย์ถามเรื่องไหน"</b> แล้วทำตาม <b>4 สเต็ปตายตัว</b> ของเรื่องนั้นทีละบรรทัด และระวัง <b>จุดหลอกประจำบท</b> ที่เขียนกำกับไว้ให้ด้านล่างครับ</p>
+  </div>
+
+  <!-- PLAYBOOK 1: TORSION -->
+  <div class="playbook-card">
+    <div class="playbook-head">
+      <span class="playbook-title">บทที่ 5: การบิดของเพลา (Torsion) — เพลาตรง / เฟือง / ยึดหัวท้าย / สวมซ้อน</span>
+    </div>
+    <div class="playbook-trigger">
+      <b>👀 สิ่งที่ต้องสังเกตในโจทย์:</b> โจทย์ให้เพลาทรงกระบอก (ตันหรือวงแหวน), แรงบิด \(T\) (หน่วย N·m), โมดูลัสเฉือน \(G\) (GPa) หรือมีเฟืองขบกัน
+    </div>
+    <ol class="playbook-steps">
+      <li><b>หา \(J\) ก่อนเสมอ (หน่วย \(\text{mm}^4\)):</b> เพลาตันใช้ \(J = \frac{\pi}{2}c^4\) | เพลาวงแหวนใช้ \(J = \frac{\pi}{2}(c_o^4 - c_i^4)\) <i>(ใช้รัศมี \(c\) เสมอ อย่าเผลอเอาเส้นผ่านศูนย์กลางไปยกกำลัง 4!)</i></li>
+      <li><b>ตัด FBD หาแรงบิดภายใน \(T\) ทีละช่วง:</b> ใช้กฎมือขวา (นิ้วโป้งพุ่งออกจากหน้าตัด = บวก, พุ่งเข้า = ลบ)
+        <ul>
+          <li>ถ้ามี <b>เฟืองขบกัน</b>: แรงขบฟันเฟืองเท่ากัน \(\implies \frac{T_1}{r_1} = \frac{T_2}{r_2}\) และระยะโค้งเท่ากัน \(\implies r_1 \phi_1 = r_2 \phi_2\)</li>
+          <li>ถ้า <b>ยึดแน่นหัวท้าย (A และ D)</b>: ตั้งสมการเข้ากันได้ \(\phi_{AB} + \phi_{BC} + \phi_{CD} = 0\)</li>
+          <li>ถ้า <b>หุ้ม 2 วัสดุติดกัน</b>: ช่วงที่หุ้มติดกันมุมบิดเท่ากัน \(\phi_1 = \phi_2\) และแรงบิดรวมเท่ากับแรงบิดภายนอก \(T_1 + T_2 = T_{\text{รวม}}\)</li>
+        </ul>
+      </li>
+      <li><b>หาความเค้นเฉือน (\(\text{MPa}\)):</b> ใช้สูตร \(\tau = \frac{T \rho}{J} \times 1000\) <i>(คูณ 1000 เพื่อแปลง \(T\) จาก \(\text{N}\cdot\text{m}\) เป็น \(\text{N}\cdot\text{mm}\))</i></li>
+      <li><b>หามุมบิด (\(\text{rad}\)):</b> ใช้สูตร \(\phi = \frac{T L}{G J}\) <i>(เช็กหน่วย: ใช้ \(T\) เป็น \(\text{N}\cdot\text{m}\), \(L\) เป็น \(\text{mm}\), \(G\) เป็น \(\text{GPa}\), \(J\) เป็น \(\text{mm}^4\) เลขจะลงตัวเป็น rad พอดี!)</i></li>
+    </ol>
+    <div class="playbook-trap">
+      <b>⚠️ จุดหลอกประจำบทที่ 5:</b> เพลาวงแหวนความเค้นต่ำสุดที่ผิวใน **ไม่เป็นศูนย์** (ต้องแทน \(\rho = c_i\) ด้วย) และการไล่มุมบิดให้เริ่มจากปลายที่ "ยึดแน่น" สะสมออกมาหาปลายอิสระเสมอ
+    </div>
+  </div>
+
+  <!-- PLAYBOOK 2: BENDING STRESS -->
+  <div class="playbook-card">
+    <div class="playbook-head">
+      <span class="playbook-title">บทที่ 6 (ส่วนที่ 1): ความเค้นดัด (Bending Stress) &amp; หน้าตัดไม่สมมาตร</span>
+    </div>
+    <div class="playbook-trigger">
+      <b>👀 สิ่งที่ต้องสังเกตในโจทย์:</b> โจทย์ให้คานรับน้ำหนัก + รูปหน้าตัด (ตัว I, ตัว T, กล่อง) ถามหาความเค้นดัดดึง/อัดสูงสุด หรือถามสัดส่วนการรับโมเมนต์
+    </div>
+    <ol class="playbook-steps">
+      <li><b>ถ้าโจทย์ให้คาน + แรงกด (ไม่บอก \(M\) มาตรงๆ):</b> หาแรงปฏิกิริยา \(R_A, R_B\) $\to$ วาดกราฟ <b>SFD</b> และ <b>BMD</b> เพื่อหาค่าโมเมนต์บวกสูงสุด (\(+M\)) และโมเมนต์ลบสูงสุด (\(-M\))</li>
+      <li><b>หาตำแหน่งแกนสะเทิน NA (\(\bar{y}\) หรือ \(d\)):</b> ถ้าสมมาตร (ตัว I) อยู่ตรงกลางเลย ไม่ต้องคำนวณ | ถ้าไม่สมมาตร (ตัว T) วัดจากขอบล่างขึ้นไป: \(d = \frac{\sum A_i y_i}{\sum A_i}\)</li>
+      <li><b>หาโมเมนต์ความเฉื่อยรวม \(I\) รอบ NA:</b> ใช้ทฤษฎีแกนขนาน \(I = \sum \left[\frac{1}{12}b_i h_i^3 + A_i (y_i - d)^2\right]\)</li>
+      <li><b>คำนวณหน่วยแรงดัด (\(\text{MPa}\)):</b> แทนค่าลงใน \(\sigma = \frac{M y}{I}\) (เอา \(M\) หน่วย \(\text{kN}\cdot\text{m}\) มา \(\times 10^6\) เป็น \(\text{N}\cdot\text{mm}\), แทน \(y\) จาก NA ไปขอบนอกสุด, \(I\) เป็น \(\text{mm}^4\))</li>
+      <li><b>ถ้าถามสัดส่วนการรับโมเมนต์ (เช่น ตย. 6.1):</b> สัดส่วนโมเมนต์ของชิ้นส่วนใดๆ เท่ากับ \(\frac{I_{\text{ชิ้นนั้น}}}{I_{\text{รวม}}}\) (หรือหาปริมาตร Stress Block = แรง \(\times\) ระยะแขนโมเมนต์ \(\frac{2}{3}a\))</li>
+    </ol>
+    <div class="playbook-trap">
+      <b>⚠️ จุดหลอกประจำบทที่ 6.1–6.2:</b> ถ้าคานมีทั้งช่วงโมเมนต์บวก (\(+M\)) และโมเมนต์ลบ (\(-M\)) ในหน้าตัดตัว T <b>ต้องเช็กความเค้นทั้ง 2 จุด!</b> เพราะโมเมนต์บวก (ด้านบนอัด/ล่างดึง) ส่วนโมเมนต์ลบ (ด้านบนดึง/ล่างอัด) สลับด้านกัน!
+    </div>
+  </div>
+
+  <!-- PLAYBOOK 3: BEAM DEFLECTION -->
+  <div class="playbook-card">
+    <div class="playbook-head">
+      <span class="playbook-title">บทที่ 6 (ส่วนที่ 2): การโก่งตัวของคาน (Deflection — Double Integration)</span>
+    </div>
+    <div class="playbook-trigger">
+      <b>👀 สิ่งที่ต้องสังเกตในโจทย์:</b> โจทย์ถามหา "ฟังก์ชันการโก่งตัว \(v(x)\)", "ความชัน \(v'(x)\)" หรือ "ระยะตกสูงสุด" (ติดตัวแปร \(P, w, L, EI\))
+    </div>
+    <ol class="playbook-steps">
+      <li><b>ตัดคานเขียนสมการโมเมนต์ \(M(x)\):</b> ถ้าน้ำหนักสม่ำเสมอตลอดคาน ตัดครั้งเดียว \(x\) เดียว | ถ้ามีแรงจุดคั่นกลาง (เช่น ตย. 6.5) <b>ต้องตัด 2 ช่วง \(x_1, x_2\)</b></li>
+      <li><b>อินทิเกรต 2 ครั้ง:</b>
+        <ul>
+          <li>\(EI v''(x) = M(x)\)</li>
+          <li>\(EI v'(x) = \int M(x)\,dx + C_1\) (สมการความชัน Slope)</li>
+          <li>\(EI v(x) = \iint M(x)\,dx\,dx + C_1 x + C_2\) (สมการการโก่งตัว Deflection)</li>
+        </ul>
+      </li>
+      <li><b>แทนเงื่อนไขขอบเขต (Boundary Conditions) หาค่าคงที่ \(C\):</b>
+        <ul>
+          <li><b>ปลายยึดแน่น (Fixed):</b> ณ จุดนั้น <b>ทั้ง \(v = 0\) และ \(v' = 0\)</b></li>
+          <li><b>ฐานหมุด/ล้อ (Pin/Roller):</b> ณ จุดนั้น <b>\(v = 0\)</b> (แต่ความชัน \(v' \ne 0\))</li>
+          <li><b>จุดต่อระหว่าง 2 ช่วง (เช่น จุด B ใน ตย. 6.5):</b> ระยะโก่งต้องเท่ากัน \(v_1 = v_2\) และความชันต้องต่อเนื่อง (ระวังถ้า \(x_1, x_2\) วิ่งสวนทางกัน: \(v_1' = -v_2'\))</li>
+        </ul>
+      </li>
+      <li><b>หาค่าสูงสุด:</b> การโก่งตัวสูงสุดเกิดที่ตำแหน่งที่ความชันเป็นศูนย์ (จับ \(v'(x) = 0\) เพื่อหา \(x\) แล้วแทนกลับใน \(v(x)\))</li>
+    </ol>
+    <div class="playbook-trap">
+      <b>⚠️ จุดหลอกประจำบทที่ 6.3–6.5:</b> ดูทิศการวัดระยะ \(x\) ให้ดี! ถ้า \(x_1\) วัดจากซ้ายไปขวา และ \(x_2\) วัดจากขวาไปซ้าย เงื่อนไขความชันต่อเนื่องที่จุดต่อคือ <b>\(v_1' = -v_2'\)</b> (ต้องติดลบ!)
+    </div>
+  </div>
+
+  <!-- PLAYBOOK 4: COMPOSITE BEAM -->
+  <div class="playbook-card">
+    <div class="playbook-head">
+      <span class="playbook-title">บทที่ 6 (ส่วนที่ 3): คานหน้าตัดผสม 2 วัสดุ (Transformed Section)</span>
+    </div>
+    <div class="playbook-trigger">
+      <b>👀 สิ่งที่ต้องสังเกตในโจทย์:</b> หน้าตัดมี 2 วัสดุต่างชนิดติดกัน (เช่น ไม้+เหล็ก, เหล็ก+อะลูมิเนียม) โดยให้ค่า \(E_1\) และ \(E_2\) มา
+    </div>
+    <ol class="playbook-steps">
+      <li><b>เลือกโมดูลัสฐาน \(E'\) (จะแปลงตัวไหนเป็นตัวไหนก็ได้ คำตอบเท่ากัน!):</b> หาตัวคูณแปลงหน้าตัด \(n = \frac{E_{\text{ตัวที่จะแปลง}}}{E'}\)</li>
+      <li><b>แปลงขนาดเฉพาะ "ความกว้าง" แนวนอน:</b> เอาความกว้างไปคูณ \(n\) คือ \(b' = n \cdot b\) <b>(ห้ามเปลี่ยนความสูงในแนวดิ่งเด็ดขาด!)</b></li>
+      <li><b>คำนวณเหมือนคานเนื้อเดียวปกติ:</b> หา NA (\(d'\)) และหา \(I'\) ของรูปที่แปลงแล้ว แล้วคำนวณหน่วยแรงแปลง \(\sigma' = \frac{M y}{I'}\)</li>
+      <li><b>แปลงกลับเป็นหน่วยแรงจริง:</b>
+        <ul>
+          <li>ชิ้นส่วนที่ไม่ได้แปลง (ใช้ \(E'\)): <b>\(\sigma_{\text{จริง}} = \sigma'\)</b> ใช้ค่าได้เลย</li>
+          <li>ชิ้นส่วนที่ถูกแปลงความกว้าง: <b>\(\sigma_{\text{จริง}} = n \cdot \sigma'\)</b> (ต้องคูณ \(n\) กลับ!)</li>
+        </ul>
+      </li>
+    </ol>
+    <div class="playbook-trap">
+      <b>⚠️ จุดหลอกประจำบทที่ 6.6:</b> ถ้าโจทย์นำหน้าตัดผสมนี้ไปหาการโก่งตัวต่อ (แบบฝึกหัด 6.6 A ข้อ 6) ให้ใช้คู่ <b>\(E' \times I'\)</b> ชุดเดียวกันแทนลงในสูตร \(v = \frac{PL^3}{3 E' I'}\) ได้ทันที!
+    </div>
+  </div>
+
+  <!-- PLAYBOOK 5: TRANSVERSE SHEAR & FLOW -->
+  <div class="playbook-card">
+    <div class="playbook-head">
+      <span class="playbook-title">บทที่ 7: แรงเฉือนตามขวาง (\(\tau\)) · รอยต่อกาว · ระยะห่างตะปู (Shear Flow)</span>
+    </div>
+    <div class="playbook-trigger">
+      <b>👀 สิ่งที่ต้องสังเกตในโจทย์:</b> โจทย์ให้แรงเฉือน \(V\), ถามหน่วยแรงเฉือนที่ระดับต่างๆ (เช่น ตัว I), ถามหน่วยแรงเฉือนที่รอยต่อกาว หรือถามระยะห่างตะปู \(s\)
+    </div>
+    <ol class="playbook-steps">
+      <li><b>หา \(I\) รวมรอบ NA ก่อนเสมอ</b></li>
+      <li><b>เลือกเส้นตัดที่ต้องการหาค่า แล้วแรเงาเฉพาะพื้นที่ "ด้านนอก" ของเส้นตัดนั้นไปจนสุดขอบ:</b> <i>(ห้ามแรเงาข้ามแกนสะเทิน NA เด็ดขาด!)</i></li>
+      <li><b>คำนวณ First Moment \(Q = A' \cdot d'\):</b> เอาพื้นที่ที่แรเงา \(A'\) คูณระยะจาก NA ถึงจุดศูนย์กลางของพื้นที่ที่แรเงานั้น</li>
+      <li><b>เลือกสูตรให้ตรงกับคำถาม:</b>
+        <ul>
+          <li>ถามหน่วยแรงเฉือนทั่วไป / กาว: \(\tau = \frac{V Q}{I t}\) (\(t\) คือความกว้างของแนวรอยตัด/ความกว้างทากาวที่เฉือนขาด)</li>
+          <li>ถามแรงเฉือนไหล \(q\): \(q = \frac{V Q}{I}\) (หน่วย \(\text{N/mm}\)) — <b>ถ้ามีตะปูยึดซ้าย-ขวาสมมาตร 2 ข้าง ต้องหาร 2:</b> \(q' = \frac{V Q}{2 I}\)</li>
+          <li>ถามระยะห่างตะปู \(s\): \(s = \frac{F_{\text{ตะปู 1 ตัว}}}{q'}\) (และเวลาตอบใช้งานจริง ให้ปัดเศษลงเพื่อความปลอดภัย)</li>
+        </ul>
+      </li>
+    </ol>
+    <div class="playbook-trap">
+      <b>⚠️ จุดหลอกประจำบทที่ 7:</b> ระวังจุดรอยต่อปีกกับเอว (ระดับ 2)! ที่ความสูงเดียวกันค่า \(Q\) เท่ากันเป๊ะ แต่ความหนา \(t\) เปลี่ยนจากปีก (60 mm) เป็นเอว (10 mm) ทำให้ค่า \(\tau\) กระโดดขึ้นทันที \(6\) เท่า!
+    </div>
+  </div>
+
+  <!-- PLAYBOOK 6: COLUMN BUCKLING -->
+  <div class="playbook-card">
+    <div class="playbook-head">
+      <span class="playbook-title">บทที่ 8: การโก่งเดาะของเสา (Column Buckling)</span>
+    </div>
+    <div class="playbook-trigger">
+      <b>👀 สิ่งที่ต้องสังเกตในโจทย์:</b> เสารับแรงอัด \(P\) ตามแนวยาว, ให้ความยาว \(L\), ค่า \(E, \sigma_y\), พื้นที่ \(A\), \(I_x, I_y\) และสภาพการยึดปลาย (Pin, Fix, Free)
+    </div>
+    <ol class="playbook-steps">
+      <li><b>หาคุณสมบัติหน้าตัด 3 ค่าแรก:</b> \(r_x = \sqrt{\frac{I_x}{A}}\), \(r_y = \sqrt{\frac{I_y}{A}}\), และจุดแบ่งเขตวิกฤต \(\left(\frac{KL}{r}\right)_c = \pi \sqrt{\frac{E}{\sigma_y}}\)</li>
+      <li><b>หาค่า \(K\) ของแต่ละแกน:</b> Pin-Pin (\(K=1\)), Fix-Fix (\(K=0.5\)), Fix-Pin (\(K=0.7\)), Fix-Free (\(K=2\))</li>
+      <li><b>คำนวณความชะลูดแยกทั้ง 2 แกน:</b> \(\left(\frac{KL}{r}\right)_x\) และ \(\left(\frac{KL}{r}\right)_y\) — <b>แกนไหนได้ตัวเลข "มากกว่า" แกนนั้นจะเป็นแกนที่โก่งเดาะก่อน (Governing Axis)!</b></li>
+      <li><b>เทียบค่าความชะลูดตัวมากสุดกับ \((KL/r)_c\):</b>
+        <ul>
+          <li>ถ้าน้อยกว่า \((KL/r)_c\): <b>เสาครากก่อนเดาะ</b> \(\implies \sigma_c = \sigma_y \implies P_{cr} = \sigma_y A\)</li>
+          <li>ถ้ามากกว่า \((KL/r)_c\): <b>เสาโก่งเดาะแบบ Euler</b> \(\implies \sigma_c = \frac{\pi^2 E}{(KL/r)_{\max}^2} \implies P_{cr} = \sigma_c A\)</li>
+        </ul>
+      </li>
+    </ol>
+    <div class="playbook-trap">
+      <b>⚠️ จุดหลอกประจำบทที่ 8 (ออกสอบบ่อยมาก!):</b> ถ้าโจทย์บอกว่า <b>"มีเคเบิลหรือค้ำยันป้องกันการเคลื่อนที่ในแนว \(x\)"</b> แปลว่ามันป้องกันการแอ่นตัวไปทางซ้าย-ขวา (ซึ่งคือการดัด<b>รอบแกน \(y\)</b>)! ดังนั้นตัวที่ได้ลดความยาวหรือเปลี่ยน \(K\) เป็น 0.7 คือ <b>แกน \(y\)</b> ส่วนแกน \(x\) ยังคงเท่าเดิม!
+    </div>
+  </div>
+
+  <div class="pn">
+    <a href="#sum">← กลับสู่หน้าสรุปภาพรวม</a>
+    <a href="#p1">เริ่มอ่านเฉลยข้อที่ 1 (ตย. 5.1–5.2) →</a>
+  </div>
+</section>
+
+
 <section id="p1">
   <header class="top">
-    <p class="kick">Solid Ja E Here · หน้า 1–2</p>
-    <h1>ข้อ 1: การบิดของเพลาขั้นและระบบส่งกำลังด้วยเฟือง</h1>
-    <p class="sub">Torsion in Stepped Shaft &amp; Geared Systems · การหามุมบิดสะสมและการทดโมเมนต์</p>
+    <p class="kick">บทที่ 5 การบิด · หน้า 1–2</p>
+    <h1>บทที่ 5: การบิดเพลาขั้นและระบบเฟือง (ตย. 5.1 และ 5.2)</h1>
+    <p class="sub">เฉลยละเอียดครบทุกข้อย่อยตรงตามลายมือต้นฉบับ · พร้อมรูปภาพจากโจทย์จริง</p>
     <p class="pracnote">โหมดฝึกเปิดอยู่: ซ่อนวิธีทำไว้ แตะแต่ละขั้นเพื่อดู (ลองเขียนเองก่อน) กดปุ่ม "ฝึก" อีกครั้งเพื่อปิด</p>
   </header>
 
-  <h2 class="prob"><span class="tag">โจทย์จริง</span>คำอธิบายและมิติรูปทรงจากข้อสอบ</h2>
+  <h2 class="prob"><span class="tag">ตย. 5.1</span>เพลา ABC หน้าตัดกลม (d = 40 mm) ปลาย A ยึดแน่น</h2>
   <div class="stmt">
-    <p>เพลากลมตันรับแรงบิดภายนอกกระทำที่จุดต่าง ๆ มีขนาดรัศมี \(c = 10\text{ mm}\) (เส้นผ่านศูนย์กลาง \(d = 20\text{ mm}\)) ทำจากวัสดุที่มีโมดูลัสเฉือน \(G = 80\text{ GPa}\) โดยเพลาประกอบด้วย 2 ช่วง คือ \(AB\) ยาว \(L_{AB} = 600\text{ mm}\) และ \(BC\) ยาว \(L_{BC} = 400\text{ mm}\) รับแรงบิดภายนอก \(T_A = 1200\text{ N}\cdot\text{m}\), \(T_B = 800\text{ N}\cdot\text{m}\), \(T_C = 1100\text{ N}\cdot\text{m}\) และส่งกำลังผ่านระบบเฟืองทดโดยเฟือง A มีรัศมี \(r_A = 100\text{ mm}\) ขบกับเฟือง B รัศมี \(r_B = 200\text{ mm}\) ส่งแรงขบฟันเฟือง \(F = 400\text{ N}\)</p>
+    <p>เพลา ABC ทำจากวัสดุที่มี \(G = 80\text{ GPa}\) มีหน้าตัดกลมขนาดเส้นผ่านศูนย์กลาง \(40\text{ mm}\) (รัศมี \(c = 20\text{ mm}\)) ปลาย A ยึดแน่น ความยาว \(L_{AB} = 600\text{ mm}\), \(L_{BC} = 400\text{ mm}\) รับแรงบิดที่ B = \(800\text{ N}\cdot\text{m}\) และที่ C = \(1200\text{ N}\cdot\text{m}\) จงหา (ก) หน่วยแรงเฉือนสูงสุดช่วง AB และ BC และ (ข) ขนาดและทิศทางของมุมบิดของเฟือง B และ C</p>
   </div>
+  <figure class="fig-box">
+    <img src="assets/figs/fig_5_1.png" alt="รูปโจทย์ตัวอย่างที่ 5.1">
+    <figcaption class="fig-cap">ภาพประกอบจากโจทย์จริง: ตัวอย่างที่ 5.1</figcaption>
+  </figure>
 
-  <div class="stmt">
-    <p><b>หลักฟิสิกส์พื้นฐาน (First Principles):</b> แรงบิดภายในเพลาจะคงที่ตลอดช่วงจนกว่าจะมีแรงบิดภายนอกมากระทำ เมื่อตัด FBD ต้องคิดทิศทางตามกฎมือขวา และสำหรับเฟืองทด แรงระหว่างฟันเฟือง \(F\) มีขนาดเท่ากันแต่ทิศทางตรงข้ามตามกฎข้อที่ 3 ของนิวตัน (Action = Reaction) ส่งผลให้ \(T = F \cdot r\) และมุมบิดสัมพันธ์กับรัศมีผ่านความยาวส่วนโค้งที่ขบกัน \(s = r_1 \phi_1 = r_2 \phi_2\)</p>
-  </div>
-
-  <figure style="margin:20px 0;"><img src="assets/diagram_p1.svg" alt="แผนภาพประกอบข้อ 1" style="width:100%;height:auto;border:1.5px solid var(--rule);border-radius:4px;background:#fff;"></figure>
-
-  <h3 class="grp">เฉลยละเอียดทีละขั้นตอน (Step-by-Step Solution)</h3>
   <div class="exam">
     <div class="step">
       <div class="row">
         <div class="lab">สิ่งที่โจทย์กำหนด</div>
+        <div class="math">\(d = 40\text{ mm} \implies c = 20\text{ mm}, \quad G = 80\text{ GPa}, \quad L_{AB} = 600\text{ mm}, \quad L_{BC} = 400\text{ mm}\)</div>
+      </div>
+      <div class="row">
+        <div class="lab">ขั้น 1: หาค่า J และแรงบิดภายใน</div>
         <div class="math">
-          \(c = 10\text{ mm}, \quad L_{AB} = 600\text{ mm}, \quad L_{BC} = 400\text{ mm}\)<br>
-          \(G = 80\text{ GPa} = 80 \times 10^3\text{ MPa} = 80 \times 10^3\text{ N/mm}^2\)<br>
-          \(r_1 = 100\text{ mm}, \quad r_2 = 200\text{ mm}, \quad F = 400\text{ N}\)
+          \[J = \frac{\pi}{2} c^4 = \frac{\pi}{2}(20)^4 = 251,327\text{ mm}^4\]
+          ตัด FBD ช่วง BC: \(T_{BC} = 1200\text{ N}\cdot\text{m}\) (นิ้วโป้งพุ่งเข้า)<br>
+          ตัด FBD ช่วง AB (หักล้างกับ 800): \(T_{AB} = 1200 - 800 = 400\text{ N}\cdot\text{m}\) (พุ่งเข้า)
         </div>
       </div>
       <div class="row">
-        <div class="lab">ขั้น 1: โมเมนต์ความเฉื่อยเชิงขั้ว (J)</div>
+        <div class="lab">ขั้น 2: (ก) หน่วยแรงเฉือนสูงสุด</div>
         <div class="math">
-          \[J = \frac{\pi c^4}{2} = \frac{\pi (10\text{ mm})^4}{2} = 15,707.96\text{ mm}^4 \approx 15,708\text{ mm}^4 = 1.571 \times 10^{-8}\text{ m}^4\]
+          \[\tau_{AB} = \frac{T_{AB} c}{J} = \frac{400(20)}{251,327} \times 1000 = 31.8\text{ MPa}\]
+          \[\tau_{BC} = \frac{T_{BC} c}{J} = \frac{1200(20)}{251,327} \times 1000 = 95.5\text{ MPa}\]
         </div>
       </div>
       <div class="row">
-        <div class="lab">ขั้น 2: ตัด FBD หาแรงบิดภายใน (T)</div>
+        <div class="lab">ขั้น 3: (ข) มุมบิดของเฟือง B และ C</div>
         <div class="math">
-          ตัดช่วง \(AB\): สมดุล \(\sum T = 0 \implies T_{AB} = 400\text{ N}\cdot\text{m} = 400 \times 10^3\text{ N}\cdot\text{mm}\)<br>
-          ตัดช่วง \(BC\): สมดุล \(\sum T = 0 \implies T_{BC} = 1200 - 1100 = 100\text{ N}\cdot\text{m} = 100 \times 10^3\text{ N}\cdot\text{mm}\)
+          \[\phi_{AB} = \frac{T_{AB} L_{AB}}{GJ} = \frac{400(600)}{80(251,327)} = 0.01194\text{ rad}\]
+          \[\phi_{BC} = \frac{T_{BC} L_{BC}}{GJ} = \frac{1200(400)}{80(251,327)} = 0.02387\text{ rad}\]
+          เนื่องจากปลาย A ยึดแน่น:<br>
+          <b>เฟือง B หมุนบิด</b> \(= 0.01194\text{ rad}\) (ทิศนิ้วโป้งชี้ไปทางซ้าย)<br>
+          <b>เฟือง C หมุนบิด</b> \(= 0.01194 + 0.02387 = 0.03581\text{ rad}\) (ทิศนิ้วโป้งชี้ไปทางซ้าย)
         </div>
       </div>
       <div class="row">
-        <div class="lab">ขั้น 3: ความเค้นเฉือนสูงสุดในแต่ละช่วง</div>
-        <div class="math">
-          \[\tau_{AB} = \frac{T_{AB} c}{J} = \frac{(400 \times 10^3\text{ N}\cdot\text{mm})(10\text{ mm})}{15,708\text{ mm}^4} = 254.65\text{ MPa}\]
-          \[\tau_{BC} = \frac{T_{BC} c}{J} = \frac{(100 \times 10^3\text{ N}\cdot\text{mm})(10\text{ mm})}{15,708\text{ mm}^4} = 63.66\text{ MPa}\]
-        </div>
-      </div>
-      <div class="row">
-        <div class="lab">ขั้น 4: มุมบิดของแต่ละช่วงและมุมบิดสะสม</div>
-        <div class="math">
-          \[\phi_{AB} = \frac{T_{AB} L_{AB}}{G J} = \frac{(400 \times 10^3)(600)}{(80 \times 10^3)(15,708)} = 0.01910\text{ rad}\]
-          \[\phi_{BC} = \frac{T_{BC} L_{BC}}{G J} = \frac{(100 \times 10^3)(400)}{(80 \times 10^3)(15,708)} = 0.00318\text{ rad}\]
-          \[\phi_{\text{รวม}} = \phi_{AB} + \phi_{BC} = 0.01910 + 0.00318 = 0.02228\text{ rad} \quad (\approx 1.28^\circ)\]
-        </div>
-      </div>
-      <div class="row">
-        <div class="lab">ขั้น 5: การส่งกำลังและมุมบิดข้ามเฟือง</div>
-        <div class="math">
-          แรงขบฟันเฟือง \(F = 400\text{ N}\):<br>
-          \[T_2 = F \cdot r_2 = (400\text{ N})(0.2\text{ m}) = 80\text{ N}\cdot\text{m} = 80 \times 10^3\text{ N}\cdot\text{mm}\]
-          \[\phi_2 = \phi_1 \left(\frac{r_1}{r_2}\right) = \phi_1 \left(\frac{100}{200}\right) = 0.5\phi_1\]
-        </div>
-      </div>
-      <div class="row">
-        <div class="lab">คำตอบสุดท้าย</div>
-        <div>
-          <span class="fin">\(\tau_{AB} = 254.65\text{ MPa}, \quad \tau_{BC} = 63.66\text{ MPa}, \quad \phi_{\text{รวม}} = 0.0223\text{ rad}, \quad T_2 = 80\text{ N}\cdot\text{m}, \quad \phi_2 = 0.5\phi_1\)</span>
-        </div>
+        <div class="lab">คำตอบ ตย. 5.1</div>
+        <div><span class="fin">\(\tau_{AB} = 31.8\text{ MPa}, \quad \tau_{BC} = 95.5\text{ MPa}, \quad \phi_B = 0.01194\text{ rad}, \quad \phi_C = 0.03581\text{ rad}\)</span></div>
       </div>
     </div>
   </div>
 
-  <div class="formula-card-trap">
-    <h4>⚠️ จุดดักคะแนนของอาจารย์ (Exam Trap)</h4>
-    <p>1. <b>การลืมแปลงหน่วย:</b> ค่า \(T\) ในโจทย์มักให้เป็น \(\text{N}\cdot\text{m}\) ต้องคูณ \(10^3\) เป็น \(\text{N}\cdot\text{mm}\) เสมอ ก่อนนำไปคำนวณร่วมกับ \(J\) (\(\text{mm}^4\)) และ \(G\) (\(\text{GPa} = 10^3\text{ MPa} = 10^3\text{ N/mm}^2\))<br>
-    2. <b>มุมบิดของเฟือง:</b> ฟันเฟืองที่ขบกันเคลื่อนที่ได้ระยะทางโค้งเท่ากัน (\(s_1 = s_2\)) ดังนั้นเฟืองตัวใหญ่ที่มีรัศมีมากกว่าจะหมุนด้วยมุมบิดที่น้อยกว่า (\(\phi_2 = \phi_1 \cdot r_1 / r_2\)) อย่าสับสนกลับเศษเป็นส่วนเด็ดขาด</p>
-  </div>
+  <hr>
 
-  
-    <div class="formula-card-trap" style="border-left-color:var(--navy);background:rgba(20,41,91,0.05);color:var(--ink);margin-top:16px;">
-      <h4 style="color:var(--navy);">📌 สรุปตัวเลขตรงตามลายมือต้นฉบับ (ตัวอย่างที่ 5.1 และ 5.2 หน้า 1–2):</h4>
-      <p>• <b>ตย. 5.1 (เพลา ABC, d = 40 mm, c = 20 mm):</b> \(J = 251,327\text{ mm}^4\), \(T_{AB} = 400\text{ N}\cdot\text{m}\), \(T_{BC} = 1200\text{ N}\cdot\text{m}\) \(\implies\) <b>\(\tau_{AB} = 31.8\text{ MPa}\), \(\tau_{BC} = 95.5\text{ MPa}\)</b>, <b>\(\phi_B = 0.01194\text{ rad}\), \(\phi_C = 0.03581\text{ rad}\)</b><br>
-      • <b>ตย. 5.2 (เฟือง A r=200 ขบเฟือง B r=100, d = 20 mm):</b> \(F = 400\text{ N}\), \(T_{BC} = 40\text{ N}\cdot\text{m}\), \(J = 15,708\text{ mm}^4\) \(\implies\) <b>\(\tau_{BC} = 25.46\text{ MPa}\)</b>, <b>\(\phi_B = 0.01273\text{ rad}\), \(\phi_A = 0.00637\text{ rad}\)</b></p>
+  <h2 class="prob"><span class="tag">ตย. 5.2</span>เฟือง A (r = 200 mm) ขบเฟือง B (r = 100 mm)</h2>
+  <div class="stmt">
+    <p>เฟือง A ขบกับเฟือง B เพลาของเฟือง A รองรับด้วย thrust bearing ที่หมุนได้อย่างอิสระ และเพลา BC มีปลาย C ยึดแน่น ทำจากวัสดุ \(G = 80\text{ GPa}\) หน้าตัดกลมเส้นผ่านศูนย์กลาง \(20\text{ mm}\) (\(c = 10\text{ mm}\)) เฟือง A รับโมเมนต์บิดภายนอก \(80\text{ N}\cdot\text{m}\) จงหา (ก) หน่วยแรงเฉือนสูงสุดเพลาช่วง BC และ (ข) มุมหมุนบิดของเฟือง A และ B</p>
+  </div>
+  <figure class="fig-box">
+    <img src="assets/figs/fig_5_2.png" alt="รูปโจทย์ตัวอย่างที่ 5.2">
+    <figcaption class="fig-cap">ภาพประกอบจากโจทย์จริง: ตัวอย่างที่ 5.2</figcaption>
+  </figure>
+
+  <div class="exam">
+    <div class="step">
+      <div class="row">
+        <div class="lab">สิ่งที่โจทย์กำหนด</div>
+        <div class="math">\(r_A = 200\text{ mm}, \quad r_B = 100\text{ mm}, \quad L_{BC} = 400\text{ mm}, \quad d = 20\text{ mm} \implies c = 10\text{ mm}\)</div>
+      </div>
+      <div class="row">
+        <div class="lab">ขั้น 1: หาแรงขบฟันเฟือง F และแรงบิด T_BC</div>
+        <div class="math">
+          สมดุลรอบแกนเฟือง A: \(F(200\text{ mm}) = 80\text{ N}\cdot\text{m} \implies F = 400\text{ N}\)<br>
+          ส่งกำลังไปเฟือง B: \(T_{BC} = F(100\text{ mm}) = 400\text{ N} \times 0.1\text{ m} = 40\text{ N}\cdot\text{m}\)
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">ขั้น 2: (ก) หน่วยแรงเฉือนเพลา BC</div>
+        <div class="math">
+          \[J = \frac{\pi}{2}(10)^4 = 15,708\text{ mm}^4\]
+          \[\tau_{BC} = \frac{T_{BC} c}{J} = \frac{40(10)}{15,708} \times 1000 = 25.46\text{ MPa}\]
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">ขั้น 3: (ข) มุมหมุนบิดเฟือง B และ A</div>
+        <div class="math">
+          \[\phi_{BC} = \frac{T_{BC} L_{BC}}{GJ} = \frac{40(400)}{80(15,708)} = 0.01273\text{ rad}\]
+          เนื่องจากปลาย C ยึดแน่น \(\implies\) เฟือง B หมุนบิด \(\phi_B = 0.01273\text{ rad}\) (นิ้วโป้งชี้ซ้าย)<br>
+          ความสัมพันธ์ระยะโค้งเฟือง: \(200\phi_A = 100\phi_B \implies \phi_A = \frac{100}{200}(0.01273) = 0.00637\text{ rad}\)
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">คำตอบ ตย. 5.2</div>
+        <div><span class="fin">\(\tau_{BC} = 25.46\text{ MPa}, \quad \phi_B = 0.01273\text{ rad}, \quad \phi_A = 0.00637\text{ rad}\)</span></div>
+      </div>
     </div>
+  </div>
 
   <div class="sheet-preview">
-    <h4>📄 ภาพสแกนลายมือต้นฉบับจากชีท Solid Ja E Here (หน้า 1–2)</h4>
+    <h4>📄 ภาพสแกนลายมือต้นฉบับ (หน้า 1–2)</h4>
     <div class="sheet-img-grid">
-      <div class="sheet-img-card">
-        <span>หน้า 1: เฉลยละเอียดเพลาขั้น &amp; มุมบิด</span>
-        <img src="assets/pages/page_01.png" alt="ชีท Solid Ja หน้า 1" loading="lazy">
-      </div>
-      <div class="sheet-img-card">
-        <span>หน้า 2: ระบบเฟืองทด &amp; แรงขบฟันเฟือง</span>
-        <img src="assets/pages/page_02.png" alt="ชีท Solid Ja หน้า 2" loading="lazy">
-      </div>
+      <div class="sheet-img-card"><span>หน้า 1: เฉลย ตย. 5.1 และ 5.2 (ลายมือหลัก)</span><img src="assets/pages/page_01.png" loading="lazy"></div>
+      <div class="sheet-img-card"><span>หน้า 2: เฉลย ตย. 5.1 และ 5.2 (ลายมือชุดที่ 2)</span><img src="assets/pages/page_02.png" loading="lazy"></div>
     </div>
   </div>
 
   <div class="pn">
-    <a href="#sum">← สรุปภาพรวม</a>
-    <a href="#p2">ข้อ 2 บิดอินดีเทอร์มิเนต →</a>
+    <a href="#playbook">← กลับหน้าทริครวม</a>
+    <a href="#p2">บทที่ 5.4 บิดยึดหัวท้าย →</a>
   </div>
 </section>
 
-<!-- SECTION 2: ข้อ 2 บิดอินดีเทอร์มิเนต -->
+
 <section id="p2">
   <header class="top">
-    <p class="kick">Solid Ja E Here · หน้า 3–4</p>
-    <h1>ข้อ 2: การบิดแบบอินดีเทอร์มิเนตเชิงสถิต ยึดแน่นหัวท้าย</h1>
-    <p class="sub">Statically Indeterminate Torsion · Hollow Shaft Fixed-Fixed</p>
+    <p class="kick">บทที่ 5 การบิด · หน้า 3–4</p>
+    <h1>บทที่ 5.4: การบิดแบบอินดีเทอร์มิเนต ยึดแน่นหัวท้าย (ตย. 5.4)</h1>
+    <p class="sub">เพลาวงแหวนยึดแน่นที่ A และ D · ตั้งสมการความเข้ากันได้ของมุมบิดรวมเท่ากับศูนย์</p>
     <p class="pracnote">โหมดฝึกเปิดอยู่: ซ่อนวิธีทำไว้ แตะแต่ละขั้นเพื่อดู (ลองเขียนเองก่อน) กดปุ่ม "ฝึก" อีกครั้งเพื่อปิด</p>
   </header>
 
-  <h2 class="prob"><span class="tag">โจทย์จริง</span>คำอธิบายและมิติรูปทรงจากข้อสอบ</h2>
+  <h2 class="prob"><span class="tag">ตย. 5.4</span>เพลาวงแหวน ABCD ยึดแน่นปลาย A และ D</h2>
   <div class="stmt">
-    <p>เพลากลวงปลายยึดแน่นทั้ง 2 ข้าง (Fixed-Fixed ที่จุด A และจุด D) มีขนาดรัศมีนอก \(c_o = 10\text{ mm}\) และรัศมีใน \(c_i = 5\text{ mm}\) รับแรงบิดภายนอกกระทำที่จุดต่อคือ \(T_B = 800\text{ N}\cdot\text{m}\) และ \(T_C = 1100\text{ N}\cdot\text{m}\) โดยความยาวแต่ละช่วงคือ \(L_{AB} = 600\text{ mm}\), \(L_{BC} = 400\text{ mm}\), \(L_{CD} = 500\text{ mm}\) จงหาแรงบิดภายในทุกช่วง และคำนวณความเค้นเฉือนสูงสุดและต่ำสุด</p>
+    <p>เพลา ABCD ยึดแน่นที่ปลาย A และ D มีหน้าตัดเป็นวงแหวน ขนาดเส้นผ่านศูนย์กลางภายนอก \(20\text{ mm}\) (\(c_o = 10\text{ mm}\)) และเส้นผ่านศูนย์กลางภายใน \(10\text{ mm}\) (\(c_i = 5\text{ mm}\)) วัสดุ \(G = 80\text{ GPa}\) จงหาขนาดของหน่วยแรงเฉือนสูงสุดและต่ำสุดที่เกิดขึ้นในช่วง AB, BC และ CD</p>
   </div>
+  <figure class="fig-box">
+    <img src="assets/figs/fig_5_4.png" alt="รูปโจทย์ตัวอย่างที่ 5.4">
+    <figcaption class="fig-cap">ภาพประกอบจากโจทย์จริง: ตัวอย่างที่ 5.4</figcaption>
+  </figure>
 
-  <div class="stmt">
-    <p><b>หลักฟิสิกส์พื้นฐาน (First Principles):</b> เนื่องจากปลายทั้งสองข้างยึดแน่นกับผนังแข็งเกร็ง มุมบิดรวมระหว่างปลาย A ถึงปลาย D จึงต้องเป็นศูนย์เสมอ (\(\phi_{A/D} = 0\)) นี่คือสมการความเข้ากันได้ของการเสียรูป (Compatibility Equation) ที่นำมาใช้ปลดล็อกสถิตยศาสตร์อินดีเทอร์มิเนต</p>
-  </div>
-
-  <figure style="margin:20px 0;"><img src="assets/diagram_p2.svg" alt="แผนภาพประกอบข้อ 2" style="width:100%;height:auto;border:1.5px solid var(--rule);border-radius:4px;background:#fff;"></figure>
-
-  <h3 class="grp">เฉลยละเอียดทีละขั้นตอน (Step-by-Step Solution)</h3>
   <div class="exam">
     <div class="step">
       <div class="row">
         <div class="lab">สิ่งที่โจทย์กำหนด</div>
-        <div class="math">
-          \(c_o = 10\text{ mm}, \quad c_i = 5\text{ mm}\)<br>
-          \(L_{AB} = 600\text{ mm}, \quad L_{BC} = 400\text{ mm}, \quad L_{CD} = 500\text{ mm}\)<br>
-          \(T_B = 800\text{ N}\cdot\text{m}, \quad T_C = 1100\text{ N}\cdot\text{m}\)
-        </div>
+        <div class="math">\(c_o = 10\text{ mm}, \quad c_i = 5\text{ mm}, \quad L_{AB} = 600, L_{BC} = 400, L_{CD} = 500\text{ mm}, \quad T_B = 800, T_C = 1200\text{ N}\cdot\text{m}\)</div>
       </div>
       <div class="row">
-        <div class="lab">ขั้น 1: โมเมนต์ความเฉื่อยเชิงขั้วของเพลากลวง</div>
+        <div class="lab">ขั้น 1: หา J และสมการสมดุล FBD</div>
         <div class="math">
-          \[J = \frac{\pi}{2}(c_o^4 - c_i^4) = \frac{\pi}{2}(10^4 - 5^4) = \frac{\pi}{2}(10,000 - 625) = 14,726.22\text{ mm}^4\]
-        </div>
-      </div>
-      <div class="row">
-        <div class="lab">ขั้น 2: ตั้งสมการสมดุล (Equilibrium)</div>
-        <div class="math">
-          \[\sum T_x = 0 \implies T_A + T_D = 800 - 1100 = -300\text{ N}\cdot\text{m}\]
-          เขียนแรงบิดช่วงต่าง ๆ ในรูปของ \(T_{BC}\):<br>
+          \[J = \frac{\pi}{2}(c_o^4 - c_i^4) = \frac{\pi}{2}(10^4 - 5^4) = 14,726\text{ mm}^4\]
+          สมมติแรงบิดภายในทั้ง 3 ช่วงพุ่งออก (บวก) ตัด FBD รอบจุด B และ C:<br>
           \[T_{AB} = T_{BC} + 800 \quad \text{--- (1)}\]
-          \[T_{CD} = T_{BC} + 1100 \quad \text{--- (2)}\]
+          \[T_{CD} = T_{BC} + 1200 \quad \text{--- (2)}\]
         </div>
       </div>
       <div class="row">
-        <div class="lab">ขั้น 3: สมการความเข้ากันได้ (Compatibility)</div>
+        <div class="lab">ขั้น 2: ตั้งสมการความเข้ากันได้ (Compatibility)</div>
         <div class="math">
-          \[\phi_{A/D} = 0 \implies \phi_{AB} + \phi_{BC} + \phi_{CD} = 0\]
-          \[\frac{T_{AB} L_{AB}}{GJ} + \frac{T_{BC} L_{BC}}{GJ} + \frac{T_{CD} L_{CD}}{GJ} = 0\]
-          ตัด \(GJ\) ทิ้งทั้งสมการ:<br>
-          \[(600) T_{AB} + (400) T_{BC} + (500) T_{CD} = 0\]
+          เนื่องจากปลาย A และ D ยึดแน่น \(\implies \phi_{AB} + \phi_{BC} + \phi_{CD} = 0\)<br>
+          \[\phi_{AB} = \frac{600 T_{AB}}{80(14,726)} = 5.093 \times 10^{-4} T_{AB}\]
+          \[\phi_{BC} = \frac{400 T_{BC}}{80(14,726)} = 3.395 \times 10^{-4} T_{BC}\]
+          \[\phi_{CD} = \frac{500 T_{CD}}{80(14,726)} = 4.244 \times 10^{-4} T_{CD}\]
+          หารสมการด้วย \(3.395 \times 10^{-4}\) จะได้รูปอย่างง่าย:<br>
+          \[1.5 T_{AB} + T_{BC} + 1.25 T_{CD} = 0 \quad \text{--- (3)}\]
         </div>
       </div>
       <div class="row">
-        <div class="lab">ขั้น 4: แก้หาแรงบิดในทุกช่วง</div>
+        <div class="lab">ขั้น 3: แก้สมการหาแรงบิดภายใน</div>
         <div class="math">
-          แทน (1) และ (2) ลงในสมการ Compatibility:<br>
-          \[600(T_{BC} + 800) + 400 T_{BC} + 500(T_{BC} + 1100) = 0\]
-          \[1500 T_{BC} + 480,000 + 550,000 = 0 \implies 1500 T_{BC} = -1,030,000\]
-          \[T_{BC} = -686.67\text{ N}\cdot\text{m}\]
-          ย้อนหาค่าในแต่ละช่วง:<br>
-          \[T_{AB} = -686.67 + 800 = +113.33\text{ N}\cdot\text{m}\]
-          \[T_{CD} = -686.67 + 1100 = +413.33\text{ N}\cdot\text{m}\]
+          แทน (1), (2) ใน (3):<br>
+          \[1.5(T_{BC} + 800) + T_{BC} + 1.25(T_{BC} + 1200) = 0\]
+          \[3.75 T_{BC} = -2700 \implies T_{BC} = -720\text{ N}\cdot\text{m} \quad (\text{พุ่งเข้า})\]
+          \[T_{AB} = -720 + 800 = +80\text{ N}\cdot\text{m} \quad (\text{พุ่งออก})\]
+          \[T_{CD} = -720 + 1200 = +480\text{ N}\cdot\text{m} \quad (\text{พุ่งออก})\]
         </div>
       </div>
       <div class="row">
-        <div class="lab">ขั้น 5: ความเค้นเฉือนสูงสุดและต่ำสุด</div>
+        <div class="lab">ขั้น 4: คำนวณหน่วยแรงเฉือน max (r=10) และ min (r=5)</div>
         <div class="math">
-          ช่วงวิกฤตที่มีแรงบิดสูงสุดคือช่วง \(BC\) (\(|T_{BC}| = 686.67\text{ N}\cdot\text{m} = 686.67 \times 10^3\text{ N}\cdot\text{mm}\)):<br>
-          \[\tau_{\max} = \frac{|T_{BC}| c_o}{J} = \frac{(686.67 \times 10^3)(10)}{14,726.22} = 466.30\text{ MPa} \quad (\text{ที่ผิวนอก } r = 10\text{ mm})\]
-          \[\tau_{\min} = \frac{|T_{BC}| c_i}{J} = \frac{(686.67 \times 10^3)(5)}{14,726.22} = 233.15\text{ MPa} \quad (\text{ที่ผิวใน } r = 5\text{ mm})\]
+          • ช่วง AB: \(\tau_{\max} = \frac{80(10)}{14,726}\times 1000 = 54.33\text{ MPa}\), \(\tau_{\min} = \frac{80(5)}{14,726}\times 1000 = 27.16\text{ MPa}\)<br>
+          • ช่วง BC: \(\tau_{\max} = \frac{720(10)}{14,726}\times 1000 = 488.93\text{ MPa}\), \(\tau_{\min} = \frac{720(5)}{14,726}\times 1000 = 244.47\text{ MPa}\)<br>
+          • ช่วง CD: \(\tau_{\max} = \frac{480(10)}{14,726}\times 1000 = 325.95\text{ MPa}\), \(\tau_{\min} = \frac{480(5)}{14,726}\times 1000 = 162.98\text{ MPa}\)
         </div>
       </div>
       <div class="row">
-        <div class="lab">คำตอบสุดท้าย</div>
-        <div>
-          <span class="fin">\(T_{BC} = -686.67\text{ N}\cdot\text{m}, \quad T_{AB} = 113.33\text{ N}\cdot\text{m}, \quad T_{CD} = 413.33\text{ N}\cdot\text{m}, \quad \tau_{\max} = 466.30\text{ MPa}, \quad \tau_{\min} = 233.15\text{ MPa}\)</span>
-        </div>
+        <div class="lab">คำตอบ ตย. 5.4</div>
+        <div><span class="fin">\(27.16 \le \tau_{AB} \le 54.33\text{ MPa}, \quad 244.47 \le \tau_{BC} \le 488.93\text{ MPa}, \quad 162.98 \le \tau_{CD} \le 325.95\text{ MPa}\)</span></div>
       </div>
     </div>
   </div>
-
-  <div class="formula-card-trap">
-    <h4>⚠️ จุดดักคะแนนของอาจารย์ (Exam Trap)</h4>
-    <p>1. <b>ความเค้นต่ำสุดในเพลากลวง:</b> ในเพลากลวง \(\tau_{\min}\) ที่ผิวใน **ไม่เป็นศูนย์** (\(\tau_{\min} = 233.15\text{ MPa}\)) อย่าเผลอตอบว่าศูนย์เหมือนเพลาตันเด็ดขาด!<br>
-    2. <b>เครื่องหมายลบของแรงบิด:</b> \(T_{BC} = -686.67\text{ N}\cdot\text{m}\) เครื่องหมายลบแสดงว่าทิศทางการบิดหมุนตรงข้ามกับที่สมมติไว้ แต่เมื่อนำไปหาค่าความเค้นเฉือนต้องใส่ค่าสัมบูรณ์ \(|T|\) เสมอ</p>
-  </div>
-
-  
-    <div class="formula-card-trap" style="border-left-color:var(--navy);background:rgba(20,41,91,0.05);color:var(--ink);margin-top:16px;">
-      <h4 style="color:var(--navy);">📌 สรุปตัวเลขตรงตามลายมือต้นฉบับ (ตัวอย่างที่ 5.4 หน้า 3–4):</h4>
-      <p>• <b>เพลาวงแหวน ABCD (\(d_o = 20\text{ mm}, d_i = 10\text{ mm}\)):</b> \(J = 14,726\text{ mm}^4\), แรงบิดกระทำ \(T_B = 800\text{ N}\cdot\text{m}, T_C = 1200\text{ N}\cdot\text{m}\)<br>
-      • สมการ Compatibility: \(1.5 T_{AB} + T_{BC} + 1.25 T_{CD} = 0 \implies\) <b>\(T_{BC} = -720\text{ N}\cdot\text{m}\) (พุ่งเข้า), \(T_{AB} = 80\text{ N}\cdot\text{m}\), \(T_{CD} = 480\text{ N}\cdot\text{m}\)</b><br>
-      • ช่วงวิกฤต BC: <b>\(244.47\text{ MPa} \le \tau_{BC} \le 488.93\text{ MPa}\)</b> | ช่วง AB: \(27.16 \le \tau_{AB} \le 54.33\text{ MPa}\) | ช่วง CD: \(162.98 \le \tau_{CD} \le 325.95\text{ MPa}\)</p>
-    </div>
 
   <div class="sheet-preview">
-    <h4>📄 ภาพสแกนลายมือต้นฉบับจากชีท Solid Ja E Here (หน้า 3–4)</h4>
+    <h4>📄 ภาพสแกนลายมือต้นฉบับ (หน้า 3–4)</h4>
     <div class="sheet-img-grid">
-      <div class="sheet-img-card">
-        <span>หน้า 3: การตั้งสมการ Compatibility &amp; แก้หาแรงบิด</span>
-        <img src="assets/pages/page_03.png" alt="ชีท Solid Ja หน้า 3" loading="lazy">
-      </div>
-      <div class="sheet-img-card">
-        <span>หน้า 4: การกระจายของหน่วยแรงเฉือนเพลากลวง</span>
-        <img src="assets/pages/page_04.png" alt="ชีท Solid Ja หน้า 4" loading="lazy">
-      </div>
+      <div class="sheet-img-card"><span>หน้า 3: เฉลย ตย. 5.4 (ละเอียดครบ)</span><img src="assets/pages/page_03.png" loading="lazy"></div>
+      <div class="sheet-img-card"><span>หน้า 4: เฉลย ตย. 5.4 (ลายมือชุดที่ 2)</span><img src="assets/pages/page_04.png" loading="lazy"></div>
     </div>
   </div>
 
   <div class="pn">
-    <a href="#p1">← ข้อ 1 เพลาขั้น &amp; เฟือง</a>
-    <a href="#p3">ข้อ 3 เพลาสวมซ้อน →</a>
+    <a href="#p1">← บทที่ 5.1–5.2</a>
+    <a href="#p3">บทที่ 5.5 เพลาหุ้ม 2 วัสดุ →</a>
   </div>
 </section>
 
-<!-- SECTION 3: ข้อ 3 เพลาสวมซ้อน -->
+
 <section id="p3">
   <header class="top">
-    <p class="kick">Solid Ja E Here · หน้า 5–6</p>
-    <h1>ข้อ 3: เพลาสวมซ้อน แกนเหล็ก-ปลอกทองเหลือง</h1>
-    <p class="sub">Composite Coaxial Shaft · Steel Core &amp; Brass Sleeve</p>
+    <p class="kick">บทที่ 5 การบิด · หน้า 5–6</p>
+    <h1>บทที่ 5.5: เพลาสวมซ้อน เหล็กหุ้มด้วยอะลูมิเนียม (ตย. 5.5)</h1>
+    <p class="sub">เพลาเหล็ก ABCD ยึดแน่นปลาย D ช่วง BC หุ้มด้วยอะลูมิเนียม · เงื่อนไขความเข้ากันได้มุมบิดเท่ากัน</p>
     <p class="pracnote">โหมดฝึกเปิดอยู่: ซ่อนวิธีทำไว้ แตะแต่ละขั้นเพื่อดู (ลองเขียนเองก่อน) กดปุ่ม "ฝึก" อีกครั้งเพื่อปิด</p>
   </header>
 
-  <h2 class="prob"><span class="tag">โจทย์จริง</span>คำอธิบายและมิติรูปทรงจากข้อสอบ</h2>
+  <h2 class="prob"><span class="tag">ตย. 5.5</span>เพลาเหล็ก ABCD หุ้มอะลูมิเนียมช่วง BC</h2>
   <div class="stmt">
-    <p>เพลาประกอบสองวัสดุสวมซ้อนกันและเชื่อมติดแน่นเป็นเนื้อเดียว แกนในเป็นเหล็กกล้า (Steel Core) มีโมดูลัสเฉือน \(G_s = 80\text{ GPa}\) รัศมี \(c_s = 15\text{ mm}\) หุ้มด้วยปลอกนอกทองเหลือง (Brass Sleeve) มี \(G_b = 36\text{ GPa}\) รัศมีใน \(c_i = 15\text{ mm}\) และรัศมีนอก \(c_o = 30\text{ mm}\) โดยเพลายาว \(L = 600\text{ mm}\) รับแรงบิดรวมภายนอก \(T_{\text{total}} = 20\text{ N}\cdot\text{m}\) จงหาแรงบิดที่แต่ละวัสดุร่วมกันแบกรับ และความเค้นเฉือนสูงสุดในแต่ละวัสดุ</p>
+    <p>เพลาเหล็ก ABCD ยึดแน่นที่ปลาย D ช่วง BC หุ้มด้วยอะลูมิเนียม ปลาย A ถูกกระทำด้วยโมเมนต์บิด \(20\text{ N}\cdot\text{m}\) กำหนด \(G\) ของเหล็กและอะลูมิเนียมคือ \(80\) และ \(36\text{ GPa}\) ตามลำดับ จงหา (ก) ขนาดหน่วยแรงเฉือนสูงสุดที่เกิดขึ้นในเหล็กและอะลูมิเนียม และ (ข) ค่ามุมหมุนบิดของปลาย A</p>
   </div>
+  <figure class="fig-box">
+    <img src="assets/figs/fig_5_5.png" alt="รูปโจทย์ตัวอย่างที่ 5.5">
+    <figcaption class="fig-cap">ภาพประกอบจากโจทย์จริง: ตัวอย่างที่ 5.5</figcaption>
+  </figure>
 
-  <div class="stmt">
-    <p><b>หลักฟิสิกส์พื้นฐาน (First Principles):</b> เนื่องจากวัสดุทั้งสองเชื่อมติดกันแน่น การเสียรูปเชิงมุมจึงต้องหมุนไปด้วยกันเท่ากันทุกประการ (\(\phi_s = \phi_b\)) วัสดุหรือรูปทรงที่มีความแข็งแกร่งต้านทานการบิด (Torsional Rigidity \(GJ\)) สูงกว่า จะรับสัดส่วนแรงบิดไปมากกว่าเสมอ</p>
-  </div>
-
-  <figure style="margin:20px 0;"><img src="assets/diagram_p3.svg" alt="แผนภาพประกอบข้อ 3" style="width:100%;height:auto;border:1.5px solid var(--rule);border-radius:4px;background:#fff;"></figure>
-
-  <h3 class="grp">เฉลยละเอียดทีละขั้นตอน (Step-by-Step Solution)</h3>
   <div class="exam">
     <div class="step">
       <div class="row">
         <div class="lab">สิ่งที่โจทย์กำหนด</div>
+        <div class="math">เหล็ก: \(d_s = 10\text{ mm} (r_s=5), G_s = 80\text{ GPa}\) | อะลูมิเนียม: \(d_o = 30\text{ mm} (r_o=15), r_i=5, G_a = 36\text{ GPa}\)<br>ความยาวช่วง \(L_{AB} = 0.4\text{ m}, L_{BC} = 0.6\text{ m}, L_{CD} = 0.4\text{ m}\), แรงบิด \(T = 20\text{ N}\cdot\text{m}\)</div>
+      </div>
+      <div class="row">
+        <div class="lab">ขั้น 1: หาค่า J ของเหล็กและอะลูมิเนียม</div>
         <div class="math">
-          เหล็กกล้า (Steel): \(G_s = 80\text{ GPa} = 80 \times 10^3\text{ MPa}, \quad c_s = 15\text{ mm}\)<br>
-          ทองเหลือง (Brass): \(G_b = 36\text{ GPa} = 36 \times 10^3\text{ MPa}, \quad c_i = 15\text{ mm}, \quad c_o = 30\text{ mm}\)<br>
-          \(T_{\text{total}} = 20\text{ N}\cdot\text{m} = 20 \times 10^3\text{ N}\cdot\text{mm}, \quad L = 600\text{ mm}\)
+          \[J_s = \frac{\pi}{2}(5)^4 = 981.7\text{ mm}^4, \quad J_a = \frac{\pi}{2}(15^4 - 5^4) = 78,539.8\text{ mm}^4\]
         </div>
       </div>
       <div class="row">
-        <div class="lab">ขั้น 1: โมเมนต์ความเฉื่อยเชิงขั้ว (J) แต่ละวัสดุ</div>
+        <div class="lab">ขั้น 2: สมดุลและความเข้ากันได้ในช่วง BC</div>
         <div class="math">
-          \[J_s = \frac{\pi (15)^4}{2} = 79,521.56\text{ mm}^4\]
-          \[J_b = \frac{\pi}{2}(30^4 - 15^4) = \frac{\pi}{2}(810,000 - 50,625) = 1,192,823.86\text{ mm}^4\]
+          เงื่อนไขสมดุล: \(T_a + T_s = 20\text{ N}\cdot\text{m} \quad \text{--- (1)}\)<br>
+          เงื่อนไขเข้ากันได้: \(\phi_a^{BC} = \phi_s^{BC} \implies \frac{600 T_a}{78,539.8(36)} = \frac{600 T_s}{981.7(80)}\)<br>
+          \[2.122 \times 10^{-4} T_a = 7.64 \times 10^{-3} T_s \implies T_a = 36 T_s \quad \text{--- (2)}\]
+          แทน (2) ใน (1): \(37 T_s = 20 \implies T_s = 0.54\text{ N}\cdot\text{m}, \quad T_a = 19.46\text{ N}\cdot\text{m}\)
         </div>
       </div>
       <div class="row">
-        <div class="lab">ขั้น 2: สมการความเข้ากันได้และการแบ่งแรงบิด</div>
+        <div class="lab">ขั้น 3: (ก) ความเค้นเฉือนในเหล็กและอะลูมิเนียม</div>
         <div class="math">
-          \[\phi_s = \phi_b \implies \frac{T_s L}{G_s J_s} = \frac{T_b L}{G_b J_b} \implies \frac{T_s}{T_b} = \frac{G_s J_s}{G_b J_b}\]
-          คำนวณค่า Torsional Rigidity:\
-          \[G_s J_s = (80 \times 10^3)(79,521.56) = 6.3617 \times 10^9\text{ N}\cdot\text{mm}^2\]
-          \[G_b J_b = (36 \times 10^3)(1,192,823.86) = 42.9417 \times 10^9\text{ N}\cdot\text{mm}^2\]
-          \[\frac{T_s}{T_b} = \frac{6.3617}{42.9417} = 0.14815 \implies T_s = 0.14815 T_b\]
+          • เหล็กช่วง AB และ CD (รับเต็ม 20 N·m): \(\tau = \frac{20(5)}{981.7} \times 1000 = 101.86\text{ MPa}\)<br>
+          • เหล็กช่วง BC: \(\tau = \frac{0.54(5)}{981.7} \times 1000 = 2.75\text{ MPa}\)<br>
+          • อะลูมิเนียมช่วง BC (ต่ำสุดที่ผิวใน r=5): \(\tau_{\min} = \frac{19.46(5)}{78,539.8} \times 1000 = 1.24\text{ MPa}\)<br>
+          • อะลูมิเนียมช่วง BC (สูงสุดที่ผิวนอก r=15): \(\tau_{\max} = \frac{19.46(15)}{78,539.8} \times 1000 = 3.72\text{ MPa}\)
         </div>
       </div>
       <div class="row">
-        <div class="lab">ขั้น 3: แก้หาสัดส่วนแรงบิดจากสมดุล</div>
+        <div class="lab">ขั้น 4: (ข) มุมหมุนบิดปลาย A</div>
         <div class="math">
-          \[T_s + T_b = 20\text{ N}\cdot\text{m}\]
-          \[0.14815 T_b + T_b = 20 \implies 1.14815 T_b = 20\]
-          \[T_b = 17.42\text{ N}\cdot\text{m} = 17.42 \times 10^3\text{ N}\cdot\text{mm}\]
-          \[T_s = 20 - 17.42 = 2.58\text{ N}\cdot\text{m} = 2.58 \times 10^3\text{ N}\cdot\text{mm}\]
+          \[\phi_{AB} = \phi_{CD} = \frac{20(400)}{981.7(80)} = 0.10186\text{ rad}\]
+          \[\phi_{BC} = \frac{19.46(600)}{78,539.8(36)} = 0.00413\text{ rad}\]
+          เนื่องจากปลาย D ยึดแน่น: \(\phi_A = 0.10186 + 0.00413 + 0.10186 = 0.20785\text{ rad}\)
         </div>
       </div>
       <div class="row">
-        <div class="lab">ขั้น 4: คำนวณความเค้นเฉือนสูงสุดในแต่ละวัสดุ</div>
-        <div class="math">
-          ในเนื้อเหล็ก (สูงสุดที่ผิวนอกเหล็ก \(r = 15\text{ mm}\)):<br>
-          \[\tau_{s,\max} = \frac{T_s c_s}{J_s} = \frac{(2.58 \times 10^3)(15)}{79,521.56} = 0.487\text{ MPa}\]
-          ในเนื้อทองเหลือง (สูงสุดที่ผิวนอกสุด \(r = 30\text{ mm}\)):<br>
-          \[\tau_{b,\max} = \frac{T_b c_o}{J_b} = \frac{(17.42 \times 10^3)(30)}{1,192,823.86} = 0.438\text{ MPa}\]
-        </div>
-      </div>
-      <div class="row">
-        <div class="lab">คำตอบสุดท้าย</div>
-        <div>
-          <span class="fin">\(T_s = 2.58\text{ N}\cdot\text{m}, \quad T_b = 17.42\text{ N}\cdot\text{m}, \quad \tau_{s,\max} = 0.487\text{ MPa}, \quad \tau_{b,\max} = 0.438\text{ MPa}\)</span>
-        </div>
+        <div class="lab">คำตอบ ตย. 5.5</div>
+        <div><span class="fin">เหล็ก \(\tau_{\max} = 101.86\text{ MPa}\), อะลูมิเนียม \(\tau_{\max} = 3.72\text{ MPa}\), มุมบิดปลาย A \(= 0.20785\text{ rad}\)</span></div>
       </div>
     </div>
   </div>
-
-  <div class="formula-card-trap">
-    <h4>⚠️ จุดดักคะแนนของอาจารย์ (Exam Trap)</h4>
-    <p>1. <b>พฤติกรรมที่รอยต่อ (Interface at r = 15 mm):</b> ความเครียดเฉือน \(\gamma\) จะต่อเนื่องและเท่ากันทั้งสองฝั่ง แต่ **ความเค้นเฉือน \(\tau\) จะกระโดดไม่เท่ากัน** โดยฝั่งเหล็กจะมีค่า \(\tau = G_s \gamma\) สูงกว่าฝั่งทองเหลือง \(\tau = G_b \gamma\) ตามอัตราส่วน \(G_s / G_b = 80/36 = 2.22\) เท่า!<br>
-    2. <b>การแบ่งแรงบิด:</b> แม้เหล็กจะมี \(G\) สูงกว่า แต่ปลอกทองเหลืองมีปริมาตรรัศมีนอก \(30\text{ mm}\) ทำให้ได้ค่า \(J_b\) มหาศาล ทองเหลืองจึงแบกรับแรงบิดไปถึง 87.1% ของแรงบิดทั้งหมด</p>
-  </div>
-
-  
-    <div class="formula-card-trap" style="border-left-color:var(--navy);background:rgba(20,41,91,0.05);color:var(--ink);margin-top:16px;">
-      <h4 style="color:var(--navy);">📌 สรุปตัวเลขตรงตามลายมือต้นฉบับ (ตัวอย่างที่ 5.5 หน้า 5–6):</h4>
-      <p>• <b>เพลาเหล็ก (d = 10 mm, G = 80 GPa) หุ้มด้วยอะลูมิเนียมช่วง BC (d_o = 30 mm, G = 36 GPa):</b> \(J_s = 981.7\text{ mm}^4\), \(J_a = 78,539.8\text{ mm}^4\)<br>
-      • สมดุลและความเข้ากันได้: \(T_a = 36 T_s\), \(T_s + T_a = 20\text{ N}\cdot\text{m} \implies\) <b>\(T_s = 0.54\text{ N}\cdot\text{m}\), \(T_a = 19.46\text{ N}\cdot\text{m}\)</b><br>
-      • เหล็กช่วง AB, CD = <b>\(101.86\text{ MPa}\)</b>, ช่วง BC = <b>\(2.75\text{ MPa}\)</b> | อะลูมิเนียมช่วง BC: <b>\(\tau_{\min} = 1.24\text{ MPa}\), \(\tau_{\max} = 3.72\text{ MPa}\)</b> | มุมบิดปลาย A = <b>\(0.20785\text{ rad}\)</b></p>
-    </div>
 
   <div class="sheet-preview">
-    <h4>📄 ภาพสแกนลายมือต้นฉบับจากชีท Solid Ja E Here (หน้า 5–6)</h4>
+    <h4>📄 ภาพสแกนลายมือต้นฉบับ (หน้า 5–6)</h4>
     <div class="sheet-img-grid">
-      <div class="sheet-img-card">
-        <span>หน้า 5: พิสูจน์ความแข็งต้านการบิด &amp; Compatibility</span>
-        <img src="assets/pages/page_05.png" alt="ชีท Solid Ja หน้า 5" loading="lazy">
-      </div>
-      <div class="sheet-img-card">
-        <span>หน้า 6: ไดอะแกรมความเค้นเฉือนกระโดดที่รอยต่อ</span>
-        <img src="assets/pages/page_06.png" alt="ชีท Solid Ja หน้า 6" loading="lazy">
-      </div>
+      <div class="sheet-img-card"><span>หน้า 5: เฉลย ตย. 5.5 (ละเอียดครบ)</span><img src="assets/pages/page_05.png" loading="lazy"></div>
+      <div class="sheet-img-card"><span>หน้า 6: รูปโจทย์ ตย. 5.5</span><img src="assets/pages/page_06.png" loading="lazy"></div>
     </div>
   </div>
 
   <div class="pn">
-    <a href="#p2">← ข้อ 2 บิดอินดีเทอร์มิเนต</a>
-    <a href="#p4">ข้อ 4 เพลาตัน vs กลวง →</a>
+    <a href="#p2">← บทที่ 5.4</a>
+    <a href="#p4">แบบฝึกหัดบทที่ 5 (ข้อ C–F) →</a>
   </div>
 </section>
 
-<!-- SECTION 4: ข้อ 4 เพลาตัน vs กลวง -->
+
 <section id="p4">
   <header class="top">
-    <p class="kick">Solid Ja E Here · หน้า 7</p>
-    <h1>ข้อ 4: การเปรียบเทียบการรับแรงบิด เพลาตัน vs เพลากลวง</h1>
-    <p class="sub">Hollow vs Solid Shaft Design &amp; Efficiency Comparison</p>
+    <p class="kick">แบบฝึกหัดบทที่ 5 การบิด · หน้า 7</p>
+    <h1>แบบฝึกหัดท้ายบทที่ 5: ข้อ C, D, E และ F ครบทุกข้อ</h1>
+    <p class="sub">ฝึกออกแบบหาแรงบิดสูงสุดและเปลี่ยนหน้าตัดจาก ตย. 5.1 และ 5.2 · พร้อมรูปวาดประกอบสำหรับข้อที่ไม่มีรูป</p>
     <p class="pracnote">โหมดฝึกเปิดอยู่: ซ่อนวิธีทำไว้ แตะแต่ละขั้นเพื่อดู (ลองเขียนเองก่อน) กดปุ่ม "ฝึก" อีกครั้งเพื่อปิด</p>
   </header>
 
-  <h2 class="prob"><span class="tag">โจทย์จริง</span>คำอธิบายและมิติรูปทรงจากข้อสอบ</h2>
+  <h2 class="prob"><span class="tag">ข้อ C &amp; D</span>การรับแรงบิดสูงสุดของหน้าตัดกลมตัน vs วงแหวน (\(\tau \le 100\text{ MPa}\))</h2>
   <div class="stmt">
-    <p>กำหนดหน่วยแรงเฉือนที่ยอมให้ \(\tau_{\text{allow}} = 100\text{ MPa}\) และโมดูลัสเฉือน \(G = 80\text{ GPa}\) ให้เปรียบเทียบความสามารถในการรับแรงบิดสูงสุดและพื้นที่หน้าตัดระหว่างเพลา 2 รูปแบบ:<br>
-    1. <b>เพลากลมตัน:</b> รัศมี \(c = 10\text{ mm}\)<br>
-    2. <b>เพลากลมกลวง:</b> รัศมีนอก \(c_o = 20\text{ mm}\), รัศมีใน \(c_i = 15\text{ mm}\)</p>
+    <p><b>ข้อ C:</b> หน้าตัดกลมรัศมี \(20\text{ mm}\) รับโมเมนต์บิดได้มากที่สุดเท่าใดในหน่วย \(\text{N}\cdot\text{m}\) หากกำหนดว่าหน่วยแรงเฉือนสูงสุดต้องไม่เกิน \(100\text{ MPa}\)<br>
+    <b>ข้อ D:</b> หน้าตัดวงแหวน รัศมีภายนอก \(20\text{ mm}\) รัศมีภายใน \(15\text{ mm}\) รับโมเมนต์บิดได้มากที่สุดเท่าใดในหน่วย \(\text{N}\cdot\text{m}\) หากกำหนด \(\tau \le 100\text{ MPa}\)</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin:16px 0;">
+    <figure class="fig-box" style="margin:0;"><img src="assets/figs/fig_5_c.svg" alt="วาดประกอบข้อ C"><figcaption class="fig-cap">วาดประกอบข้อ C (ไม่มีรูปในโจทย์)</figcaption></figure>
+    <figure class="fig-box" style="margin:0;"><img src="assets/figs/fig_5_d.svg" alt="วาดประกอบข้อ D"><figcaption class="fig-cap">วาดประกอบข้อ D (ไม่มีรูปในโจทย์)</figcaption></figure>
   </div>
 
-  <div class="stmt">
-    <p><b>หลักฟิสิกส์พื้นฐาน (First Principles):</b> ความเค้นเฉือนในเพลากลมแปรผันตรงกับระยะห่างจากจุดศูนย์กลาง (\(\tau \propto r\)) ที่จุดกึ่งกลางเพลาความเค้นมีค่าเป็นศูนย์ การย้ายเนื้อวัสดุตรงกลางไปไว้ที่ขอบนอกสุดในรูปแบบเพลากลวง จะเพิ่มค่าโมเมนต์ความเฉื่อยเชิงขั้ว \(J\) มหาศาล ส่งผลให้รับแรงบิดได้สูงขึ้นหลายเท่าตัวอย่างคุ้มค่าน้ำหนัก</p>
-  </div>
-
-  <figure style="margin:20px 0;"><img src="assets/diagram_p4.svg" alt="แผนภาพประกอบข้อ 4" style="width:100%;height:auto;border:1.5px solid var(--rule);border-radius:4px;background:#fff;"></figure>
-
-  <h3 class="grp">เฉลยละเอียดทีละขั้นตอน (Step-by-Step Solution)</h3>
   <div class="exam">
     <div class="step">
       <div class="row">
-        <div class="lab">สิ่งที่โจทย์กำหนด</div>
+        <div class="lab">เฉลยข้อ C (กลมตัน)</div>
         <div class="math">
-          \(\tau_{\text{allow}} = 100\text{ MPa} = 100\text{ N/mm}^2\)<br>
-          เพลาตัน: \(c = 10\text{ mm}\)<br>
-          เพลากลวง: \(c_o = 20\text{ mm}, \quad c_i = 15\text{ mm}\)
+          \[J = \frac{\pi}{2}(20)^4 = 251,327\text{ mm}^4\]
+          \[\tau = \frac{Tc}{J} \implies T = \frac{\tau J}{c} = \frac{100(251,327)}{20} \times 10^{-3} = 1,256.6\text{ N}\cdot\text{m}\]
         </div>
       </div>
       <div class="row">
-        <div class="lab">ขั้น 1: คำนวณเพลากลมตัน</div>
+        <div class="lab">เฉลยข้อ D (วงแหวน)</div>
         <div class="math">
-          \[J_{\text{solid}} = \frac{\pi (10)^4}{2} = 15,708\text{ mm}^4\]
-          \[A_{\text{solid}} = \pi (10)^2 = 314.16\text{ mm}^2\]
-          \[T_{\text{allow, solid}} = \frac{\tau_{\text{allow}} J}{c} = \frac{(100)(15,708)}{10} = 157.08 \times 10^3\text{ N}\cdot\text{mm} = 157.08\text{ N}\cdot\text{m}\]
-        </div>
-      </div>
-      <div class="row">
-        <div class="lab">ขั้น 2: คำนวณเพลากลมกลวง</div>
-        <div class="math">
-          \[J_{\text{hollow}} = \frac{\pi}{2}(20^4 - 15^4) = \frac{\pi}{2}(160,000 - 50,625) = 171,805.85\text{ mm}^4\]
-          \[A_{\text{hollow}} = \pi (20^2 - 15^2) = \pi (400 - 225) = 549.78\text{ mm}^2\]
-          \[T_{\text{allow, hollow}} = \frac{\tau_{\text{allow}} J}{c_o} = \frac{(100)(171,805.85)}{20} = 859.03 \times 10^3\text{ N}\cdot\text{mm} = 859.03\text{ N}\cdot\text{m}\]
-        </div>
-      </div>
-      <div class="row">
-        <div class="lab">ขั้น 3: วิเคราะห์ประสิทธิภาพเปรียบเทียบ</div>
-        <div class="math">
-          อัตราส่วนความจุแรงบิด:\
-          \[\frac{T_{\text{hollow}}}{T_{\text{solid}}} = \frac{859.03}{157.08} = 5.47 \text{ เท่า!}\]
-          อัตราส่วนพื้นที่หน้าตัด (น้ำหนัก):\
-          \[\frac{A_{\text{hollow}}}{A_{\text{solid}}} = \frac{549.78}{314.16} = 1.75 \text{ เท่า}\]
-        </div>
-      </div>
-      <div class="row">
-        <div class="lab">คำตอบสุดท้าย</div>
-        <div>
-          <span class="fin">\(T_{\text{solid}} = 157.08\text{ N}\cdot\text{m}, \quad T_{\text{hollow}} = 859.03\text{ N}\cdot\text{m} \implies\) เพลากลวงรับแรงบิดได้สูงกว่าถึง 5.47 เท่า!</span>
+          \[J = \frac{\pi}{2}(20^4 - 15^4) = 171,805\text{ mm}^4\]
+          \[T = \frac{\tau J}{c_o} = \frac{100(171,805)}{20} \times 10^{-3} = 859.03\text{ N}\cdot\text{m}\]
         </div>
       </div>
     </div>
   </div>
 
-  <div class="formula-card-trap">
-    <h4>⚠️ จุดดักคะแนนของอาจารย์ (Exam Trap)</h4>
-    <p>เมื่อคำนวณเพลากลวง ตัวส่วนของสูตร \(T = \frac{\tau J}{c_o}\) ต้องใช้รัศมีนอกสุด \(c_o = 20\text{ mm}\) เท่านั้น **ห้ามใช้ความหนา \(t = c_o - c_i\) หรือรัศมีเฉลี่ยเด็ดขาด** เพราะความเค้นสูงสุดเกิดที่ผิวด้านนอกสุดของหน้าตัด</p>
+  <hr>
+
+  <h2 class="prob"><span class="tag">ข้อ E &amp; F</span>โจทย์ประยุกต์จาก ตย. 5.1 และ ตย. 5.2</h2>
+  <div class="stmt">
+    <p><b>ข้อ E:</b> จาก ตย. 5.1 หากเปลี่ยนหน้าตัดเพลา ABC เป็นหน้าตัดวงแหวน รัศมีนอก \(20\text{ mm}\) รัศมีใน \(15\text{ mm}\) (ข้อมูลอื่นคงเดิม) จงหามุมบิดเฟือง B, เฟือง C และหน่วยแรงเฉือนสูงสุด<br>
+    <b>ข้อ F:</b> จาก ตย. 5.2 หากเปลี่ยนรัศมีเฟือง B เป็น \(150\text{ mm}\) และความยาวเพลา BC เป็น \(600\text{ mm}\) (ข้อมูลอื่นคงเดิม) จงหาหน่วยแรงเฉือนสูงสุดเพลา BC และมุมบิดเฟือง A</p>
+  </div>
+
+  <div class="exam">
+    <div class="step">
+      <div class="row">
+        <div class="lab">เฉลยข้อ E (อ้างอิงรูป ตย. 5.1)</div>
+        <div class="math">
+          ใช้ \(J = 171,805\text{ mm}^4\) (จากข้อ D):<br>
+          \[\phi_{AB} = \frac{400(600)}{171,805(80)} = 0.0174\text{ rad} \implies \text{เฟือง B หมุนบิด } 0.0174\text{ rad}\]
+          \[\phi_{BC} = \frac{1200(400)}{171,805(80)} = 0.0349\text{ rad} \implies \text{เฟือง C หมุนบิด } 0.0174 + 0.0349 = 0.0523\text{ rad}\]
+          \[\tau_{\max} = \frac{1200(20)}{171,805} \times 1000 = 139.69\text{ MPa}\]
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">เฉลยข้อ F (อ้างอิงรูป ตย. 5.2)</div>
+        <div class="math">
+          แรงขบเฟือง \(F = 400\text{ N}\) ทำให้ \(T_{BC} = 400(0.15\text{ m}) = 60\text{ N}\cdot\text{m}\), \(J = 15,708\text{ mm}^4\):<br>
+          \[\tau_{BC} = \frac{60(10)}{15,708} \times 1000 = 38.2\text{ MPa}\]
+          \[\phi_{BC} = \frac{60(600)}{15,708(80)} = 0.0286\text{ rad} \implies \text{เฟือง B หมุน } 0.0286\text{ rad}\]
+          \[200\phi_A = 150\phi_B \implies \phi_A = \frac{150}{200}(0.0286) = 0.02145\text{ rad}\]
+          <i>(หมายเหตุ: ในหน้า 7 ต้นฉบับเขียน 1/2 จากอัตราส่วน 100/200 เดิมได้ 0.0143 แต่ถ้ารัศมี B=150 จะได้ 3/4 ของ 0.0286 = 0.02145 rad — ให้สังเกตตัวเลขที่อาจารย์แก้ในโจทย์ให้ดี!)</i>
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">สรุปคำตอบ C–F</div>
+        <div><span class="fin">C: 1256.6 N·m | D: 859.03 N·m | E: φ_B=0.0174, φ_C=0.0523, τ=139.69 MPa | F: τ=38.2 MPa</span></div>
+      </div>
+    </div>
   </div>
 
   <div class="sheet-preview">
-    <h4>📄 ภาพสแกนลายมือต้นฉบับจากชีท Solid Ja E Here (หน้า 7)</h4>
+    <h4>📄 ภาพสแกนลายมือต้นฉบับ (หน้า 7)</h4>
     <div class="sheet-img-grid">
-      <div class="sheet-img-card">
-        <span>หน้า 7: การคำนวณและสรุปประสิทธิภาพเพลาตัน vs เพลากลวง</span>
-        <img src="assets/pages/page_07.png" alt="ชีท Solid Ja หน้า 7" loading="lazy">
-      </div>
+      <div class="sheet-img-card"><span>หน้า 7: เฉลยแบบฝึกหัดข้อ C, D, E, F</span><img src="assets/pages/page_07.png" loading="lazy"></div>
     </div>
   </div>
 
   <div class="pn">
-    <a href="#p3">← ข้อ 3 เพลาสวมซ้อน</a>
-    <a href="#p5">ข้อ 5 ดัดหน้าตัดไม่สมมาตร →</a>
+    <a href="#p3">← บทที่ 5.5</a>
+    <a href="#p5">บทที่ 6.1–6.2 &amp; C ความเค้นดัด →</a>
   </div>
 </section>
 
-<!-- SECTION 5: ข้อ 5 ดัดหน้าตัดไม่สมมาตร -->
+
 <section id="p5">
   <header class="top">
-    <p class="kick">Solid Ja E Here · หน้า 8–9</p>
-    <h1>ข้อ 5: ความเค้นดัดในคานหน้าตัดไม่สมมาตร</h1>
-    <p class="sub">Bending Stress in Unsymmetric Beam · Centroid, Moment of Inertia &amp; Flexure Formula</p>
+    <p class="kick">บทที่ 6 การดัด · หน้า 8–9 และ 13</p>
+    <h1>บทที่ 6: ความเค้นดัดใน I-Beam, T-Beam และแบบฝึกหัด 6.1(C)</h1>
+    <p class="sub">ครบทั้ง ตย. 6.1 (สัดส่วนโมเมนต์), ตย. 6.2 (คานยื่นตัว T + SFD/BMD) และ แบบฝึกหัด C (ขยายปีกเป็น 100 mm)</p>
     <p class="pracnote">โหมดฝึกเปิดอยู่: ซ่อนวิธีทำไว้ แตะแต่ละขั้นเพื่อดู (ลองเขียนเองก่อน) กดปุ่ม "ฝึก" อีกครั้งเพื่อปิด</p>
   </header>
 
-  <h2 class="prob"><span class="tag">โจทย์จริง</span>คำอธิบายและมิติรูปทรงจากข้อสอบ</h2>
+  <h2 class="prob"><span class="tag">ตย. 6.1</span>หน้าตัดตัว I (60 × 140 mm) รับโมเมนต์ 20 kN·m</h2>
   <div class="stmt">
-    <p>คานช่วงเดี่ยวรับภาระทำให้เกิดโมเมนต์ดัดบวกสูงสุด \(M = 3.693\text{ kN}\cdot\text{m} = 3.693 \times 10^6\text{ N}\cdot\text{mm}\) (ทำให้คานแอ่นลง) หน้าตัดคานไม่สมมาตรรูปตัว T หรือกล่อง ปีกบนกว้าง \(100\text{ mm}\) หนา \(10\text{ mm}\) เอวหนา \(10\text{ mm}\) สูง \(110\text{ mm}\) ความสูงรวม \(h = 120\text{ mm}\) จงหาตำแหน่งแกนสะเทิน (Neutral Axis), คำนวณโมเมนต์ความเฉื่อยรอบแกนสะเทิน \(I\), และหาความเค้นดัดสูงสุดที่ขอบบนและขอบล่าง</p>
+    <p>โมเมนต์ดัดขนาด \(20\text{ kN}\cdot\text{m}\) กระทำกับหน้าตัดตัวไอรอบแกน NA จงแสดง (ก) การกระจายตัวของหน่วยแรงดัดที่เกิดขึ้น และ (ข) หาว่าพื้นที่ส่วนเอว ปีกบน และปีกล่าง มีส่วนร่วมรับโมเมนต์ดัดในสัดส่วนเท่าใด</p>
   </div>
+  <figure class="fig-box">
+    <img src="assets/figs/fig_6_1.png" alt="รูปโจทย์ตัวอย่างที่ 6.1">
+    <figcaption class="fig-cap">ภาพประกอบจากโจทย์จริง: ตัวอย่างที่ 6.1</figcaption>
+  </figure>
 
-  <div class="stmt">
-    <p><b>หลักฟิสิกส์พื้นฐาน (First Principles):</b> แกนสะเทิน (NA) คือแกนที่เส้นใยของวัสดุไม่มีการยืดหรือหดตัว (\(\sigma = 0\)) โดยจะผ่านจุดเซนทรอยด์ของพื้นที่หน้าตัด ความเค้นดัดจะกระจายเป็นเส้นตรงตามสูตร \(\sigma = -My/I\) โมเมนต์ดัดบวกจะบีบอัดเส้นใยด้านบนให้หดตัว (เกิดแรงอัด Compression) และดึงเส้นใยด้านล่างให้ยืดออก (เกิดแรงดึง Tension)</p>
-  </div>
-
-  <figure style="margin:20px 0;"><img src="assets/diagram_p5.svg" alt="แผนภาพประกอบข้อ 5" style="width:100%;height:auto;border:1.5px solid var(--rule);border-radius:4px;background:#fff;"></figure>
-
-  <h3 class="grp">เฉลยละเอียดทีละขั้นตอน (Step-by-Step Solution)</h3>
   <div class="exam">
     <div class="step">
       <div class="row">
-        <div class="lab">สิ่งที่โจทย์กำหนด</div>
+        <div class="lab">ขั้น 1: หาค่า I (วิธีลบกล่องกลวง)</div>
+        <div class="math">\[I = \frac{1}{12}\left[60(140)^3 - 50(120)^3\right] = 6,520,000\text{ mm}^4\]</div>
+      </div>
+      <div class="row">
+        <div class="lab">ขั้น 2: (ก) หน่วยแรงดัดที่จุด 1 และ 2</div>
         <div class="math">
-          \(M = 3.693\text{ kN}\cdot\text{m} = 3.693 \times 10^6\text{ N}\cdot\text{mm}\)<br>
-          ปีกบน: กว้าง \(100\text{ mm}\), หนา \(10\text{ mm}\)<br>
-          เอว: กว้าง \(10\text{ mm}\), สูง \(110\text{ mm}\), ความสูงรวม \(120\text{ mm}\)
+          \[\sigma_1 = \frac{(20 \times 10^6)(70)}{6,520,000} = 214.7\text{ MPa} \quad (\text{บนอัด, ล่างดึง})\]
+          \[\sigma_2 = \frac{(20 \times 10^6)(60)}{6,520,000} = 184.0\text{ MPa}\]
         </div>
       </div>
       <div class="row">
-        <div class="lab">ขั้น 1: หาตำแหน่งจุดเซนทรอยด์ (แกนสะเทิน NA)</div>
+        <div class="lab">ขั้น 3: (ข) สัดส่วนรับโมเมนต์ดัด</div>
         <div class="math">
-          เลือกแนวอ้างอิงที่ขอบล่างสุดของคาน:<br>
-          \[\bar{y} = \frac{\sum A_i y_i}{\sum A_i} = 58.0\text{ mm} \quad (\text{วัดขึ้นจากขอบล่าง})\]
-          ดังนั้นระยะจากแกน NA ถึงขอบนอกสุด:<br>
-          ระยะถึงขอบล่าง: \(y_{\text{bot}} = -58.0\text{ mm}\)<br>
-          ระยะถึงขอบบน: \(y_{\text{top}} = 120 - 58 = +62.0\text{ mm}\)
-        </div>
-      </div>
-      <div class="row">
-        <div class="lab">ขั้น 2: คำนวณ Moment of Inertia (I) รอบแกน NA</div>
-        <div class="math">
-          ใช้ทฤษฎีแกนขนาน \(I = \sum (\bar{I}_i + A_i d_i^2)\):<br>
-          \[I = 3,135,200\text{ mm}^4 = 3.1352 \times 10^6\text{ mm}^4\]
-        </div>
-      </div>
-      <div class="row">
-        <div class="lab">ขั้น 3: ความเค้นดัดที่ขอบบน (Top Fiber)</div>
-        <div class="math">
-          \[\sigma_{\text{top}} = -\frac{M y_{\text{top}}}{I} = -\frac{(3.693 \times 10^6\text{ N}\cdot\text{mm})(62\text{ mm})}{3,135,200\text{ mm}^4} = -73.03\text{ MPa}\]
-          เครื่องหมายลบแสดงถึง <b>แรงอัด (Compression)</b>
-        </div>
-      </div>
-      <div class="row">
-        <div class="lab">ขั้น 4: ความเค้นดัดที่ขอบล่าง (Bottom Fiber)</div>
-        <div class="math">
-          \[\sigma_{\text{bot}} = -\frac{M (-y_{\text{bot}})}{I} = +\frac{(3.693 \times 10^6\text{ N}\cdot\text{mm})(58\text{ mm})}{3,135,200\text{ mm}^4} = +68.32\text{ MPa}\]
-          เครื่องหมายบวกแสดงถึง <b>แรงดึง (Tension)</b>
-        </div>
-      </div>
-      <div class="row">
-        <div class="lab">คำตอบสุดท้าย</div>
-        <div>
-          <span class="fin">\(\bar{y} = 58\text{ mm}, \quad I = 3.135 \times 10^6\text{ mm}^4, \quad \sigma_{\text{top}} = -73.03\text{ MPa (อัด)}, \quad \sigma_{\text{bot}} = +68.32\text{ MPa (ดึง)}\)</span>
+          แรงรวมบนเอวครึ่งบน (ปริมาตร Stress Block): \(F = \frac{1}{2}(60)(184.0)(10) = 55.2\text{ kN}\), ระยะแขน \(\frac{2}{3}(60) = 40\text{ mm}\)<br>
+          <b>ส่วนเอวรับโมเมนต์ (บน+ล่าง):</b> \(M_{\text{เอว}} = 55.2(40) \times 2 = 4.416\text{ kN}\cdot\text{m} \quad (\mathbf{22.08\%})\)<br>
+          <b>ปีกบนรับโมเมนต์ = ปีกล่างรับโมเมนต์:</b> \(M_{\text{ปีก}} = \frac{20 - 4.416}{2} = 7.792\text{ kN}\cdot\text{m} \quad (\mathbf{38.96\% \text{ ต่อข้าง}})\)
         </div>
       </div>
     </div>
   </div>
 
-  <div class="formula-card-trap">
-    <h4>⚠️ จุดดักคะแนนของอาจารย์ (Exam Trap)</h4>
-    <p>1. <b>หน้าตัดไม่สมมาตรค่าดึงกับอัดไม่เท่ากัน:</b> \(|\sigma_{\text{top}}| \ne |\sigma_{\text{bot}}|\) เพราะระยะห่างจากแกนสะเทินถึงขอบบนและขอบล่างไม่เท่ากัน (\(62\text{ mm} \ne 58\text{ mm}\)) ต้องคิดแยกกันทุกครั้ง<br>
-    2. <b>การระบุสภาวะแรง:</b> ข้อสอบอัตนัยบังคับให้เขียนกำกับคำตอบชัดเจนว่าเป็น <b>(ดึง)</b> หรือ <b>(อัด)</b> หากเขียนแค่ตัวเลขเปล่า ๆ จะถูกหักคะแนนส่วนผลลัพธ์</p>
+  <hr>
+
+  <h2 class="prob"><span class="tag">ตย. 6.2</span>คานตัว T ยื่น 1 m รับแรงกระจาย 20 kN/m (หน้า 8)</h2>
+  <div class="stmt">
+    <p>คานหน้าตัดตัว T ยาวรวม \(3\text{ m}\) (ช่วงระหว่างฐานรองรับ \(2\text{ m}\), ยื่นขวา \(1\text{ m}\)) รับน้ำหนักกระจาย \(20\text{ kN/m}\) ตลอดคาน จงหาขนาดมากที่สุดของหน่วยแรงดัดแบบดึงและแบบอัดที่เกิดขึ้นบนหน้าตัด</p>
+  </div>
+  <figure class="fig-box">
+    <img src="assets/figs/fig_6_2.png" alt="รูปโจทย์ตัวอย่างที่ 6.2">
+    <figcaption class="fig-cap">ภาพประกอบจากโจทย์จริง: ตัวอย่างที่ 6.2</figcaption>
+  </figure>
+
+  <div class="exam">
+    <div class="step">
+      <div class="row">
+        <div class="lab">ขั้น 1: แรงปฏิกิริยา, SFD และ BMD</div>
+        <div class="math">
+          น้ำหนักรวม \(20(3) = 60\text{ kN}\) ลงที่ \(1.5\text{ m}\) \(\implies R_A = 15\text{ kN}, \quad R_B = 45\text{ kN}\)<br>
+          • <b>SFD:</b> ขึ้น \(+15\) $\to$ โดนกดลง \(20(2)=40\) เหลือ \(\mathbf{-25}\) (ตัด 0 ที่ \(x = 0.75\text{ m}\)) $\to$ ขึ้น \(45\) เป็น \(+20\) $\to$ ลง \(20\) จบที่ \(0\)<br>
+          • <b>BMD:</b> จุด A (โมเมนต์บวกสูงสุด) \(M_A = +5.625\text{ kN}\cdot\text{m}\) | จุด B (โมเมนต์ลบสูงสุด) \(M_B = -10\text{ kN}\cdot\text{m}\)
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">ขั้น 2: หาแกนสะเทิน NA (d) และค่า I</div>
+        <div class="math">
+          \[d = \frac{10(120)(60) + 60(10)(125)}{10(120) + 60(10)} = 82\text{ mm} \quad (\text{จากขอบล่าง, เหลือระยะบน } 130 - 82 = 48\text{ mm})\]
+          \[I_1 = \frac{1}{12}(10)(120)^3 + 10(120)(22)^2 = 2,020,800\text{ mm}^4\]
+          \[I_2 = \frac{1}{12}(60)(10)^3 + 60(10)(43)^2 = 1,114,400\text{ mm}^4\]
+          \[I_{\text{รวม}} = 2,020,800 + 1,114,400 = 3,135,200\text{ mm}^4\]
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">ขั้น 3: ตรวจสอบความเค้นที่จุด A (+M) และจุด B (-M)</div>
+        <div class="math">
+          <b>ที่จุดโมเมนต์บวก A (\(M_A = +5.625\text{ kN}\cdot\text{m}\), บนอัด / ล่างดึง):</b><br>
+          ระดับ 1 (ขอบบน \(y=48\)): \(\sigma = \frac{5.625(48)}{3.1352} = 86.12\text{ MPa}\) (อัด)<br>
+          ระดับ 2 (ขอบล่าง \(y=82\)): \(\sigma = \frac{5.625(82)}{3.1352} = 147.1\text{ MPa}\) (ดึง)<br>
+          <b>ที่จุดโมเมนต์ลบ B (\(M_B = -10\text{ kN}\cdot\text{m}\), บนดึง / ล่างอัด):</b><br>
+          ระดับ 1 (ขอบบน \(y=48\)): \(\sigma = \frac{10(48)}{3.1352} = \mathbf{153.1\text{ MPa}}\) <b>(ดึงสูงสุด!)</b><br>
+          ระดับ 2 (ขอบล่าง \(y=82\)): \(\sigma = \frac{10(82)}{3.1352} = \mathbf{261.5\text{ MPa}}\) <b>(อัดสูงสุด!)</b>
+        </div>
+      </div>
+    </div>
   </div>
 
-  
-    <div class="formula-card-trap" style="border-left-color:var(--navy);background:rgba(20,41,91,0.05);color:var(--ink);margin-top:16px;">
-      <h4 style="color:var(--navy);">📌 สรุปตัวเลขตรงตามลายมือต้นฉบับ (ตัวอย่างที่ 6.1 และ 6.2 หน้า 8–9):</h4>
-      <p>• <b>ตย. 6.1 (I-beam 60×140 mm, M = 20 kN·m):</b> \(I = 6,520,000\text{ mm}^4\), <b>\(\sigma_1 = 214.7\text{ MPa}\), \(\sigma_2 = 184.0\text{ MPa}\)</b>, ส่วนเอวรับโมเมนต์ <b>\(4.416\text{ kN}\cdot\text{m}\) (22.08%)</b>, ปีกบน/ล่างรับข้างละ <b>\(7.792\text{ kN}\cdot\text{m}\) (38.96%)</b><br>
-      • <b>ตย. 6.2 (T-beam คานยื่น 2+1 m รับ w = 20 kN/m):</b> \(R_A = 15\text{ kN}\), \(R_B = 45\text{ kN}\), SFD: \(+15 \to -25 \to +20 \to 0\) (ตัดศูนย์ที่ \(x = 0.75\text{ m}\)), BMD: \(M_A = +5.625\text{ kN}\cdot\text{m}\), \(M_B = -10\text{ kN}\cdot\text{m}\), \(d = 82\text{ mm}\), \(I = 3,135,200\text{ mm}^4\) \(\implies\) <b>อัดสูงสุด \(261.5\text{ MPa}\) (ที่ B ขอบล่าง), ดึงสูงสุด \(153.1\text{ MPa}\) (ที่ B ขอบบน)</b></p>
+  <hr>
+
+  <h2 class="prob"><span class="tag">ฝึกหัด C</span>จาก ตย. 6.1 เปลี่ยนความกว้างปีกบน-ล่างเป็น 100 mm (หน้า 13)</h2>
+  <div class="stmt">
+    <p>เปลี่ยนความกว้างของปีกบนและล่างจาก \(60\text{ mm}\) เป็น \(100\text{ mm}\) (ข้อมูลอื่นคงเดิม) จงหาหน่วยแรงดัดระดับ 1, ระดับ 2 และโมเมนต์ดัดที่รับโดยพื้นที่เอว</p>
+  </div>
+  <figure class="fig-box">
+    <img src="assets/figs/fig_6_1_c.png" alt="รูปโจทย์แบบฝึกหัด 6.1 C">
+    <figcaption class="fig-cap">ภาพประกอบจากโจทย์จริง: แบบฝึกหัด 6.1 ข้อ C (หน้า 13)</figcaption>
+  </figure>
+
+  <div class="exam">
+    <div class="step">
+      <div class="row">
+        <div class="lab">เฉลยข้อ C</div>
+        <div class="math">
+          \[I = \frac{1}{12}\left[100(140)^3 - 90(120)^3\right] = 9,906,666.7\text{ mm}^4\]
+          \[\sigma_1 = \frac{(20 \times 10^6)(70)}{9,906,666.7} = \mathbf{141.3\text{ MPa}}, \quad \sigma_2 = \frac{(20 \times 10^6)(60)}{9,906,666.7} = \mathbf{121.1\text{ MPa}}\]
+          ส่วนเอวรับโมเมนต์ดัด: \(\left[\frac{1}{2}(121.1)(60)(10)\right] \times \frac{2}{3}(60) \times 2 = \mathbf{2.91\text{ kN}\cdot\text{m}}\)
+        </div>
+      </div>
     </div>
+  </div>
 
   <div class="sheet-preview">
-    <h4>📄 ภาพสแกนลายมือต้นฉบับจากชีท Solid Ja E Here (หน้า 8–9)</h4>
+    <h4>📄 ภาพสแกนลายมือต้นฉบับ (หน้า 8–9)</h4>
     <div class="sheet-img-grid">
-      <div class="sheet-img-card">
-        <span>หน้า 8: การหาเซนทรอยด์ &amp; ทฤษฎีแกนขนาน</span>
-        <img src="assets/pages/page_08.png" alt="ชีท Solid Ja หน้า 8" loading="lazy">
-      </div>
-      <div class="sheet-img-card">
-        <span>หน้า 9: ไดอะแกรมความเค้นดัดดึง-อัด</span>
-        <img src="assets/pages/page_09.png" alt="ชีท Solid Ja หน้า 9" loading="lazy">
-      </div>
+      <div class="sheet-img-card"><span>หน้า 8: เฉลย ตย. 6.1 และ 6.2 (ละเอียดครบ)</span><img src="assets/pages/page_08.png" loading="lazy"></div>
+      <div class="sheet-img-card"><span>หน้า 9: เฉลย ตย. 6.1 และ 6.2 (ลายมือชุดที่ 2)</span><img src="assets/pages/page_09.png" loading="lazy"></div>
     </div>
   </div>
 
   <div class="pn">
-    <a href="#p4">← ข้อ 4 เพลาตัน vs กลวง</a>
-    <a href="#p6">ข้อ 6 คานแอ่นตัว Double Int →</a>
+    <a href="#p4">← แบบฝึกหัดบท 5</a>
+    <a href="#p6">บทที่ 6.3–6.5 คานแอ่นตัว →</a>
   </div>
 </section>
 
-<!-- SECTION 6: ข้อ 6 คานแอ่นตัว Double Int -->
+
 <section id="p6">
   <header class="top">
-    <p class="kick">Solid Ja E Here · หน้า 10–11</p>
-    <h1>ข้อ 6: การแอ่นตัวของคานด้วยวิธีอินทิเกรตสองชั้น</h1>
-    <p class="sub">Beam Deflection · Double Integration Method &amp; Moment-Area Theorem</p>
+    <p class="kick">บทที่ 6 การโก่งตัวของคาน · หน้า 10–11</p>
+    <h1>บทที่ 6.3–6.5: การโก่งตัวของคานด้วย Double Integration ครบทั้ง 3 แบบ</h1>
+    <p class="sub">ตย. 6.3 (คานยื่น) · ตย. 6.4 (คานช่วงเดียวรับแรงกระจาย w) · ตย. 6.5 (คานช่วงเดียวรับแรงจุดเยื้องศูนย์ L/3)</p>
     <p class="pracnote">โหมดฝึกเปิดอยู่: ซ่อนวิธีทำไว้ แตะแต่ละขั้นเพื่อดู (ลองเขียนเองก่อน) กดปุ่ม "ฝึก" อีกครั้งเพื่อปิด</p>
   </header>
 
-  <h2 class="prob"><span class="tag">โจทย์จริง</span>คำอธิบายและมิติรูปทรงจากข้อสอบ</h2>
-  <div class="stmt">
-    <p>คานยื่น (Cantilever Beam) ความยาว \(L\) ปลายด้านซ้ายถูกยึดแน่น (Fixed at \(x = 0\)) ปลายด้านขวาเป็นปลายอิสระรับแรงกระทำแบบจุด \(P\) ในทิศทางชี้ลงที่ปลายคาน (\(x = L\)) จงใช้ <b>วิธีอินทิเกรตสองชั้น (Double Integration Method)</b> หาสมการความลาดชัน \(v'(x)\), สมการเส้นโค้งการแอ่นตัว \(v(x)\), และการแอ่นตัวสูงสุดที่ปลายอิสระ พร้อมตรวจสอบคำตอบด้วยวิธีพื้นที่โมเมนต์ (Moment-Area Method)</p>
-  </div>
-
-  <div class="stmt">
-    <p><b>หลักฟิสิกส์พื้นฐาน (First Principles):</b> ความโค้งของเส้นแอ่นตัวของคานอิลาสติกสัมพันธ์กับโมเมนต์ดัดภายในผ่านสมการอนุพันธ์อันดับสอง \(EI \frac{d^2v}{dx^2} = M(x)\) เมื่ออินทิเกรตหนึ่งครั้งจะได้ความลาดชัน (Slope) และอินทิเกรตสองครั้งจะได้ระยะแอ่นตัว (Deflection) โดยค่าคงที่ \(C_1, C_2\) จะถูกกำหนดด้วยเงื่อนไขขอบเขตที่จุดรองรับ</p>
-  </div>
-
-  <figure style="margin:20px 0;"><img src="assets/diagram_p6.svg" alt="แผนภาพประกอบข้อ 6" style="width:100%;height:auto;border:1.5px solid var(--rule);border-radius:4px;background:#fff;"></figure>
-
-  <h3 class="grp">เฉลยละเอียดทีละขั้นตอน (Step-by-Step Solution)</h3>
+  <h2 class="prob"><span class="tag">ตย. 6.3</span>คานยื่น ปลาย B ยึดแน่น แรง P กดปลาย A</h2>
+  <figure class="fig-box">
+    <img src="assets/figs/fig_6_3.png" alt="รูปโจทย์ตัวอย่างที่ 6.3">
+    <figcaption class="fig-cap">ภาพประกอบจากโจทย์จริง: ตัวอย่างที่ 6.3</figcaption>
+  </figure>
   <div class="exam">
     <div class="step">
       <div class="row">
-        <div class="lab">สิ่งที่โจทย์กำหนด</div>
+        <div class="lab">สมการ M(x) และอินทิเกรต</div>
         <div class="math">
-          คานยื่นยาว \(L\), ความแข็งเกร็งการดัด \(EI\) คงที่<br>
-          แรงจุด \(P\) กดลงที่ปลายอิสระ \(x = L\)<br>
-          เงื่อนไขขอบเขตที่จุดยึดแน่น (\(x = 0\)): \(v(0) = 0, \quad v'(0) = 0\)
-        </div>
-      </div>
-      <div class="row">
-        <div class="lab">ขั้น 1: เขียนสมการโมเมนต์ดัด M(x)</div>
-        <div class="math">
-          ตัดคานที่ระยะ \(x\) จากปลายยึดแน่นซ้าย:<br>
-          \[M(x) = -P(L - x) = -PL + Px\]
-        </div>
-      </div>
-      <div class="row">
-        <div class="lab">ขั้น 2: อินทิเกรตครั้งที่ 1 (หาสมการความลาดชัน v')</div>
-        <div class="math">
-          \[EI \frac{dv}{dx} = \int (-PL + Px) dx = -PLx + \frac{Px^2}{2} + C_1\]
-          แทนเงื่อนไขขอบเขตที่ปลายยึดแน่น: ที่ \(x = 0, v' = 0\):<br>
-          \[0 = 0 + 0 + C_1 \implies C_1 = 0\]
-          สมการความลาดชัน:\
-          \[v'(x) = \frac{P}{2EI}(x^2 - 2Lx)\]
-          ความลาดชันที่ปลายอิสระ (\(x = L\)): \(\theta_B = v'(L) = -\frac{PL^2}{2EI}\)
-        </div>
-      </div>
-      <div class="row">
-        <div class="lab">ขั้น 3: อินทิเกรตครั้งที่ 2 (หาสมการเส้นแอ่นตัว v)</div>
-        <div class="math">
-          \[EI v(x) = \int \left(-PLx + \frac{Px^2}{2}\right) dx = -\frac{PLx^2}{2} + \frac{Px^3}{6} + C_2\]
-          แทนเงื่อนไขขอบเขต: ที่ \(x = 0, v = 0\):<br>
-          \[0 = 0 + 0 + C_2 \implies C_2 = 0\]
-          สมการเส้นโค้งการแอ่นตัว:\
-          \[v(x) = \frac{Px^2}{6EI}(x - 3L)\]
-        </div>
-      </div>
-      <div class="row">
-        <div class="lab">ขั้น 4: การแอ่นตัวสูงสุดที่ปลายอิสระ (x = L)</div>
-        <div class="math">
-          \[v_{\max} = v(L) = \frac{P(L)^2}{6EI}(L - 3L) = \frac{PL^2}{6EI}(-2L) = -\frac{PL^3}{3EI}\]
-          เครื่องหมายลบแสดงว่า <b>คานแอ่นตัวลงในแนวดิ่ง</b>
-        </div>
-      </div>
-      <div class="row">
-        <div class="lab">ขั้น 5: ตรวจสอบด้วย Moment-Area Method</div>
-        <div class="math">
-          ระยะโก่งตัวที่ปลาย B เทียบกับเส้นสัมผัสที่ A (ซึ่งขนานแนวราบ):<br>
-          \[t_{B/A} = \text{พื้นที่ไดอะแกรม } \frac{M}{EI} \times \bar{x}_B\]
-          พื้นที่สามเหลี่ยมโมเมนต์: \(\text{Area} = \frac{1}{2}(L)\left(-\frac{PL}{EI}\right) = -\frac{PL^2}{2EI}\)<br>
-          ระยะเซนทรอยด์จากปลาย B: \(\bar{x}_B = \frac{2}{3}L\)<br>
-          \[t_{B/A} = \left(-\frac{PL^2}{2EI}\right) \left(\frac{2}{3}L\right) = -\frac{PL^3}{3EI} \quad \text{[ตรงกัน 100%!]}\]
-        </div>
-      </div>
-      <div class="row">
-        <div class="lab">คำตอบสุดท้าย</div>
-        <div>
-          <span class="fin">\(v'(x) = \frac{P}{2EI}(x^2 - 2Lx), \quad v(x) = \frac{Px^2}{6EI}(x - 3L), \quad v_{\max} = -\frac{PL^3}{3EI} \downarrow\)</span>
+          ตัดจากซ้าย A: \(M(x) = -Px\)<br>
+          \[EI v'(x) = -\frac{1}{2}Px^2 + C_1, \quad EI v(x) = -\frac{1}{6}Px^3 + C_1 x + C_2\]
+          แทน BC ที่ปลายยึดแน่น B (\(x = L\)): \(v'(L)=0 \implies C_1 = \frac{1}{2}PL^2\) และ \(v(L)=0 \implies C_2 = -\frac{1}{3}PL^3\)<br>
+          ที่ปลายอิสระ A (\(x = 0\)): <b>\(v_A' = \frac{PL^2}{2EI}\), \(v_A = -\frac{PL^3}{3EI}\)</b>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="formula-card-trap">
-    <h4>⚠️ จุดดักคะแนนของอาจารย์ (Exam Trap)</h4>
-    <p>1. <b>ค่าคงที่การอินทิเกรตไม่ได้เป็นศูนย์เสมอไป:</b> สำหรับคานยื่น (Cantilever) ค่า \(C_1 = 0, C_2 = 0\) เพราะจุดยึดแน่นอยู่ที่ \(x = 0\) แต่หากเป็นคานช่วงเดี่ยว (Simply Supported) เงื่อนไขขอบเขตคือ \(v(0) = 0\) และ \(v(L) = 0\) ค่า \(C_1\) จะไม่เป็นศูนย์!<br>
-    2. <b>การวัดระยะ x ในวิธีพื้นที่โมเมนต์:</b> ระยะ \(\bar{x}\) ต้องวัดจากจุดที่ต้องการหาระยะโก่ง (ปลาย B) ไปยังเซนทรอยด์ของพื้นที่ไดอะแกรม \(M/EI\) เสมอ</p>
+  <hr>
+
+  <h2 class="prob"><span class="tag">ตย. 6.4</span>คานช่วงเดียวรับแรงกระจายสม่ำเสมอ w</h2>
+  <figure class="fig-box">
+    <img src="assets/figs/fig_6_4.png" alt="รูปโจทย์ตัวอย่างที่ 6.4">
+    <figcaption class="fig-cap">ภาพประกอบจากโจทย์จริง: ตัวอย่างที่ 6.4</figcaption>
+  </figure>
+  <div class="exam">
+    <div class="step">
+      <div class="row">
+        <div class="lab">สมการ M(x) และอินทิเกรต</div>
+        <div class="math">
+          \[M(x) = \frac{1}{2}wLx - \frac{1}{2}wx^2\]
+          \[EI v'(x) = \frac{1}{4}wLx^2 - \frac{1}{6}wx^3 + C_1, \quad EI v(x) = \frac{1}{12}wLx^3 - \frac{1}{24}wx^4 + C_1 x + C_2\]
+          แทน BC: \(v(0)=0 \implies C_2 = 0\), \(v(L)=0 \implies C_1 = -\frac{1}{24}wL^3\)<br>
+          ความชันที่ปลาย: <b>\(v'(0) = -\frac{wL^3}{24EI}\)</b> | แอ่นตัวสูงสุดกลางคาน (\(x=L/2\)): <b>\(v_{\max} = -\frac{5wL^4}{384EI}\)</b>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <h2 class="prob"><span class="tag">ตย. 6.5</span>คานช่วงเดียวรับแรงจุดเยื้องศูนย์ P ที่ระยะ L/3 (เฉลยจบครบทุกคำถาม)</h2>
+  <figure class="fig-box">
+    <img src="assets/figs/fig_6_5.png" alt="รูปโจทย์ตัวอย่างที่ 6.5">
+    <figcaption class="fig-cap">ภาพประกอบจากโจทย์จริง: ตัวอย่างที่ 6.5</figcaption>
+  </figure>
+  <div class="exam">
+    <div class="step">
+      <div class="row">
+        <div class="lab">ขั้น 1: แยก 2 ช่วง (x1 และ x2)</div>
+        <div class="math">
+          แรงปฏิกิริยา: \(R_A = \frac{2}{3}P\), \(R_C = \frac{1}{3}P\)<br>
+          • ช่วง AB (วัด \(x_1\) จากซ้าย): \(M_1 = \frac{2}{3}Px_1 \implies EI v_1' = \frac{1}{3}Px_1^2 + C_1, \quad EI v_1 = \frac{1}{9}Px_1^3 + C_1 x_1 + C_2\)<br>
+          • ช่วง CB (วัด \(x_2\) จากขวา): \(M_2 = \frac{1}{3}Px_2 \implies EI v_2' = \frac{1}{6}Px_2^2 + C_3, \quad EI v_2 = \frac{1}{18}Px_2^3 + C_3 x_2 + C_4\)
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">ขั้น 2: หาค่าคงที่ C1, C2, C3, C4</div>
+        <div class="math">
+          จาก \(v_1(0) = 0\) และ \(v_2(0) = 0 \implies C_2 = 0, C_4 = 0\)<br>
+          เงื่อนไขต่อเนื่องที่จุด B (\(x_1 = L/3\) และ \(x_2 = 2L/3\)):<br>
+          1) \(v_1(L/3) = v_2(2L/3) \implies C_1 = \frac{1}{27}PL^2 + 2C_3\)<br>
+          2) \(v_1'(L/3) = -v_2'(2L/3)\) (สวนทาง!) \(\implies C_1 + C_3 = -\frac{3}{27}PL^2\)<br>
+          แก้ระบบสมการ: <b>\(C_3 = -\frac{4}{81}PL^2, \quad C_1 = -\frac{5}{81}PL^2\)</b>
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">ขั้น 3: คำตอบที่ปลาย จุด B และจุดโก่งสูงสุด</div>
+        <div class="math">
+          • ความชันที่ปลาย A (\(x_1=0\)): \(v_A' = -\frac{5}{81}\frac{PL^2}{EI}\) | ที่ปลาย C (\(x_2=0\)): \(v_C' = -\frac{4}{81}\frac{PL^2}{EI}\)<br>
+          • การโก่งตัวที่จุด B (\(x_1 = L/3\)): \(v_B = \frac{P}{EI}\left(\frac{1}{243} - \frac{5}{243}\right)L^3 = \mathbf{-\frac{4PL^3}{243EI}}\)<br>
+          • <b>การโก่งตัวสูงสุดของคาน</b> (เกิดในช่วงยาว BC ที่ \(v_2' = 0\)):<br>
+          \[\frac{1}{6}x_2^2 = \frac{4}{81}L^2 \implies x_2 = \frac{2\sqrt{6}}{9}L \approx 0.544L \implies v_{\max} = -\frac{16\sqrt{6}}{2187}\frac{PL^3}{EI} \approx \mathbf{-0.01792\frac{PL^3}{EI}}\]
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="sheet-preview">
-    <h4>📄 ภาพสแกนลายมือต้นฉบับจากชีท Solid Ja E Here (หน้า 10–11)</h4>
+    <h4>📄 ภาพสแกนลายมือต้นฉบับ (หน้า 10–11)</h4>
     <div class="sheet-img-grid">
-      <div class="sheet-img-card">
-        <span>หน้า 10: การอินทิเกรตสองชั้น &amp; เงื่อนไข Boundary Conditions</span>
-        <img src="assets/pages/page_10.png" alt="ชีท Solid Ja หน้า 10" loading="lazy">
-      </div>
-      <div class="sheet-img-card">
-        <span>หน้า 11: ทฤษฎีพื้นที่โมเมนต์ Moment-Area Method</span>
-        <img src="assets/pages/page_11.png" alt="ชีท Solid Ja หน้า 11" loading="lazy">
-      </div>
+      <div class="sheet-img-card"><span>หน้า 10: เฉลย ตย. 6.3 และ 6.4</span><img src="assets/pages/page_10.png" loading="lazy"></div>
+      <div class="sheet-img-card"><span>หน้า 11: เฉลย ตย. 6.5 (ตัด 2 ช่วง)</span><img src="assets/pages/page_11.png" loading="lazy"></div>
     </div>
   </div>
 
   <div class="pn">
-    <a href="#p5">← ข้อ 5 ดัดหน้าตัดไม่สมมาตร</a>
-    <a href="#p7">ข้อ 7 หน้าตัดผสมไม้-เหล็ก →</a>
+    <a href="#p5">← บทที่ 6.1–6.2 &amp; C</a>
+    <a href="#p7">บทที่ 6.6 &amp; A หน้าตัดผสม →</a>
   </div>
 </section>
 
-<!-- SECTION 7: ข้อ 7 หน้าตัดผสมไม้-เหล็ก -->
+
 <section id="p7">
   <header class="top">
-    <p class="kick">Solid Ja E Here · หน้า 12–13</p>
-    <h1>ข้อ 7: คานประกอบวัสดุผสม ไม้-เหล็ก โดยวิธีแปลงหน้าตัด</h1>
-    <p class="sub">Composite Beam Bending · Transformed Section Method &amp; Modular Ratio</p>
+    <p class="kick">บทที่ 6 หน้าตัดผสม · หน้า 12–13</p>
+    <h1>บทที่ 6.6 &amp; แบบฝึกหัด 6.6(A): หน้าตัดผสม 2 วัสดุ (ครบข้อ 1–6)</h1>
+    <p class="sub">ตย. 6.6 ไม้-เหล็ก (แปลงทั้ง 2 วิธี) · และแบบฝึกหัด 6.6(A) เหล็ก-อะลูมิเนียม เฉลยครบจนถึงระยะตกปลาย A</p>
     <p class="pracnote">โหมดฝึกเปิดอยู่: ซ่อนวิธีทำไว้ แตะแต่ละขั้นเพื่อดู (ลองเขียนเองก่อน) กดปุ่ม "ฝึก" อีกครั้งเพื่อปิด</p>
   </header>
 
-  <h2 class="prob"><span class="tag">โจทย์จริง</span>คำอธิบายและมิติรูปทรงจากข้อสอบ</h2>
-  <div class="stmt">
-    <p>คานวัสดุผสมประกอบด้วยคานไม้ขนาดกว้าง \(b_w = 100\text{ mm}\) สูง \(h_w = 150\text{ mm}\) มีโมดูลัสยืดหยุ่น \(E_w = 12\text{ GPa}\) เสริมด้วยแผ่นเหล็กกล้าที่ผิวด้านล่างขนาดกว้าง \(b_s = 100\text{ mm}\) หนา \(t_s = 10\text{ mm}\) มี \(E_s = 120\text{ GPa}\) คานรับโมเมนต์ดัดบวก \(M = 20\text{ kN}\cdot\text{m} = 20 \times 10^6\text{ N}\cdot\text{mm}\) จงหาอัตราส่วนโมดูลัส (Modular Ratio \(n\)), แปลงหน้าตัด, หาแกนสะเทิน \(\bar{y}\), โมเมนต์ความเฉื่อย \(I_T\), และคำนวณหน่วยแรงดัดสูงสุดในไม้และในเหล็ก</p>
-  </div>
-
-  <div class="stmt">
-    <p><b>หลักฟิสิกส์พื้นฐาน (First Principles):</b> สมมติฐานพื้นฐานของการดัดระบุว่าระนาบหน้าตัดยังคงเป็นระนาบหลังการดัด ทำให้ความเครียด (Strain) กระจายเป็นเส้นตรงต่อเนื่องข้ามรอยต่อของวัสดุ (\(\epsilon_w = \epsilon_s\)) เพื่อใช้สูตรการดัด \(\sigma = -My/I\) จึงต้องแปลงพื้นที่ของวัสดุหนึ่งให้มีพฤติกรรมเสมือนอีกวัสดุหนึ่ง โดยขยายมิติด้านกว้างตามอัตราส่วนความแข็งแรง \(n = E_s / E_w\)</p>
-  </div>
-
-  <figure style="margin:20px 0;"><img src="assets/diagram_p7.svg" alt="แผนภาพประกอบข้อ 7" style="width:100%;height:auto;border:1.5px solid var(--rule);border-radius:4px;background:#fff;"></figure>
-
-  <h3 class="grp">เฉลยละเอียดทีละขั้นตอน (Step-by-Step Solution)</h3>
+  <h2 class="prob"><span class="tag">ตย. 6.6</span>หน้าตัดผสมไม้ (150×150, E=12) + เหล็ก (150×20, E=200), M = 20 kN·m</h2>
+  <figure class="fig-box">
+    <img src="assets/figs/fig_6_6.png" alt="รูปโจทย์ตัวอย่างที่ 6.6">
+    <figcaption class="fig-cap">ภาพประกอบจากโจทย์จริง: ตัวอย่างที่ 6.6</figcaption>
+  </figure>
   <div class="exam">
     <div class="step">
       <div class="row">
-        <div class="lab">สิ่งที่โจทย์กำหนด</div>
+        <div class="lab">ก) ใช้ E' = 12 GPa (แปลงเป็นไม้)</div>
         <div class="math">
-          ไม้: \(b_w = 100\text{ mm}, \quad h_w = 150\text{ mm}, \quad E_w = 12\text{ GPa}\)<br>
-          เหล็ก: \(b_s = 100\text{ mm}, \quad t_s = 10\text{ mm}, \quad E_s = 120\text{ GPa}\)<br>
-          โมเมนต์ดัดบวก: \(M = 20\text{ kN}\cdot\text{m} = 20 \times 10^6\text{ N}\cdot\text{mm}\)
+          \(n = \frac{200}{12}\), แปลงเหล็กกว้าง \(b' = \frac{200}{12}(150) = 2500\text{ mm}\)<br>
+          \[d' = \frac{150(150)(95) + 2500(20)(10)}{150(150) + 2500(20)} = 36.4\text{ mm}, \quad I' = 155,966,267\text{ mm}^4\]
+          • ไม้จริง: \(\sigma_A = 17.13\text{ MPa}\text{ (อัด)}, \quad \sigma_B = 2.10\text{ MPa}\text{ (ดึง)}\)<br>
+          • เหล็กจริง (คูณ \(\frac{200}{12}\) กลับ): \(\sigma_B = 35.04\text{ MPa}\text{ (ดึง)}, \quad \sigma_C = 77.78\text{ MPa}\text{ (ดึง)}\)
         </div>
       </div>
       <div class="row">
-        <div class="lab">ขั้น 1: อัตราส่วนโมดูลัส (n) และแปลงความกว้างเหล็ก</div>
+        <div class="lab">ข) ใช้ E' = 200 GPa (แปลงเป็นเหล็ก)</div>
         <div class="math">
-          \[n = \frac{E_s}{E_w} = \frac{120\text{ GPa}}{12\text{ GPa}} = 10\]
-          แปลงแผ่นเหล็กด้านล่างให้เป็นไม้เสมือน (ขยายเฉพาะด้านกว้าง):<br>
-          \[b_s' = n \cdot b_s = 10 \times 100\text{ mm} = 1000\text{ mm} \quad (\text{ความหนา } 10\text{ mm เท่าเดิม})\]
-        </div>
-      </div>
-      <div class="row">
-        <div class="lab">ขั้น 2: หาตำแหน่งแกนสะเทิน (NA) หน้าตัดแปลง</div>
-        <div class="math">
-          เลือกแนวอ้างอิงที่ขอบล่างสุดของแผ่นเหล็ก:<br>
-          เหล็กแปลง: \(A_s' = 1000 \times 10 = 10,000\text{ mm}^2, \quad y_s = 5\text{ mm}\)<br>
-          ไม้จริง: \(A_w = 100 \times 150 = 15,000\text{ mm}^2, \quad y_w = 10 + 75 = 85\text{ mm}\)<br>
-          \[\bar{y} = \frac{(10,000)(5) + (15,000)(85)}{10,000 + 15,000} = \frac{50,000 + 1,275,000}{25,000} = 53.0\text{ mm} \quad (\text{จากขอบล่าง})\]
-          ระยะจากแกน NA ถึงขอบบนสุดของไม้: \(y_{\text{top}} = 160 - 53 = 107.0\text{ mm}\)
-        </div>
-      </div>
-      <div class="row">
-        <div class="lab">ขั้น 3: คำนวณ Moment of Inertia หน้าตัดแปลง (IT)</div>
-        <div class="math">
-          \[I_T = \sum (\bar{I} + Ad^2) = 49,420,512\text{ mm}^4 \approx 49.42 \times 10^6\text{ mm}^4\]
-        </div>
-      </div>
-      <div class="row">
-        <div class="lab">ขั้น 4: ความเค้นดัดสูงสุดในเนื้อไม้ (Wood)</div>
-        <div class="math">
-          เกิดที่ขอบบนสุดของไม้ (\(y = +107.0\text{ mm}\)):<br>
-          \[\sigma_w = \frac{M y_{\text{top}}}{I_T} = \frac{(20 \times 10^6\text{ N}\cdot\text{mm})(107\text{ mm})}{49.42 \times 10^6\text{ mm}^4} = 43.30\text{ MPa (อัด - Compression)}\]
-        </div>
-      </div>
-      <div class="row">
-        <div class="lab">ขั้น 5: ความเค้นดัดสูงสุดในเนื้อเหล็กจริง (Steel)</div>
-        <div class="math">
-          เกิดที่ขอบล่างสุดของเหล็ก (\(y = -53.0\text{ mm}\)) **ต้องคูณ n กลับเสมอ:**<br>
-          \[\sigma_s = n \left(\frac{M y_{\text{bot}}}{I_T}\right) = 10 \times \frac{(20 \times 10^6\text{ N}\cdot\text{mm})(53\text{ mm})}{49.42 \times 10^6\text{ mm}^4} = 214.50\text{ MPa (ดึง - Tension)}\]
-        </div>
-      </div>
-      <div class="row">
-        <div class="lab">คำตอบสุดท้าย</div>
-        <div>
-          <span class="fin">\(n = 10, \quad \bar{y} = 53.0\text{ mm}, \quad I_T = 49.42 \times 10^6\text{ mm}^4, \quad \sigma_w = 43.30\text{ MPa (อัด)}, \quad \sigma_s = 214.50\text{ MPa (ดึง)}\)</span>
+          \(n = \frac{12}{200}\), แปลงไม้กว้าง \(b' = \frac{12}{200}(150) = 9\text{ mm}\)<br>
+          \(d' = 36.4\text{ mm}\) เท่าเดิม, \(I' = 9,357,976\text{ mm}^4\) $\to$ ได้หน่วยแรงจริงเท่ากันเป๊ะ!
         </div>
       </div>
     </div>
   </div>
 
-  <div class="formula-card-trap">
-    <h4>⚠️ จุดดักคะแนนของอาจารย์ (Exam Trap)</h4>
-    <p>1. <b>ห้ามเปลี่ยนความสูง:</b> แปลงหน้าตัดต้องขยายเฉพาะความกว้างขนานกับแกนสะเทิน (\(b' = nb\)) **ห้ามขยายความสูง \(h\)** เด็ดขาด เพราะความเครียดกระจายตามความสูงจริงของคาน<br>
-    2. <b>อย่าลืมคูณ n กลับในเนื้อเหล็ก:</b> จุดตัดคะแนนอันดับ 1 ของข้อสอบคือ การคำนวณความเค้นในเหล็กแล้วลืมคูณ \(n = 10\) กลับ ทำให้คำตอบผิดไปถึง 10 เท่า</p>
-  </div>
+  <hr>
 
-  
-    <div class="formula-card-trap" style="border-left-color:var(--navy);background:rgba(20,41,91,0.05);color:var(--ink);margin-top:16px;">
-      <h4 style="color:var(--navy);">📌 สรุปตัวเลขตรงตามลายมือต้นฉบับ (ตัวอย่างที่ 6.6 หน้า 12–13):</h4>
-      <p>• <b>ไม้ (150×150 mm, E = 12 GPa) + เหล็ก (150×20 mm, E = 200 GPa), M = 20 kN·m:</b><br>
-      • กรณี ก) แปลงเป็นไม้ (\(E' = 12\text{ GPa}, n = 200/12\)): \(b' = 2500\text{ mm}, d' = 36.4\text{ mm}, I' = 155,966,267\text{ mm}^4\)<br>
-      • กรณี ข) แปลงเป็นเหล็ก (\(E' = 200\text{ GPa}, n = 12/200\)): \(b' = 9\text{ mm}, d' = 36.4\text{ mm}, I' = 9,357,976\text{ mm}^4\)<br>
-      • <b>หน่วยแรงจริงเท่ากันทั้ง 2 วิธี:</b> ไม้บน = <b>\(17.13\text{ MPa}\) (อัด)</b>, ไม้ล่าง = <b>\(2.10\text{ MPa}\) (ดึง)</b> | เหล็กบน = <b>\(35.04\text{ MPa}\) (ดึง)</b>, เหล็กล่าง = <b>\(77.78\text{ MPa}\) (ดึง)</b></p>
+  <h2 class="prob"><span class="tag">ฝึกหัด 6.6(A)</span>สลับวัสดุเป็น เหล็ก (150×150, E=200) + อะลูมิเนียม (20×150, E=70) (ครบข้อ 1–6)</h2>
+  <div class="stmt">
+    <p>สลับให้พื้นที่ \(150 \times 150\text{ mm}^2\) ทำจากเหล็ก (\(E = 200\text{ GPa}\)) และพื้นที่ \(20 \times 150\text{ mm}^2\) ทำจากอะลูมิเนียม (\(E = 70\text{ GPa}\)) ใช้โมดูลัสฐานคือเหล็ก (\(E' = 200\text{ GPa}\)) จงหาข้อ (1)–(5) และ **(6) หากใช้หน้าตัดนี้ทำเป็นคานใน ตย. 6.3 โดย P = 10 kN และ L = 4 m จะได้ระยะตกปลาย A เท่ากับกี่ mm**</p>
+  </div>
+  <figure class="fig-box">
+    <img src="assets/figs/fig_6_6_a.png" alt="รูปวาดโจทย์แบบฝึกหัด 6.6 A">
+    <figcaption class="fig-cap">ภาพประกอบจากหน้า 13: แบบฝึกหัด 6.6(A)</figcaption>
+  </figure>
+
+  <div class="exam">
+    <div class="step">
+      <div class="row">
+        <div class="lab">ข้อ (1)–(2): ระดับ NA และค่า I'</div>
+        <div class="math">
+          แปลงอะลูมิเนียมกว้าง \(b' = 150\left(\frac{70}{200}\right) = 52.5\text{ mm}\)<br>
+          <b>(1) ระดับ NA:</b> \(d = \frac{52.5(20)(10) + 150^2(95)}{52.5(20) + 150^2} = \mathbf{91.2\text{ mm}}\)<br>
+          <b>(2) ค่าโมเมนต์ความเฉื่อย:</b> \(I' = \mathbf{49,470,512\text{ mm}^4}\)
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">ข้อ (3)–(5): หน่วยแรงจริงในเหล็กและ Al</div>
+        <div class="math">
+          คำนวณค่าแปลง: \(\sigma_A' = 31.9\text{ MPa}\), \(\sigma_B' = 28.8\text{ MPa}\), \(\sigma_C' = 36.9\text{ MPa}\)<br>
+          <b>(3) เหล็กดึงสูงสุด (ที่ B):</b> \(\mathbf{28.8\text{ MPa}}\) | <b>(4) เหล็กอัดสูงสุด (ที่ A):</b> \(\mathbf{31.9\text{ MPa}}\)<br>
+          <b>(5) อะลูมิเนียมดึงสูงสุด (ที่ C, คูณ 70/200):</b> \(36.9 \times \frac{70}{200} = \mathbf{12.9\text{ MPa}}\)
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">ข้อ (6): ระยะตกปลาย A (ในลายมือยังไม่ได้ทำ!)</div>
+        <div class="math">
+          ใช้สูตรคานยื่น ตย. 6.3: \(v_A = \frac{P L^3}{3 E' I'}\) โดยใช้คู่ฐานเหล็ก \(E' = 200 \times 10^3\text{ MPa}\), \(I' = 49,470,512\text{ mm}^4\):<br>
+          \[v_A = \frac{(10,000\text{ N})(4,000\text{ mm})^3}{3 (200 \times 10^3\text{ MPa})(49,470,512\text{ mm}^4)} = \mathbf{21.56\text{ mm}}\]
+        </div>
+      </div>
     </div>
+  </div>
 
   <div class="sheet-preview">
-    <h4>📄 ภาพสแกนลายมือต้นฉบับจากชีท Solid Ja E Here (หน้า 12–13)</h4>
+    <h4>📄 ภาพสแกนลายมือต้นฉบับ (หน้า 12–13)</h4>
     <div class="sheet-img-grid">
-      <div class="sheet-img-card">
-        <span>หน้า 12: การแปลงหน้าตัด Transformed Section &amp; เซนทรอยด์</span>
-        <img src="assets/pages/page_12.png" alt="ชีท Solid Ja หน้า 12" loading="lazy">
-      </div>
-      <div class="sheet-img-card">
-        <span>หน้า 13: คำนวณความเค้นดัดจริงในไม้และเหล็ก (คูณ n)</span>
-        <img src="assets/pages/page_13.png" alt="ชีท Solid Ja หน้า 13" loading="lazy">
-      </div>
+      <div class="sheet-img-card"><span>หน้า 12: เฉลย ตย. 6.6 (ครบ ก และ ข)</span><img src="assets/pages/page_12.png" loading="lazy"></div>
+      <div class="sheet-img-card"><span>หน้า 13: เฉลยแบบฝึกหัด 6.1(C) และ 6.6(A)</span><img src="assets/pages/page_13.png" loading="lazy"></div>
     </div>
   </div>
 
   <div class="pn">
-    <a href="#p6">← ข้อ 6 คานแอ่นตัว Double Int</a>
-    <a href="#p8">ข้อ 8 แรงเฉือน τ กระโดด →</a>
+    <a href="#p6">← บทที่ 6.3–6.5</a>
+    <a href="#p8">บทที่ 7.2–7.3 แรงเฉือน &amp; กาว →</a>
   </div>
 </section>
 
-<!-- SECTION 8: ข้อ 8 แรงเฉือน τ กระโดด -->
+
 <section id="p8">
   <header class="top">
-    <p class="kick">Solid Ja E Here · หน้า 14–15</p>
-    <h1>ข้อ 8: แรงเฉือนตามขวางและการกระโดดของหน่วยแรงเฉือน</h1>
-    <p class="sub">Transverse Shear Stress · Shear Stress Jump Across Flange-Web Junction</p>
+    <p class="kick">บทที่ 7 แรงเฉือนตามขวาง · หน้า 14–15</p>
+    <h1>บทที่ 7: แรงเฉือนในตัว I (ตย. 7.2) และรอยต่อทากาว (ตย. 7.3)</h1>
+    <p class="sub">หน่วยแรงเฉือนกระโดด 6 เท่าที่รอยต่อปีก-เอว และหน่วยแรงเฉือนบนชั้นกาวรอยต่อ 1–2</p>
     <p class="pracnote">โหมดฝึกเปิดอยู่: ซ่อนวิธีทำไว้ แตะแต่ละขั้นเพื่อดู (ลองเขียนเองก่อน) กดปุ่ม "ฝึก" อีกครั้งเพื่อปิด</p>
   </header>
 
-  <h2 class="prob"><span class="tag">โจทย์จริง</span>คำอธิบายและมิติรูปทรงจากข้อสอบ</h2>
-  <div class="stmt">
-    <p>คานเหล็กหน้าตัดปีกกว้าง (Wide-Flange) สมมาตรทั้งบนและล่าง รับแรงเฉือนตามขวาง \(V = 120\text{ kN} = 120,000\text{ N}\) ปีกบนกว้าง \(b_f = 160\text{ mm}\) หนา \(t_f = 20\text{ mm}\) ส่วนเอวหนา \(t_w = 10\text{ mm}\) ความสูงรวมของหน้าตัด \(h = 240\text{ mm}\) โดยมีโมเมนต์ความเฉื่อยรอบแกนสะเทิน \(I = 63.2 \times 10^6\text{ mm}^4\) จงคำนวณหา First Moment of Area (\(Q\)), หาหน่วยแรงเฉือนที่รอยต่อระหว่างปีกกับเอวทั้งสองฝั่ง และคำนวณหน่วยแรงเฉือนสูงสุดที่แกนสะเทิน</p>
-  </div>
-
-  <div class="stmt">
-    <p><b>หลักฟิสิกส์พื้นฐาน (First Principles):</b> หน่วยแรงเฉือนในคานคำนวณจากสูตร \(\tau = \frac{VQ}{It}\) โดยหน่วยแรงเฉือนแปรผกผันกับความหนาแนวระนาบตัด \(t\) เมื่อพิจารณาที่รอยต่อระหว่างปีกกับเอว ค่า \(Q\) เท่ากัน แต่ความหนาเปลี่ยนจากปีกกว้าง \(160\text{ mm}\) ลงมาเป็นเอวบาง \(10\text{ mm}\) ทำให้เกิดการกระโดดพุ่งสูงขึ้นของหน่วยแรงเฉือนอย่างรุนแรงทันที</p>
-  </div>
-
-  <figure style="margin:20px 0;"><img src="assets/diagram_p8.svg" alt="แผนภาพประกอบข้อ 8" style="width:100%;height:auto;border:1.5px solid var(--rule);border-radius:4px;background:#fff;"></figure>
-
-  <h3 class="grp">เฉลยละเอียดทีละขั้นตอน (Step-by-Step Solution)</h3>
+  <h2 class="prob"><span class="tag">ตย. 7.2</span>หน้าตัดตัว I (60×140 mm) รับแรงเฉือน V = 120 kN</h2>
+  <figure class="fig-box">
+    <img src="assets/figs/fig_7_2.png" alt="รูปโจทย์ตัวอย่างที่ 7.2">
+    <figcaption class="fig-cap">ภาพประกอบจากโจทย์จริง: ตัวอย่างที่ 7.2</figcaption>
+  </figure>
   <div class="exam">
     <div class="step">
       <div class="row">
-        <div class="lab">สิ่งที่โจทย์กำหนด</div>
+        <div class="lab">ขั้น 1: ค่าเฉลี่ยและจุดระดับ 2 (รอยต่อปีก-เอว)</div>
         <div class="math">
-          \(V = 120\text{ kN} = 120,000\text{ N}\)<br>
-          ปีกบน: \(b_f = 160\text{ mm}, \quad t_f = 20\text{ mm}\)<br>
-          เอว: \(t_w = 10\text{ mm}, \quad h = 240\text{ mm}\)<br>
-          \(I = 63.2 \times 10^6\text{ mm}^4\) (แกนสะเทินอยู่ที่กึ่งกลาง \(120\text{ mm}\))
+          \(A = 2400\text{ mm}^2, \quad \bar{\tau} = \frac{120,000}{2400} = 50\text{ MPa}, \quad I = 6,520,000\text{ mm}^4\)<br>
+          \(Q_2 = (60 \times 10)(65) = 39,000\text{ mm}^3\)<br>
+          ฝั่งปีก (\(t=60\)): \(\tau_{2+} = \frac{120(39,000)}{6,520,000(60)}\times 1000 = \mathbf{11.96\text{ MPa}}\)<br>
+          ฝั่งเอว (\(t=10\)): \(\tau_{2-} = \frac{120(39,000)}{6,520,000(10)}\times 1000 = \mathbf{71.78\text{ MPa}}\) (กระโดด 6 เท่า!)
         </div>
       </div>
       <div class="row">
-        <div class="lab">ขั้น 1: คำนวณ First Moment Q ที่รอยต่อปีกกับเอว</div>
+        <div class="lab">ขั้น 2: สูงสุดที่ระดับ 3 (NA) และสัดส่วนเอว</div>
         <div class="math">
-          ตัดพื้นที่ปีกบนทั้งหมดเหนือรอยต่อ:<br>
-          พื้นที่ปีก: \(A_f' = 160 \times 20 = 3,200\text{ mm}^2\)<br>
-          ระยะจากแกน NA ถึงเซนทรอยด์ปีก: \(\bar{y}_f' = 120 - 10 = 110\text{ mm}\)<br>
-          \[Q_{\text{junc}} = A_f' \bar{y}_f' = (3,200\text{ mm}^2)(110\text{ mm}) = 352,000\text{ mm}^3\]
-        </div>
-      </div>
-      <div class="row">
-        <div class="lab">ขั้น 2: หน่วยแรงเฉือนในปีก (Flange Side)</div>
-        <div class="math">
-          ที่รอยต่อฝั่งปีก ความหนาแนวตัด \(t = b_f = 160\text{ mm}\):<br>
-          \[\tau_{\text{flange}} = \frac{V Q_{\text{junc}}}{I t_f} = \frac{(120,000\text{ N})(352,000\text{ mm}^3)}{(63.2 \times 10^6\text{ mm}^4)(160\text{ mm})} = 4.18\text{ MPa}\]
-        </div>
-      </div>
-      <div class="row">
-        <div class="lab">ขั้น 3: หน่วยแรงเฉือนในเอว (Web Side)</div>
-        <div class="math">
-          ที่รอยต่อฝั่งเอว ความหนาแนวตัดเปลี่ยนเป็น \(t = t_w = 10\text{ mm}\):<br>
-          \[\tau_{\text{web}} = \frac{V Q_{\text{junc}}}{I t_w} = \frac{(120,000\text{ N})(352,000\text{ mm}^3)}{(63.2 \times 10^6\text{ mm}^4)(10\text{ mm})} = 66.83\text{ MPa}\]
-          <b>การกระโดดของหน่วยแรง:</b> \(\frac{\tau_{\text{web}}}{\tau_{\text{flange}}} = \frac{160\text{ mm}}{10\text{ mm}} = 16\) เท่า!
-        </div>
-      </div>
-      <div class="row">
-        <div class="lab">ขั้น 4: หน่วยแรงเฉือนสูงสุดที่แกนสะเทิน NA</div>
-        <div class="math">
-          คิดพื้นที่ส่วนเอวเพิ่มจากรอยต่อไปจนถึงแกน NA (ครึ่งเอวบน):<br>
-          \(A_{\text{web half}} = 10 \times 100 = 1,000\text{ mm}^2, \quad \bar{y} = 50\text{ mm}\)<br>
-          \[Q_{\text{NA}} = Q_{\text{junc}} + A_{\text{web half}} \bar{y} = 352,000 + (1,000)(50) = 402,000\text{ mm}^3\]
-          \[\tau_{\max} = \frac{V Q_{\text{NA}}}{I t_w} = \frac{(120,000)(402,000)}{(63.2 \times 10^6)(10)} = 76.33\text{ MPa}\]
-        </div>
-      </div>
-      <div class="row">
-        <div class="lab">คำตอบสุดท้าย</div>
-        <div>
-          <span class="fin">\(\tau_{\text{flange}} = 4.18\text{ MPa}, \quad \tau_{\text{web}} = 66.83\text{ MPa} \quad (\text{กระโดด 16 เท่า}), \quad \tau_{\max} = 76.33\text{ MPa}\)</span>
+          \(Q_3 = 39,000 + (10 \times 60)(30) = 57,000\text{ mm}^3\)<br>
+          \[\tau_3 = \frac{120(57,000)}{6,520,000(10)} \times 1000 = \mathbf{104.9\text{ MPa}} \quad (\text{เท่ากับ } \frac{104.9}{50} = \mathbf{2.1} \text{ เท่าของค่าเฉลี่ย})\]
+          แรงเฉือนบนปีกบน+ล่าง \(= 2 \times \frac{1}{2}(11.96)(10)(60) = 7,176\text{ N} \approx 6\%\)<br>
+          <b>ดังนั้น พื้นที่ส่วนเอวรับแรงเฉือนถึง \(\mathbf{94\%}\)</b>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="formula-card-trap">
-    <h4>⚠️ จุดดักคะแนนของอาจารย์ (Exam Trap)</h4>
-    <p>1. <b>การคำนวณพื้นที่ Q:</b> พื้นที่ \(A'\) ต้องเป็นพื้นที่ที่อยู่เหนือหรือใต้รอยตัดขึ้นไปจนถึงขอบนอกสุด **ห้ามแรเงาข้ามแกนสะเทินเด็ดขาด**<br>
-    2. <b>ความหนา t ในสูตร:</b> ที่รอยต่อระหว่างปีกกับเอวค่า \(Q\) เป็นค่าเดียวกัน แต่ความหนา \(t\) ต่างกันถึง 16 เท่า ทำให้ไดอะแกรมของ \(\tau\) ไม่ต่อเนื่องและเกิดการกระโดดทันที</p>
-  </div>
+  <hr>
 
-  
-    <div class="formula-card-trap" style="border-left-color:var(--navy);background:rgba(20,41,91,0.05);color:var(--ink);margin-top:16px;">
-      <h4 style="color:var(--navy);">📌 สรุปตัวเลขตรงตามลายมือต้นฉบับ (ตัวอย่างที่ 7.2 และ 7.3 หน้า 14–15):</h4>
-      <p>• <b>ตย. 7.2 (I-beam 60×140, V = 120 kN, I = 6,520,000 mm⁴):</b> \(\tau_{\text{avg}} = 50\text{ MPa}\), ปีก \(\tau_{2+} = 11.96\text{ MPa}\), เอว \(\tau_{2-} = 71.78\text{ MPa}\) (กระโดด 6 เท่า), สูงสุดที่ NA <b>\(\tau_3 = 104.9\text{ MPa}\)</b> (2.1 เท่าของค่าเฉลี่ย), <b>เอวรับแรงเฉือน 94%</b><br>
-      • <b>ตย. 7.3 (หน้าตัดประกอบ 4 ชิ้นทากาว, V = 100 kN):</b> \(d = 167\text{ mm}, I = 1,026,676,000\text{ mm}^4\) \(\implies\) รอยต่อ 1: <b>\(\tau_1 = 1.08\text{ MPa}\)</b>, รอยต่อ 2: <b>\(\tau_2 = 2.03\text{ MPa}\)</b></p>
+  <h2 class="prob"><span class="tag">ตย. 7.3</span>หน้าตัดประกอบ 4 ชิ้นยึดด้วยกาว รับแรงเฉือน V = 100 kN</h2>
+  <figure class="fig-box">
+    <img src="assets/figs/fig_7_3.png" alt="รูปโจทย์ตัวอย่างที่ 7.3">
+    <figcaption class="fig-cap">ภาพประกอบจากโจทย์จริง: ตัวอย่างที่ 7.3</figcaption>
+  </figure>
+  <div class="exam">
+    <div class="step">
+      <div class="row">
+        <div class="lab">ขั้น 1: หา NA (d) และค่า I รวม</div>
+        <div class="math">
+          \[d = \frac{320(50)(325) + 180(200)(200) + 320(100)(50)}{84,000} = 167\text{ mm}, \quad I = 1,026,676,000\text{ mm}^4\]
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">ขั้น 2: หน่วยแรงเฉือนที่ชั้นกาวรอยต่อ 1 และ 2</div>
+        <div class="math">
+          • <b>รอยต่อ 1 (ปีกยื่นข้าง 70×50):</b> \(Q_1 = (70 \times 50)(158) = 553,000\text{ mm}^3\)<br>
+          \[q_1 = \frac{100(553,000)}{1,026,676,000}(1000) = 53.86\text{ N/mm} \implies \bar{\tau}_1 = \frac{53.86}{50} = \mathbf{1.08\text{ MPa}}\]
+          • <b>รอยต่อ 2 (แผ่นล่าง 320×100, กว้างกาว 180 mm):</b> \(Q_2 = (320 \times 100)(117) = 3,744,000\text{ mm}^3\)<br>
+          \[q_2 = \frac{100(3,744,000)}{1,026,676,000}(1000) = 364.67\text{ N/mm} \implies \bar{\tau}_2 = \frac{364.67}{180} = \mathbf{2.03\text{ MPa}}\]
+        </div>
+      </div>
     </div>
+  </div>
 
   <div class="sheet-preview">
-    <h4>📄 ภาพสแกนลายมือต้นฉบับจากชีท Solid Ja E Here (หน้า 14–15)</h4>
+    <h4>📄 ภาพสแกนลายมือต้นฉบับ (หน้า 14–15)</h4>
     <div class="sheet-img-grid">
-      <div class="sheet-img-card">
-        <span>หน้า 14: คำนวณ First Moment Q &amp; การกระโดด 16 เท่า</span>
-        <img src="assets/pages/page_14.png" alt="ชีท Solid Ja หน้า 14" loading="lazy">
-      </div>
-      <div class="sheet-img-card">
-        <span>หน้า 15: ไดอะแกรมการกระจายตัวของหน่วยแรงเฉือน τ</span>
-        <img src="assets/pages/page_15.png" alt="ชีท Solid Ja หน้า 15" loading="lazy">
-      </div>
+      <div class="sheet-img-card"><span>หน้า 14: เฉลย ตย. 7.2 และ 7.3 (ละเอียดครบ)</span><img src="assets/pages/page_14.png" loading="lazy"></div>
+      <div class="sheet-img-card"><span>หน้า 15: เฉลย ตย. 7.2 และ 7.3 (ลายมือชุดที่ 2)</span><img src="assets/pages/page_15.png" loading="lazy"></div>
     </div>
   </div>
 
   <div class="pn">
-    <a href="#p7">← ข้อ 7 หน้าตัดผสมไม้-เหล็ก</a>
-    <a href="#p9">ข้อ 9 Shear Flow &amp; ตะปู →</a>
+    <a href="#p7">← บทที่ 6.6 &amp; A</a>
+    <a href="#p9">บทที่ 7.4 คานกล่องตะปู →</a>
   </div>
 </section>
 
-<!-- SECTION 9: ข้อ 9 Shear Flow & ตะปู -->
+
 <section id="p9">
   <header class="top">
-    <p class="kick">Solid Ja E Here · หน้า 16</p>
-    <h1>ข้อ 9: การเฉือนไหลและระยะห่างของตะปูยึดแผ่นไม้</h1>
-    <p class="sub">Shear Flow &amp; Fastener Pitch · Spacing Design Rule</p>
+    <p class="kick">บทที่ 7 Shear Flow &amp; ตะปู · หน้า 16</p>
+    <h1>บทที่ 7.4: คานกล่องไม้ 4 แผ่นยึดด้วยตะปู 4 แนว (ตย. 7.4)</h1>
+    <p class="sub">คำนวณระยะห่างตะปู \(s_1\) และ \(s_2\) ทั้งช่วง AB และ BC · ตอกยึด 2 ข้างสมมาตรต้องหาร 2I</p>
     <p class="pracnote">โหมดฝึกเปิดอยู่: ซ่อนวิธีทำไว้ แตะแต่ละขั้นเพื่อดู (ลองเขียนเองก่อน) กดปุ่ม "ฝึก" อีกครั้งเพื่อปิด</p>
   </header>
 
-  <h2 class="prob"><span class="tag">โจทย์จริง</span>คำอธิบายและมิติรูปทรงจากข้อสอบ</h2>
-  <div class="stmt">
-    <p>คานไม้ประกอบยึดด้วยตะปู มีโมเมนต์ความเฉื่อยรวม \(I = 189.44 \times 10^6\text{ mm}^4\) โดยมีแผ่นไม้ปีกบนขนาดกว้าง \(100\text{ mm}\) หนา \(40\text{ mm}\) ระยะจากแกนสะเทินถึงเซนทรอยด์แผ่นไม้ \(\bar{y}' = 100\text{ mm}\) ตอกยึดด้วยตะปู 2 แถว (\(m = 2\)) ตะปูแต่ละตัวรับแรงเฉือนที่ยอมให้ได้ \(F_{\text{nail}} = 100\text{ N}\) คานรับแรงเฉือนสองช่วง คือช่วง AB มี \(V_{AB} = 1000\text{ N}\) และช่วง BC มี \(V_{BC} = 300\text{ N}\) จงคำนวณหาแรงเฉือนไหล (Shear Flow \(q\)) และกำหนดระยะห่างของตะปู (Pitch \(s\)) ที่ปลอดภัยในแต่ละช่วง</p>
-  </div>
+  <h2 class="prob"><span class="tag">ตย. 7.4</span>คานประกอบ 4 แผ่นยึดด้วยตะปู (F_nail = 100 N)</h2>
+  <figure class="fig-box">
+    <img src="assets/figs/fig_7_4.png" alt="รูปโจทย์ตัวอย่างที่ 7.4">
+    <figcaption class="fig-cap">ภาพประกอบจากโจทย์จริง: ตัวอย่างที่ 7.4</figcaption>
+  </figure>
 
-  <div class="stmt">
-    <p><b>หลักฟิสิกส์พื้นฐาน (First Principles):</b> แรงเฉือนไหล (Shear Flow \(q\)) คือแรงเฉือนในแนวนอนต่อหนึ่งหน่วยความยาวตามแนวแกนคาน (\(q = VQ/I\)) ที่พยายามทำให้แผ่นไม้เลื่อนหลุดออกจากกัน ตะปูที่ตอกไว้มีหน้าที่ต้านทานแรงเฉือนไหลนี้ โดยตะปู \(m\) ตัวในหนึ่งหน้าตัดที่ระยะห่าง \(s\) จะต้องรับแรง \(q \cdot s \le m F_{\text{allow}}\)</p>
-  </div>
-
-  <figure style="margin:20px 0;"><img src="assets/diagram_p9.svg" alt="แผนภาพประกอบข้อ 9" style="width:100%;height:auto;border:1.5px solid var(--rule);border-radius:4px;background:#fff;"></figure>
-
-  <h3 class="grp">เฉลยละเอียดทีละขั้นตอน (Step-by-Step Solution)</h3>
   <div class="exam">
     <div class="step">
       <div class="row">
-        <div class="lab">สิ่งที่โจทย์กำหนด</div>
+        <div class="lab">ขั้น 1: SFD และค่า I รวมของกล่อง</div>
         <div class="math">
-          \(I = 189.44 \times 10^6\text{ mm}^4\)<br>
-          แผ่นไม้ปีก: \(A' = 100 \times 40 = 4,000\text{ mm}^2, \quad \bar{y}' = 100\text{ mm}\)<br>
-          ตะปู: \(m = 2\) แถว, \(F_{\text{nail}} = 100\text{ N/ตัว}\)<br>
-          แรงเฉือน: \(V_{AB} = 1000\text{ N}, \quad V_{BC} = 300\text{ N}\)
+          แรงปฏิกิริยา \(R_A = 1000\text{ N}, R_C = 500\text{ N} \implies V_{AB} = 1000\text{ N}, V_{BC} = 500\text{ N}\)<br>
+          \[I = 2\left[\frac{1}{12}(40)(200)^3 + 40(200)(20)^2\right] + 2\left[\frac{1}{12}(160)(40)^3 + 160(40)(100)^2\right] = 189,440,000\text{ mm}^4\]
         </div>
       </div>
       <div class="row">
-        <div class="lab">ขั้น 1: คำนวณ First Moment Q ของแผ่นไม้ที่ต้องการยึด</div>
+        <div class="lab">ขั้น 2: รอยต่อที่ 1 (แผ่นยาว 200×40, d=100)</div>
         <div class="math">
-          \[Q = A' \bar{y}' = (100 \times 40\text{ mm}^2)(100\text{ mm}) = 400,000\text{ mm}^3\]
+          \(Q_1 = (200 \times 40)(100) = 800,000\text{ mm}^3\) (หาร 2I เพราะมีตะปู 2 ข้าง):<br>
+          • ช่วง AB: \(q_1 = \frac{1000(800,000)}{2(189,440,000)} = 2.11\text{ N/mm} \implies s_1 = \frac{100}{2.11} = \mathbf{47.4\text{ mm}}\)<br>
+          • ช่วง BC: \(q_1 = \frac{500(800,000)}{2(189,440,000)} = 1.06\text{ N/mm} \implies s_1 = \frac{100}{1.06} = \mathbf{94.3\text{ mm}}\)
         </div>
       </div>
       <div class="row">
-        <div class="lab">ขั้น 2: แรงเฉือนไหลและระยะตะปูในช่วง AB (V = 1000 N)</div>
+        <div class="lab">ขั้น 3: รอยต่อที่ 2 (แผ่นสั้นใน 120×40, d=100)</div>
         <div class="math">
-          \[q_{AB} = \frac{V_{AB} Q}{I} = \frac{(1000\text{ N})(400,000\text{ mm}^3)}{189.44 \times 10^6\text{ mm}^4} = 2.1115\text{ N/mm}\]
-          คำนวณระยะห่างตะปูสูงสุด:\
-          \[s_{AB} \le \frac{m F_{\text{nail}}}{q_{AB}} = \frac{2 \times 100\text{ N}}{2.1115\text{ N/mm}} = 94.72\text{ mm}\]
-          <b>การตัดสินใจทางวิศวกรรม:</b> ปัดเศษลง \(\implies\) <b>เลือกใช้ \(s_{AB} \le 90\text{ mm}\)</b>
-        </div>
-      </div>
-      <div class="row">
-        <div class="lab">ขั้น 3: แรงเฉือนไหลและระยะตะปูในช่วง BC (V = 300 N)</div>
-        <div class="math">
-          \[q_{BC} = \frac{V_{BC} Q}{I} = \frac{(300\text{ N})(400,000\text{ mm}^3)}{189.44 \times 10^6\text{ mm}^4} = 0.6334\text{ N/mm}\]
-          คำนวณระยะห่างตะปูสูงสุด:\
-          \[s_{BC} \le \frac{m F_{\text{nail}}}{q_{BC}} = \frac{2 \times 100\text{ N}}{0.6334\text{ N/mm}} = 315.75\text{ mm}\]
-          <b>การตัดสินใจทางวิศวกรรม:</b> ปัดเศษลง \(\implies\) <b>เลือกใช้ \(s_{BC} \le 300\text{ mm}\)</b>
-        </div>
-      </div>
-      <div class="row">
-        <div class="lab">คำตอบสุดท้าย</div>
-        <div>
-          <span class="fin">\(q_{AB} = 2.112\text{ N/mm} \implies s_{AB} \le 90\text{ mm}, \quad q_{BC} = 0.633\text{ N/mm} \implies s_{BC} \le 300\text{ mm}\)</span>
+          \(Q_2 = (120 \times 40)(100) = 480,000\text{ mm}^3\):<br>
+          • ช่วง AB: \(q_2 = \frac{1000(480,000)}{2(189,440,000)} = 1.27\text{ N/mm} \implies s_2 = \frac{100}{1.27} = \mathbf{78.7\text{ mm}}\)<br>
+          • ช่วง BC: \(q_2 = \frac{500(480,000)}{2(189,440,000)} = 0.63\text{ N/mm} \implies s_2 = \frac{100}{0.63} = \mathbf{158.7\text{ mm}}\)
         </div>
       </div>
     </div>
   </div>
 
-  <div class="formula-card-trap">
-    <h4>⚠️ จุดดักคะแนนของอาจารย์ (Exam Trap)</h4>
-    <p><b>กฎเหล็กทางวิศวกรรม: ต้องปัดเศษลง (Round Down) เสมอ!</b><br>
-    ระยะห่างตะปูคำนวณได้ \(94.72\text{ mm}\) ต้องปัดลงเป็น \(90\text{ mm}\) (หรือ \(94\text{ mm}\)) **ห้ามปัดขึ้นเป็น 95 หรือ 100 mm เด็ดขาด** เพราะการเพิ่มระยะห่างจะทำให้ตะปูแต่ละตัวต้องแบกรับแรงเกินพิกัด \(F_{\text{allow}}\) และรอยต่อจะวิบัติ</p>
-  </div>
-
   <div class="sheet-preview">
-    <h4>📄 ภาพสแกนลายมือต้นฉบับจากชีท Solid Ja E Here (หน้า 16)</h4>
+    <h4>📄 ภาพสแกนลายมือต้นฉบับ (หน้า 16)</h4>
     <div class="sheet-img-grid">
-      <div class="sheet-img-card">
-        <span>หน้า 16: การคำนวณ Shear Flow q และระยะห่างตะปู s</span>
-        <img src="assets/pages/page_16.png" alt="ชีท Solid Ja หน้า 16" loading="lazy">
-      </div>
+      <div class="sheet-img-card"><span>หน้า 16: เฉลย ตย. 7.4 (ครบทั้ง 2 รอยต่อ)</span><img src="assets/pages/page_16.png" loading="lazy"></div>
     </div>
   </div>
 
   <div class="pn">
-    <a href="#p8">← ข้อ 8 แรงเฉือน τ กระโดด</a>
-    <a href="#p10">ข้อ 10 เสาโก่งเดาะ 2 แกน →</a>
+    <a href="#p8">← บทที่ 7.2–7.3</a>
+    <a href="#p10">บทที่ 8.1–8.3 &amp; 8.2 เสาโก่งเดาะ →</a>
   </div>
 </section>
 
-<!-- SECTION 10: ข้อ 10 เสาโก่งเดาะ 2 แกน -->
+
 <section id="p10">
   <header class="top">
-    <p class="kick">Solid Ja E Here · หน้า 17–21</p>
-    <h1>ข้อ 10: การโก่งเดาะของเสาอุดมคติและการตรวจสอบ 2 ระนาบ</h1>
-    <p class="sub">Euler Column Buckling in 2 Planes · End Conditions &amp; Bracing Effects</p>
+    <p class="kick">บทที่ 8 การโก่งเดาะของเสา · หน้า 17–21</p>
+    <h1>บทที่ 8: เสาโก่งเดาะ (ตย. 8.1, 8.2, 8.3 และแบบฝึกหัด 8.2 ครบทุกข้อ)</h1>
+    <p class="sub">เฉลยครบทั้ง 4 ข้อใหญ่ในบทที่ 8 · รวมถึงข้อ 8.3(ข) ที่ค้ำยันกึ่งกลางความสูงแนว x ที่ลายมือยังเขียนไม่จบ</p>
     <p class="pracnote">โหมดฝึกเปิดอยู่: ซ่อนวิธีทำไว้ แตะแต่ละขั้นเพื่อดู (ลองเขียนเองก่อน) กดปุ่ม "ฝึก" อีกครั้งเพื่อปิด</p>
   </header>
 
-  <h2 class="prob"><span class="tag">โจทย์จริง</span>คำอธิบายและมิติรูปทรงจากข้อสอบ</h2>
-  <div class="stmt">
-    <p>เสาเหล็กโครงสร้างยาว \(L = 3\text{ m} = 3000\text{ mm}\) ทำจากวัสดุที่มีโมดูลัสยืดหยุ่น \(E = 200\text{ GPa}\) และกำลังคราก \(\sigma_y = 250\text{ MPa}\) หน้าตัดมีพื้นที่ \(A = 21,800\text{ mm}^2\) มีโมเมนต์ความเฉื่อยรอบแกน x คือ \(I_x = 366 \times 10^6\text{ mm}^4\) และรอบแกน y คือ \(I_y = 88 \times 10^6\text{ mm}^4\) จงคำนวณหารัศมีไจเรชัน (\(r_x, r_y\)), อัตราส่วนความชะลูดวิกฤต (\((KL/r)_c\)), ตรวจสอบพฤติกรรมภายใต้จุดรองรับแบบต่าง ๆ (Pin-Pin, Fix-Fix, Fix-Pin, Fix-Free) และศึกษาผลของการค้ำยันกึ่งกลางแกนอ่อน</p>
-  </div>
-
-  <div class="stmt">
-    <p><b>หลักฟิสิกส์พื้นฐาน (First Principles):</b> เสาจะโก่งเดาะรอบแกนที่มีความต้านทานต่ำสุดเสมอ (แกนที่มีค่าอัตราส่วนความชะลูด \(KL/r\) สูงสุด หรือค่าโมเมนต์ความเฉื่อย \(I\) ต่ำสุด) ทฤษฎีออยเลอร์จะใช้ได้เฉพาะเมื่อความเค้นวิกฤตไม่เกินขีดจำกัดการครากของวัสดุ (\(\sigma_{cr} \le \sigma_y\)) หากเสามีความชะลูดต่ำกว่าค่าวิกฤต เสาจะวิบัติด้วยการคราก (Yielding) ก่อนเกิดการโก่งเดาะ</p>
-  </div>
-
-  <figure style="margin:20px 0;"><img src="assets/diagram_p10.svg" alt="แผนภาพประกอบข้อ 10" style="width:100%;height:auto;border:1.5px solid var(--rule);border-radius:4px;background:#fff;"></figure>
-
-  <h3 class="grp">เฉลยละเอียดทีละขั้นตอน (Step-by-Step Solution)</h3>
+  <h2 class="prob"><span class="tag">ตย. 8.1</span>เสาตัว H ยาว 3 m (A=218,700, Ix=666×10⁶, Iy=224×10⁶, หน้า 17–18)</h2>
+  <figure class="fig-box">
+    <img src="assets/figs/fig_8_1.png" alt="รูปโจทย์ตัวอย่างที่ 8.1">
+    <figcaption class="fig-cap">ภาพประกอบจากโจทย์จริง: ตัวอย่างที่ 8.1</figcaption>
+  </figure>
   <div class="exam">
     <div class="step">
       <div class="row">
-        <div class="lab">สิ่งที่โจทย์กำหนด</div>
-        <div class="math">
-          \(L = 3000\text{ mm}, \quad E = 200 \times 10^3\text{ MPa}, \quad \sigma_y = 250\text{ MPa}\)<br>
-          \(A = 21,800\text{ mm}^2, \quad I_x = 366 \times 10^6\text{ mm}^4, \quad I_y = 88 \times 10^6\text{ mm}^4\)
-        </div>
+        <div class="lab">คุณสมบัติพื้นฐาน</div>
+        <div class="math">\(r_x = 55.18\text{ mm}, \quad r_y = 32\text{ mm}, \quad \left(\frac{KL}{r}\right)_c = \pi\sqrt{\frac{200\times 10^3}{250}} = 88.86\)</div>
       </div>
       <div class="row">
-        <div class="lab">ขั้น 1: รัศมีไจเรชันและอัตราส่วนความชะลูดวิกฤต</div>
+        <div class="lab">คำตอบทั้ง 4 กรณี (ก–ง)</div>
         <div class="math">
-          \[r_x = \sqrt{\frac{I_x}{A}} = \sqrt{\frac{366 \times 10^6}{21,800}} = 129.58\text{ mm} \approx 129.6\text{ mm}\]
-          \[r_y = \sqrt{\frac{I_y}{A}} = \sqrt{\frac{88 \times 10^6}{21,800}} = 63.53\text{ mm} \approx 63.5\text{ mm}\]
-          อัตราส่วนความชะลูดวิกฤตแบ่งเขตการครากกับการโก่งเดาะออยเลอร์:\
-          \[\left(\frac{KL}{r}\right)_c = \sqrt{\frac{2\pi^2 E}{\sigma_y}} = \sqrt{\frac{2\pi^2 (200 \times 10^3)}{250}} = 125.66\]
-        </div>
-      </div>
-      <div class="row">
-        <div class="lab">ขั้น 2: ตรวจสอบกรณีจุดรองรับแบบ Pin-Pin (K = 1.0)</div>
-        <div class="math">
-          รอบแกน x: \(\left(\frac{KL}{r}\right)_x = \frac{1.0 \times 3000}{129.6} = 23.15\)<br>
-          รอบแกน y: \(\left(\frac{KL}{r}\right)_y = \frac{1.0 \times 3000}{63.5} = 47.24\) (แกนอ่อน y ควบคุม)<br>
-          เนื่องจาก \(47.24 < 125.66 \implies\) <b>เสาคราก (Yielding) ก่อนโก่งเดาะออยเลอร์:</b><br>
-          \[P_{\text{fail}} = \sigma_y \cdot A = (250\text{ MPa})(21,800\text{ mm}^2) = 5,450\text{ kN}\]
-        </div>
-      </div>
-      <div class="row">
-        <div class="lab">ขั้น 3: ตรวจสอบกรณีจุดรองรับแบบ Fix-Free เสายื่น (K = 2.0)</div>
-        <div class="math">
-          รอบแกน y: \(\left(\frac{KL}{r}\right)_y = \frac{2.0 \times 3000}{63.5} = 94.49\)<br>
-          คำนวณกำลังรับน้ำหนักวิกฤตออยเลอร์:\
-          \[P_{cr, y} = \frac{\pi^2 E I_y}{(KL)^2} = \frac{\pi^2 (200 \times 10^3\text{ N/mm}^2)(88 \times 10^6\text{ mm}^4)}{(2.0 \times 3000\text{ mm})^2} = 4,824.71\text{ kN}\]
-        </div>
-      </div>
-      <div class="row">
-        <div class="lab">ขั้น 4: การใส่ค้ำยันกึ่งกลางแกนอ่อน (Braced at mid-height in y)</div>
-        <div class="math">
-          แกน x ไม่ถูกค้ำยัน: \(L_x = 3.0\text{ m} \implies \left(\frac{KL}{r}\right)_x = \frac{1.0 \times 3000}{129.6} = 23.15\)<br>
-          แกน y ถูกค้ำยันกึ่งกลาง: \(L_y = 1.5\text{ m} \implies \left(\frac{KL}{r}\right)_y = \frac{1.0 \times 1500}{63.5} = 23.62\)<br>
-          <b>ข้อสังเกต:</b> ค่าความชะลูดทั้งสองแกนใกล้เคียงกันอย่างสมบูรณ์แบบ (\(23.15 \approx 23.62\)) ทำให้เสาใช้งานได้อย่างมีประสิทธิภาพสูงสุดทั้ง 2 ระนาบ!
-        </div>
-      </div>
-      <div class="row">
-        <div class="lab">คำตอบสุดท้าย</div>
-        <div>
-          <span class="fin">\((KL/r)_c = 125.66, \quad P_{\text{yield, Pin-Pin}} = 5,450\text{ kN}, \quad P_{cr, \text{Fix-Free}} = 4,824.7\text{ kN}\)</span>
+          • <b>ก) Pin-Pin (K=1):</b> \((KL/r)_y = 93.75 > 88.86 \implies\) เดาะแกน y \(\implies \sigma_c = 224.59\text{ MPa} \implies \mathbf{49.12\text{ MN}}\)<br>
+          • <b>ข) Fix-Fix (K=0.5):</b> \((KL/r)_y = 46.88 < 88.86 \implies\) คราก \(\implies \sigma_c = 250\text{ MPa} \implies \mathbf{54.68\text{ MN}}\)<br>
+          • <b>ค) Fix-Pin (K=0.7):</b> \((KL/r)_y = 65.62 < 88.86 \implies\) คราก \(\implies \sigma_c = 250\text{ MPa} \implies \mathbf{54.68\text{ MN}}\)<br>
+          • <b>ง) Fix-Free (K=2):</b> \((KL/r)_y = 187.5 > 88.86 \implies\) เดาะแกน y \(\implies \sigma_c = 56.15\text{ MPa} \implies \mathbf{12.28\text{ MN}}\)
         </div>
       </div>
     </div>
   </div>
 
-  <div class="formula-card-trap">
-    <h4>⚠️ จุดดักคะแนนของอาจารย์ (Exam Trap)</h4>
-    <p>1. <b>ต้องเช็กทั้ง 2 แกนเสมอ:</b> ห้ามคำนวณเฉพาะแกน x เด็ดขาด เพราะหน้าตัดโครงสร้างส่วนใหญ่ค่า \(I_y < I_x\) ทำให้แกน y มีความชะลูดสูงกว่าและเกิดการโก่งเดาะก่อนเสมอ<br>
-    2. <b>ความยาวประสิทธิผลไม่จำเป็นต้องเท่ากัน:</b> หากโจทย์กำหนดว่ามีค้ำยันด้านข้าง (Lateral Bracing) ในแกนใดแกนหนึ่ง ความยาวประสิทธิผล \(L_x\) และ \(L_y\) จะไม่เท่ากัน ต้องแยกคำนวณทีละแกน</p>
+  <hr>
+
+  <h2 class="prob"><span class="tag">ตย. 8.2</span>เสายาว 3 m ยึดรั้งปลายบนด้วยเคเบิลแนว x (E=180, σ_y=200, หน้า 19)</h2>
+  <figure class="fig-box">
+    <img src="assets/figs/fig_8_2.png" alt="รูปโจทย์ตัวอย่างที่ 8.2">
+    <figcaption class="fig-cap">ภาพประกอบจากโจทย์จริง: ตัวอย่างที่ 8.2</figcaption>
+  </figure>
+  <div class="exam">
+    <div class="step">
+      <div class="row">
+        <div class="lab">เฉลย ก) และ ข)</div>
+        <div class="math">
+          \(r_x = 53.18\text{ mm}, \quad r_y = 30.81\text{ mm}, \quad (KL/r)_c = \pi\sqrt{\frac{180}{200}} = 94.25\)<br>
+          • <b>ก) ก่อนยึดรั้ง (Fix-Free, K=2):</b> \((KL/r)_y = 194.74\) (เดาะแกน y) \(\implies \sigma_c = 46.84\text{ MPa} \implies \mathbf{11.74\text{ MN}}\)<br>
+          • <b>ข) หลังยึดรั้งเคเบิลแนว x:</b> เปลี่ยนแกน y เป็น Fix-Pin (\(K_y=0.7\)) \(\implies (KL/r)_y = 68.16\) ทำให้แกน x เดิม (\(112.82\)) กลับมาคุม! \(\implies \sigma_c = 139.57\text{ MPa} \implies \mathbf{34.99\text{ MN}}\)
+        </div>
+      </div>
+    </div>
   </div>
 
-  
-    <div class="formula-card-trap" style="border-left-color:var(--navy);background:rgba(20,41,91,0.05);color:var(--ink);margin-top:16px;">
-      <h4 style="color:var(--navy);">📌 สรุปตัวเลขตรงตามลายมือต้นฉบับ (ตัวอย่างที่ 8.2 หน้า 17–21):</h4>
-      <p>• <b>เสาเหล็กตัว I ยาว 9 m (ปีก 200×10, เอว 150×10, E = 200 GPa, σ_y = 250 MPa):</b> \(A = 5,500\text{ mm}^2\), \(I_x = 28,445,833\text{ mm}^4\) (\(r_x = 71.91\)), \(I_y = 13,345,833\text{ mm}^4\) (\(r_y = 49.26\)), \((KL/r)_c = 88.86\)<br>
-      • <b>1) Pin-Pin ทุกทิศทาง:</b> \((KL/r)_y = 182.7\) (แกน y เดาะ) \(\implies \sigma_c = 59.14\text{ MPa} \implies\) <b>\(P_{cr} = 325\text{ kN}\)</b><br>
-      • <b>2) ปลายล่าง Fix, บน Pin (y) &amp; Free (x):</b> \((KL/r)_x = 250.31\) (แกน x เดาะ) \(\implies \sigma_c = 31.5\text{ MPa} \implies\) <b>\(P_{cr} = 173.25\text{ kN}\)</b></p>
+  <hr>
+
+  <h2 class="prob"><span class="tag">ตย. 8.3</span>เสายาว 8 m ยึดแน่น 2 ข้าง + ติดตั้งค้ำยันกึ่งกลางแนว x (เฉลยครบทั้ง ก และ ข!)</h2>
+  <figure class="fig-box">
+    <img src="assets/figs/fig_8_3.png" alt="รูปโจทย์ตัวอย่างที่ 8.3">
+    <figcaption class="fig-cap">ภาพประกอบจากโจทย์จริง: ตัวอย่างที่ 8.3</figcaption>
+  </figure>
+  <div class="exam">
+    <div class="step">
+      <div class="row">
+        <div class="lab">ก) กรณีเดิมก่อนค้ำยัน</div>
+        <div class="math">
+          \(r_x = 53.18, r_y = 30.81\text{ mm}, \quad (KL/r)_c = \pi\sqrt{\frac{200\times 10^3}{280}} = 83.96\)<br>
+          Fix-Fix (\(K=0.5\)): \((KL/r)_x = 75.21, \quad (KL/r)_y = 129.83\) (เดาะแกน y) \(\implies \sigma_c = 117.11\text{ MPa} \implies \mathbf{29.36\text{ MN}}\)
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">ข) หลังติดค้ำยันแนว x ที่กึ่งกลาง (ส่วนที่ลายมือยังไม่ได้เขียน!)</div>
+        <div class="math">
+          การค้ำยันในแนว x ที่กึ่งกลาง (4 m) ทำให้การโก่งเดาะรอบแกน y แบ่งเป็น 2 ช่วงย่อย 4 m (สภาพ Fix-Pin: \(K_y = 0.7\)):<br>
+          • รอบแกน x (ไม่ถูกค้ำยัน ยาว 8 m, \(K_x=0.5\)): \((KL/r)_x = \frac{0.5(8000)}{53.18} = 75.22\)<br>
+          • รอบแกน y (ถูกค้ำยัน ยาว 4 m, \(K_y=0.7\)): \((KL/r)_y = \frac{0.7(4000)}{30.81} = 90.88\) (ยังมากกว่าแกน x และมากกว่า 83.96)<br>
+          \[\sigma_c = \frac{\pi^2(200 \times 10^3)}{(90.88)^2} = 239.02\text{ MPa} \implies P_{cr} = 239.02 \times 250,700 = \mathbf{59.92\text{ MN}}\]
+        </div>
+      </div>
     </div>
+  </div>
+
+  <hr>
+
+  <h2 class="prob"><span class="tag">ฝึกหัด 8.2</span>เสาเหล็กยาว 9 m หน้าตัดตัว I (200×10, เอว 150×10, หน้า 21)</h2>
+  <figure class="fig-box">
+    <img src="assets/figs/fig_8_2_ex.png" alt="รูปโจทย์แบบฝึกหัด 8.2">
+    <figcaption class="fig-cap">ภาพประกอบจากโจทย์จริง: แบบฝึกหัด 8.2 (หน้า 21)</figcaption>
+  </figure>
+  <div class="exam">
+    <div class="step">
+      <div class="row">
+        <div class="lab">ขั้น 1: คุณสมบัติหน้าตัด</div>
+        <div class="math">
+          \(A = 5,500\text{ mm}^2, \quad d = 85\text{ mm}, \quad I_x = 28,445,833\text{ mm}^4, \quad I_y = 13,345,833\text{ mm}^4\) <i>(แกน y ไม่ต้อง +Ad² เพราะ d = 0 ทุกชิ้น!)</i><br>
+          \(r_x = 71.91\text{ mm}, \quad r_y = 49.26\text{ mm}, \quad (KL/r)_c = 88.86\)
+        </div>
+      </div>
+      <div class="row">
+        <div class="lab">ขั้น 2: เฉลย 1) Pin-Pin และ 2) Fix-Pin(y) &amp; Fix-Free(x)</div>
+        <div class="math">
+          • <b>1) Pin-Pin (K=1):</b> \((KL/r)_x = 125.16, \quad (KL/r)_y = 182.7\) (แกน y เดาะ) \(\implies \sigma_c = 59.14\text{ MPa} \implies \mathbf{P_{cr} = 325\text{ kN}}\)<br>
+          • <b>2) ล่าง Fix, บน Pin(y) &amp; Free(x):</b> \((KL/r)_y = 127.89, \quad (KL/r)_x = 250.31\) (แกน x เดาะ) \(\implies \sigma_c = 31.50\text{ MPa} \implies \mathbf{P_{cr} = 173.25\text{ kN}}\)
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="sheet-preview">
-    <h4>📄 ภาพสแกนลายมือต้นฉบับจากชีท Solid Ja E Here (หน้า 17–21)</h4>
+    <h4>📄 ภาพสแกนลายมือต้นฉบับ (หน้า 17–21)</h4>
     <div class="sheet-img-grid">
-      <div class="sheet-img-card">
-        <span>หน้า 17: รัศมีไจเรชัน &amp; จุดรองรับ 4 แบบ</span>
-        <img src="assets/pages/page_17.png" alt="ชีท Solid Ja หน้า 17" loading="lazy">
-      </div>
-      <div class="sheet-img-card">
-        <span>หน้า 18: การคำนวณ Euler Buckling Pin-Pin</span>
-        <img src="assets/pages/page_18.png" alt="ชีท Solid Ja หน้า 18" loading="lazy">
-      </div>
-      <div class="sheet-img-card">
-        <span>หน้า 19: กรณี Fix-Fix และ Fix-Pin</span>
-        <img src="assets/pages/page_19.png" alt="ชีท Solid Ja หน้า 19" loading="lazy">
-      </div>
-      <div class="sheet-img-card">
-        <span>หน้า 20: กรณี Fix-Free เสายื่น</span>
-        <img src="assets/pages/page_20.png" alt="ชีท Solid Ja หน้า 20" loading="lazy">
-      </div>
-      <div class="sheet-img-card">
-        <span>หน้า 21: ผลของการใส่ค้ำยันกึ่งกลางแกนอ่อน</span>
-        <img src="assets/pages/page_21.png" alt="ชีท Solid Ja หน้า 21" loading="lazy">
-      </div>
+      <div class="sheet-img-card"><span>หน้า 17: เฉลย ตย. 8.1</span><img src="assets/pages/page_17.png" loading="lazy"></div>
+      <div class="sheet-img-card"><span>หน้า 18: โจทย์ &amp; เฉลย ตย. 8.1</span><img src="assets/pages/page_18.png" loading="lazy"></div>
+      <div class="sheet-img-card"><span>หน้า 19: เฉลย ตย. 8.2</span><img src="assets/pages/page_19.png" loading="lazy"></div>
+      <div class="sheet-img-card"><span>หน้า 20: เฉลย ตย. 8.3</span><img src="assets/pages/page_20.png" loading="lazy"></div>
+      <div class="sheet-img-card"><span>หน้า 21: เฉลยแบบฝึกหัด 8.2</span><img src="assets/pages/page_21.png" loading="lazy"></div>
     </div>
   </div>
 
   <div class="pn">
-    <a href="#p9">← ข้อ 9 Shear Flow &amp; ตะปู</a>
-    <a href="#ref">สูตร &amp; จุดดักข้อสอบ →</a>
+    <a href="#p9">← บทที่ 7.4 คานกล่องตะปู</a>
+    <a href="#guess">🔥 ไปหน้าเก็งข้อสอบพลิกแพลง 7 รูปแบบ →</a>
   </div>
 </section>
 
-<!-- SECTION 11: สูตร & จุดดักข้อสอบ -->
-<section id="ref">
-  <header class="top">
-    <p class="kick">คลังสูตรและตารางอ้างอิง · กลศาสตร์ของแข็ง มหาวิทยาลัยธรรมศาสตร์</p>
-    <h1>สูตรสำคัญและการแปลงหน่วยวิศวกรรมโยธา</h1>
-    <p class="sub">สรุปสมการควบคุม 10 ข้อ · ตารางหน่วยสากล · จุดตัดคะแนนของอาจารย์</p>
-    <p class="pracnote">โหมดฝึกเปิดอยู่: ซ่อนวิธีทำไว้ แตะแต่ละขั้นเพื่อดู (ลองเขียนเองก่อน) กดปุ่ม "ฝึก" อีกครั้งเพื่อปิด</p>
-  </header>
-
-  <h2 class="prob"><span class="tag">สูตร</span>รวมสูตรควบคุมหลักทั้ง 10 ข้อ</h2>
-  <div class="tw">
-    <table>
-      <caption>ตารางสรุปสูตรคำนวณและข้อควรระวัง ครบทั้ง 10 ข้อสอบจริง</caption>
-      <thead>
-        <tr>
-          <th>หัวข้อเรื่อง</th>
-          <th>สมการหลัก (Governing Equations)</th>
-          <th>ตัวแปรสำคัญ</th>
-          <th>หน่วยมาตรฐาน</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><b>1. การบิดเพลา</b></td>
-          <td>\(\tau = \frac{Tc}{J}, \quad \phi = \sum \frac{TL}{GJ}\)</td>
-          <td>\(J = \frac{\pi c^4}{2}\)</td>
-          <td>\(T\) [\(\text{N}\cdot\text{mm}\)], \(J\) [\(\text{mm}^4\)], \(G\) [\(\text{MPa}\)]</td>
-        </tr>
-        <tr>
-          <td><b>2. บิดอินดีเทอร์มิเนต</b></td>
-          <td>\(\sum T = 0, \quad \phi_{\text{tot}} = \sum \frac{T_i L_i}{GJ} = 0\)</td>
-          <td>\(J = \frac{\pi(c_o^4 - c_i^4)}{2}\)</td>
-          <td>\(\phi\) [\(\text{rad}\)], \(\tau_{\min} = \frac{T c_i}{J}\) [\(\text{MPa}\)]</td>
-        </tr>
-        <tr>
-          <td><b>3. เพลาสวมซ้อน</b></td>
-          <td>\(\phi_1 = \phi_2 \implies \frac{T_1}{T_2} = \frac{G_1 J_1}{G_2 J_2}\)</td>
-          <td>\(T_1 + T_2 = T_{\text{tot}}\)</td>
-          <td>\(GJ\) [\(\text{N}\cdot\text{mm}^2\)] Torsional Rigidity</td>
-        </tr>
-        <tr>
-          <td><b>4. ความเค้นดัด</b></td>
-          <td>\(\sigma = -\frac{My}{I}, \quad \bar{y} = \frac{\sum Ay}{\sum A}\)</td>
-          <td>\(I = \sum (\bar{I} + Ad^2)\)</td>
-          <td>\(M\) [\(\text{N}\cdot\text{mm}\)], \(y\) [\(\text{mm}\)], \(I\) [\(\text{mm}^4\)]</td>
-        </tr>
-        <tr>
-          <td><b>5. การแอ่นตัวคาน</b></td>
-          <td>\(EI v''(x) = M(x), \quad v_{\max} = -\frac{PL^3}{3EI}\)</td>
-          <td>\(C_1, C_2\) จาก BCs</td>
-          <td>\(v\) [\(\text{mm}\)], \(\theta\) [\(\text{rad}\)], \(EI\) [\(\text{N}\cdot\text{mm}^2\)]</td>
-        </tr>
-        <tr>
-          <td><b>6. หน้าตัดผสม</b></td>
-          <td>\(n = \frac{E_s}{E_w}, \quad b' = nb, \quad \sigma_s = n \frac{My}{I_T}\)</td>
-          <td>\(I_T\) หน้าตัดแปลง</td>
-          <td>ขยายเฉพาะกว้าง \(b\) และคูณ \(n\) กลับในเหล็ก</td>
-        </tr>
-        <tr>
-          <td><b>7. แรงเฉือนตามขวาง</b></td>
-          <td>\(\tau = \frac{VQ}{It}, \quad Q = A' \bar{y}'\)</td>
-          <td>\(t\) ความหนาแนวตัด</td>
-          <td>\(V\) [\(\text{N}\)], \(Q\) [\(\text{mm}^3\)], \(\tau\) [\(\text{MPa}\)]</td>
-        </tr>
-        <tr>
-          <td><b>8. Shear Flow &amp; ตะปู</b></td>
-          <td>\(q = \frac{VQ}{I}, \quad s \le \frac{m F_{\text{nail}}}{q}\)</td>
-          <td>\(m\) แถวตะปู</td>
-          <td>\(q\) [\(\text{N/mm}\)], \(s\) [\(\text{mm}\)] (ปัดลงเสมอ)</td>
-        </tr>
-        <tr>
-          <td><b>9. เสาโก่งเดาะออยเลอร์</b></td>
-          <td>\(P_{cr} = \frac{\pi^2 E I}{(KL)^2}, \quad \sigma_{cr} = \frac{\pi^2 E}{(KL/r)^2}\)</td>
-          <td>\(r = \sqrt{I/A}\)</td>
-          <td>\(P_{cr}\) [\(\text{N}\)], \(KL/r\) อัตราส่วนความชะลูด</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h2 class="prob"><span class="tag">หน่วย</span>ตารางแปลงหน่วยวิศวกรรมที่ใช้บ่อย</h2>
-  <div class="tw">
-    <table>
-      <caption>ตารางความสัมพันธ์และการแปลงหน่วยวิศวกรรมโยธา</caption>
-      <thead>
-        <tr>
-          <th>ปริมาณ</th>
-          <th>หน่วย SI มาตรฐาน</th>
-          <th>หน่วยที่ใช้แทนค่าในสูตร</th>
-          <th>สูตรการแปลง</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><b>แรงบิด / โมเมนต์ (T, M)</b></td>
-          <td>\(\text{N}\cdot\text{m}\) หรือ \(\text{kN}\cdot\text{m}\)</td>
-          <td>\(\text{N}\cdot\text{mm}\)</td>
-          <td>\(1\text{ N}\cdot\text{m} = 10^3\text{ N}\cdot\text{mm}, \quad 1\text{ kN}\cdot\text{m} = 10^6\text{ N}\cdot\text{mm}\)</td>
-        </tr>
-        <tr>
-          <td><b>แรงเฉือน / แรงตามแนวแกน (V, P)</b></td>
-          <td>\(\text{kN}\)</td>
-          <td>\(\text{N}\)</td>
-          <td>\(1\text{ kN} = 1,000\text{ N}\)</td>
-        </tr>
-        <tr>
-          <td><b>ความเค้น (Stress \(\sigma, \tau\))</b></td>
-          <td>\(\text{Pa} = \text{N/m}^2\)</td>
-          <td>\(\text{MPa} = \text{N/mm}^2\)</td>
-          <td>\(1\text{ MPa} = 10^6\text{ Pa} = 1\text{ N/mm}^2 \approx 10.197\text{ ksc}\)</td>
-        </tr>
-        <tr>
-          <td><b>โมดูลัสยืดหยุ่น (E, G)</b></td>
-          <td>\(\text{GPa}\)</td>
-          <td>\(\text{MPa} = \text{N/mm}^2\)</td>
-          <td>\(1\text{ GPa} = 1,000\text{ MPa} = 10^3\text{ N/mm}^2\)</td>
-        </tr>
-        <tr>
-          <td><b>โมเมนต์ความเฉื่อย (I, J)</b></td>
-          <td>\(\text{m}^4\)</td>
-          <td>\(\text{mm}^4\)</td>
-          <td>\(1\text{ m}^4 = 10^{12}\text{ mm}^4\)</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="formula-card-trap">
-    <h4>🔥 5 กฎเหล็กป้องกันการเสียคะแนนในห้องสอบกลศาสตร์ของแข็ง</h4>
-    <p>1. <b>แปลงหน่วยเป็น N และ mm ให้หมดก่อนคำนวณ:</b> อย่าแทนค่า \(\text{N}\cdot\text{m}\) ปนกับ \(\text{mm}\) หรือ \(\text{GPa}\) ปนกับ \(\text{MPa}\)<br>
-    2. <b>ตรวจสอบมิติและสมดุลแรง:</b> หลังหาแรงปฏิกิริยา ตรวจสมดุล \(\sum F = 0, \sum M = 0\) เสมอ<br>
-    3. <b>ระบุสภาวะแรง ดึง/อัด ให้ชัดเจน:</b> หน้าตัดไม่สมมาตรต้องบอกว่าใยบนเป็นอัด ใยล่างเป็นดึง<br>
-    4. <b>ระยะห่างตะปูหรือรอยต่อต้องปัดเศษลง (Round Down) เสมอ:</b> ห้ามปัดขึ้นเพื่อความปลอดภัยทางโครงสร้าง<br>
-    5. <b>เสาโก่งเดาะต้องเช็ก 2 แกนเสมอ:</b> เสามักโก่งเดาะรอบแกนอ่อน (\(I_y < I_x\)) ก่อนเสมอ</p>
-  </div>
-
-  <div class="pn">
-    <a href="#p10">← ข้อ 10 เสาโก่งเดาะ 2 แกน</a>
-    <a href="#sum">กลับสู่หน้าสรุปภาพรวม 21 หน้า →</a>
-  </div>
-</section>
-
-
-<!-- SECTION 12: หมวดเก็งข้อสอบ & เทคนิคแก้โจทย์พลิกแพลง (SURVIVAL GUIDE) -->
 <section id="guess">
   <header class="top">
     <p class="kick">หมวดกู้ชีพข้อสอบปลายภาค · กลศาสตร์ของแข็ง มหาวิทยาลัยธรรมศาสตร์</p>
@@ -1870,9 +1596,6 @@
     <a href="#p1">ไปทบทวนข้อสอบข้อที่ 1 →</a>
   </div>
 </section>
-
-
-<!-- SECTION 13: ชุดข้อสอบเก็งปลายภาคจริง 5 ข้อใหญ่ (FINAL MOCK EXAM 2026) -->
 <section id="mock">
   <header class="top">
     <p class="kick">จำลองข้อสอบจริงปลายภาค · ภาควิชาวิศวกรรมโยธา มหาวิทยาลัยธรรมศาสตร์</p>
@@ -2247,16 +1970,156 @@
     <a href="#sum">กลับสู่หน้าสรุปภาพรวม 21 หน้า →</a>
   </div>
 </section>
+<section id="ref">
+  <header class="top">
+    <p class="kick">คลังสูตรและตารางอ้างอิง · กลศาสตร์ของแข็ง มหาวิทยาลัยธรรมศาสตร์</p>
+    <h1>สูตรสำคัญและการแปลงหน่วยวิศวกรรมโยธา</h1>
+    <p class="sub">สรุปสมการควบคุม 10 ข้อ · ตารางหน่วยสากล · จุดตัดคะแนนของอาจารย์</p>
+    <p class="pracnote">โหมดฝึกเปิดอยู่: ซ่อนวิธีทำไว้ แตะแต่ละขั้นเพื่อดู (ลองเขียนเองก่อน) กดปุ่ม "ฝึก" อีกครั้งเพื่อปิด</p>
+  </header>
+
+  <h2 class="prob"><span class="tag">สูตร</span>รวมสูตรควบคุมหลักทั้ง 10 ข้อ</h2>
+  <div class="tw">
+    <table>
+      <caption>ตารางสรุปสูตรคำนวณและข้อควรระวัง ครบทั้ง 10 ข้อสอบจริง</caption>
+      <thead>
+        <tr>
+          <th>หัวข้อเรื่อง</th>
+          <th>สมการหลัก (Governing Equations)</th>
+          <th>ตัวแปรสำคัญ</th>
+          <th>หน่วยมาตรฐาน</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>1. การบิดเพลา</b></td>
+          <td>\(\tau = \frac{Tc}{J}, \quad \phi = \sum \frac{TL}{GJ}\)</td>
+          <td>\(J = \frac{\pi c^4}{2}\)</td>
+          <td>\(T\) [\(\text{N}\cdot\text{mm}\)], \(J\) [\(\text{mm}^4\)], \(G\) [\(\text{MPa}\)]</td>
+        </tr>
+        <tr>
+          <td><b>2. บิดอินดีเทอร์มิเนต</b></td>
+          <td>\(\sum T = 0, \quad \phi_{\text{tot}} = \sum \frac{T_i L_i}{GJ} = 0\)</td>
+          <td>\(J = \frac{\pi(c_o^4 - c_i^4)}{2}\)</td>
+          <td>\(\phi\) [\(\text{rad}\)], \(\tau_{\min} = \frac{T c_i}{J}\) [\(\text{MPa}\)]</td>
+        </tr>
+        <tr>
+          <td><b>3. เพลาสวมซ้อน</b></td>
+          <td>\(\phi_1 = \phi_2 \implies \frac{T_1}{T_2} = \frac{G_1 J_1}{G_2 J_2}\)</td>
+          <td>\(T_1 + T_2 = T_{\text{tot}}\)</td>
+          <td>\(GJ\) [\(\text{N}\cdot\text{mm}^2\)] Torsional Rigidity</td>
+        </tr>
+        <tr>
+          <td><b>4. ความเค้นดัด</b></td>
+          <td>\(\sigma = -\frac{My}{I}, \quad \bar{y} = \frac{\sum Ay}{\sum A}\)</td>
+          <td>\(I = \sum (\bar{I} + Ad^2)\)</td>
+          <td>\(M\) [\(\text{N}\cdot\text{mm}\)], \(y\) [\(\text{mm}\)], \(I\) [\(\text{mm}^4\)]</td>
+        </tr>
+        <tr>
+          <td><b>5. การแอ่นตัวคาน</b></td>
+          <td>\(EI v''(x) = M(x), \quad v_{\max} = -\frac{PL^3}{3EI}\)</td>
+          <td>\(C_1, C_2\) จาก BCs</td>
+          <td>\(v\) [\(\text{mm}\)], \(\theta\) [\(\text{rad}\)], \(EI\) [\(\text{N}\cdot\text{mm}^2\)]</td>
+        </tr>
+        <tr>
+          <td><b>6. หน้าตัดผสม</b></td>
+          <td>\(n = \frac{E_s}{E_w}, \quad b' = nb, \quad \sigma_s = n \frac{My}{I_T}\)</td>
+          <td>\(I_T\) หน้าตัดแปลง</td>
+          <td>ขยายเฉพาะกว้าง \(b\) และคูณ \(n\) กลับในเหล็ก</td>
+        </tr>
+        <tr>
+          <td><b>7. แรงเฉือนตามขวาง</b></td>
+          <td>\(\tau = \frac{VQ}{It}, \quad Q = A' \bar{y}'\)</td>
+          <td>\(t\) ความหนาแนวตัด</td>
+          <td>\(V\) [\(\text{N}\)], \(Q\) [\(\text{mm}^3\)], \(\tau\) [\(\text{MPa}\)]</td>
+        </tr>
+        <tr>
+          <td><b>8. Shear Flow &amp; ตะปู</b></td>
+          <td>\(q = \frac{VQ}{I}, \quad s \le \frac{m F_{\text{nail}}}{q}\)</td>
+          <td>\(m\) แถวตะปู</td>
+          <td>\(q\) [\(\text{N/mm}\)], \(s\) [\(\text{mm}\)] (ปัดลงเสมอ)</td>
+        </tr>
+        <tr>
+          <td><b>9. เสาโก่งเดาะออยเลอร์</b></td>
+          <td>\(P_{cr} = \frac{\pi^2 E I}{(KL)^2}, \quad \sigma_{cr} = \frac{\pi^2 E}{(KL/r)^2}\)</td>
+          <td>\(r = \sqrt{I/A}\)</td>
+          <td>\(P_{cr}\) [\(\text{N}\)], \(KL/r\) อัตราส่วนความชะลูด</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 class="prob"><span class="tag">หน่วย</span>ตารางแปลงหน่วยวิศวกรรมที่ใช้บ่อย</h2>
+  <div class="tw">
+    <table>
+      <caption>ตารางความสัมพันธ์และการแปลงหน่วยวิศวกรรมโยธา</caption>
+      <thead>
+        <tr>
+          <th>ปริมาณ</th>
+          <th>หน่วย SI มาตรฐาน</th>
+          <th>หน่วยที่ใช้แทนค่าในสูตร</th>
+          <th>สูตรการแปลง</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>แรงบิด / โมเมนต์ (T, M)</b></td>
+          <td>\(\text{N}\cdot\text{m}\) หรือ \(\text{kN}\cdot\text{m}\)</td>
+          <td>\(\text{N}\cdot\text{mm}\)</td>
+          <td>\(1\text{ N}\cdot\text{m} = 10^3\text{ N}\cdot\text{mm}, \quad 1\text{ kN}\cdot\text{m} = 10^6\text{ N}\cdot\text{mm}\)</td>
+        </tr>
+        <tr>
+          <td><b>แรงเฉือน / แรงตามแนวแกน (V, P)</b></td>
+          <td>\(\text{kN}\)</td>
+          <td>\(\text{N}\)</td>
+          <td>\(1\text{ kN} = 1,000\text{ N}\)</td>
+        </tr>
+        <tr>
+          <td><b>ความเค้น (Stress \(\sigma, \tau\))</b></td>
+          <td>\(\text{Pa} = \text{N/m}^2\)</td>
+          <td>\(\text{MPa} = \text{N/mm}^2\)</td>
+          <td>\(1\text{ MPa} = 10^6\text{ Pa} = 1\text{ N/mm}^2 \approx 10.197\text{ ksc}\)</td>
+        </tr>
+        <tr>
+          <td><b>โมดูลัสยืดหยุ่น (E, G)</b></td>
+          <td>\(\text{GPa}\)</td>
+          <td>\(\text{MPa} = \text{N/mm}^2\)</td>
+          <td>\(1\text{ GPa} = 1,000\text{ MPa} = 10^3\text{ N/mm}^2\)</td>
+        </tr>
+        <tr>
+          <td><b>โมเมนต์ความเฉื่อย (I, J)</b></td>
+          <td>\(\text{m}^4\)</td>
+          <td>\(\text{mm}^4\)</td>
+          <td>\(1\text{ m}^4 = 10^{12}\text{ mm}^4\)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="formula-card-trap">
+    <h4>🔥 5 กฎเหล็กป้องกันการเสียคะแนนในห้องสอบกลศาสตร์ของแข็ง</h4>
+    <p>1. <b>แปลงหน่วยเป็น N และ mm ให้หมดก่อนคำนวณ:</b> อย่าแทนค่า \(\text{N}\cdot\text{m}\) ปนกับ \(\text{mm}\) หรือ \(\text{GPa}\) ปนกับ \(\text{MPa}\)<br>
+    2. <b>ตรวจสอบมิติและสมดุลแรง:</b> หลังหาแรงปฏิกิริยา ตรวจสมดุล \(\sum F = 0, \sum M = 0\) เสมอ<br>
+    3. <b>ระบุสภาวะแรง ดึง/อัด ให้ชัดเจน:</b> หน้าตัดไม่สมมาตรต้องบอกว่าใยบนเป็นอัด ใยล่างเป็นดึง<br>
+    4. <b>ระยะห่างตะปูหรือรอยต่อต้องปัดเศษลง (Round Down) เสมอ:</b> ห้ามปัดขึ้นเพื่อความปลอดภัยทางโครงสร้าง<br>
+    5. <b>เสาโก่งเดาะต้องเช็ก 2 แกนเสมอ:</b> เสามักโก่งเดาะรอบแกนอ่อน (\(I_y < I_x\)) ก่อนเสมอ</p>
+  </div>
+
+  <div class="pn">
+    <a href="#p10">← ข้อ 10 เสาโก่งเดาะ 2 แกน</a>
+    <a href="#sum">กลับสู่หน้าสรุปภาพรวม 21 หน้า →</a>
+  </div>
+</section>
 
 </main>
 
 <footer class="foot">
-  <p>Solid Ja E Here · เฉลยข้อสอบจริง 10 ข้อ 21 หน้าเต็ม ครบสมบูรณ์ 100%<br>
+  <p>Solid Ja E Here · เฉลยแบบฝึกหัดครบทุกข้อ &amp; ทริครวมทำข้อสอบ 21 หน้าเต็ม<br>
   ภาควิชาวิศวกรรมโยธา คณะวิศวกรรมศาสตร์ มหาวิทยาลัยธรรมศาสตร์ · จัดทำโดย ธนภรณ์ นพรัตน์</p>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
-<script src="assets/app.js?v=20261123a"></script>
+<script src="assets/app.js?v=20261125a"></script>
 </body>
 </html>
