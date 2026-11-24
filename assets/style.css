@@ -270,5 +270,75 @@ body.practice .pracnote{display:block}
 .playbook-steps li{margin-bottom:6px}
 .playbook-trap{margin-top:12px;padding:8px 12px;background:rgba(179,32,31,0.06);border-left:3px solid var(--red);font-size:14px;color:var(--red)}
 
+/* ==================== CE271 ACADEMIC STUDY HUB UX/UI UPGRADE ==================== */
+:root{
+  --bg:#F7F6F2;
+  --sidebar-bg:#FAF9F6;
+  --card-bg:#FFFFFF;
+  --border-soft:rgba(22,24,29,0.10);
+  --border-card:#CBD5E1;
+  --nav-active-bg:#E0ECFF;
+  --nav-active-ink:#1D4ED8;
+  --ans-bg:#F0FDF4;
+  --ans-border:#22C55E;
+  --ans-ink:#14532D;
+}
+:root[data-theme=dark]{
+  --bg:#0F1219;
+  --sidebar-bg:#141822;
+  --card-bg:#181D29;
+  --border-soft:rgba(255,255,255,0.10);
+  --border-card:#2D3648;
+  --nav-active-bg:#1E3A8A;
+  --nav-active-ink:#93C5FD;
+  --ans-bg:rgba(34,197,94,0.12);
+  --ans-border:#22C55E;
+  --ans-ink:#86EFAC;
+}
+
+/* Crisp White Card Container & Answer Pill */
+main>section.on{background:var(--card-bg);border:1px solid var(--border-card);border-radius:12px;padding:28px 34px 36px;box-shadow:0 1px 4px rgba(0,0,0,0.03)}
+.exam{border:1px solid var(--border-card);border-radius:10px;background:var(--card-bg);padding:8px 22px 16px}
+.exam .row{border-top:1px solid var(--border-soft)}
+.fin,.exam .fin{border:1.5px solid var(--ans-border);background:var(--ans-bg);color:var(--ans-ink);border-radius:8px;padding:8px 16px;font-weight:700}
+.formula-card-trap{border-radius:8px;padding:10px 14px;margin:14px 0}
+.fig-box{border-radius:8px;border:1px solid var(--border-soft)}
+.playbook-card,.twist-card,.tw{border-radius:10px;border:1px solid var(--border-card)}
+.tw{overflow:hidden;overflow-x:auto}
+.survival-banner,.checklist-card{border-radius:10px}
+.pn{border-top:1px solid var(--border-soft)}
+.pn a{border-radius:8px}
+
+/* Floating Action Button (FAB) */
+.fab-cheat{position:fixed;right:22px;bottom:22px;z-index:60;display:inline-flex;align-items:center;gap:6px;background:#1E293B;color:#FFFFFF;padding:10px 18px;border-radius:9999px;font-size:14.5px;font-weight:700;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,0.22);transition:transform 0.15s ease,background 0.15s ease}
+.fab-cheat:hover{background:#0F172A;transform:translateY(-2px)}
+:root[data-theme=dark] .fab-cheat{background:#3B82F6;color:#FFFFFF}
+
+/* Sidebar Elements (Hidden in horizontal mobile bar, visible on Desktop) */
+.toc-brand,.toc-grp,.toc-chips{display:none}
+
+/* Desktop Left Sidebar Layout (>= 980px) */
+@media(min-width:980px){
+  nav.toc{position:fixed;top:0;left:0;bottom:0;width:264px;height:100vh;flex-direction:column;align-items:stretch;overflow-y:auto;overflow-x:hidden;white-space:normal;background:var(--sidebar-bg);border-right:1px solid var(--border-soft);border-bottom:0;padding:16px 12px 48px;gap:2px}
+  .toc-brand{display:block;font-size:15.5px;font-weight:700;color:var(--navy);padding:4px 10px 12px;margin-bottom:6px;border-bottom:1px solid var(--border-soft)}
+  .toc-grp{display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--gray);padding:12px 10px 4px;margin-top:4px}
+  .toc-chips{display:flex;flex-wrap:wrap;gap:6px;padding:4px 10px 8px}
+  .toc-chips a{flex:none!important;padding:3px 10px!important;font-size:12.5px!important;border:1px solid var(--border-card)!important;border-radius:9999px!important;background:var(--card-bg);color:var(--ink)!important}
+  .toc-chips a:hover{background:var(--hover)!important}
+  nav.toc a{border-right:0;border-left:0!important;padding:7px 12px;border-radius:8px;font-size:14.5px;line-height:1.4}
+  nav.toc a[aria-current=page]{background:var(--nav-active-bg);color:var(--nav-active-ink);font-weight:700}
+  nav.toc .sp{display:none}
+  nav.toc .tools{position:static;margin-top:14px;padding-top:12px;border-top:1px solid var(--border-soft);border-left:0;background:transparent;gap:8px}
+  nav.toc .tools button.th{flex:1;justify-content:center;border:1px solid var(--border-card)!important;border-radius:8px;min-height:38px;font-size:13.5px;background:var(--card-bg)}
+  main{margin-left:264px;max-width:880px;padding:28px 36px 96px}
+  .foot{margin-left:264px;padding-bottom:40px}
+}
+@media(max-width:979px){
+  main{padding:16px 12px 84px}
+  main>section.on{padding:18px 16px 26px}
+}
+@media print{.fab-cheat{display:none}}
+
+
 
 
