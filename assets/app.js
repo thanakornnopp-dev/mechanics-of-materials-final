@@ -50,10 +50,12 @@
     });
     render(sec);
 
-    var h = sec.querySelector("h1, h2");
-    if (h) {
-      var titleText = h.textContent.replace(/\s+/g, " ").trim();
-      document.title = titleText + " · CE 211 กลศาสตร์วัสดุ ปลายภาค";
+    var curLink = document.querySelector('nav.toc a[aria-current="page"]');
+    if (sec.id === "sum" || !curLink) {
+      document.title = "CE211 Solid Mechanics Final";
+    } else {
+      var shortName = curLink.textContent.replace(/\s+/g, " ").trim();
+      document.title = "CE211 Solid Mechanics Final · " + shortName;
     }
 
     if (target && target !== sec) {
