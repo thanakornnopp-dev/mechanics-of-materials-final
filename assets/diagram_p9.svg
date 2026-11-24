@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="100%" height="auto" style="background:#fff;font-family:'Sarabun',sans-serif;">
+  <rect x="0" y="0" width="800" height="300" fill="#fff" stroke="#CBD5E1"/>
+  <text x="20" y="30" fill="#14295B" font-size="16" font-weight="700">ตัวอย่างที่ 7.4: คานกล่องไม้ 4 ชิ้นยึดตะปู 4 แนว (F_nail = 100 N)</text>
+  <!-- Left: SFD -->
+  <rect x="20" y="45" width="330" height="235" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="35" y="68" fill="#14295B" font-size="14" font-weight="700">SFD: แรงจุด 1500 N (ช่วง AB ยาว 1 m, BC ยาว 2 m)</text>
+  <line x1="50" y1="150" x2="310" y2="150" stroke="#16181D" stroke-width="1.5"/>
+  <rect x="50" y="100" width="90" height="50" fill="#DBEAFE" stroke="#1C2FA8" stroke-width="2"/>
+  <rect x="140" y="150" width="170" height="25" fill="#FEE2E2" stroke="#B3201F" stroke-width="2"/>
+  <text x="95" y="92" fill="#1C2FA8" font-size="13" font-weight="700" text-anchor="middle">V_AB = +1000 N</text>
+  <text x="225" y="192" fill="#B3201F" font-size="13" font-weight="700" text-anchor="middle">V_BC = -500 N</text>
+  <text x="35" y="232" fill="#14295B" font-size="13" font-weight="700">• โมเมนต์ความเฉื่อยรวม: I = 189,440,000 mm⁴</text>
+  <text x="35" y="255" fill="#B3201F" font-size="13" font-weight="700">• หาร 2I เพราะตะปูยึดสมมาตร 2 ข้าง (ซ้าย-ขวา)</text>
+
+  <!-- Right: Nail Joints -->
+  <rect x="370" y="45" width="410" height="235" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="385" y="68" fill="#14295B" font-size="14" font-weight="700">ระยะห่างตะปูสูงสุด (s = F_nail / q):</text>
+  <rect x="385" y="85" width="380" height="80" rx="4" fill="#FEE2E2" stroke="#B3201F"/>
+  <text x="400" y="108" fill="#B3201F" font-size="13" font-weight="700">รอยต่อที่ 1 (แผ่นปีก 200×40, Q₁ = 800,000 mm³):</text>
+  <text x="400" y="130" fill="#16181D" font-size="13">• ช่วง AB: q₁ = 2.11 N/mm ⇒ s₁ = 100/2.11 = 47.4 mm</text>
+  <text x="400" y="150" fill="#16181D" font-size="13">• ช่วง BC: q₁ = 1.06 N/mm ⇒ s₁ = 100/1.06 = 94.3 mm</text>
+
+  <rect x="385" y="180" width="380" height="80" rx="4" fill="#DCFCE7" stroke="#17702A"/>
+  <text x="400" y="203" fill="#17702A" font-size="13" font-weight="700">รอยต่อที่ 2 (แผ่นปีกใน 120×40, Q₂ = 480,000 mm³):</text>
+  <text x="400" y="225" fill="#16181D" font-size="13">• ช่วง AB: q₂ = 1.27 N/mm ⇒ s₂ = 100/1.27 = 78.7 mm</text>
+  <text x="400" y="245" fill="#16181D" font-size="13">• ช่วง BC: q₂ = 0.63 N/mm ⇒ s₂ = 100/0.63 = 158.7 mm</text>
+</svg>

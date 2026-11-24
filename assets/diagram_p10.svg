@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="100%" height="auto" style="background:#fff;font-family:'Sarabun',sans-serif;">
+  <rect x="0" y="0" width="800" height="300" fill="#fff" stroke="#CBD5E1"/>
+  <text x="20" y="30" fill="#14295B" font-size="16" font-weight="700">ตัวอย่างที่ 8.2: เสาเหล็กยาว 9 m หน้าตัดตัว I (200×10, เอว 150×10, E=200 GPa, σ_y=250 MPa)</text>
+  <!-- Left: I-section -->
+  <rect x="50" y="65" width="140" height="14" fill="#DBEAFE" stroke="#1C2FA8" stroke-width="2"/>
+  <rect x="113" y="79" width="14" height="105" fill="#F3E8FF" stroke="#14295B" stroke-width="2"/>
+  <rect x="50" y="184" width="140" height="14" fill="#DBEAFE" stroke="#1C2FA8" stroke-width="2"/>
+  <line x1="30" y1="131" x2="210" y2="131" stroke="#B3201F" stroke-dasharray="6 3" stroke-width="1.5"/>
+  <line x1="120" y1="45" x2="120" y2="215" stroke="#17702A" stroke-dasharray="6 3" stroke-width="1.5"/>
+  <text x="215" y="135" fill="#B3201F" font-size="12" font-weight="700">x</text>
+  <text x="125" y="55" fill="#17702A" font-size="12" font-weight="700">y (d = 0 ทุกชิ้น!)</text>
+  <text x="120" y="238" fill="#14295B" font-size="13" font-weight="700" text-anchor="middle">A = 5,500 mm²</text>
+  <text x="120" y="258" fill="#B3201F" font-size="12" text-anchor="middle">I_x = 28.45×10⁶ mm⁴ (r_x = 71.91)</text>
+  <text x="120" y="276" fill="#17702A" font-size="12" text-anchor="middle">I_y = 13.35×10⁶ mm⁴ (r_y = 49.26)</text>
+
+  <!-- Right: Cases 1 and 2 -->
+  <rect x="270" y="50" width="510" height="105" rx="6" fill="#F8FAFC" stroke="#1C2FA8"/>
+  <text x="285" y="75" fill="#1C2FA8" font-size="14" font-weight="700">กรณี 1) Pin-Pin ทุกทิศทาง (K_x = 1.0, K_y = 1.0):</text>
+  <text x="285" y="98" fill="#16181D" font-size="13">• (KL/r)_x = 125.16  |  (KL/r)_y = 182.7 (แกน y ชะลูดกว่า ควบคุมการเดาะ!)</text>
+  <text x="285" y="120" fill="#B3201F" font-size="13" font-weight="700">• σ_c = 59.14 MPa  ⇒  P_cr = 59.14 × 5500 = 325 kN</text>
+  <text x="285" y="140" fill="#64748B" font-size="12">เช็ก (KL/r)_c = π√(E/σ_y) = 88.86 (ทั้งสองแกน &gt; 88.86 เกิด Euler Buckling)</text>
+
+  <rect x="270" y="170" width="510" height="105" rx="6" fill="#F8FAFC" stroke="#B3201F"/>
+  <text x="285" y="195" fill="#B3201F" font-size="14" font-weight="700">กรณี 2) ปลายล่าง Fix: แกน y Fix-Pin (K_y=0.7), แกน x Fix-Free (K_x=2.0):</text>
+  <text x="285" y="218" fill="#16181D" font-size="13">• (KL/r)_y = 127.89  |  (KL/r)_x = 250.31 (คราวนี้แกน x ชะลูดกว่า ควบคุม!)</text>
+  <text x="285" y="240" fill="#B3201F" font-size="13" font-weight="700">• σ_c = 31.50 MPa  ⇒  P_cr = 31.50 × 5500 = 173.25 kN</text>
+</svg>

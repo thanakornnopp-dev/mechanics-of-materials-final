@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" width="100%" height="auto" style="background:#fff;font-family:'Sarabun',sans-serif;">
+  <rect x="0" y="0" width="800" height="280" fill="#fff" stroke="#CBD5E1"/>
+  <text x="20" y="30" fill="#14295B" font-size="16" font-weight="700">ตัวอย่างที่ 6.3 (คานยื่นปลาย B ยึดแน่น) &amp; ตัวอย่างที่ 6.4 (คานช่วงเดียวรับแรงกระจาย w)</text>
+  <!-- Left: 6.3 -->
+  <rect x="20" y="45" width="370" height="215" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="35" y="68" fill="#14295B" font-size="14" font-weight="700">ตย. 6.3: คานยื่นปลายขวา B ยึดแน่น (v_B = 0, v'_B = 0)</text>
+  <line x1="70" y1="120" x2="320" y2="120" stroke="#14295B" stroke-width="4"/>
+  <line x1="320" y1="85" x2="320" y2="155" stroke="#16181D" stroke-width="4"/>
+  <line x1="70" y1="80" x2="70" y2="115" stroke="#B3201F" stroke-width="2.5"/>
+  <text x="80" y="95" fill="#B3201F" font-size="13" font-weight="700">P ↓ (x=0)</text>
+  <path d="M 70 140 Q 190 123 320 120" fill="none" stroke="#1C2FA8" stroke-width="2" stroke-dasharray="5 3"/>
+  <text x="35" y="185" fill="#14295B" font-size="13" font-weight="700">• M(x) = -P·x  ⇒  C₁ = ½PL²,  C₂ = -⅓PL³</text>
+  <text x="35" y="210" fill="#B3201F" font-size="13" font-weight="700">• ปลายอิสระ A (x=0): v'_A = PL²/(2EI)</text>
+  <text x="35" y="232" fill="#B3201F" font-size="13" font-weight="700">• การแอ่นตัวสูงสุด: v_A = -PL³/(3EI) ↓</text>
+
+  <!-- Right: 6.4 -->
+  <rect x="410" y="45" width="370" height="215" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="425" y="68" fill="#14295B" font-size="14" font-weight="700">ตย. 6.4: คานช่วงเดียวรับแรงกระจาย w</text>
+  <line x1="450" y1="120" x2="730" y2="120" stroke="#14295B" stroke-width="4"/>
+  <line x1="450" y1="95" x2="730" y2="95" stroke="#B3201F" stroke-width="2"/>
+  <text x="590" y="88" fill="#B3201F" font-size="12" font-weight="700" text-anchor="middle">w (สม่ำเสมอ)</text>
+  <polygon points="450,122 444,134 456,134" fill="#16181D"/>
+  <circle cx="730" cy="128" r="5" fill="#fff" stroke="#16181D" stroke-width="2"/>
+  <text x="425" y="185" fill="#14295B" font-size="13" font-weight="700">• BC: v(0) = 0, v(L) = 0 ⇒ C₂ = 0, C₁ = -wL³/24</text>
+  <text x="425" y="210" fill="#17702A" font-size="13" font-weight="700">• ความชันปลาย: θ_max = ± wL³/(24EI)</text>
+  <text x="425" y="232" fill="#17702A" font-size="13" font-weight="700">• แอ่นตัวกลางคาน: v_max = -5wL⁴/(384EI)</text>
+</svg>

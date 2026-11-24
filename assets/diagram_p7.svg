@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="100%" height="auto" style="background:#fff;font-family:'Sarabun',sans-serif;">
+  <rect x="0" y="0" width="800" height="300" fill="#fff" stroke="#CBD5E1"/>
+  <text x="20" y="30" fill="#14295B" font-size="16" font-weight="700">ตัวอย่างที่ 6.6: หน้าตัดผสมไม้ (150×150, E=12 GPa) + เหล็ก (150×20, E=200 GPa), M = 20 kN·m</text>
+  <!-- Left: Real Section -->
+  <rect x="80" y="65" width="100" height="100" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+  <text x="130" y="115" fill="#B45309" font-size="13" font-weight="700" text-anchor="middle">ไม้ 150×150</text>
+  <rect x="80" y="165" width="100" height="16" fill="#DBEAFE" stroke="#1C2FA8" stroke-width="2"/>
+  <text x="130" y="198" fill="#1C2FA8" font-size="12" font-weight="700" text-anchor="middle">เหล็ก 150×20</text>
+  <line x1="50" y1="150" x2="210" y2="150" stroke="#B3201F" stroke-dasharray="6 3" stroke-width="1.5"/>
+  <text x="215" y="154" fill="#B3201F" font-size="12" font-weight="700">NA (d'=36.4 mm จากล่าง)</text>
+  <!-- Middle: Transformed into Wood -->
+  <rect x="420" y="65" width="50" height="100" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+  <rect x="330" y="165" width="230" height="16" fill="#FEE2E2" stroke="#B3201F" stroke-width="2"/>
+  <text x="445" y="198" fill="#B3201F" font-size="12" font-weight="700" text-anchor="middle">แปลงเหล็กเป็นไม้: กว้าง b' = 2500 mm</text>
+  <text x="445" y="55" fill="#14295B" font-size="13" font-weight="700" text-anchor="middle">กรณี ก) E' = 12 GPa (n = 200/12)</text>
+  <!-- Summary -->
+  <rect x="20" y="218" width="760" height="65" rx="6" fill="#F8FAFC" stroke="#CBD5E1"/>
+  <text x="35" y="240" fill="#14295B" font-size="13" font-weight="700">• I' (แปลงเป็นไม้) = 155,966,267 mm⁴  |  หรือ I' (แปลงเป็นเหล็ก) = 9,357,976 mm⁴</text>
+  <text x="35" y="262" fill="#B3201F" font-size="13" font-weight="700">• หน่วยแรงจริงในไม้: บน 17.13 MPa (อัด), ล่าง 2.10 MPa (ดึง)  |  ในเหล็ก: บน 35.04 MPa (ดึง), ล่าง 77.78 MPa (ดึง)</text>
+</svg>

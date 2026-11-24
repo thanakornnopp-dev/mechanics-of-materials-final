@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="100%" height="auto" style="background:#fff;font-family:'Sarabun',sans-serif;">
+  <rect x="0" y="0" width="800" height="300" fill="#fff" stroke="#CBD5E1"/>
+  <text x="20" y="30" fill="#14295B" font-size="16" font-weight="700">ตัวอย่างที่ 7.2 (I-beam V=120 kN, τ กระโดด 6 เท่า!) &amp; ตัวอย่างที่ 7.3 (รอยต่อทากาว V=100 kN)</text>
+  <!-- Left: 7.2 -->
+  <rect x="20" y="45" width="370" height="235" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="35" y="68" fill="#14295B" font-size="14" font-weight="700">ตย. 7.2: หน้าตัดตัว I (60×140, I = 6.52×10⁶ mm⁴)</text>
+  <!-- Stress diagram for Shear -->
+  <line x1="180" y1="85" x2="180" y2="215" stroke="#16181D" stroke-width="1.5"/>
+  <path d="M 180 85 L 200 100 L 280 100 Q 320 150 280 200 L 200 200 L 180 215" fill="#FEE2E2" stroke="#B3201F" stroke-width="2"/>
+  <text x="205" y="95" fill="#14295B" font-size="12" font-weight="700">ปีก: 11.96 MPa</text>
+  <text x="285" y="105" fill="#B3201F" font-size="12" font-weight="700">เอว: 71.78 MPa (กระโดด 6 เท่า!)</text>
+  <text x="305" y="155" fill="#B3201F" font-size="13" font-weight="700">τ_max = 104.9 MPa</text>
+  <text x="35" y="242" fill="#14295B" font-size="13" font-weight="700">• τ_avg = 120,000 / 2400 = 50 MPa (max = 2.1×avg)</text>
+  <text x="35" y="264" fill="#17702A" font-size="13" font-weight="700">• ส่วนเอวรับแรงเฉือนถึง 94% | ปีกรับเพียง 6%</text>
+
+  <!-- Right: 7.3 -->
+  <rect x="410" y="45" width="370" height="235" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="425" y="68" fill="#14295B" font-size="14" font-weight="700">ตย. 7.3: หน้าตัดประกอบ 4 ชิ้นทากาว (V = 100 kN)</text>
+  <rect x="500" y="85" width="180" height="25" fill="#DBEAFE" stroke="#1C2FA8" stroke-width="2"/>
+  <rect x="540" y="110" width="100" height="65" fill="#F1F5F9" stroke="#14295B" stroke-width="2"/>
+  <rect x="500" y="175" width="180" height="35" fill="#DCFCE7" stroke="#17702A" stroke-width="2"/>
+  <text x="425" y="232" fill="#14295B" font-size="13" font-weight="700">• d = 167 mm, I = 1,026,676,000 mm⁴</text>
+  <text x="425" y="252" fill="#B3201F" font-size="13" font-weight="700">• กาวรอยต่อ 1: q₁ = 53.86 N/mm → τ₁ = 1.08 MPa</text>
+  <text x="425" y="272" fill="#17702A" font-size="13" font-weight="700">• กาวรอยต่อ 2: q₂ = 364.67 N/mm → τ₂ = 2.03 MPa</text>
+</svg>
